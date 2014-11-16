@@ -1,0 +1,1 @@
+elm --only-js Nicepost.elm

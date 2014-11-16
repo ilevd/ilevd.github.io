@@ -1,0 +1,195 @@
+<html>
+	
+	<head>
+		<title>NicePost</title>
+		<meta http-equiv="Content-Language" Content="ru"/>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="resources/elm-runtime-compressed.js"></script>
+		<script type="text/javascript" src="build/Nicepost.js"></script>
+		<script type="text/javascript" src="resources/groups.js"></script>
+		<script type="text/javascript" src="resources/jsonp.js"></script>
+		<link rel="stylesheet" type="text/css" href="resources/style.css">
+	</head>
+
+	<body>
+		<h2>Run:</h2>
+		<div id="elm-vk" style="margin-left: auto; margin-right: auto; left: 0px; right:0px;"></div>
+		
+		<!--div class="win_black"></div>
+
+		<div class="win_container">
+		<div class="win">
+			<p style="text-align: right;"><a class="song">Закрыть</a></p>
+			<img src="https://pp.vk.me/c540103/v540103791/18982/FlQ3RHTmAmM.jpg"></img>
+			
+			
+		</div>
+		</div-->
+	</body>
+
+	<script type="text/javascript">
+
+		var jsonpCount = 0;
+		var currentGroup = 0;
+		var currentGroupOffset = 0;
+		var currentGroupMax = 0;
+
+		var div = document.getElementById('elm-vk');
+		var vk = Elm.embed(Elm.Nicepost, div, {
+			getGroups: [],
+			getWallPosts: [0, []] 
+		} );
+		
+		//vk.ports.sendReq.subscribe(getRequest);
+		//vk.ports.toHtml.subscribe(getHtmlRequest);
+		
+		window.onscroll = function(){
+		/*  html = document.documentElement;
+	 		alert( body.scrollHeight + " " + body.offsetHeight + " " + body.scrollTop + " " +
+                   html.clientHeight + " " + html.scrollHeight + " " +html.offsetHeight  + " " + html.scrollTop + " " +
+					window.innerHeight + " " + document.body.clientHeight + " " + document.body.offsetHeight  );*/
+			var p1 = document.getElementById("post-column1");
+			var p2 = document.getElementById("post-column2");
+			var p3 = document.getElementById("post-column3");
+			if( p1 && p2 && p3){
+				//alert(p1.offsetHeight  + " " +p2.offsetHeight + " " + p3.offsetHeight);
+				var min = Math.min(p1.offsetHeight, p2.offsetHeight, p3.offsetHeight);
+				//alert(document.body.scrollTop  + " " +  min)
+				if( (document.body.scrollTop + window.innerHeight + 100 > min) && jsonpCount == 0){
+					//alert("need data! " + jsonpCount  );
+					wallGet(currentGroup);
+				}
+			}
+		}
+
+		vk.ports.htmlGroupClick.subscribe(onGroupClick);
+		vk.ports.htmlToggleClick.subscribe(onToggleClick);
+
+
+
+
+		wallGet("-11031943");
+		groupsGet(getAllGroupsString());
+		
+
+		/**------- requests -------**/
+		function groupsGet(groups){
+			JSONP("https://api.vk.com/method/groups.getById?v=5.25&group_ids=" + groups, onGroupsGet );
+		}
+		function onGroupsGet(json){
+			GROUPS = json.response;
+			//alert(getGroupsByName("Юмор", GROUPS));
+			//vk.ports.getGroups.send(json.response);
+			vk.ports.getGroups.send(getGroupsByName("Юмор", GROUPS));
+		}
+
+		function wallGet(owner_id){
+			if( currentGroupOffset == 0 ){
+				vk.ports.getWallPosts.send([0, []]); 	
+			}
+			currentGroup = owner_id;
+			jsonpCount++;
+			JSONP("https://api.vk.com/method/wall.get?v=5.25&count=65&owner_id=" + owner_id +
+				"&offset=" + currentGroupOffset, onWallGet);
+		}
+		function onWallGet(json){
+			var posts = parseJson(json);
+			var sortPosts = posts.sort( function(a,b){return b.likes-a.likes} ).slice(0, 45);
+			vk.ports.getWallPosts.send([currentGroupOffset, sortPosts]); 
+			//console.log("WallGet posts.length: " + posts.length);
+			currentGroupOffset += json.response.items.length;
+			jsonpCount--;
+		}
+
+
+		/** ------ actions -------**/
+		function onGroupClick(id){
+			currentGroup = "-" + id.toString()
+			currentGroupOffset = 0;
+
+			//vk.ports.getWallPosts.send([]);
+			wallGet(currentGroup);
+		}
+
+		function onToggleClick(name){
+			var currentGroups = getGroupsByName(name, GROUPS);
+			vk.ports.getGroups.send(currentGroups);
+
+			if( currentGroups.length > 0){
+				currentGroup = "-" + currentGroups[0].id.toString();
+				currentGroupOffset = 0;
+		
+				wallGet(currentGroup);
+			}
+		}
+
+
+
+	
+
+
+		/**----- Parsing data -----------**/
+
+		function parseJson(json){
+			var rawPosts = json.response.items;
+			var len = rawPosts.length;
+			var posts = [];
+			for( var i = 0; i < len; i++){
+				var post = toRecord(rawPosts[i]);
+				if( post.text == "" 
+					&& post.photos.length == 0 
+					&& post.audios.length == 0 ){
+					continue;
+				}
+				posts.push(post);
+			}
+			return posts;
+			//return json.response.items.map(toRecord);	
+		}
+
+		function toRecord(postObject){
+			var rec = {}
+			rec.id = postObject.id;
+			rec.text = postObject.text;
+			rec.date = postObject.date;
+			rec.likes = postObject.likes.count;
+			rec.reposts = postObject.reposts.count;
+			if( postObject.attachments == null) {
+				postObject.attachments = [];
+			}
+			parsePhotos(rec, postObject.attachments);
+			return rec;
+		}
+		
+		function parsePhotos(rec, arr){
+			var photos = [];
+			var audios = [];
+			var len = arr.length;
+			for(var i = 0; i < len; i++){
+				if( arr[i].type == "photo"){
+					var photo = {};
+					photo.photo_75 = arr[i].photo.photo_75;
+					photo.photo_130 = arr[i].photo.photo_130;
+					photo.photo_604 = arr[i].photo.photo_604;
+					photo.width = arr[i].photo.width ? arr[i].photo.width : 0;
+					photo.height = arr[i].photo.height ? arr[i].photo.height : 0;
+					photos.push(photo);
+				}
+				if( arr[i].type == "audio"){
+					var audio = {};
+					audio.artist = arr[i].audio.artist;
+					audio.title = arr[i].audio.title;
+					audios.push(audio);
+				}
+			}
+			rec.photos = photos;
+			rec.audios = audios;
+		}	
+
+
+	
+		
+		
+	</script>
+	
+</html>

@@ -1,0 +1,254 @@
+body{
+  font-size: 11px;
+  font-family: tahoma; 
+}
+
+.columnpost{
+  margin-right: 5px;
+  float: left;
+  /*border-right: 1px solid #cccccc;*/
+}
+
+.main{
+  background-color: #FEFEFE;
+  border: 1px solid #cccccc;
+  width: 290px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 7px;
+  margin-bottom: 5px;
+  font-size: 11px;
+  font-family: tahoma;
+  text-align: left;
+  /*link: #573463;*/
+}
+
+.mainimg{
+  /*width: 290px;*/
+  max-height: 350px;
+  margin-bottom: 5px;
+  margin-right: 1px;
+  cursor: pointer;
+}
+
+.textBlock, .textBlockClicked{
+  overflow: hidden;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  /*border: 1px solid #cccccc;*/
+}
+
+.textBlockClicked:hover{
+  background: #F5FAFD; /* #e1e7ed; */
+  cursor: pointer;
+}
+
+.footer{
+  margin-top: 5px;
+  padding-top: 5px;
+  /*border: 1px solid #cccccc;*/
+}
+
+.likestext{
+  margin-left: 5px;
+  margin-right: 45px;
+  font-weight: bold;  
+  color: #41658a;
+}
+
+.likesimg{
+  height: 9px;
+}
+
+.postbutton{
+  color: #555555;
+  margin-right: 5px;
+  font-size: 9.5px;
+}
+
+.popupdiv{
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 200px;
+  height: 200px;
+  opacity: 0.8;
+  background-color: black;
+  z-index: 1000;
+}
+
+div.groups{
+  margin-bottom: 8px;
+}
+
+
+img.group_checked{
+   /*border: 1px solid  /* #2B587A; */
+   border: 1px solid #2B587A;
+   padding: 4px;
+   margin: 1px;
+   width: 40px;
+   display: inline-block;
+   vertical-align: middle;
+}
+img.groupimg{
+  /*filter: greyscale(100%) opacity(50%);
+  -webkit-filter: grayscale(100%) opacity(50%);
+  -moz-filter: grayscale(100%) opacity(50%);
+  -ms-filter: grayscale(100%) opacity(50%);
+  -o-filter: grayscale(100%) opacity(50%);*/
+
+  border: 1px solid #FFFFFF;
+  padding: 4px;
+  margin: 1px;
+  width: 40px;
+  height: 40px;
+  background-color: #FEFEFE; 
+  cursor: pointer;
+   display: inline-block;
+   vertical-align: middle;
+}
+img.groupimg:hover{
+  /*filter: greyscale(0%) opacity(100%);
+  -webkit-filter: grayscale(0%) opacity(100%);
+  -moz-filter: grayscale(0%) opacity(100%);
+  -ms-filter: grayscale(0%) opacity(100%);
+  -o-filter: grayscale(0%) opacity(100%);*/
+ display: inline-block;
+  vertical-align: middle;
+  border: 1px dotted #45688E;
+  padding: 4px;
+  margin: 1px;
+  width: 40px;
+  height: 40px;
+}
+
+
+
+
+
+
+/* Audio style */
+a.song {
+  /*font-weight: bold;*/
+  /*font-size: 11;*/
+  color: #4a6283;
+  display: block;
+}
+
+a.song:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+a.song:active{
+  color: #999999;
+}
+
+
+
+
+
+/* CSS toggle only version */
+.main-toggle{
+  padding-bottom: 10px;
+}
+
+.toggle-btn { 
+    text-align:center; 
+    margin: 2px 2px;
+    padding:0.4em 3em; 
+    color:#45688E; 
+    font-size: 12;
+    background-color:#F5F5F5; 
+    border-radius: 0px; 
+    display:inline-block; 
+    border:solid 1px #FFFFFF; 
+    cursor:pointer;
+    /*font-weight: bold;*/
+    font-family: Tahoma;
+}
+
+.toggle-btn-grp.cssonly * {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+}
+.toggle-btn-grp.cssonly div {
+    display:inline-block;
+    position:relative;
+    margin:2px 2px;
+}
+
+.toggle-btn-grp.cssonly div label {
+    position:absolute;
+    z-index:0;
+    padding:0;
+    text-align:center;
+}
+
+.toggle-btn-grp.cssonly div input {
+    position:absolute;
+    z-index:1;
+    cursor:pointer;
+    height: 30px;
+    opacity:0;
+}
+
+.toggle-btn-grp.cssonly div:hover label {
+    /*border:solid 1px #a0d5dc !important; */
+    /*background:#f1fdfe;*/
+    background: #e1e7ed
+}
+
+.toggle-btn-grp.cssonly div input:checked + label {
+    background: #45688E;
+    color: #FFFFFF;
+    border:solid 1px black !important; 
+}
+
+
+
+
+/* window */
+.win_black{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: 1000;
+  opacity: 0.2;
+}
+
+.win_container{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 1001;
+}
+.win_container:before{
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
+}
+
+.win{
+  text-align: left;
+  vertical-align: middle;
+  display: inline-block;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  z-index: 1002;
+  padding: 10px;
+}
+
+.post_window_p{
+  text-align: right;
+}
