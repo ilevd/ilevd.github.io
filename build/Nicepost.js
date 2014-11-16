@@ -2055,7 +2055,7 @@ Elm.Nicepost.make = function (_elm) {
               {case "::": return _v4._1._1;}
               break;}
          _E.Case($moduleName,
-         "on line 227, column 25 to 26");
+         "on line 226, column 25 to 26");
       }();
    };
    var getBlackBackground = A2($Html$Tags.div,
@@ -2076,7 +2076,7 @@ Elm.Nicepost.make = function (_elm) {
               f,
               elem);}
          _E.Case($moduleName,
-         "between lines 110 and 115");
+         "between lines 109 and 114");
       }();
    });
    var getNextImg = F2(function (post,
@@ -2130,7 +2130,7 @@ Elm.Nicepost.make = function (_elm) {
                                       posts._0,
                                       p3)};}
                     _E.Case($moduleName,
-                    "between lines 99 and 102");
+                    "between lines 98 and 101");
                  }();
               }();
             case "[]":
@@ -2139,7 +2139,7 @@ Elm.Nicepost.make = function (_elm) {
                    ,_1: posts2
                    ,_2: posts3};}
          _E.Case($moduleName,
-         "between lines 95 and 102");
+         "between lines 94 and 101");
       }();
    });
    var dividePosts = function (posts) {
@@ -2222,7 +2222,7 @@ Elm.Nicepost.make = function (_elm) {
                                ,action._0]],
               state);}
          _E.Case($moduleName,
-         "between lines 59 and 88");
+         "between lines 58 and 87");
       }();
    });
    var NewGroups = function (a) {
@@ -2266,7 +2266,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "_Tuple2":
                return GetPosts(_v30._1);}
             _E.Case($moduleName,
-            "on line 362, column 35 to 49");
+            "on line 361, column 35 to 49");
          }();
       };
       return A2($Signal._op["<~"],
@@ -2521,7 +2521,7 @@ Elm.Nicepost.make = function (_elm) {
                                       _v42._1)
                                       ,getBlackBackground]);}
                _E.Case($moduleName,
-               "between lines 119 and 122");
+               "between lines 118 and 121");
             }();
             return A2($Html.toElement,
             1000,
