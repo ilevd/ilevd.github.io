@@ -34,6 +34,7 @@
 		var currentGroup = 0;
 		var currentGroupOffset = 0;
 		var currentGroupMax = 0;
+		var currentHeight = 1000;
 
 		var div = document.getElementById('elm-vk');
 		var vk = Elm.embed(Elm.Nicepost, div, {
@@ -57,12 +58,16 @@
 			var p1 = document.getElementById("post-column1");
 			var p2 = document.getElementById("post-column2");
 			var p3 = document.getElementById("post-column3");
+			var bdy = document.getElementsByTagName("body")[0];
 			if( p1 && p2 && p3){
 				var min = Math.min(p1.offsetHeight, p2.offsetHeight, p3.offsetHeight);
 				//alert(document.body.scrollTop  + " " +  min)
 				if( (scrollTop + windowHeight + 100 > min) && jsonpCount == 0){
 					//alert("need data! " + jsonpCount  );
 					wallGet(currentGroup);
+				}
+				if( bdy.offsetHeight > currentHeight){
+					VK.callMethod("resizeWindow", 960, bdy.offsetHeight);
 				}
 			}
 		}
