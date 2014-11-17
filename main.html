@@ -61,14 +61,16 @@
 			var bdy = document.getElementsByTagName("body")[0];
 			if( p1 && p2 && p3){
 				var min = Math.min(p1.offsetHeight, p2.offsetHeight, p3.offsetHeight);
+				var max = Math.max(p1.offsetHeight, p2.offsetHeight, p3.offsetHeight);
 				//alert(document.body.scrollTop  + " " +  min)
 				if( (scrollTop + windowHeight + 100 > min) && jsonpCount == 0){
 					//alert("need data! " + jsonpCount  );
 					wallGet(currentGroup);
 				}
 				console.log("Body height: " + bdy.offsetHeight);
-				if( bdy.offsetHeight > currentHeight){
-					VK.callMethod("resizeWindow", 960, bdy.offsetHeight);
+				if( max + 100 > currentHeight){
+					VK.callMethod("resizeWindow", 960, max + 100);
+					currentHeight = max + 100;
 				}
 			}
 		}
