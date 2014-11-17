@@ -10,6 +10,7 @@
 		<script type="text/javascript" src="resources/groups.js"></script>
 		<script type="text/javascript" src="resources/jsonp.js"></script>
 		<link rel="stylesheet" type="text/css" href="resources/style.css">
+		<script src="//vk.com/js/api/xd_connection.js?2"  type="text/javascript"></script>
 	</head>
 
 	<body>
@@ -40,8 +41,20 @@
 			getWallPosts: [0, []] 
 		} );
 		
-		//vk.ports.sendReq.subscribe(getRequest);
-		//vk.ports.toHtml.subscribe(getHtmlRequest);
+
+
+		VK.init(function() {
+				console.log("VK init success");
+				VK.addCallback("onScroll", onVKScroll);
+			}, function() {
+				console.log("VK init fail");
+		}, '5.26'); 
+
+
+		function onVKScroll(scrollTop, windowHeight){
+			console.log("OnScroll: " + scrollTop + " " + windowHeight);
+		}
+
 		
 		window.onscroll = function(){
 		/*  html = document.documentElement;
