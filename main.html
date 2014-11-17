@@ -54,6 +54,17 @@
 
 		function onVKScroll(scrollTop, windowHeight){
 			console.log("OnScroll: " + scrollTop + " " + windowHeight);
+			var p1 = document.getElementById("post-column1");
+			var p2 = document.getElementById("post-column2");
+			var p3 = document.getElementById("post-column3");
+			if( p1 && p2 && p3){
+				var min = Math.min(p1.offsetHeight, p2.offsetHeight, p3.offsetHeight);
+				//alert(document.body.scrollTop  + " " +  min)
+				if( (scrollTop + windowHeight + 100 > min) && jsonpCount == 0){
+					//alert("need data! " + jsonpCount  );
+					wallGet(currentGroup);
+				}
+			}
 		}
 
 		
