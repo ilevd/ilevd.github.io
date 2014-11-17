@@ -46,6 +46,7 @@
 		VK.init(function() {
 				console.log("VK init success");
 				VK.addCallback("onScroll", onVKScroll);
+				VK.callMethod("scrollSubscribe", true)
 			}, function() {
 				console.log("VK init fail");
 		}, '5.26'); 
