@@ -66,6 +66,7 @@
 					//alert("need data! " + jsonpCount  );
 					wallGet(currentGroup);
 				}
+				console.log("Body height: " + bdy.offsetHeight);
 				if( bdy.offsetHeight > currentHeight){
 					VK.callMethod("resizeWindow", 960, bdy.offsetHeight);
 				}
