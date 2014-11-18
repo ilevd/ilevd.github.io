@@ -1929,7 +1929,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "_Tuple2":
                return $Update.GetPosts(_v0._1);}
             _E.Case($moduleName,
-            "on line 284, column 35 to 49");
+            "on line 285, column 35 to 49");
          }();
       };
       return A2($Signal._op["<~"],
@@ -1964,7 +1964,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "ChangeGroup":
                return _v4._0;}
             _E.Case($moduleName,
-            "on line 299, column 40 to 47");
+            "on line 300, column 40 to 47");
          }();
       };
       var pridicate = function (act) {
@@ -1993,7 +1993,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "ChangeToggle":
                return _v9._0;}
             _E.Case($moduleName,
-            "on line 308, column 38 to 42");
+            "on line 309, column 38 to 42");
          }();
       };
       var predicate = function (act) {
@@ -2156,7 +2156,7 @@ Elm.Nicepost.make = function (_elm) {
               {case "::": return _v14._1._1;}
               break;}
          _E.Case($moduleName,
-         "on line 148, column 25 to 26");
+         "on line 149, column 25 to 26");
       }();
    };
    var getImgs = function (post) {
@@ -2317,22 +2317,25 @@ Elm.Nicepost.make = function (_elm) {
                               "top",
                               $String.show(_v25._1))]))]),
                  _L.fromArray([A2($Html$Tags.div,
-                 _L.fromArray([$Html$Attributes.$class("win")]),
-                 _L.fromArray([A2($Html$Tags.p,
-                              _L.fromArray([$Html$Attributes.$class("post_window_p")]),
-                              _L.fromArray([A2($Html$Tags.a,
-                              _L.fromArray([$Html$Attributes.$class("song")
-                                           ,A2($Html$Events.onclick,
-                                           actions.handle,
-                                           $Basics.always($Update.OpenImage($Model.None)))]),
-                              _L.fromArray([$Html.text("Закрыть")]))]))
-                              ,A2($Html$Tags.img,
-                              _L.append(_L.fromArray([$Html$Attributes.src(imgSrc)]),
-                              imgStyle),
-                              _L.fromArray([]))]))]));
+                              _L.fromArray([$Html$Attributes.$class("win")]),
+                              _L.fromArray([A2($Html$Tags.p,
+                                           _L.fromArray([$Html$Attributes.$class("post_window_p")]),
+                                           _L.fromArray([A2($Html$Tags.a,
+                                           _L.fromArray([$Html$Attributes.$class("song")
+                                                        ,A2($Html$Events.onclick,
+                                                        actions.handle,
+                                                        $Basics.always($Update.OpenImage($Model.None)))]),
+                                           _L.fromArray([$Html.text("Закрыть")]))]))
+                                           ,A2($Html$Tags.img,
+                                           _L.append(_L.fromArray([$Html$Attributes.src(imgSrc)]),
+                                           imgStyle),
+                                           _L.fromArray([]))]))
+                              ,$Html.text(_L.append($String.show(_v25._1),
+                              _L.append(" ",
+                              $String.show(_v25._0))))]));
               }();}
          _E.Case($moduleName,
-         "between lines 56 and 77");
+         "between lines 56 and 78");
       }();
    });
    var dividePosts = function (posts) {
