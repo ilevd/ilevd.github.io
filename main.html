@@ -182,7 +182,7 @@
 				return "audio" + photo.owner_id + "_" + audio.id;
 			}
 			atts = post.photos.map( getPhoto ).concat( post.audios.map( getAudio));
-			VK.api("wall.post", {message: message, attachments: atts}, function(response){
+			VK.api("wall.post", {owner_id: "1039055", v: "5.26", message: message, attachments: atts}, function(response){
 
 			})
 			//alert(JSON.stringify(atts));
