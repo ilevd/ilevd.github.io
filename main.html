@@ -178,7 +178,7 @@
 				return "photo" + photo.owner_id + "_" + photo.id;
 			}
 			var getAudio = function(audio){
-				return "audio" + photo.owner_id + "_" + audio.id;
+				return "audio" + audio.owner_id + "_" + audio.id;
 			}
 			var atts = post.photos.map( getPhoto ).concat( post.audios.map( getAudio));
 			var strAtts = atts.join(",");
