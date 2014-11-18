@@ -174,15 +174,15 @@
 		function onRepostClick(post){
 			//alert(JSON.stringify(post));
 			var message = post.text;
-			var atts = [];
 			var getPhoto = function(photo){ 
 				return "photo" + photo.owner_id + "_" + photo.id;
 			}
 			var getAudio = function(audio){
 				return "audio" + photo.owner_id + "_" + audio.id;
 			}
-			atts = post.photos.map( getPhoto ).concat( post.audios.map( getAudio));
-			VK.api("wall.post", {owner_id: "1039055", v: "5.26", message: message, attachments: atts}, function(response){
+			var atts = post.photos.map( getPhoto ).concat( post.audios.map( getAudio));
+			var strAtts = atts.join(",");
+			VK.api("wall.post", {v: "5.26", message: message, attachments: strAtts}, function(response){
 
 			})
 			//alert(JSON.stringify(atts));
