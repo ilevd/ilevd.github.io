@@ -28,30 +28,46 @@
 	<script type="text/javascript">
 
 		var jsonpCount = 0;
+
 		var currentGroup = 0;
 		var currentGroupOffset = 0;
 		var currentGroupMax = 0;
-		var currentHeight = 1000;
+
+		var appHeight = 1000;
+
+		var windowHeight = 1000;
+		var windowScrollTop = 0;
+
 
 		var div = document.getElementById('elm-vk');
 		var vk = Elm.embed(Elm.Nicepost, div, {
 			getGroups: [],
-			getWallPosts: [0, []] 
+			getWallPosts: [0, []],
+			resize: [1000, 0]
 		} );
 		
 
 
 		VK.init(function() {
 				console.log("VK init success");
-				VK.addCallback("onScroll", onVKScroll);
+				VK.addCallback("onScroll", onVkScroll);
+				VK.addCallback("onWindowResized", onVkWindowResized);
 				VK.callMethod("scrollSubscribe", true)
 			}, function() {
 				console.log("VK init fail");
 		}, '5.26'); 
 
+		function onVkWindowResized(width, height){
+			windowHeight = height;
+			vk.ports.resize.send(windowHeight, windowScrollTop);
+		}
 
-		function onVKScroll(scrollTop, windowHeight){
-			console.log("OnScroll: " + scrollTop + " " + windowHeight);
+		function onVkScroll(scrollTop, winHeight){
+			windowScrollTop = scrollTop;
+			windowHeight = winHeight;
+			vk.ports.resize.send(windowHeight, windowScrollTop);
+
+			console.log("OnScroll: " + scrollTop + " " + winHeight);
 			var p1 = document.getElementById("post-column1");
 			var p2 = document.getElementById("post-column2");
 			var p3 = document.getElementById("post-column3");
@@ -60,14 +76,14 @@
 				var min = Math.min(p1.offsetHeight, p2.offsetHeight, p3.offsetHeight);
 				var max = Math.max(p1.offsetHeight, p2.offsetHeight, p3.offsetHeight);
 				//alert(document.body.scrollTop  + " " +  min)
-				if( (scrollTop + windowHeight + 100 > min) && jsonpCount == 0){
+				if( (scrollTop + winHeight + 100 > min) && jsonpCount == 0){
 					//alert("need data! " + jsonpCount  );
 					wallGet(currentGroup);
 				}
 				console.log("Body height: " + bdy.offsetHeight);
-				if( max + 160 > currentHeight){
+				if( max + 160 > appHeight){
 					VK.callMethod("resizeWindow", 962, max + 160);
-					currentHeight = max + 160;
+					appHeight = max + 160;
 				}
 			}
 		}

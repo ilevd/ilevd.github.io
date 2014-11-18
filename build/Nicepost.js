@@ -1888,6 +1888,15 @@ Elm.Nicepost.make = function (_elm) {
    $String = Elm.String.make(_elm),
    $Update = Elm.Update.make(_elm),
    $Utils = Elm.Utils.make(_elm);
+   var resize = $Native$Ports.portIn("resize",
+   $Native$Ports.incomingSignal(function (v) {
+      return _U.isJSArray(v) ? {ctor: "_Tuple2"
+                               ,_0: typeof v[0] === "number" ? v[0] : _E.raise("invalid input, expecting JSNumber but got " + v[0])
+                               ,_1: typeof v[1] === "number" ? v[1] : _E.raise("invalid input, expecting JSNumber but got " + v[1])} : _E.raise("invalid input, expecting JSArray but got " + v);
+   }));
+   var newResize = A2($Signal._op["<~"],
+   $Update.Resize,
+   resize);
    var getWallPosts = $Native$Ports.portIn("getWallPosts",
    $Native$Ports.incomingSignal(function (v) {
       return _U.isJSArray(v) ? {ctor: "_Tuple2"
@@ -1920,7 +1929,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "_Tuple2":
                return $Update.GetPosts(_v0._1);}
             _E.Case($moduleName,
-            "on line 281, column 35 to 49");
+            "on line 284, column 35 to 49");
          }();
       };
       return A2($Signal._op["<~"],
@@ -1955,7 +1964,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "ChangeGroup":
                return _v4._0;}
             _E.Case($moduleName,
-            "on line 293, column 40 to 47");
+            "on line 299, column 40 to 47");
          }();
       };
       var pridicate = function (act) {
@@ -1984,7 +1993,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "ChangeToggle":
                return _v9._0;}
             _E.Case($moduleName,
-            "on line 302, column 38 to 42");
+            "on line 308, column 38 to 42");
          }();
       };
       var predicate = function (act) {
@@ -2004,14 +2013,18 @@ Elm.Nicepost.make = function (_elm) {
    }());
    var mainSignal = $Signal.merges(_L.fromArray([actions.signal
                                                 ,newGroups
-                                                ,newPosts]));
+                                                ,newPosts
+                                                ,newResize]));
    var defaultState = {_: {}
                       ,currentGroup: 0
                       ,currentToggle: "Юмор"
                       ,groups: _L.fromArray([])
                       ,openPosts: _L.fromArray([])
                       ,postWindow: $Model.None
-                      ,posts: _L.fromArray([])};
+                      ,posts: _L.fromArray([])
+                      ,winSize: {ctor: "_Tuple2"
+                                ,_0: 1000
+                                ,_1: 0}};
    var currentState = A3($Signal.foldp,
    $Update.update,
    defaultState,
@@ -2143,7 +2156,7 @@ Elm.Nicepost.make = function (_elm) {
               {case "::": return _v14._1._1;}
               break;}
          _E.Case($moduleName,
-         "on line 147, column 25 to 26");
+         "on line 148, column 25 to 26");
       }();
    };
    var getImgs = function (post) {
@@ -2276,40 +2289,50 @@ Elm.Nicepost.make = function (_elm) {
       },
       imgSrc);
    });
-   var getPostWindow = F2(function (post,
+   var getPostWindow = F3(function (_v25,
+   post,
    imgSrc) {
       return function () {
-         var pointerProp = _U.cmp($List.length(post.photos),
-         1) > 0 ? _L.fromArray([$Html.style(_L.fromArray([A2($Html.prop,
-                                                         "cursor",
-                                                         "pointer")
-                                                         ,A2($Html.prop,
-                                                         "min-width",
-                                                         "200px")]))
-                               ,$Html$Attributes.alt("Loading")
-                               ,A2($Html$Events.onclick,
-                               actions.handle,
-                               $Basics.always($Update.OpenImage(A2($Model.Window,
-                               post,
-                               A2(getNextImg,
-                               post,
-                               imgSrc)))))]) : _L.fromArray([]);
-         return A2($Html$Tags.div,
-         _L.fromArray([$Html$Attributes.$class("win_container")]),
-         _L.fromArray([A2($Html$Tags.div,
-         _L.fromArray([$Html$Attributes.$class("win")]),
-         _L.fromArray([A2($Html$Tags.p,
-                      _L.fromArray([$Html$Attributes.$class("post_window_p")]),
-                      _L.fromArray([A2($Html$Tags.a,
-                      _L.fromArray([$Html$Attributes.$class("song")
-                                   ,A2($Html$Events.onclick,
-                                   actions.handle,
-                                   $Basics.always($Update.OpenImage($Model.None)))]),
-                      _L.fromArray([$Html.text("Закрыть")]))]))
-                      ,A2($Html$Tags.img,
-                      _L.append(_L.fromArray([$Html$Attributes.src(imgSrc)]),
-                      pointerProp),
-                      _L.fromArray([]))]))]));
+         switch (_v25.ctor)
+         {case "_Tuple2":
+            return function () {
+                 var imgStyle = _U.cmp($List.length(post.photos),
+                 1) > 0 ? _L.fromArray([$Html.style(_L.fromArray([A2($Html.prop,
+                                                                 "cursor",
+                                                                 "pointer")
+                                                                 ,A2($Html.prop,
+                                                                 "min-width",
+                                                                 "200px")]))
+                                       ,$Html$Attributes.alt("Loading")
+                                       ,A2($Html$Events.onclick,
+                                       actions.handle,
+                                       $Basics.always($Update.OpenImage(A2($Model.Window,
+                                       post,
+                                       A2(getNextImg,
+                                       post,
+                                       imgSrc)))))]) : _L.fromArray([]);
+                 return A2($Html$Tags.div,
+                 _L.fromArray([$Html$Attributes.$class("win_container")
+                              ,$Html.style(_L.fromArray([A2($Html.prop,
+                              "top",
+                              $String.show(_v25._1))]))]),
+                 _L.fromArray([A2($Html$Tags.div,
+                 _L.fromArray([$Html$Attributes.$class("win")]),
+                 _L.fromArray([A2($Html$Tags.p,
+                              _L.fromArray([$Html$Attributes.$class("post_window_p")]),
+                              _L.fromArray([A2($Html$Tags.a,
+                              _L.fromArray([$Html$Attributes.$class("song")
+                                           ,A2($Html$Events.onclick,
+                                           actions.handle,
+                                           $Basics.always($Update.OpenImage($Model.None)))]),
+                              _L.fromArray([$Html.text("Закрыть")]))]))
+                              ,A2($Html$Tags.img,
+                              _L.append(_L.fromArray([$Html$Attributes.src(imgSrc)]),
+                              imgStyle),
+                              _L.fromArray([]))]))]));
+              }();}
+         _E.Case($moduleName,
+         "between lines 56 and 77");
       }();
    });
    var dividePosts = function (posts) {
@@ -2348,18 +2371,19 @@ Elm.Nicepost.make = function (_elm) {
          }();
       }();
    });
-   var display = function (_v26) {
+   var display = function (_v30) {
       return function () {
          return function () {
             var divWin = function () {
-               var _v28 = _v26.postWindow;
-               switch (_v28.ctor)
+               var _v32 = _v30.postWindow;
+               switch (_v32.ctor)
                {case "None":
                   return _L.fromArray([]);
                   case "Window":
-                  return _L.fromArray([A2(getPostWindow,
-                                      _v28._0,
-                                      _v28._1)
+                  return _L.fromArray([A3(getPostWindow,
+                                      _v30.winSize,
+                                      _v32._0,
+                                      _v32._1)
                                       ,getBlackBackground]);}
                _E.Case($moduleName,
                "between lines 39 and 42");
@@ -2373,12 +2397,12 @@ Elm.Nicepost.make = function (_elm) {
                                    toggleList)
                                    ,A3($Html$Optimize$RefEq.lazy2,
                                    groupsDiv,
-                                   _v26.groups,
-                                   _v26.currentGroup)
+                                   _v30.groups,
+                                   _v30.currentGroup)
                                    ,A3($Html$Optimize$RefEq.lazy2,
                                    postColumns,
-                                   _v26.posts,
-                                   _v26.openPosts)]),
+                                   _v30.posts,
+                                   _v30.openPosts)]),
             divWin)));
          }();
       }();
@@ -2414,7 +2438,8 @@ Elm.Nicepost.make = function (_elm) {
                           ,mainSignal: mainSignal
                           ,actions: actions
                           ,newGroups: newGroups
-                          ,newPosts: newPosts};
+                          ,newPosts: newPosts
+                          ,newResize: newResize};
    return _elm.Nicepost.values;
 };Elm.View = Elm.View || {};
 Elm.View.make = function (_elm) {
@@ -3498,12 +3523,12 @@ Elm.Update.make = function (_elm) {
               state);
             case "ClickText":
             return function () {
-                 var _v7 = A2($List.filter,
+                 var _v10 = A2($List.filter,
                  function (id) {
                     return _U.eq(id,action._0);
                  },
                  state.openPosts);
-                 switch (_v7.ctor)
+                 switch (_v10.ctor)
                  {case "[]":
                     return _U.replace([["openPosts"
                                        ,A2($List._op["::"],
@@ -3520,14 +3545,14 @@ Elm.Update.make = function (_elm) {
               }();
             case "GetPosts":
             return function () {
-                 var _v8 = state.posts;
-                 switch (_v8.ctor)
+                 var _v11 = state.posts;
+                 switch (_v11.ctor)
                  {case "[]":
                     return _U.replace([["posts"
                                        ,action._0]],
                       state);}
                  return _U.replace([["posts"
-                                    ,_L.append(_v8,action._0)]],
+                                    ,_L.append(_v11,action._0)]],
                  state);
               }();
             case "NewGroups":
@@ -3551,11 +3576,24 @@ Elm.Update.make = function (_elm) {
             case "OpenImage":
             return _U.replace([["postWindow"
                                ,action._0]],
-              state);}
+              state);
+            case "Resize":
+            switch (action._0.ctor)
+              {case "_Tuple2":
+                 return _U.replace([["winSize"
+                                    ,{ctor: "_Tuple2"
+                                     ,_0: action._0._0
+                                     ,_1: action._0._1}]],
+                   state);}
+              break;}
          _E.Case($moduleName,
-         "between lines 20 and 45");
+         "between lines 21 and 49");
       }();
    });
+   var Resize = function (a) {
+      return {ctor: "Resize"
+             ,_0: a};
+   };
    var NewGroups = function (a) {
       return {ctor: "NewGroups"
              ,_0: a};
@@ -3589,6 +3627,7 @@ Elm.Update.make = function (_elm) {
                         ,ClickText: ClickText
                         ,OpenImage: OpenImage
                         ,NewGroups: NewGroups
+                        ,Resize: Resize
                         ,update: update};
    return _elm.Update.values;
 };Elm.Model = Elm.Model || {};
@@ -3604,19 +3643,21 @@ Elm.Model.make = function (_elm) {
    _A = _N.Array.make(_elm),
    _E = _N.Error.make(_elm),
    $moduleName = "Model";
-   var State = F6(function (a,
+   var State = F7(function (a,
    b,
    c,
    d,
    e,
-   f) {
+   f,
+   g) {
       return {_: {}
              ,currentGroup: b
              ,currentToggle: a
              ,groups: c
              ,openPosts: e
              ,postWindow: f
-             ,posts: d};
+             ,posts: d
+             ,winSize: g};
    });
    var None = {ctor: "None"};
    var Window = F2(function (a,b) {
