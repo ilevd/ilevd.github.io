@@ -2318,22 +2318,19 @@ Elm.Nicepost.make = function (_elm) {
                               _L.append($String.show(_v25._1),
                               "px"))]))]),
                  _L.fromArray([A2($Html$Tags.div,
-                              _L.fromArray([$Html$Attributes.$class("win")]),
-                              _L.fromArray([A2($Html$Tags.p,
-                                           _L.fromArray([$Html$Attributes.$class("post_window_p")]),
-                                           _L.fromArray([A2($Html$Tags.a,
-                                           _L.fromArray([$Html$Attributes.$class("song")
-                                                        ,A2($Html$Events.onclick,
-                                                        actions.handle,
-                                                        $Basics.always($Update.OpenImage($Model.None)))]),
-                                           _L.fromArray([$Html.text("Закрыть")]))]))
-                                           ,A2($Html$Tags.img,
-                                           _L.append(_L.fromArray([$Html$Attributes.src(imgSrc)]),
-                                           imgStyle),
-                                           _L.fromArray([]))]))
-                              ,$Html.text(_L.append($String.show(_v25._1),
-                              _L.append(" ",
-                              $String.show(_v25._0))))]));
+                 _L.fromArray([$Html$Attributes.$class("win")]),
+                 _L.fromArray([A2($Html$Tags.p,
+                              _L.fromArray([$Html$Attributes.$class("post_window_p")]),
+                              _L.fromArray([A2($Html$Tags.a,
+                              _L.fromArray([$Html$Attributes.$class("song")
+                                           ,A2($Html$Events.onclick,
+                                           actions.handle,
+                                           $Basics.always($Update.OpenImage($Model.None)))]),
+                              _L.fromArray([$Html.text("Закрыть")]))]))
+                              ,A2($Html$Tags.img,
+                              _L.append(_L.fromArray([$Html$Attributes.src(imgSrc)]),
+                              imgStyle),
+                              _L.fromArray([]))]))]));
               }();}
          _E.Case($moduleName,
          "between lines 56 and 78");
