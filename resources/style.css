@@ -14,8 +14,8 @@ body{
 
 .main{
   background-color: #FEFEFE;
-  border-bottom: 1px solid #cccccc;
-  border-right: 1px solid #cccccc;
+  border: 1px solid #cccccc;
+  /*border-right: 1px solid #cccccc;
   /*border-radius: 5px;*/
   width: 290px;
   padding-top: 10px;
@@ -70,6 +70,14 @@ body{
   color: #555555;
   margin-right: 5px;
   font-size: 9.5px;
+  cursor: pointer;
+}
+.postbutton:hover{
+  color: #222222;
+  text-decoration: underline;
+}
+.postbutton:active{
+  text-decoration: none;
 }
 
 .popupdiv{

@@ -110,6 +110,8 @@
 
 		vk.ports.htmlGroupClick.subscribe(onGroupClick);
 		vk.ports.htmlToggleClick.subscribe(onToggleClick);
+		vk.ports.repostClick.subscribe(onRepostClick);
+
 
 
 
@@ -169,6 +171,22 @@
 			}
 		}
 
+		function onRepostClick(post){
+			//alert(JSON.stringify(post));
+			var message = post.text;
+			var atts = [];
+			var getPhoto = function(photo){ 
+				return "photo" + photo.owner_id + "_" + photo.id;
+			}
+			var getAudio = function(audio){
+				return "audio" + photo.owner_id + "_" + audio.id;
+			}
+			atts = post.photos.map( getPhoto ).concat( post.audios.map( getAudio));
+			VK.api("wall.post", {message: message, attachments: atts}, function(response){
+
+			})
+			//alert(JSON.stringify(atts));
+		}
 
 
 	
@@ -217,12 +235,16 @@
 					photo.photo_75 = arr[i].photo.photo_75;
 					photo.photo_130 = arr[i].photo.photo_130;
 					photo.photo_604 = arr[i].photo.photo_604;
+					photo.id = arr[i].photo.id;
+					photo.owner_id = arr[i].photo.owner_id;
 					photo.width = arr[i].photo.width ? arr[i].photo.width : 0;
 					photo.height = arr[i].photo.height ? arr[i].photo.height : 0;
 					photos.push(photo);
 				}
 				if( arr[i].type == "audio"){
 					var audio = {};
+					audio.id = arr[i].audio.id;
+					audio.owner_id = arr[i].audio.owner_id;
 					audio.artist = arr[i].audio.artist;
 					audio.title = arr[i].audio.title;
 					audios.push(audio);

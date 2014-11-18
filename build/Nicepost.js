@@ -1888,6 +1888,13 @@ Elm.Nicepost.make = function (_elm) {
    $String = Elm.String.make(_elm),
    $Update = Elm.Update.make(_elm),
    $Utils = Elm.Utils.make(_elm);
+   var emptyPost = {_: {}
+                   ,audios: _L.fromArray([])
+                   ,date: 0
+                   ,id: 0
+                   ,likes: 0
+                   ,photos: _L.fromArray([])
+                   ,text: ""};
    var resize = $Native$Ports.portIn("resize",
    $Native$Ports.incomingSignal(function (v) {
       return _U.isJSArray(v) ? {ctor: "_Tuple2"
@@ -1908,17 +1915,21 @@ Elm.Nicepost.make = function (_elm) {
                                                                                                                                                               ,likes: typeof v.likes === "number" ? v.likes : _E.raise("invalid input, expecting JSNumber but got " + v.likes)
                                                                                                                                                               ,date: typeof v.date === "number" ? v.date : _E.raise("invalid input, expecting JSNumber but got " + v.date)
                                                                                                                                                               ,photos: _U.isJSArray(v.photos) ? _L.fromArray(v.photos.map(function (v) {
-                                                                                                                                                                 return typeof v === "object" && "photo_75" in v && "photo_130" in v && "photo_604" in v && "width" in v && "height" in v ? {_: {}
-                                                                                                                                                                                                                                                                                            ,photo_75: typeof v.photo_75 === "string" || typeof v.photo_75 === "object" && v.photo_75 instanceof String ? v.photo_75 : _E.raise("invalid input, expecting JSString but got " + v.photo_75)
-                                                                                                                                                                                                                                                                                            ,photo_130: typeof v.photo_130 === "string" || typeof v.photo_130 === "object" && v.photo_130 instanceof String ? v.photo_130 : _E.raise("invalid input, expecting JSString but got " + v.photo_130)
-                                                                                                                                                                                                                                                                                            ,photo_604: typeof v.photo_604 === "string" || typeof v.photo_604 === "object" && v.photo_604 instanceof String ? v.photo_604 : _E.raise("invalid input, expecting JSString but got " + v.photo_604)
-                                                                                                                                                                                                                                                                                            ,width: typeof v.width === "number" ? v.width : _E.raise("invalid input, expecting JSNumber but got " + v.width)
-                                                                                                                                                                                                                                                                                            ,height: typeof v.height === "number" ? v.height : _E.raise("invalid input, expecting JSNumber but got " + v.height)} : _E.raise("invalid input, expecting JSObject [\"photo_75\",\"photo_130\",\"photo_604\",\"width\",\"height\"] but got " + v);
+                                                                                                                                                                 return typeof v === "object" && "id" in v && "owner_id" in v && "photo_75" in v && "photo_130" in v && "photo_604" in v && "width" in v && "height" in v ? {_: {}
+                                                                                                                                                                                                                                                                                                                            ,id: typeof v.id === "number" ? v.id : _E.raise("invalid input, expecting JSNumber but got " + v.id)
+                                                                                                                                                                                                                                                                                                                            ,owner_id: typeof v.owner_id === "number" ? v.owner_id : _E.raise("invalid input, expecting JSNumber but got " + v.owner_id)
+                                                                                                                                                                                                                                                                                                                            ,photo_75: typeof v.photo_75 === "string" || typeof v.photo_75 === "object" && v.photo_75 instanceof String ? v.photo_75 : _E.raise("invalid input, expecting JSString but got " + v.photo_75)
+                                                                                                                                                                                                                                                                                                                            ,photo_130: typeof v.photo_130 === "string" || typeof v.photo_130 === "object" && v.photo_130 instanceof String ? v.photo_130 : _E.raise("invalid input, expecting JSString but got " + v.photo_130)
+                                                                                                                                                                                                                                                                                                                            ,photo_604: typeof v.photo_604 === "string" || typeof v.photo_604 === "object" && v.photo_604 instanceof String ? v.photo_604 : _E.raise("invalid input, expecting JSString but got " + v.photo_604)
+                                                                                                                                                                                                                                                                                                                            ,width: typeof v.width === "number" ? v.width : _E.raise("invalid input, expecting JSNumber but got " + v.width)
+                                                                                                                                                                                                                                                                                                                            ,height: typeof v.height === "number" ? v.height : _E.raise("invalid input, expecting JSNumber but got " + v.height)} : _E.raise("invalid input, expecting JSObject [\"id\",\"owner_id\",\"photo_75\",\"photo_130\",\"photo_604\",\"width\",\"height\"] but got " + v);
                                                                                                                                                               })) : _E.raise("invalid input, expecting JSArray but got " + v.photos)
                                                                                                                                                               ,audios: _U.isJSArray(v.audios) ? _L.fromArray(v.audios.map(function (v) {
-                                                                                                                                                                 return typeof v === "object" && "title" in v && "artist" in v ? {_: {}
-                                                                                                                                                                                                                                 ,title: typeof v.title === "string" || typeof v.title === "object" && v.title instanceof String ? v.title : _E.raise("invalid input, expecting JSString but got " + v.title)
-                                                                                                                                                                                                                                 ,artist: typeof v.artist === "string" || typeof v.artist === "object" && v.artist instanceof String ? v.artist : _E.raise("invalid input, expecting JSString but got " + v.artist)} : _E.raise("invalid input, expecting JSObject [\"title\",\"artist\"] but got " + v);
+                                                                                                                                                                 return typeof v === "object" && "id" in v && "owner_id" in v && "title" in v && "artist" in v ? {_: {}
+                                                                                                                                                                                                                                                                 ,id: typeof v.id === "number" ? v.id : _E.raise("invalid input, expecting JSNumber but got " + v.id)
+                                                                                                                                                                                                                                                                 ,owner_id: typeof v.owner_id === "number" ? v.owner_id : _E.raise("invalid input, expecting JSNumber but got " + v.owner_id)
+                                                                                                                                                                                                                                                                 ,title: typeof v.title === "string" || typeof v.title === "object" && v.title instanceof String ? v.title : _E.raise("invalid input, expecting JSString but got " + v.title)
+                                                                                                                                                                                                                                                                 ,artist: typeof v.artist === "string" || typeof v.artist === "object" && v.artist instanceof String ? v.artist : _E.raise("invalid input, expecting JSString but got " + v.artist)} : _E.raise("invalid input, expecting JSObject [\"id\",\"owner_id\",\"title\",\"artist\"] but got " + v);
                                                                                                                                                               })) : _E.raise("invalid input, expecting JSArray but got " + v.audios)} : _E.raise("invalid input, expecting JSObject [\"id\",\"text\",\"likes\",\"date\",\"photos\",\"audios\"] but got " + v);
                                })) : _E.raise("invalid input, expecting JSArray but got " + v[1])} : _E.raise("invalid input, expecting JSArray but got " + v);
    }));
@@ -1929,7 +1940,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "_Tuple2":
                return $Update.GetPosts(_v0._1);}
             _E.Case($moduleName,
-            "on line 292, column 35 to 49");
+            "on line 293, column 35 to 49");
          }();
       };
       return A2($Signal._op["<~"],
@@ -1964,7 +1975,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "ChangeGroup":
                return _v4._0;}
             _E.Case($moduleName,
-            "on line 307, column 40 to 47");
+            "on line 308, column 40 to 47");
          }();
       };
       var pridicate = function (act) {
@@ -1993,7 +2004,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "ChangeToggle":
                return _v9._0;}
             _E.Case($moduleName,
-            "on line 316, column 38 to 42");
+            "on line 317, column 38 to 42");
          }();
       };
       var predicate = function (act) {
@@ -2009,6 +2020,51 @@ Elm.Nicepost.make = function (_elm) {
       A3($Signal.keepIf,
       predicate,
       $Update.ChangeToggle("Юмор"),
+      actions.signal));
+   }());
+   var repostClick = $Native$Ports.portOut("repostClick",
+   $Native$Ports.outgoingSignal(function (v) {
+      return {id: v.id
+             ,text: v.text
+             ,likes: v.likes
+             ,date: v.date
+             ,photos: _L.toArray(v.photos).map(function (v) {
+                return {id: v.id
+                       ,owner_id: v.owner_id
+                       ,photo_75: v.photo_75
+                       ,photo_130: v.photo_130
+                       ,photo_604: v.photo_604
+                       ,width: v.width
+                       ,height: v.height};
+             })
+             ,audios: _L.toArray(v.audios).map(function (v) {
+                return {id: v.id
+                       ,owner_id: v.owner_id
+                       ,title: v.title
+                       ,artist: v.artist};
+             })};
+   }),
+   function () {
+      var select = function (_v14) {
+         return function () {
+            switch (_v14.ctor)
+            {case "Repost": return _v14._0;}
+            _E.Case($moduleName,
+            "on line 326, column 32 to 36");
+         }();
+      };
+      var predicate = function (act) {
+         return function () {
+            switch (act.ctor)
+            {case "Repost": return true;}
+            return false;
+         }();
+      };
+      return A2($Signal._op["<~"],
+      select,
+      A3($Signal.keepIf,
+      predicate,
+      $Update.Repost(emptyPost),
       actions.signal));
    }());
    var mainSignal = $Signal.merges(_L.fromArray([actions.signal
@@ -2110,7 +2166,10 @@ Elm.Nicepost.make = function (_elm) {
                    _L.fromArray([$Html$Attributes.$class("likestext")]),
                    _L.fromArray([$Html.text($String.show(post.likes))]))
                    ,A2($Html$Tags.a,
-                   _L.fromArray([$Html$Attributes.$class("postbutton")]),
+                   _L.fromArray([$Html$Attributes.$class("postbutton")
+                                ,A2($Html$Events.onclick,
+                                actions.handle,
+                                $Basics.always($Update.Repost(post)))]),
                    _L.fromArray([$Html.text("На стену!")]))
                    ,A2($Html$Tags.a,
                    _L.fromArray([$Html$Attributes.$class("postbutton")]),
@@ -2148,12 +2207,12 @@ Elm.Nicepost.make = function (_elm) {
                    photo.photo_604))))]),
       _L.fromArray([]));
    });
-   var last2_3 = function (_v14) {
+   var last2_3 = function (_v19) {
       return function () {
-         switch (_v14.ctor)
+         switch (_v19.ctor)
          {case "::":
-            switch (_v14._1.ctor)
-              {case "::": return _v14._1._1;}
+            switch (_v19._1.ctor)
+              {case "::": return _v19._1._1;}
               break;}
          _E.Case($moduleName,
          "on line 156, column 25 to 26");
@@ -2181,8 +2240,8 @@ Elm.Nicepost.make = function (_elm) {
          post);
          var photos = post.photos;
          return function () {
-            var _v20 = $List.length(photos);
-            switch (_v20)
+            var _v25 = $List.length(photos);
+            switch (_v25)
             {case 1: return A2($List.map,
                  getImg_290,
                  photos);
@@ -2218,12 +2277,12 @@ Elm.Nicepost.make = function (_elm) {
       0) ? _L.fromArray([]) : function () {
          var $ = _U.cmp($String.length(post.text),
          240) > 0 ? function () {
-            var _v21 = A2($List.filter,
+            var _v26 = A2($List.filter,
             function (id) {
                return _U.eq(id,post.id);
             },
             openPosts);
-            switch (_v21.ctor)
+            switch (_v26.ctor)
             {case "[]":
                return {ctor: "_Tuple2"
                       ,_0: _L.append(A2($String.left,
@@ -2251,8 +2310,8 @@ Elm.Nicepost.make = function (_elm) {
    post) {
       return function () {
          var imgs = function () {
-            var _v22 = post.photos;
-            switch (_v22.ctor)
+            var _v27 = post.photos;
+            switch (_v27.ctor)
             {case "::":
                return getImgs(post);}
             return _L.fromArray([]);
@@ -2290,11 +2349,11 @@ Elm.Nicepost.make = function (_elm) {
       },
       imgSrc);
    });
-   var getPostWindow = F3(function (_v25,
+   var getPostWindow = F3(function (_v30,
    post,
    imgSrc) {
       return function () {
-         switch (_v25.ctor)
+         switch (_v30.ctor)
          {case "_Tuple2":
             return function () {
                  var imgStyle = _U.cmp($List.length(post.photos),
@@ -2316,7 +2375,7 @@ Elm.Nicepost.make = function (_elm) {
                  _L.fromArray([$Html$Attributes.$class("win_container")
                               ,$Html.style(_L.fromArray([A2($Html.prop,
                               "top",
-                              _L.append($String.show(_v25._1),
+                              _L.append($String.show(_v30._1),
                               "px"))]))]),
                  _L.fromArray([A2($Html$Tags.div,
                  _L.fromArray([$Html$Attributes.$class("win")]),
@@ -2373,19 +2432,19 @@ Elm.Nicepost.make = function (_elm) {
          }();
       }();
    });
-   var display = function (_v30) {
+   var display = function (_v35) {
       return function () {
          return function () {
             var divWin = function () {
-               var _v32 = _v30.postWindow;
-               switch (_v32.ctor)
+               var _v37 = _v35.postWindow;
+               switch (_v37.ctor)
                {case "None":
                   return _L.fromArray([]);
                   case "Window":
                   return _L.fromArray([A3(getPostWindow,
-                                      _v30.winSize,
-                                      _v32._0,
-                                      _v32._1)
+                                      _v35.winSize,
+                                      _v37._0,
+                                      _v37._1)
                                       ,getBlackBackground]);}
                _E.Case($moduleName,
                "between lines 39 and 42");
@@ -2399,12 +2458,12 @@ Elm.Nicepost.make = function (_elm) {
                                    toggleList)
                                    ,A3($Html$Optimize$RefEq.lazy2,
                                    groupsDiv,
-                                   _v30.groups,
-                                   _v30.currentGroup)
+                                   _v35.groups,
+                                   _v35.currentGroup)
                                    ,A3($Html$Optimize$RefEq.lazy2,
                                    postColumns,
-                                   _v30.posts,
-                                   _v30.openPosts)]),
+                                   _v35.posts,
+                                   _v35.openPosts)]),
             divWin)));
          }();
       }();
@@ -2441,7 +2500,8 @@ Elm.Nicepost.make = function (_elm) {
                           ,actions: actions
                           ,newGroups: newGroups
                           ,newPosts: newPosts
-                          ,newResize: newResize};
+                          ,newResize: newResize
+                          ,emptyPost: emptyPost};
    return _elm.Nicepost.values;
 };Elm.View = Elm.View || {};
 Elm.View.make = function (_elm) {
@@ -3525,12 +3585,12 @@ Elm.Update.make = function (_elm) {
               state);
             case "ClickText":
             return function () {
-                 var _v10 = A2($List.filter,
+                 var _v11 = A2($List.filter,
                  function (id) {
                     return _U.eq(id,action._0);
                  },
                  state.openPosts);
-                 switch (_v10.ctor)
+                 switch (_v11.ctor)
                  {case "[]":
                     return _U.replace([["openPosts"
                                        ,A2($List._op["::"],
@@ -3547,14 +3607,14 @@ Elm.Update.make = function (_elm) {
               }();
             case "GetPosts":
             return function () {
-                 var _v11 = state.posts;
-                 switch (_v11.ctor)
+                 var _v12 = state.posts;
+                 switch (_v12.ctor)
                  {case "[]":
                     return _U.replace([["posts"
                                        ,action._0]],
                       state);}
                  return _U.replace([["posts"
-                                    ,_L.append(_v11,action._0)]],
+                                    ,_L.append(_v12,action._0)]],
                  state);
               }();
             case "NewGroups":
@@ -3579,6 +3639,7 @@ Elm.Update.make = function (_elm) {
             return _U.replace([["postWindow"
                                ,action._0]],
               state);
+            case "Repost": return state;
             case "Resize":
             switch (action._0.ctor)
               {case "_Tuple2":
@@ -3589,9 +3650,13 @@ Elm.Update.make = function (_elm) {
                    state);}
               break;}
          _E.Case($moduleName,
-         "between lines 21 and 49");
+         "between lines 21 and 52");
       }();
    });
+   var Repost = function (a) {
+      return {ctor: "Repost"
+             ,_0: a};
+   };
    var Resize = function (a) {
       return {ctor: "Resize"
              ,_0: a};
@@ -3630,6 +3695,7 @@ Elm.Update.make = function (_elm) {
                         ,OpenImage: OpenImage
                         ,NewGroups: NewGroups
                         ,Resize: Resize
+                        ,Repost: Repost
                         ,update: update};
    return _elm.Update.values;
 };Elm.Model = Elm.Model || {};
@@ -3667,22 +3733,31 @@ Elm.Model.make = function (_elm) {
              ,_0: a
              ,_1: b};
    });
-   var Audio = F2(function (a,b) {
+   var Audio = F4(function (a,
+   b,
+   c,
+   d) {
       return {_: {}
-             ,artist: b
-             ,title: a};
+             ,artist: d
+             ,id: a
+             ,owner_id: b
+             ,title: c};
    });
-   var Photo = F5(function (a,
+   var Photo = F7(function (a,
    b,
    c,
    d,
-   e) {
+   e,
+   f,
+   g) {
       return {_: {}
-             ,height: e
-             ,photo_130: b
-             ,photo_604: c
-             ,photo_75: a
-             ,width: d};
+             ,height: g
+             ,id: a
+             ,owner_id: b
+             ,photo_130: d
+             ,photo_604: e
+             ,photo_75: c
+             ,width: f};
    });
    var Post = F6(function (a,
    b,
