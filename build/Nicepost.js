@@ -1881,23 +1881,13 @@ Elm.Nicepost.make = function (_elm) {
    $Html$Optimize$RefEq = Elm.Html.Optimize.RefEq.make(_elm),
    $Html$Tags = Elm.Html.Tags.make(_elm),
    $List = Elm.List.make(_elm),
+   $Model = Elm.Model.make(_elm),
    $Native$Json = Elm.Native.Json.make(_elm),
    $Native$Ports = Elm.Native.Ports.make(_elm),
    $Signal = Elm.Signal.make(_elm),
-   $String = Elm.String.make(_elm);
-   var textBlockclick = $Graphics$Input.input(0);
-   var toggleClick = $Graphics$Input.input("Юмор");
-   var htmlToggleClick = $Native$Ports.portOut("htmlToggleClick",
-   $Native$Ports.outgoingSignal(function (v) {
-      return v;
-   }),
-   toggleClick.signal);
-   var groupClick = $Graphics$Input.input(1);
-   var htmlGroupClick = $Native$Ports.portOut("htmlGroupClick",
-   $Native$Ports.outgoingSignal(function (v) {
-      return v;
-   }),
-   groupClick.signal);
+   $String = Elm.String.make(_elm),
+   $Update = Elm.Update.make(_elm),
+   $Utils = Elm.Utils.make(_elm);
    var getWallPosts = $Native$Ports.portIn("getWallPosts",
    $Native$Ports.incomingSignal(function (v) {
       return _U.isJSArray(v) ? {ctor: "_Tuple2"
@@ -1923,6 +1913,20 @@ Elm.Nicepost.make = function (_elm) {
                                                                                                                                                               })) : _E.raise("invalid input, expecting JSArray but got " + v.audios)} : _E.raise("invalid input, expecting JSObject [\"id\",\"text\",\"likes\",\"date\",\"photos\",\"audios\"] but got " + v);
                                })) : _E.raise("invalid input, expecting JSArray but got " + v[1])} : _E.raise("invalid input, expecting JSArray but got " + v);
    }));
+   var newPosts = function () {
+      var convert = function (_v0) {
+         return function () {
+            switch (_v0.ctor)
+            {case "_Tuple2":
+               return $Update.GetPosts(_v0._1);}
+            _E.Case($moduleName,
+            "on line 281, column 35 to 49");
+         }();
+      };
+      return A2($Signal._op["<~"],
+      convert,
+      getWallPosts);
+   }();
    var getGroups = $Native$Ports.portIn("getGroups",
    $Native$Ports.incomingSignal(function (v) {
       return _U.isJSArray(v) ? _L.fromArray(v.map(function (v) {
@@ -1936,15 +1940,87 @@ Elm.Nicepost.make = function (_elm) {
                                                                                                                                                                          ,photo_200: typeof v.photo_200 === "string" || typeof v.photo_200 === "object" && v.photo_200 instanceof String ? v.photo_200 : _E.raise("invalid input, expecting JSString but got " + v.photo_200)} : _E.raise("invalid input, expecting JSObject [\"id\",\"name\",\"screen_name\",\"is_closed\",\"photo_50\",\"photo_100\",\"photo_200\"] but got " + v);
       })) : _E.raise("invalid input, expecting JSArray but got " + v);
    }));
+   var newGroups = A2($Signal._op["<~"],
+   $Update.NewGroups,
+   getGroups);
+   var actions = $Graphics$Input.input($Update.Noop);
+   var htmlGroupClick = $Native$Ports.portOut("htmlGroupClick",
+   $Native$Ports.outgoingSignal(function (v) {
+      return v;
+   }),
+   function () {
+      var select = function (_v4) {
+         return function () {
+            switch (_v4.ctor)
+            {case "ChangeGroup":
+               return _v4._0;}
+            _E.Case($moduleName,
+            "on line 293, column 40 to 47");
+         }();
+      };
+      var pridicate = function (act) {
+         return function () {
+            switch (act.ctor)
+            {case "ChangeGroup":
+               return true;}
+            return false;
+         }();
+      };
+      return A2($Signal._op["<~"],
+      select,
+      A3($Signal.keepIf,
+      pridicate,
+      $Update.ChangeGroup(0),
+      actions.signal));
+   }());
+   var htmlToggleClick = $Native$Ports.portOut("htmlToggleClick",
+   $Native$Ports.outgoingSignal(function (v) {
+      return v;
+   }),
+   function () {
+      var select = function (_v9) {
+         return function () {
+            switch (_v9.ctor)
+            {case "ChangeToggle":
+               return _v9._0;}
+            _E.Case($moduleName,
+            "on line 302, column 38 to 42");
+         }();
+      };
+      var predicate = function (act) {
+         return function () {
+            switch (act.ctor)
+            {case "ChangeToggle":
+               return true;}
+            return false;
+         }();
+      };
+      return A2($Signal._op["<~"],
+      select,
+      A3($Signal.keepIf,
+      predicate,
+      $Update.ChangeToggle("Юмор"),
+      actions.signal));
+   }());
+   var mainSignal = $Signal.merges(_L.fromArray([actions.signal
+                                                ,newGroups
+                                                ,newPosts]));
+   var defaultState = {_: {}
+                      ,currentGroup: 0
+                      ,currentToggle: "Юмор"
+                      ,groups: _L.fromArray([])
+                      ,openPosts: _L.fromArray([])
+                      ,postWindow: $Model.None
+                      ,posts: _L.fromArray([])};
+   var currentState = A3($Signal.foldp,
+   $Update.update,
+   defaultState,
+   mainSignal);
    var getToggle = function (name) {
       return A2($Html$Tags.div,
       _L.fromArray([A2($Html$Events.onclick,
-      toggleClick.handle,
-      function (_v0) {
-         return function () {
-            return name;
-         }();
-      })]),
+      actions.handle,
+      $Basics.always($Update.ChangeToggle(name)))]),
       _L.fromArray([A2($Html$Tags.input,
                    _L.fromArray([$Html$Attributes.type$("radio")
                                 ,$Html$Attributes.name("group1")]),
@@ -1988,12 +2064,8 @@ Elm.Nicepost.make = function (_elm) {
                       _L.append(" | ",
                       group.screen_name)))
                       ,A2($Html$Events.onclick,
-                      groupClick.handle,
-                      function (_v2) {
-                         return function () {
-                            return group.id;
-                         }();
-                      })]),
+                      actions.handle,
+                      $Basics.always($Update.ChangeGroup(group.id)))]),
          _L.fromArray([]));
       }();
    });
@@ -2048,339 +2120,6 @@ Elm.Nicepost.make = function (_elm) {
       getAudio,
       post.audios);
    };
-   var last2_3 = function (_v4) {
-      return function () {
-         switch (_v4.ctor)
-         {case "::": switch (_v4._1.ctor)
-              {case "::": return _v4._1._1;}
-              break;}
-         _E.Case($moduleName,
-         "on line 226, column 25 to 26");
-      }();
-   };
-   var getBlackBackground = A2($Html$Tags.div,
-   _L.fromArray([$Html$Attributes.$class("win_black")]),
-   _L.fromArray([]));
-   var getNext = F4(function (all,
-   arr,
-   f,
-   elem) {
-      return function () {
-         switch (arr.ctor)
-         {case "::":
-            return _U.eq(f(arr._0),
-              elem) ? f($List.head(_L.append(arr._1,
-              all))) : A4(getNext,
-              all,
-              arr._1,
-              f,
-              elem);}
-         _E.Case($moduleName,
-         "between lines 109 and 114");
-      }();
-   });
-   var getNextImg = F2(function (post,
-   imgSrc) {
-      return A4(getNext,
-      post.photos,
-      post.photos,
-      function (_) {
-         return _.photo_604;
-      },
-      imgSrc);
-   });
-   var divp = F5(function (posts1,
-   posts2,
-   posts3,
-   posts,
-   acc) {
-      return function () {
-         switch (posts.ctor)
-         {case "::": return function () {
-                 var $ = A5(divp,
-                 posts1,
-                 posts2,
-                 posts3,
-                 posts._1,
-                 acc + 1),
-                 p1 = $._0,
-                 p2 = $._1,
-                 p3 = $._2;
-                 return function () {
-                    var _v16 = A2($Basics._op["%"],
-                    acc,
-                    3);
-                    switch (_v16)
-                    {case 0: return {ctor: "_Tuple3"
-                                    ,_0: A2($List._op["::"],
-                                    posts._0,
-                                    p1)
-                                    ,_1: p2
-                                    ,_2: p3};
-                       case 1: return {ctor: "_Tuple3"
-                                      ,_0: p1
-                                      ,_1: A2($List._op["::"],
-                                      posts._0,
-                                      p2)
-                                      ,_2: p3};
-                       case 2: return {ctor: "_Tuple3"
-                                      ,_0: p1
-                                      ,_1: p2
-                                      ,_2: A2($List._op["::"],
-                                      posts._0,
-                                      p3)};}
-                    _E.Case($moduleName,
-                    "between lines 98 and 101");
-                 }();
-              }();
-            case "[]":
-            return {ctor: "_Tuple3"
-                   ,_0: posts1
-                   ,_1: posts2
-                   ,_2: posts3};}
-         _E.Case($moduleName,
-         "between lines 94 and 101");
-      }();
-   });
-   var dividePosts = function (posts) {
-      return A5(divp,
-      _L.fromArray([]),
-      _L.fromArray([]),
-      _L.fromArray([]),
-      posts,
-      0);
-   };
-   var update = F2(function (action,
-   state) {
-      return function () {
-         switch (action.ctor)
-         {case "ChangeGroup":
-            return _U.replace([["posts"
-                               ,_L.fromArray([])]
-                              ,["openPosts",_L.fromArray([])]
-                              ,["currentGroup",action._0]],
-              state);
-            case "ChangeToggle":
-            return _U.replace([["openPosts"
-                               ,_L.fromArray([])]
-                              ,["posts",_L.fromArray([])]],
-              state);
-            case "ClickText":
-            return function () {
-                 var _v23 = A2($List.filter,
-                 function (id) {
-                    return _U.eq(id,action._0);
-                 },
-                 state.openPosts);
-                 switch (_v23.ctor)
-                 {case "[]":
-                    return _U.replace([["openPosts"
-                                       ,A2($List._op["::"],
-                                       action._0,
-                                       state.openPosts)]],
-                      state);}
-                 return _U.replace([["openPosts"
-                                    ,A2($List.filter,
-                                    function (id) {
-                                       return !_U.eq(id,action._0);
-                                    },
-                                    state.openPosts)]],
-                 state);
-              }();
-            case "GetPosts":
-            return function () {
-                 var _v24 = state.posts;
-                 switch (_v24.ctor)
-                 {case "[]":
-                    return _U.replace([["posts"
-                                       ,action._0]],
-                      state);}
-                 return _U.replace([["posts"
-                                    ,_L.append(_v24,action._0)]],
-                 state);
-              }();
-            case "NewGroups":
-            return function () {
-                 switch (action._0.ctor)
-                 {case "::":
-                    return _U.replace([["groups"
-                                       ,action._0]
-                                      ,["currentGroup"
-                                       ,action._0._0.id]
-                                      ,["openPosts"
-                                       ,_L.fromArray([])]],
-                      state);}
-                 return _U.replace([["groups"
-                                    ,action._0]
-                                   ,["openPosts",_L.fromArray([])]
-                                   ,["posts",_L.fromArray([])]],
-                 state);
-              }();
-            case "Noop": return state;
-            case "OpenImage":
-            return _U.replace([["postWindow"
-                               ,action._0]],
-              state);}
-         _E.Case($moduleName,
-         "between lines 58 and 87");
-      }();
-   });
-   var NewGroups = function (a) {
-      return {ctor: "NewGroups"
-             ,_0: a};
-   };
-   var newGroups = A2($Signal._op["<~"],
-   NewGroups,
-   getGroups);
-   var OpenImage = function (a) {
-      return {ctor: "OpenImage"
-             ,_0: a};
-   };
-   var ClickText = function (a) {
-      return {ctor: "ClickText"
-             ,_0: a};
-   };
-   var ChangeGroup = function (a) {
-      return {ctor: "ChangeGroup"
-             ,_0: a};
-   };
-   var groupClickAction = A2($Signal._op["<~"],
-   ChangeGroup,
-   htmlGroupClick);
-   var ChangeToggle = {ctor: "ChangeToggle"};
-   var toggleClickAction = A2($Signal._op["<~"],
-   function (_v28) {
-      return function () {
-         return ChangeToggle;
-      }();
-   },
-   htmlToggleClick);
-   var GetPosts = function (a) {
-      return {ctor: "GetPosts"
-             ,_0: a};
-   };
-   var getNewPosts = function () {
-      var convert = function (_v30) {
-         return function () {
-            switch (_v30.ctor)
-            {case "_Tuple2":
-               return GetPosts(_v30._1);}
-            _E.Case($moduleName,
-            "on line 361, column 35 to 49");
-         }();
-      };
-      return A2($Signal._op["<~"],
-      convert,
-      getWallPosts);
-   }();
-   var Noop = {ctor: "Noop"};
-   var actions = $Graphics$Input.input(Noop);
-   var getTextBlock = F2(function (post,
-   openPosts) {
-      return function () {
-         var $ = _U.cmp($String.length(post.text),
-         240) > 0 ? function () {
-            var _v34 = A2($List.filter,
-            function (id) {
-               return _U.eq(id,post.id);
-            },
-            openPosts);
-            switch (_v34.ctor)
-            {case "[]":
-               return {ctor: "_Tuple2"
-                      ,_0: _L.append(A2($String.left,
-                      140,
-                      post.text),
-                      "... (развернуть)")
-                      ,_1: "textBlockClicked"};}
-            return {ctor: "_Tuple2"
-                   ,_0: post.text
-                   ,_1: "textBlockClicked"};
-         }() : {ctor: "_Tuple2"
-               ,_0: post.text
-               ,_1: "textBlock"},
-         txt = $._0,
-         className = $._1;
-         return A2($Html$Tags.div,
-         _L.fromArray([$Html$Attributes.$class(className)
-                      ,A2($Html$Events.onclick,
-                      actions.handle,
-                      $Basics.always(ClickText(post.id)))]),
-         _L.fromArray([$Html.text(txt)]));
-      }();
-   });
-   var mainSignal = $Signal.merges(_L.fromArray([actions.signal
-                                                ,newGroups
-                                                ,getNewPosts
-                                                ,groupClickAction
-                                                ,toggleClickAction]));
-   var State = F6(function (a,
-   b,
-   c,
-   d,
-   e,
-   f) {
-      return {_: {}
-             ,currentGroup: b
-             ,currentToggle: a
-             ,groups: c
-             ,openPosts: e
-             ,postWindow: f
-             ,posts: d};
-   });
-   var None = {ctor: "None"};
-   var defaultState = {_: {}
-                      ,currentGroup: 0
-                      ,currentToggle: "Юмор"
-                      ,groups: _L.fromArray([])
-                      ,openPosts: _L.fromArray([])
-                      ,postWindow: None
-                      ,posts: _L.fromArray([])};
-   var currentState = A3($Signal.foldp,
-   update,
-   defaultState,
-   mainSignal);
-   var Window = F2(function (a,b) {
-      return {ctor: "Window"
-             ,_0: a
-             ,_1: b};
-   });
-   var getPostWindow = F2(function (post,
-   imgSrc) {
-      return function () {
-         var pointerProp = _U.cmp($List.length(post.photos),
-         1) > 0 ? _L.fromArray([$Html.style(_L.fromArray([A2($Html.prop,
-                                                         "cursor",
-                                                         "pointer")
-                                                         ,A2($Html.prop,
-                                                         "min-width",
-                                                         "200px")]))
-                               ,$Html$Attributes.alt("Loading")
-                               ,A2($Html$Events.onclick,
-                               actions.handle,
-                               $Basics.always(OpenImage(A2(Window,
-                               post,
-                               A2(getNextImg,
-                               post,
-                               imgSrc)))))]) : _L.fromArray([]);
-         return A2($Html$Tags.div,
-         _L.fromArray([$Html$Attributes.$class("win_container")]),
-         _L.fromArray([A2($Html$Tags.div,
-         _L.fromArray([$Html$Attributes.$class("win")]),
-         _L.fromArray([A2($Html$Tags.p,
-                      _L.fromArray([$Html$Attributes.$class("post_window_p")]),
-                      _L.fromArray([A2($Html$Tags.a,
-                      _L.fromArray([$Html$Attributes.$class("song")
-                                   ,A2($Html$Events.onclick,
-                                   actions.handle,
-                                   $Basics.always(OpenImage(None)))]),
-                      _L.fromArray([$Html.text("Закрыть")]))]))
-                      ,A2($Html$Tags.img,
-                      _L.append(_L.fromArray([$Html$Attributes.src(imgSrc)]),
-                      pointerProp),
-                      _L.fromArray([]))]))]));
-      }();
-   });
    var getImg = F4(function (w,
    getSrc,
    post,
@@ -2391,11 +2130,22 @@ Elm.Nicepost.make = function (_elm) {
                    ,$Html$Attributes.width($String.show(w))
                    ,A2($Html$Events.onclick,
                    actions.handle,
-                   $Basics.always(OpenImage(A2(Window,
+                   $Basics.always($Update.OpenImage(A2($Model.Window,
                    post,
                    photo.photo_604))))]),
       _L.fromArray([]));
    });
+   var last2_3 = function (_v14) {
+      return function () {
+         switch (_v14.ctor)
+         {case "::":
+            switch (_v14._1.ctor)
+              {case "::": return _v14._1._1;}
+              break;}
+         _E.Case($moduleName,
+         "on line 147, column 25 to 26");
+      }();
+   };
    var getImgs = function (post) {
       return function () {
          var getImg_95 = A3(getImg,
@@ -2418,8 +2168,8 @@ Elm.Nicepost.make = function (_elm) {
          post);
          var photos = post.photos;
          return function () {
-            var _v35 = $List.length(photos);
-            switch (_v35)
+            var _v20 = $List.length(photos);
+            switch (_v20)
             {case 1: return A2($List.map,
                  getImg_290,
                  photos);
@@ -2449,12 +2199,46 @@ Elm.Nicepost.make = function (_elm) {
          }();
       }();
    };
+   var getTextBlock = F2(function (post,
+   openPosts) {
+      return function () {
+         var $ = _U.cmp($String.length(post.text),
+         240) > 0 ? function () {
+            var _v21 = A2($List.filter,
+            function (id) {
+               return _U.eq(id,post.id);
+            },
+            openPosts);
+            switch (_v21.ctor)
+            {case "[]":
+               return {ctor: "_Tuple2"
+                      ,_0: _L.append(A2($String.left,
+                      140,
+                      post.text),
+                      "... (развернуть)")
+                      ,_1: "textBlockClicked"};}
+            return {ctor: "_Tuple2"
+                   ,_0: post.text
+                   ,_1: "textBlockClicked"};
+         }() : {ctor: "_Tuple2"
+               ,_0: post.text
+               ,_1: "textBlock"},
+         txt = $._0,
+         className = $._1;
+         return A2($Html$Tags.div,
+         _L.fromArray([$Html$Attributes.$class(className)
+                      ,A2($Html$Events.onclick,
+                      actions.handle,
+                      $Basics.always($Update.ClickText(post.id)))]),
+         _L.fromArray([$Html.text(txt)]));
+      }();
+   });
    var postHtml = F2(function (openPosts,
    post) {
       return function () {
          var imgs = function () {
-            var _v36 = post.photos;
-            switch (_v36.ctor)
+            var _v22 = post.photos;
+            switch (_v22.ctor)
             {case "::":
                return getImgs(post);}
             return _L.fromArray([]);
@@ -2479,6 +2263,63 @@ Elm.Nicepost.make = function (_elm) {
       postHtml(openPosts),
       posts));
    });
+   var getBlackBackground = A2($Html$Tags.div,
+   _L.fromArray([$Html$Attributes.$class("win_black")]),
+   _L.fromArray([]));
+   var getNextImg = F2(function (post,
+   imgSrc) {
+      return A4($Utils.getNext,
+      post.photos,
+      post.photos,
+      function (_) {
+         return _.photo_604;
+      },
+      imgSrc);
+   });
+   var getPostWindow = F2(function (post,
+   imgSrc) {
+      return function () {
+         var pointerProp = _U.cmp($List.length(post.photos),
+         1) > 0 ? _L.fromArray([$Html.style(_L.fromArray([A2($Html.prop,
+                                                         "cursor",
+                                                         "pointer")
+                                                         ,A2($Html.prop,
+                                                         "min-width",
+                                                         "200px")]))
+                               ,$Html$Attributes.alt("Loading")
+                               ,A2($Html$Events.onclick,
+                               actions.handle,
+                               $Basics.always($Update.OpenImage(A2($Model.Window,
+                               post,
+                               A2(getNextImg,
+                               post,
+                               imgSrc)))))]) : _L.fromArray([]);
+         return A2($Html$Tags.div,
+         _L.fromArray([$Html$Attributes.$class("win_container")]),
+         _L.fromArray([A2($Html$Tags.div,
+         _L.fromArray([$Html$Attributes.$class("win")]),
+         _L.fromArray([A2($Html$Tags.p,
+                      _L.fromArray([$Html$Attributes.$class("post_window_p")]),
+                      _L.fromArray([A2($Html$Tags.a,
+                      _L.fromArray([$Html$Attributes.$class("song")
+                                   ,A2($Html$Events.onclick,
+                                   actions.handle,
+                                   $Basics.always($Update.OpenImage($Model.None)))]),
+                      _L.fromArray([$Html.text("Закрыть")]))]))
+                      ,A2($Html$Tags.img,
+                      _L.append(_L.fromArray([$Html$Attributes.src(imgSrc)]),
+                      pointerProp),
+                      _L.fromArray([]))]))]));
+      }();
+   });
+   var dividePosts = function (posts) {
+      return A5($Utils.divideList,
+      _L.fromArray([]),
+      _L.fromArray([]),
+      _L.fromArray([]),
+      posts,
+      0);
+   };
    var postColumns = F2(function (posts,
    openPosts) {
       return function () {
@@ -2507,21 +2348,21 @@ Elm.Nicepost.make = function (_elm) {
          }();
       }();
    });
-   var display = function (_v40) {
+   var display = function (_v26) {
       return function () {
          return function () {
             var divWin = function () {
-               var _v42 = _v40.postWindow;
-               switch (_v42.ctor)
+               var _v28 = _v26.postWindow;
+               switch (_v28.ctor)
                {case "None":
                   return _L.fromArray([]);
                   case "Window":
                   return _L.fromArray([A2(getPostWindow,
-                                      _v42._0,
-                                      _v42._1)
+                                      _v28._0,
+                                      _v28._1)
                                       ,getBlackBackground]);}
                _E.Case($moduleName,
-               "between lines 118 and 121");
+               "between lines 39 and 42");
             }();
             return A2($Html.toElement,
             1000,
@@ -2532,12 +2373,12 @@ Elm.Nicepost.make = function (_elm) {
                                    toggleList)
                                    ,A3($Html$Optimize$RefEq.lazy2,
                                    groupsDiv,
-                                   _v40.groups,
-                                   _v40.currentGroup)
+                                   _v26.groups,
+                                   _v26.currentGroup)
                                    ,A3($Html$Optimize$RefEq.lazy2,
                                    postColumns,
-                                   _v40.posts,
-                                   _v40.openPosts)]),
+                                   _v26.posts,
+                                   _v26.openPosts)]),
             divWin)));
          }();
       }();
@@ -2545,73 +2386,9 @@ Elm.Nicepost.make = function (_elm) {
    var main = A2($Signal._op["<~"],
    display,
    currentState);
-   var Audio = F2(function (a,b) {
-      return {_: {}
-             ,artist: b
-             ,title: a};
-   });
-   var Photo = F5(function (a,
-   b,
-   c,
-   d,
-   e) {
-      return {_: {}
-             ,height: e
-             ,photo_130: b
-             ,photo_604: c
-             ,photo_75: a
-             ,width: d};
-   });
-   var Post = F6(function (a,
-   b,
-   c,
-   d,
-   e,
-   f) {
-      return {_: {}
-             ,audios: f
-             ,date: d
-             ,id: a
-             ,likes: c
-             ,photos: e
-             ,text: b};
-   });
-   var Group = F7(function (a,
-   b,
-   c,
-   d,
-   e,
-   f,
-   g) {
-      return {_: {}
-             ,id: a
-             ,is_closed: d
-             ,name: b
-             ,photo_100: f
-             ,photo_200: g
-             ,photo_50: e
-             ,screen_name: c};
-   });
    _elm.Nicepost.values = {_op: _op
-                          ,Group: Group
-                          ,Post: Post
-                          ,Photo: Photo
-                          ,Audio: Audio
-                          ,Window: Window
-                          ,None: None
-                          ,State: State
-                          ,Noop: Noop
-                          ,GetPosts: GetPosts
-                          ,ChangeToggle: ChangeToggle
-                          ,ChangeGroup: ChangeGroup
-                          ,ClickText: ClickText
-                          ,OpenImage: OpenImage
-                          ,NewGroups: NewGroups
-                          ,update: update
                           ,dividePosts: dividePosts
-                          ,divp: divp
                           ,getNextImg: getNextImg
-                          ,getNext: getNext
                           ,display: display
                           ,getBlackBackground: getBlackBackground
                           ,getPostWindow: getPostWindow
@@ -2637,13 +2414,25 @@ Elm.Nicepost.make = function (_elm) {
                           ,mainSignal: mainSignal
                           ,actions: actions
                           ,newGroups: newGroups
-                          ,getNewPosts: getNewPosts
-                          ,groupClick: groupClick
-                          ,toggleClick: toggleClick
-                          ,textBlockclick: textBlockclick
-                          ,groupClickAction: groupClickAction
-                          ,toggleClickAction: toggleClickAction};
+                          ,newPosts: newPosts};
    return _elm.Nicepost.values;
+};Elm.View = Elm.View || {};
+Elm.View.make = function (_elm) {
+   "use strict";
+   _elm.View = _elm.View || {};
+   if (_elm.View.values)
+   return _elm.View.values;
+   var _op = {},
+   _N = Elm.Native,
+   _U = _N.Utils.make(_elm),
+   _L = _N.List.make(_elm),
+   _A = _N.Array.make(_elm),
+   _E = _N.Error.make(_elm),
+   $moduleName = "View";
+   var hello = "Hello";
+   _elm.View.values = {_op: _op
+                      ,hello: hello};
+   return _elm.View.values;
 };Elm.Html = Elm.Html || {};
 Elm.Html.Tags = Elm.Html.Tags || {};
 Elm.Html.Tags.make = function (_elm) {
@@ -3676,4 +3465,309 @@ Elm.Html.make = function (_elm) {
                       ,KeyboardEvent: KeyboardEvent
                       ,getAnything: getAnything};
    return _elm.Html.values;
+};Elm.Update = Elm.Update || {};
+Elm.Update.make = function (_elm) {
+   "use strict";
+   _elm.Update = _elm.Update || {};
+   if (_elm.Update.values)
+   return _elm.Update.values;
+   var _op = {},
+   _N = Elm.Native,
+   _U = _N.Utils.make(_elm),
+   _L = _N.List.make(_elm),
+   _A = _N.Array.make(_elm),
+   _E = _N.Error.make(_elm),
+   $moduleName = "Update",
+   $Basics = Elm.Basics.make(_elm),
+   $List = Elm.List.make(_elm),
+   $Model = Elm.Model.make(_elm);
+   var update = F2(function (action,
+   state) {
+      return function () {
+         switch (action.ctor)
+         {case "ChangeGroup":
+            return _U.replace([["posts"
+                               ,_L.fromArray([])]
+                              ,["openPosts",_L.fromArray([])]
+                              ,["currentGroup",action._0]],
+              state);
+            case "ChangeToggle":
+            return _U.replace([["openPosts"
+                               ,_L.fromArray([])]
+                              ,["posts",_L.fromArray([])]],
+              state);
+            case "ClickText":
+            return function () {
+                 var _v7 = A2($List.filter,
+                 function (id) {
+                    return _U.eq(id,action._0);
+                 },
+                 state.openPosts);
+                 switch (_v7.ctor)
+                 {case "[]":
+                    return _U.replace([["openPosts"
+                                       ,A2($List._op["::"],
+                                       action._0,
+                                       state.openPosts)]],
+                      state);}
+                 return _U.replace([["openPosts"
+                                    ,A2($List.filter,
+                                    function (id) {
+                                       return !_U.eq(id,action._0);
+                                    },
+                                    state.openPosts)]],
+                 state);
+              }();
+            case "GetPosts":
+            return function () {
+                 var _v8 = state.posts;
+                 switch (_v8.ctor)
+                 {case "[]":
+                    return _U.replace([["posts"
+                                       ,action._0]],
+                      state);}
+                 return _U.replace([["posts"
+                                    ,_L.append(_v8,action._0)]],
+                 state);
+              }();
+            case "NewGroups":
+            return function () {
+                 switch (action._0.ctor)
+                 {case "::":
+                    return _U.replace([["groups"
+                                       ,action._0]
+                                      ,["currentGroup"
+                                       ,action._0._0.id]
+                                      ,["openPosts"
+                                       ,_L.fromArray([])]],
+                      state);}
+                 return _U.replace([["groups"
+                                    ,action._0]
+                                   ,["openPosts",_L.fromArray([])]
+                                   ,["posts",_L.fromArray([])]],
+                 state);
+              }();
+            case "Noop": return state;
+            case "OpenImage":
+            return _U.replace([["postWindow"
+                               ,action._0]],
+              state);}
+         _E.Case($moduleName,
+         "between lines 20 and 45");
+      }();
+   });
+   var NewGroups = function (a) {
+      return {ctor: "NewGroups"
+             ,_0: a};
+   };
+   var OpenImage = function (a) {
+      return {ctor: "OpenImage"
+             ,_0: a};
+   };
+   var ClickText = function (a) {
+      return {ctor: "ClickText"
+             ,_0: a};
+   };
+   var ChangeGroup = function (a) {
+      return {ctor: "ChangeGroup"
+             ,_0: a};
+   };
+   var ChangeToggle = function (a) {
+      return {ctor: "ChangeToggle"
+             ,_0: a};
+   };
+   var GetPosts = function (a) {
+      return {ctor: "GetPosts"
+             ,_0: a};
+   };
+   var Noop = {ctor: "Noop"};
+   _elm.Update.values = {_op: _op
+                        ,Noop: Noop
+                        ,GetPosts: GetPosts
+                        ,ChangeToggle: ChangeToggle
+                        ,ChangeGroup: ChangeGroup
+                        ,ClickText: ClickText
+                        ,OpenImage: OpenImage
+                        ,NewGroups: NewGroups
+                        ,update: update};
+   return _elm.Update.values;
+};Elm.Model = Elm.Model || {};
+Elm.Model.make = function (_elm) {
+   "use strict";
+   _elm.Model = _elm.Model || {};
+   if (_elm.Model.values)
+   return _elm.Model.values;
+   var _op = {},
+   _N = Elm.Native,
+   _U = _N.Utils.make(_elm),
+   _L = _N.List.make(_elm),
+   _A = _N.Array.make(_elm),
+   _E = _N.Error.make(_elm),
+   $moduleName = "Model";
+   var State = F6(function (a,
+   b,
+   c,
+   d,
+   e,
+   f) {
+      return {_: {}
+             ,currentGroup: b
+             ,currentToggle: a
+             ,groups: c
+             ,openPosts: e
+             ,postWindow: f
+             ,posts: d};
+   });
+   var None = {ctor: "None"};
+   var Window = F2(function (a,b) {
+      return {ctor: "Window"
+             ,_0: a
+             ,_1: b};
+   });
+   var Audio = F2(function (a,b) {
+      return {_: {}
+             ,artist: b
+             ,title: a};
+   });
+   var Photo = F5(function (a,
+   b,
+   c,
+   d,
+   e) {
+      return {_: {}
+             ,height: e
+             ,photo_130: b
+             ,photo_604: c
+             ,photo_75: a
+             ,width: d};
+   });
+   var Post = F6(function (a,
+   b,
+   c,
+   d,
+   e,
+   f) {
+      return {_: {}
+             ,audios: f
+             ,date: d
+             ,id: a
+             ,likes: c
+             ,photos: e
+             ,text: b};
+   });
+   var Group = F7(function (a,
+   b,
+   c,
+   d,
+   e,
+   f,
+   g) {
+      return {_: {}
+             ,id: a
+             ,is_closed: d
+             ,name: b
+             ,photo_100: f
+             ,photo_200: g
+             ,photo_50: e
+             ,screen_name: c};
+   });
+   _elm.Model.values = {_op: _op
+                       ,Group: Group
+                       ,Post: Post
+                       ,Photo: Photo
+                       ,Audio: Audio
+                       ,Window: Window
+                       ,None: None
+                       ,State: State};
+   return _elm.Model.values;
+};Elm.Utils = Elm.Utils || {};
+Elm.Utils.make = function (_elm) {
+   "use strict";
+   _elm.Utils = _elm.Utils || {};
+   if (_elm.Utils.values)
+   return _elm.Utils.values;
+   var _op = {},
+   _N = Elm.Native,
+   _U = _N.Utils.make(_elm),
+   _L = _N.List.make(_elm),
+   _A = _N.Array.make(_elm),
+   _E = _N.Error.make(_elm),
+   $moduleName = "Utils",
+   $Basics = Elm.Basics.make(_elm),
+   $List = Elm.List.make(_elm);
+   var getNext = F4(function (all,
+   arr,
+   f,
+   elem) {
+      return function () {
+         switch (arr.ctor)
+         {case "::":
+            return _U.eq(f(arr._0),
+              elem) ? f($List.head(_L.append(arr._1,
+              all))) : A4(getNext,
+              all,
+              arr._1,
+              f,
+              elem);}
+         _E.Case($moduleName,
+         "between lines 19 and 22");
+      }();
+   });
+   var divideList = F5(function (posts1,
+   posts2,
+   posts3,
+   posts,
+   acc) {
+      return function () {
+         switch (posts.ctor)
+         {case "::": return function () {
+                 var $ = A5(divideList,
+                 posts1,
+                 posts2,
+                 posts3,
+                 posts._1,
+                 acc + 1),
+                 p1 = $._0,
+                 p2 = $._1,
+                 p3 = $._2;
+                 return function () {
+                    var _v6 = A2($Basics._op["%"],
+                    acc,
+                    3);
+                    switch (_v6)
+                    {case 0: return {ctor: "_Tuple3"
+                                    ,_0: A2($List._op["::"],
+                                    posts._0,
+                                    p1)
+                                    ,_1: p2
+                                    ,_2: p3};
+                       case 1: return {ctor: "_Tuple3"
+                                      ,_0: p1
+                                      ,_1: A2($List._op["::"],
+                                      posts._0,
+                                      p2)
+                                      ,_2: p3};
+                       case 2: return {ctor: "_Tuple3"
+                                      ,_0: p1
+                                      ,_1: p2
+                                      ,_2: A2($List._op["::"],
+                                      posts._0,
+                                      p3)};}
+                    _E.Case($moduleName,
+                    "between lines 10 and 13");
+                 }();
+              }();
+            case "[]":
+            return {ctor: "_Tuple3"
+                   ,_0: posts1
+                   ,_1: posts2
+                   ,_2: posts3};}
+         _E.Case($moduleName,
+         "between lines 6 and 13");
+      }();
+   });
+   _elm.Utils.values = {_op: _op
+                       ,divideList: divideList
+                       ,getNext: getNext};
+   return _elm.Utils.values;
 };
