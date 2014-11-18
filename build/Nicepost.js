@@ -1940,7 +1940,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "_Tuple2":
                return $Update.GetPosts(_v0._1);}
             _E.Case($moduleName,
-            "on line 293, column 35 to 49");
+            "on line 298, column 35 to 49");
          }();
       };
       return A2($Signal._op["<~"],
@@ -1975,7 +1975,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "ChangeGroup":
                return _v4._0;}
             _E.Case($moduleName,
-            "on line 308, column 40 to 47");
+            "on line 313, column 40 to 47");
          }();
       };
       var pridicate = function (act) {
@@ -2004,7 +2004,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "ChangeToggle":
                return _v9._0;}
             _E.Case($moduleName,
-            "on line 317, column 38 to 42");
+            "on line 322, column 38 to 42");
          }();
       };
       var predicate = function (act) {
@@ -2050,7 +2050,7 @@ Elm.Nicepost.make = function (_elm) {
             switch (_v14.ctor)
             {case "Repost": return _v14._0;}
             _E.Case($moduleName,
-            "on line 326, column 32 to 36");
+            "on line 331, column 32 to 36");
          }();
       };
       var predicate = function (act) {
@@ -2215,7 +2215,7 @@ Elm.Nicepost.make = function (_elm) {
               {case "::": return _v19._1._1;}
               break;}
          _E.Case($moduleName,
-         "on line 156, column 25 to 26");
+         "on line 155, column 25 to 26");
       }();
    };
    var getImgs = function (post) {
@@ -2393,7 +2393,7 @@ Elm.Nicepost.make = function (_elm) {
                               _L.fromArray([]))]))]));
               }();}
          _E.Case($moduleName,
-         "between lines 56 and 78");
+         "between lines 56 and 77");
       }();
    });
    var dividePosts = function (posts) {
