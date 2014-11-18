@@ -2315,7 +2315,8 @@ Elm.Nicepost.make = function (_elm) {
                  _L.fromArray([$Html$Attributes.$class("win_container")
                               ,$Html.style(_L.fromArray([A2($Html.prop,
                               "top",
-                              $String.show(_v25._1))]))]),
+                              _L.append($String.show(_v25._1),
+                              "px"))]))]),
                  _L.fromArray([A2($Html$Tags.div,
                               _L.fromArray([$Html$Attributes.$class("win")]),
                               _L.fromArray([A2($Html$Tags.p,
