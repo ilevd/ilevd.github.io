@@ -1940,7 +1940,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "_Tuple2":
                return $Update.GetPosts(_v0._1);}
             _E.Case($moduleName,
-            "on line 298, column 35 to 49");
+            "on line 299, column 35 to 49");
          }();
       };
       return A2($Signal._op["<~"],
@@ -1975,7 +1975,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "ChangeGroup":
                return _v4._0;}
             _E.Case($moduleName,
-            "on line 313, column 40 to 47");
+            "on line 314, column 40 to 47");
          }();
       };
       var pridicate = function (act) {
@@ -2004,7 +2004,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "ChangeToggle":
                return _v9._0;}
             _E.Case($moduleName,
-            "on line 322, column 38 to 42");
+            "on line 323, column 38 to 42");
          }();
       };
       var predicate = function (act) {
@@ -2050,7 +2050,7 @@ Elm.Nicepost.make = function (_elm) {
             switch (_v14.ctor)
             {case "Repost": return _v14._0;}
             _E.Case($moduleName,
-            "on line 331, column 32 to 36");
+            "on line 332, column 32 to 36");
          }();
       };
       var predicate = function (act) {
@@ -2178,18 +2178,22 @@ Elm.Nicepost.make = function (_elm) {
                    _L.fromArray([$Html$Attributes.$class("postbutton")]),
                    _L.fromArray([$Html.text("В группу!")]))]));
    };
-   var getAudio = function (audio) {
+   var getAudio = F2(function (post,
+   audio) {
       return A2($Html$Tags.a,
-      _L.fromArray([$Html$Attributes.$class("song")]),
+      _L.fromArray([$Html$Attributes.$class("song")
+                   ,A2($Html$Events.onclick,
+                   actions.handle,
+                   $Basics.always($Update.Repost(post)))]),
       _L.fromArray([$Html.text(A2($String.left,
       40,
       _L.append(audio.artist,
       _L.append(" - ",
       audio.title))))]));
-   };
+   });
    var getAudios = function (post) {
       return A2($List.map,
-      getAudio,
+      getAudio(post),
       post.audios);
    };
    var getImg = F4(function (w,
