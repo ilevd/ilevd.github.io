@@ -59,13 +59,13 @@
 
 		function onVkWindowResized(width, height){
 			windowHeight = height;
-			vk.ports.resize.send(windowHeight, windowScrollTop);
+			vk.ports.resize.send([windowHeight, windowScrollTop]);
 		}
 
 		function onVkScroll(scrollTop, winHeight){
 			windowScrollTop = scrollTop;
 			windowHeight = winHeight;
-			vk.ports.resize.send(windowHeight, windowScrollTop);
+			vk.ports.resize.send([windowHeight, windowScrollTop]);
 
 			console.log("OnScroll: " + scrollTop + " " + winHeight);
 			var p1 = document.getElementById("post-column1");
