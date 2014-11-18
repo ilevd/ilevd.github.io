@@ -1929,7 +1929,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "_Tuple2":
                return $Update.GetPosts(_v0._1);}
             _E.Case($moduleName,
-            "on line 285, column 35 to 49");
+            "on line 292, column 35 to 49");
          }();
       };
       return A2($Signal._op["<~"],
@@ -1964,7 +1964,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "ChangeGroup":
                return _v4._0;}
             _E.Case($moduleName,
-            "on line 300, column 40 to 47");
+            "on line 307, column 40 to 47");
          }();
       };
       var pridicate = function (act) {
@@ -1993,7 +1993,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "ChangeToggle":
                return _v9._0;}
             _E.Case($moduleName,
-            "on line 309, column 38 to 42");
+            "on line 316, column 38 to 42");
          }();
       };
       var predicate = function (act) {
@@ -2156,7 +2156,7 @@ Elm.Nicepost.make = function (_elm) {
               {case "::": return _v14._1._1;}
               break;}
          _E.Case($moduleName,
-         "on line 149, column 25 to 26");
+         "on line 156, column 25 to 26");
       }();
    };
    var getImgs = function (post) {
@@ -2214,7 +2214,8 @@ Elm.Nicepost.make = function (_elm) {
    };
    var getTextBlock = F2(function (post,
    openPosts) {
-      return function () {
+      return _U.eq($String.length(post.text),
+      0) ? _L.fromArray([]) : function () {
          var $ = _U.cmp($String.length(post.text),
          240) > 0 ? function () {
             var _v21 = A2($List.filter,
@@ -2238,12 +2239,12 @@ Elm.Nicepost.make = function (_elm) {
                ,_1: "textBlock"},
          txt = $._0,
          className = $._1;
-         return A2($Html$Tags.div,
+         return _L.fromArray([A2($Html$Tags.div,
          _L.fromArray([$Html$Attributes.$class(className)
                       ,A2($Html$Events.onclick,
                       actions.handle,
                       $Basics.always($Update.ClickText(post.id)))]),
-         _L.fromArray([$Html.text(txt)]));
+         _L.fromArray([$Html.text(txt)]))]);
       }();
    });
    var postHtml = F2(function (openPosts,
@@ -2259,9 +2260,9 @@ Elm.Nicepost.make = function (_elm) {
          return A2($Html$Tags.div,
          _L.fromArray([$Html$Attributes.$class("main")]),
          _L.append(imgs,
-         _L.append(_L.fromArray([A2(getTextBlock,
+         _L.append(A2(getTextBlock,
          post,
-         openPosts)]),
+         openPosts),
          _L.append(getAudios(post),
          _L.fromArray([postFooter(post)])))));
       }();

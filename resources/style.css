@@ -2,6 +2,8 @@ body{
   font-size: 11px;
   font-family: tahoma; 
   background: white;
+ 
+
 }
 
 .columnpost{
@@ -12,7 +14,9 @@ body{
 
 .main{
   background-color: #FEFEFE;
-  border: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+  /*border-radius: 5px;*/
   width: 290px;
   padding-top: 10px;
   padding-left: 10px;
@@ -86,7 +90,9 @@ div.groups{
 
 img.group_checked{
    /*border: 1px solid  /* #2B587A; */
-   border: 1px solid #2B587A;
+   background: white;
+   border: 2px solid #A9BACB;
+   border-radius: 5px;
    padding: 4px;
    margin: 1px;
    width: 40px;
@@ -100,7 +106,7 @@ img.groupimg{
   -ms-filter: grayscale(100%) opacity(50%);
   -o-filter: grayscale(100%) opacity(50%);*/
 
-  border: 1px solid #FFFFFF;
+  border: 2px solid #FFFFFF;
   padding: 4px;
   margin: 1px;
   width: 40px;
@@ -118,7 +124,8 @@ img.groupimg:hover{
   -o-filter: grayscale(0%) opacity(100%);*/
  display: inline-block;
   vertical-align: middle;
-  border: 1px dotted #45688E;
+  border: 2px solid #e1e7ed;
+  border-radius: 5px;
   padding: 4px;
   margin: 1px;
   width: 40px;
