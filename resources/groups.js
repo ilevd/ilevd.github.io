@@ -292,8 +292,8 @@ var ALL_GROUPS = [Humor, Love, News, Images, Brain, Quotes,
 
 var GROUPS = [];
 var GROUPS_NAMES = ["Юмор","Любовь", "Новости", "Картинки", "Умное", "Цитаты",
-        "Музыка", "Игры", "Спорт", "Авто", "Бизнес",
-        "Мода", "Рецепты", "English", "Открытки", "Мои" ]
+        "Музыка", "Игры", "Спорт", "Авто", "Бизнес", "Мода",
+        "Рецепты", "English", "Открытки", "Мои" ]
 
 function getAllGroupsString(){
 	var arr = [];
@@ -302,6 +302,9 @@ function getAllGroupsString(){
 }
 
 function getGroupsByName(name){
+    if( name == "Мои") {
+        return My;
+    }
     var index = GROUPS_NAMES.indexOf(name, 0);
     return getGroups(ALL_GROUPS[index], GROUPS);
 }
