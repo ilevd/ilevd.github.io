@@ -164,8 +164,8 @@
 			currentGroup = "-" + id.toString()
 			currentGroupOffset = 0;
 			wallGet(currentGroup);
-			VK.callMethod("resizeWindow", 962, 1000);
-			appHeight = 1000;
+			VK.callMethod("resizeWindow", 962, 2000);
+			appHeight = 2000;
 		}
 
 		function onToggleClick(name){
@@ -178,7 +178,7 @@
 
 		function onRepostClick(post){
 			//alert(JSON.stringify(post));
-			var message = post.text;
+			var message = addLinkText(post.text);
 			var getPhoto = function(photo){ 
 				return "photo" + photo.owner_id + "_" + photo.id;
 			}
@@ -190,6 +190,20 @@
 			VK.api("wall.post", {v: "5.26", message: message, attachments: strAtts}, function(response){
 
 			})
+			function addLinkText(text) {
+				galka_smile =  "&#10004;";
+    			hand_smile =  "&#128077;";
+		        if (text.indexOf("NicePost") == -1) {
+		            if (text != "") {
+		                text += "\n\n";
+		            }
+		            text += "Всё лучшее тут: vk.com/NicePost";
+		            if (text.indexOf(galka_smile) == -1 && text.indexOf(hand_smile) == -1) {
+		                text += " " + galka_smile + hand_smile;
+		            }
+		        }
+		        return text;
+		    }
 			//alert(JSON.stringify(atts));
 		}
 
