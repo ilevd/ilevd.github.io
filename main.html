@@ -51,6 +51,7 @@
 
  			VK.api("execute", {code:code, v: "5.26"}, function(response){
  				console.log("Execute: " + JSON.stringify(response));
+ 				My = response.response.groups.items;
  			});
  		}
 
