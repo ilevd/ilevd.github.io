@@ -335,8 +335,8 @@ var Groups = {
 
     getGroups: function (arr, groupsData){
         var groups = [];
-        for (var i = 0; i < groupsData.length; i++) {
-            for (var j = 0; j < arr.length; j++) {
+        for (var i = 0, len1 = groupsData.length; i < len1; i++) {
+            for (var j = 0, len2 = arr.length; j < len2; j++) {
                 if (groupsData[i].screen_name == arr[j]) {
                     groups.push(groupsData[i]);
                 }
