@@ -40,6 +40,7 @@
 		var windowHeight = 1000;
 		var windowScrollTop = 0;
 
+		var lastGetTime = (new Date()).getTime();
 
 		var div = document.getElementById('elm-vk');
 		var vk = Elm.embed(Elm.Nicepost, div, {
@@ -104,8 +105,10 @@
 				var min = Math.min(p1.offsetHeight, p2.offsetHeight, p3.offsetHeight);
 				var max = Math.max(p1.offsetHeight, p2.offsetHeight, p3.offsetHeight);
 				//alert(document.body.scrollTop  + " " +  min)
-				if( (scrollTop + winHeight + 100 > min) && jsonpCount == 0){
+				var currentTime = (new Date()).getTime();
+				if( (scrollTop + winHeight + 100 > min) && currentTime > lastGetTime + 800  /*jsonpCount == 0*/){
 					//alert("need data! " + jsonpCount  );
+					lastGetTime = currentTime;
 					wallGet(currentGroup);
 				}
 				console.log("Body height: " + bdy.offsetHeight);
@@ -161,6 +164,7 @@
 			currentGroup = "-" + id.toString()
 			currentGroupOffset = 0;
 			wallGet(currentGroup);
+			//jsonpCount
 		}
 
 		function onToggleClick(name){
