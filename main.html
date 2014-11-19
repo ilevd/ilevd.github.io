@@ -106,7 +106,7 @@
 				var max = Math.max(p1.offsetHeight, p2.offsetHeight, p3.offsetHeight);
 				//alert(document.body.scrollTop  + " " +  min)
 				var currentTime = (new Date()).getTime();
-				if( (scrollTop + winHeight + 100 > min) && currentTime > lastGetTime + 800  /*jsonpCount == 0*/){
+				if( (scrollTop + winHeight + 1500 > min) && currentTime > lastGetTime + 800  /*jsonpCount == 0*/){
 					//alert("need data! " + jsonpCount  );
 					lastGetTime = currentTime;
 					wallGet(currentGroup);
