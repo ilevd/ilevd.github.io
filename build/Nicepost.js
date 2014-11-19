@@ -2454,7 +2454,7 @@ Elm.Nicepost.make = function (_elm) {
                "between lines 39 and 42");
             }();
             return A2($Html.toElement,
-            1000,
+            962,
             700)(A2($Html$Tags.div,
             _L.fromArray([]),
             _L.append(_L.fromArray([A2($Html$Optimize$RefEq.lazy,
