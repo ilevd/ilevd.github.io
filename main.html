@@ -44,7 +44,7 @@
 
 
  		function getVKInfo(){
- 			var code = 'return {admin_groups:API.groups.get({filter:"moder", extended:1}), friends:API.friends.get({  fields:"uid, first_name, last_name,city,photo_big,photo,sex,bdate,can_post"   }), appFriends:API.getAppFriends()    };';
+ 			var code = 'return {admin_groups: API.groups.get({filter:"moder", extended:1}), groups: API.groups.get({fields:"status", extended:1}), friends:API.friends.get({  fields:"uid, first_name, last_name,city,photo_big,photo,sex,bdate,can_post"   }), appFriends:API.getAppFriends()    };';
 
  			//JSONP("https://api.vk.com/method/execute?v=5.25&count=65&owner_id=" + owner_id +
 			//	"&offset=" + currentGroupOffset, onWallGet);	
