@@ -40,7 +40,19 @@
             console.log(data["viewer_id"])
             var api_result = JSON.parse(decodeURIComponent(  data["api_result"] ));  
  		}
- 		parseVkData();
+ 		//parseVkData();
+
+
+ 		function getVKInfo(){
+ 			var code = 'return {admin_groups:API.groups.get({filter:"moder", extended:1}), friends:API.friends.get({  fields:"uid, first_name, last_name,city,photo_big,photo,sex,bdate,can_post"   }), appFriends:API.getAppFriends()    };';
+
+ 			//JSONP("https://api.vk.com/method/execute?v=5.25&count=65&owner_id=" + owner_id +
+			//	"&offset=" + currentGroupOffset, onWallGet);	
+
+ 			VK.api("execute", {code:code, v: "5.26"}, function(response){
+ 				console.log("Execute: " + response);
+ 			});
+ 		}
 
 
 
@@ -73,7 +85,9 @@
 				VK.callMethod("scrollSubscribe", true)
 			}, function() {
 				console.log("VK init fail");
-		}, '5.26'); 
+		}, '5.26');
+
+		getVKInfo(); 
 
 		function onVkWindowResized(width, height){
 			windowHeight = height;
@@ -169,6 +183,7 @@
 
 
 		/** ------ actions -------**/
+
 		function onGroupClick(id){
 			currentGroup = "-" + id.toString()
 			currentGroupOffset = 0;
