@@ -169,7 +169,7 @@
 				vk.ports.getWallPosts.send([0, []]); 	
 			}
 			currentGroup = owner_id;
-			jsonpCount++;
+			//jsonpCount++;
 			//JSONP("https://api.vk.com/method/wall.get?v=5.25&count=65&owner_id=" + owner_id +
 			//	"&offset=" + currentGroupOffset, onWallGet);
 			VK.api("wall.get", {v:5.25, count: 65, owner_id: owner_id, offset: currentGroupOffset}, onWallGet);
@@ -181,7 +181,7 @@
 			vk.ports.getWallPosts.send([currentGroupOffset, sortPosts]); 
 			//console.log("WallGet posts.length: " + posts.length);
 			currentGroupOffset += json.response.items.length;
-			jsonpCount--;
+			//jsonpCount--;
 		}
 
 
