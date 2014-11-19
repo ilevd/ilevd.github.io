@@ -45,13 +45,9 @@
 
  		function getVKInfo(){
  			var code = 'return {admin_groups: API.groups.get({filter:"moder", extended:1}), groups: API.groups.get({fields:"can_post,status", extended:1}), friends:API.friends.get({  fields:"uid, first_name, last_name,city,photo_big,photo,sex,bdate,can_post"   }), appFriends:API.getAppFriends()    };';
-
- 			//JSONP("https://api.vk.com/method/execute?v=5.25&count=65&owner_id=" + owner_id +
-			//	"&offset=" + currentGroupOffset, onWallGet);	
-
  			VK.api("execute", {code:code, v: "5.26"}, function(response){
  				console.log("Execute: " + JSON.stringify(response));
- 				My = response.response.groups.items;
+ 				Groups.My = response.response.groups.items;
  			});
  		}
 
@@ -158,10 +154,10 @@
 			JSONP("https://api.vk.com/method/groups.getById?v=5.25&group_ids=" + groups, onGroupsGet );
 		}
 		function onGroupsGet(json){
-			GROUPS = json.response;
+			Groups.groupsData = json.response;
 			//alert(getGroupsByName("Юмор", GROUPS));
 			//vk.ports.getGroups.send(json.response);
-			vk.ports.getGroups.send(getGroupsByName("Юмор", GROUPS));
+			vk.ports.getGroups.send( Groups.getGroupsByName("Юмор", GROUPS) );
 		}
 
 		function wallGet(owner_id){
@@ -169,7 +165,7 @@
 				vk.ports.getWallPosts.send([0, []]); 	
 			}
 			currentGroup = owner_id;
-			//jsonpCount++;
+			jsonpCount++;
 			//JSONP("https://api.vk.com/method/wall.get?v=5.25&count=65&owner_id=" + owner_id +
 			//	"&offset=" + currentGroupOffset, onWallGet);
 			VK.api("wall.get", {v:5.25, count: 65, owner_id: owner_id, offset: currentGroupOffset}, onWallGet);
@@ -181,7 +177,7 @@
 			vk.ports.getWallPosts.send([currentGroupOffset, sortPosts]); 
 			//console.log("WallGet posts.length: " + posts.length);
 			currentGroupOffset += json.response.items.length;
-			//jsonpCount--;
+			jsonpCount--;
 		}
 
 
@@ -196,7 +192,7 @@
 		}
 
 		function onToggleClick(name){
-			var currentGroups = getGroupsByName(name, GROUPS);
+			var currentGroups = Groups.getGroupsByName(name);
 			vk.ports.getGroups.send(currentGroups);
 
 			if( currentGroups.length > 0){
@@ -228,7 +224,8 @@
 	
 
 
-		/**----- Parsing data -----------**/
+		/**----------------------------------------------------------------------
+		------------------------------------ Parsing data ---------------------**/
 
 		function parseJson(json){
 			var rawPosts = json.response.items;
