@@ -36,7 +36,7 @@
                 var keyValue = rawData[i].split('=');
                 data[ keyValue[0] ] = keyValue[1];
             }
-            console.log(data["api_result"]);
+            console.log(decodeURIComponent(  data["api_result"] ));
             console.log(data["viewer_id"])
             var api_result = JSON.parse(decodeURIComponent(  data["api_result"] ));  
  		}
