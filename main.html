@@ -164,16 +164,15 @@
 			currentGroup = "-" + id.toString()
 			currentGroupOffset = 0;
 			wallGet(currentGroup);
-			//jsonpCount
+			VK.callMethod("resizeWindow", 962, 1000);
+			appHeight = 1000;
 		}
 
 		function onToggleClick(name){
 			var currentGroups = Groups.getGroupsByName(name);
 			vk.ports.getGroups.send(currentGroups);
 			if( currentGroups.length > 0){
-				currentGroup = "-" + currentGroups[0].id.toString();
-				currentGroupOffset = 0;
-				wallGet(currentGroup);
+				onGroupClick(currentGroups[0].id);
 			}
 		}
 
