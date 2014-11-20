@@ -78,6 +78,8 @@ body{
   margin-right: 5px;
   font-size: 9.5px;
   cursor: pointer;
+  line-height: 18px;
+  vertical-align: middle;
 }
 .postbutton:hover{
   text-decoration: underline;
