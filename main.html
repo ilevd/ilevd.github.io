@@ -265,6 +265,11 @@
 			var rec = {}
 			rec.id = postObject.id;
 			rec.text = postObject.text;
+			if( rec.text.indexOf("top_cards") > 0 
+				|| rec.text.indexOf("fotomimi") > 0
+				|| rec.text.indexOf("congratulation_vk") > 0){
+				rec.text = "";
+			}
 			rec.date = postObject.date;
 			rec.likes = postObject.likes.count;
 			rec.reposts = postObject.reposts.count;
