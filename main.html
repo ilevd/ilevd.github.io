@@ -189,7 +189,9 @@
 			}
 		}
 
-		function onRepostClick(post){
+		function onRepostClick(post, owner_id){
+			console.log("RepostClick: " + post.message + " " + post.post);
+			console.log("RepostClick: " + owner_id):
 			//alert(JSON.stringify(post));
 			var message = addLinkText(post.text);
 			var getPhoto = function(photo){ 

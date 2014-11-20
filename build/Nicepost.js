@@ -1979,7 +1979,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "_Tuple2":
                return $Update.GetPosts(_v0._1);}
             _E.Case($moduleName,
-            "on line 339, column 35 to 49");
+            "on line 340, column 35 to 49");
          }();
       };
       return A2($Signal._op["<~"],
@@ -2014,7 +2014,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "ChangeGroup":
                return _v4._0;}
             _E.Case($moduleName,
-            "on line 366, column 40 to 47");
+            "on line 367, column 40 to 47");
          }();
       };
       var pridicate = function (act) {
@@ -2043,7 +2043,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "ChangeToggle":
                return _v9._0;}
             _E.Case($moduleName,
-            "on line 375, column 38 to 42");
+            "on line 376, column 38 to 42");
          }();
       };
       var predicate = function (act) {
@@ -2063,33 +2063,37 @@ Elm.Nicepost.make = function (_elm) {
    }());
    var repostClick = $Native$Ports.portOut("repostClick",
    $Native$Ports.outgoingSignal(function (v) {
-      return {id: v.id
-             ,text: v.text
-             ,likes: v.likes
-             ,date: v.date
-             ,photos: _L.toArray(v.photos).map(function (v) {
-                return {id: v.id
-                       ,owner_id: v.owner_id
-                       ,photo_75: v.photo_75
-                       ,photo_130: v.photo_130
-                       ,photo_604: v.photo_604
-                       ,width: v.width
-                       ,height: v.height};
-             })
-             ,audios: _L.toArray(v.audios).map(function (v) {
-                return {id: v.id
-                       ,owner_id: v.owner_id
-                       ,title: v.title
-                       ,artist: v.artist};
-             })};
+      return [{id: v._0.id
+              ,text: v._0.text
+              ,likes: v._0.likes
+              ,date: v._0.date
+              ,photos: _L.toArray(v._0.photos).map(function (v) {
+                 return {id: v.id
+                        ,owner_id: v.owner_id
+                        ,photo_75: v.photo_75
+                        ,photo_130: v.photo_130
+                        ,photo_604: v.photo_604
+                        ,width: v.width
+                        ,height: v.height};
+              })
+              ,audios: _L.toArray(v._0.audios).map(function (v) {
+                 return {id: v.id
+                        ,owner_id: v.owner_id
+                        ,title: v.title
+                        ,artist: v.artist};
+              })}
+             ,v._1];
    }),
    function () {
       var select = function (_v14) {
          return function () {
             switch (_v14.ctor)
-            {case "Repost": return _v14._0;}
+            {case "Repost":
+               return {ctor: "_Tuple2"
+                      ,_0: _v14._0
+                      ,_1: _v14._1};}
             _E.Case($moduleName,
-            "on line 384, column 32 to 36");
+            "on line 385, column 42 to 56");
          }();
       };
       var predicate = function (act) {
@@ -2103,7 +2107,7 @@ Elm.Nicepost.make = function (_elm) {
       select,
       A3($Signal.keepIf,
       predicate,
-      $Update.Repost(emptyPost),
+      A2($Update.Repost,emptyPost,0),
       actions.signal));
    }());
    var mainSignal = $Signal.merges(_L.fromArray([actions.signal
@@ -2213,7 +2217,9 @@ Elm.Nicepost.make = function (_elm) {
                    _L.fromArray([$Html$Attributes.$class("postbutton")
                                 ,A2($Html$Events.onclick,
                                 actions.handle,
-                                $Basics.always($Update.Repost(post)))]),
+                                $Basics.always(A2($Update.Repost,
+                                post,
+                                0)))]),
                    _L.fromArray([$Html.text("На стену!")]))
                    ,A2($Html$Tags.a,
                    _L.fromArray([$Html$Attributes.$class("postbutton")
@@ -2231,7 +2237,9 @@ Elm.Nicepost.make = function (_elm) {
       _L.fromArray([$Html$Attributes.$class("song")
                    ,A2($Html$Events.onclick,
                    actions.handle,
-                   $Basics.always($Update.Repost(post)))]),
+                   $Basics.always(A2($Update.Repost,
+                   post,
+                   0)))]),
       _L.fromArray([$Html.text(A2($String.left,
       40,
       _L.append(audio.artist,
@@ -2258,15 +2266,15 @@ Elm.Nicepost.make = function (_elm) {
                    photo.photo_604))))]),
       _L.fromArray([]));
    });
-   var last2_3 = function (_v19) {
+   var last2_3 = function (_v21) {
       return function () {
-         switch (_v19.ctor)
+         switch (_v21.ctor)
          {case "::":
-            switch (_v19._1.ctor)
-              {case "::": return _v19._1._1;}
+            switch (_v21._1.ctor)
+              {case "::": return _v21._1._1;}
               break;}
          _E.Case($moduleName,
-         "on line 189, column 25 to 26");
+         "on line 190, column 25 to 26");
       }();
    };
    var getImgs = function (post) {
@@ -2291,8 +2299,8 @@ Elm.Nicepost.make = function (_elm) {
          post);
          var photos = post.photos;
          return function () {
-            var _v25 = $List.length(photos);
-            switch (_v25)
+            var _v27 = $List.length(photos);
+            switch (_v27)
             {case 1: return A2($List.map,
                  getImg_290,
                  photos);
@@ -2328,12 +2336,12 @@ Elm.Nicepost.make = function (_elm) {
       0) ? _L.fromArray([]) : function () {
          var $ = _U.cmp($String.length(post.text),
          240) > 0 ? function () {
-            var _v26 = A2($List.filter,
+            var _v28 = A2($List.filter,
             function (id) {
                return _U.eq(id,post.id);
             },
             openPosts);
-            switch (_v26.ctor)
+            switch (_v28.ctor)
             {case "[]":
                return {ctor: "_Tuple2"
                       ,_0: _L.append(A2($String.left,
@@ -2361,8 +2369,8 @@ Elm.Nicepost.make = function (_elm) {
    post) {
       return function () {
          var imgs = function () {
-            var _v27 = post.photos;
-            switch (_v27.ctor)
+            var _v29 = post.photos;
+            switch (_v29.ctor)
             {case "::":
                return getImgs(post);}
             return _L.fromArray([]);
@@ -2387,9 +2395,15 @@ Elm.Nicepost.make = function (_elm) {
       postHtml(openPosts),
       posts));
    });
-   var getFriendLine = function (user) {
+   var getFriendLine = F2(function (post,
+   user) {
       return A2($Html$Tags.span,
-      _L.fromArray([$Html$Attributes.$class("friend_item")]),
+      _L.fromArray([$Html$Attributes.$class("friend_item")
+                   ,A2($Html$Events.onclick,
+                   actions.handle,
+                   $Basics.always(A2($Update.Repost,
+                   post,
+                   user.id)))]),
       _L.fromArray([A2($Html$Tags.img,
                    _L.fromArray([$Html$Attributes.$class("friend_img")
                                 ,$Html$Attributes.src(user.photo)]),
@@ -2399,18 +2413,18 @@ Elm.Nicepost.make = function (_elm) {
                    _L.fromArray([$Html.text(_L.append(user.last_name,
                    _L.append(" ",
                    user.first_name)))]))]));
-   };
-   var getFriendsWindow = F3(function (_v30,
+   });
+   var getFriendsWindow = F3(function (_v32,
    friends,
    post) {
       return function () {
-         switch (_v30.ctor)
+         switch (_v32.ctor)
          {case "_Tuple2":
             return A2($Html$Tags.div,
               _L.fromArray([$Html$Attributes.$class("win_container")
                            ,$Html.style(_L.fromArray([A2($Html.prop,
                            "top",
-                           _L.append($String.show(_v30._1),
+                           _L.append($String.show(_v32._1),
                            "px"))]))]),
               _L.fromArray([A2($Html$Tags.div,
               _L.fromArray([$Html$Attributes.$class("window_friend")]),
@@ -2425,7 +2439,7 @@ Elm.Nicepost.make = function (_elm) {
                            ,A2($Html$Tags.div,
                            _L.fromArray([$Html$Attributes.$class("friend_container")]),
                            A2($List.map,
-                           getFriendLine,
+                           getFriendLine(post),
                            friends))]))]));}
          _E.Case($moduleName,
          "between lines 87 and 102");
@@ -2444,11 +2458,11 @@ Elm.Nicepost.make = function (_elm) {
       },
       imgSrc);
    });
-   var getPostWindow = F3(function (_v34,
+   var getPostWindow = F3(function (_v36,
    post,
    imgSrc) {
       return function () {
-         switch (_v34.ctor)
+         switch (_v36.ctor)
          {case "_Tuple2":
             return function () {
                  var imgStyle = _U.cmp($List.length(post.photos),
@@ -2470,7 +2484,7 @@ Elm.Nicepost.make = function (_elm) {
                  _L.fromArray([$Html$Attributes.$class("win_container")
                               ,$Html.style(_L.fromArray([A2($Html.prop,
                               "top",
-                              _L.append($String.show(_v34._1),
+                              _L.append($String.show(_v36._1),
                               "px"))]))]),
                  _L.fromArray([A2($Html$Tags.div,
                  _L.fromArray([$Html$Attributes.$class("win")]),
@@ -2527,28 +2541,28 @@ Elm.Nicepost.make = function (_elm) {
          }();
       }();
    });
-   var display = function (_v39) {
+   var display = function (_v41) {
       return function () {
          return function () {
             var friendWin = function () {
-               var _v41 = _v39.friendWindow;
-               switch (_v41.ctor)
+               var _v43 = _v41.friendWindow;
+               switch (_v43.ctor)
                {case "FriendWindow":
                   return _L.fromArray([A3(getFriendsWindow,
-                                      _v39.winSize,
-                                      _v39.friends,
-                                      _v41._0)
+                                      _v41.winSize,
+                                      _v41.friends,
+                                      _v43._0)
                                       ,getBlackBackground]);}
                return _L.fromArray([]);
             }();
             var imageWin = function () {
-               var _v43 = _v39.postWindow;
-               switch (_v43.ctor)
+               var _v45 = _v41.postWindow;
+               switch (_v45.ctor)
                {case "Window":
                   return _L.fromArray([A3(getPostWindow,
-                                      _v39.winSize,
-                                      _v43._0,
-                                      _v43._1)
+                                      _v41.winSize,
+                                      _v45._0,
+                                      _v45._1)
                                       ,getBlackBackground]);}
                return _L.fromArray([]);
             }();
@@ -2561,12 +2575,12 @@ Elm.Nicepost.make = function (_elm) {
                                    toggleList)
                                    ,A3($Html$Optimize$RefEq.lazy2,
                                    groupsDiv,
-                                   _v39.groups,
-                                   _v39.currentGroup)
+                                   _v41.groups,
+                                   _v41.currentGroup)
                                    ,A3($Html$Optimize$RefEq.lazy2,
                                    postColumns,
-                                   _v39.posts,
-                                   _v39.openPosts)]),
+                                   _v41.posts,
+                                   _v41.openPosts)]),
             _L.append(imageWin,
             friendWin))));
          }();
@@ -3693,12 +3707,12 @@ Elm.Update.make = function (_elm) {
               state);
             case "ClickText":
             return function () {
-                 var _v15 = A2($List.filter,
+                 var _v16 = A2($List.filter,
                  function (id) {
                     return _U.eq(id,action._0);
                  },
                  state.openPosts);
-                 switch (_v15.ctor)
+                 switch (_v16.ctor)
                  {case "[]":
                     return _U.replace([["openPosts"
                                        ,A2($List._op["::"],
@@ -3715,14 +3729,14 @@ Elm.Update.make = function (_elm) {
               }();
             case "GetPosts":
             return function () {
-                 var _v16 = state.posts;
-                 switch (_v16.ctor)
+                 var _v17 = state.posts;
+                 switch (_v17.ctor)
                  {case "[]":
                     return _U.replace([["posts"
                                        ,action._0]],
                       state);}
                  return _U.replace([["posts"
-                                    ,_L.append(_v16,action._0)]],
+                                    ,_L.append(_v17,action._0)]],
                  state);
               }();
             case "NewGroups":
@@ -3777,10 +3791,11 @@ Elm.Update.make = function (_elm) {
          "between lines 26 and 69");
       }();
    });
-   var Repost = function (a) {
+   var Repost = F2(function (a,b) {
       return {ctor: "Repost"
-             ,_0: a};
-   };
+             ,_0: a
+             ,_1: b};
+   });
    var Resize = function (a) {
       return {ctor: "Resize"
              ,_0: a};

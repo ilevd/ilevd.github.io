@@ -293,7 +293,7 @@ a.song:active{
 
 .friend_container{
   display: inline-block;
-  max-height: 500px;
+  max-height: 505px;
   overflow-y: scroll;
 }
 
@@ -323,5 +323,5 @@ a.song:active{
   float: left;
   font-weight: bold;
   width: 150px;
-  /*overflow: hidden;*/
+  overflow: hidden;
 }
