@@ -287,7 +287,7 @@ a.song:active{
   display: inline-block;
   background: white;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  z-index: 1002;
+  z-index: 1003;
 }
 
 .friend_container{
