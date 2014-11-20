@@ -2602,7 +2602,7 @@ Elm.Nicepost.make = function (_elm) {
                {case "GroupWindow":
                   return _L.fromArray([A3(getGroupWindow,
                                       _v45.winSize,
-                                      _v45.groups,
+                                      _v45.postGroups,
                                       _v47._0)
                                       ,getBlackBackground]);}
                return _L.fromArray([]);
