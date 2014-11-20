@@ -2391,10 +2391,11 @@ Elm.Nicepost.make = function (_elm) {
       return A2($Html$Tags.span,
       _L.fromArray([$Html$Attributes.$class("friend_item")]),
       _L.fromArray([A2($Html$Tags.img,
-                   _L.fromArray([$Html$Attributes.src(user.photo)]),
+                   _L.fromArray([$Html$Attributes.$class("friend_img")
+                                ,$Html$Attributes.src(user.photo)]),
                    _L.fromArray([]))
                    ,A2($Html$Tags.a,
-                   _L.fromArray([$Html$Attributes.$class("song")]),
+                   _L.fromArray([$Html$Attributes.$class("friend_text")]),
                    _L.fromArray([$Html.text(_L.append(user.last_name,
                    _L.append(" ",
                    user.first_name)))]))]));
