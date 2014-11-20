@@ -1898,10 +1898,11 @@ Elm.Nicepost.make = function (_elm) {
    var getPostFriends = $Native$Ports.portIn("getPostFriends",
    $Native$Ports.incomingSignal(function (v) {
       return _U.isJSArray(v) ? _L.fromArray(v.map(function (v) {
-         return typeof v === "object" && "id" in v && "first_name" in v && "last_name" in v ? {_: {}
-                                                                                              ,id: typeof v.id === "number" ? v.id : _E.raise("invalid input, expecting JSNumber but got " + v.id)
-                                                                                              ,first_name: typeof v.first_name === "string" || typeof v.first_name === "object" && v.first_name instanceof String ? v.first_name : _E.raise("invalid input, expecting JSString but got " + v.first_name)
-                                                                                              ,last_name: typeof v.last_name === "string" || typeof v.last_name === "object" && v.last_name instanceof String ? v.last_name : _E.raise("invalid input, expecting JSString but got " + v.last_name)} : _E.raise("invalid input, expecting JSObject [\"id\",\"first_name\",\"last_name\"] but got " + v);
+         return typeof v === "object" && "id" in v && "first_name" in v && "last_name" in v && "photo" in v ? {_: {}
+                                                                                                              ,id: typeof v.id === "number" ? v.id : _E.raise("invalid input, expecting JSNumber but got " + v.id)
+                                                                                                              ,first_name: typeof v.first_name === "string" || typeof v.first_name === "object" && v.first_name instanceof String ? v.first_name : _E.raise("invalid input, expecting JSString but got " + v.first_name)
+                                                                                                              ,last_name: typeof v.last_name === "string" || typeof v.last_name === "object" && v.last_name instanceof String ? v.last_name : _E.raise("invalid input, expecting JSString but got " + v.last_name)
+                                                                                                              ,photo: typeof v.photo === "string" || typeof v.photo === "object" && v.photo instanceof String ? v.photo : _E.raise("invalid input, expecting JSString but got " + v.photo)} : _E.raise("invalid input, expecting JSObject [\"id\",\"first_name\",\"last_name\",\"photo\"] but got " + v);
       })) : _E.raise("invalid input, expecting JSArray but got " + v);
    }));
    var newFriends = function () {
@@ -1978,7 +1979,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "_Tuple2":
                return $Update.GetPosts(_v0._1);}
             _E.Case($moduleName,
-            "on line 336, column 35 to 49");
+            "on line 339, column 35 to 49");
          }();
       };
       return A2($Signal._op["<~"],
@@ -2013,7 +2014,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "ChangeGroup":
                return _v4._0;}
             _E.Case($moduleName,
-            "on line 363, column 40 to 47");
+            "on line 366, column 40 to 47");
          }();
       };
       var pridicate = function (act) {
@@ -2042,7 +2043,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "ChangeToggle":
                return _v9._0;}
             _E.Case($moduleName,
-            "on line 372, column 38 to 42");
+            "on line 375, column 38 to 42");
          }();
       };
       var predicate = function (act) {
@@ -2088,7 +2089,7 @@ Elm.Nicepost.make = function (_elm) {
             switch (_v14.ctor)
             {case "Repost": return _v14._0;}
             _E.Case($moduleName,
-            "on line 381, column 32 to 36");
+            "on line 384, column 32 to 36");
          }();
       };
       var predicate = function (act) {
@@ -2265,7 +2266,7 @@ Elm.Nicepost.make = function (_elm) {
               {case "::": return _v19._1._1;}
               break;}
          _E.Case($moduleName,
-         "on line 186, column 25 to 26");
+         "on line 189, column 25 to 26");
       }();
    };
    var getImgs = function (post) {
@@ -2387,11 +2388,16 @@ Elm.Nicepost.make = function (_elm) {
       posts));
    });
    var getFriendLine = function (user) {
-      return A2($Html$Tags.a,
-      _L.fromArray([$Html$Attributes.$class("song")]),
-      _L.fromArray([$Html.text(_L.append(user.last_name,
-      _L.append(" ",
-      user.first_name)))]));
+      return A2($Html$Tags.span,
+      _L.fromArray([$Html$Attributes.$class("friend_item")]),
+      _L.fromArray([A2($Html$Tags.img,
+                   _L.fromArray([$Html$Attributes.src(user.photo)]),
+                   _L.fromArray([]))
+                   ,A2($Html$Tags.a,
+                   _L.fromArray([$Html$Attributes.$class("song")]),
+                   _L.fromArray([$Html.text(_L.append(user.last_name,
+                   _L.append(" ",
+                   user.first_name)))]))]));
    };
    var getFriendsWindow = F3(function (_v30,
    friends,
@@ -3902,11 +3908,15 @@ Elm.Model.make = function (_elm) {
              ,_0: a
              ,_1: b};
    });
-   var User = F3(function (a,b,c) {
+   var User = F4(function (a,
+   b,
+   c,
+   d) {
       return {_: {}
              ,first_name: b
              ,id: a
-             ,last_name: c};
+             ,last_name: c
+             ,photo: d};
    });
    var Audio = F4(function (a,
    b,

@@ -282,9 +282,22 @@ a.song:active{
 
 
 .friend_container{
-  width: 170px;
-  max-height: 300px;
+  width: 210px;
+  max-height: 400px;
   line-height: 3em;
   overflow: auto;
   padding: 5px;
+}
+
+.friend_item{
+  display: block;
+  width: 200;
+  height: 50px;
+}
+
+.friend_item:hover{
+  display: block;
+  width: 200;
+  height: 50px;
+  background: #edf1f5;
 }
