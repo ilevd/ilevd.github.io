@@ -284,7 +284,6 @@ a.song:active{
 .friend_container{
   display: inline-block;
   max-height: 400px;
-  line-height: 3em;
   overflow: auto;
   padding: 5px;
 }
@@ -293,14 +292,12 @@ a.song:active{
   display: block;
   cursor: pointer;
   padding: 4px 10px;
-  height: 38px;
 }
 
 .friend_item:hover{
   cursor: pointer;
   display: block;
   padding: 4px 10px;
-  height: 38px;
   background: #edf1f5;
 }
 
