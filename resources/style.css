@@ -58,7 +58,7 @@ body{
 
 .likestext{
   margin-left: 5px;
-  margin-right: 45px;
+  /*margin-right: 45px;*/
   font-weight: bold;  
   color: #41658a;
 }
@@ -68,18 +68,26 @@ body{
 }
 
 .postbutton{
-  color: #555555;
+  color: #2B587A;
   margin-right: 5px;
   font-size: 9.5px;
   cursor: pointer;
 }
 .postbutton:hover{
-  color: #222222;
   text-decoration: underline;
 }
 .postbutton:active{
   text-decoration: none;
 }
+
+.date{
+  color: #999999;
+  margin-right: 5px;
+  font-size: 9.5px;
+  cursor: pointer;  
+}
+
+
 
 .popupdiv{
   position: absolute;
