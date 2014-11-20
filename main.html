@@ -248,6 +248,7 @@
 			var rawPosts = json.response.items;
 			var len = rawPosts.length;
 			var posts = [];
+			console.log("Clearing start: " + (new Date()).getTime());
 			for( var i = 0; i < len; i++){
 				var post = toRecord(rawPosts[i]);
 				if( post.text == "" 
@@ -257,6 +258,7 @@
 				}
 				posts.push(post);
 			}
+			console.log("Clearing stop: " + (new Date()).getTime());
 			return posts;
 			//return json.response.items.map(toRecord);	
 		}
@@ -265,7 +267,7 @@
 			var rec = {}
 			rec.id = postObject.id;
 			rec.text = postObject.text;
-			if( rec.text.indexOf("top_cards") > 0 
+			if( rec.text.indexOf("cards#") > 0 
 				|| rec.text.indexOf("fotomimi") > 0
 				|| rec.text.indexOf("congratulation_vk") > 0){
 				rec.text = "";
