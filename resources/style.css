@@ -292,12 +292,11 @@ a.song:active{
   display: block;
   cursor: pointer;
   padding: 4px 10px;
+  height: 40px;
+  width: 250px;
 }
 
 .friend_item:hover{
-  cursor: pointer;
-  display: block;
-  padding: 4px 10px;
   background: #edf1f5;
 }
 
@@ -315,5 +314,5 @@ a.song:active{
   float: left;
   font-weight: bold;
   width: 150px;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
