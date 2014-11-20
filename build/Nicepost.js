@@ -1979,7 +1979,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "_Tuple2":
                return $Update.GetPosts(_v0._1);}
             _E.Case($moduleName,
-            "on line 375, column 35 to 49");
+            "on line 376, column 35 to 49");
          }();
       };
       return A2($Signal._op["<~"],
@@ -2014,7 +2014,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "ChangeGroup":
                return _v4._0;}
             _E.Case($moduleName,
-            "on line 402, column 40 to 47");
+            "on line 403, column 40 to 47");
          }();
       };
       var pridicate = function (act) {
@@ -2043,7 +2043,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "ChangeToggle":
                return _v9._0;}
             _E.Case($moduleName,
-            "on line 411, column 38 to 42");
+            "on line 412, column 38 to 42");
          }();
       };
       var predicate = function (act) {
@@ -2093,7 +2093,7 @@ Elm.Nicepost.make = function (_elm) {
                       ,_0: _v14._0
                       ,_1: _v14._1};}
             _E.Case($moduleName,
-            "on line 420, column 42 to 56");
+            "on line 421, column 42 to 56");
          }();
       };
       var predicate = function (act) {
@@ -2278,7 +2278,7 @@ Elm.Nicepost.make = function (_elm) {
               {case "::": return _v21._1._1;}
               break;}
          _E.Case($moduleName,
-         "on line 223, column 25 to 26");
+         "on line 224, column 25 to 26");
       }();
    };
    var getImgs = function (post) {
@@ -2444,7 +2444,7 @@ Elm.Nicepost.make = function (_elm) {
                            getGroupLine(post),
                            groups))]))]));}
          _E.Case($moduleName,
-         "between lines 120 and 135");
+         "between lines 121 and 136");
       }();
    });
    var getFriendLine = F2(function (post,
@@ -2494,7 +2494,7 @@ Elm.Nicepost.make = function (_elm) {
                            getFriendLine(post),
                            friends))]))]));}
          _E.Case($moduleName,
-         "between lines 90 and 105");
+         "between lines 91 and 106");
       }();
    });
    var getBlackBackground = A2($Html$Tags.div,
@@ -2554,7 +2554,7 @@ Elm.Nicepost.make = function (_elm) {
                               _L.fromArray([]))]))]));
               }();}
          _E.Case($moduleName,
-         "between lines 64 and 85");
+         "between lines 65 and 86");
       }();
    });
    var dividePosts = function (posts) {
@@ -2605,8 +2605,7 @@ Elm.Nicepost.make = function (_elm) {
                                       _v45.groups,
                                       _v47._0)
                                       ,getBlackBackground]);}
-               _E.Case($moduleName,
-               "between lines 48 and 50");
+               return _L.fromArray([]);
             }();
             var friendWin = function () {
                var _v49 = _v45.friendWindow;
@@ -2646,7 +2645,8 @@ Elm.Nicepost.make = function (_elm) {
                                    _v45.posts,
                                    _v45.openPosts)]),
             _L.append(imageWin,
-            friendWin))));
+            _L.append(friendWin,
+            groupWin)))));
          }();
       }();
    };
