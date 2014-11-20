@@ -358,7 +358,8 @@ var Groups = {
         var groups = [];
         for (var i = 0, len1 = groupsData.length; i < len1; i++) {
             for (var j = 0, len2 = arr.length; j < len2; j++) {
-                if (groupsData[i].screen_name == arr[j]) {
+                if (groupsData[i].screen_name == arr[j] 
+                    || groupsData[i].id == arr[j]) {
                     groups.push(groupsData[i]);
                 }
             }
