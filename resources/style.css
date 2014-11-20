@@ -285,8 +285,6 @@ a.song:active{
   display: inline-block;
   max-height: 400px;
   overflow-y: scroll;
-  padding: 5px;
-
 }
 
 .friend_item{

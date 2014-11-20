@@ -2535,24 +2535,22 @@ Elm.Nicepost.make = function (_elm) {
                switch (_v41.ctor)
                {case "FriendWindow":
                   return _L.fromArray([A3(getFriendsWindow,
-                    _v39.winSize,
-                    _v39.friends,
-                    _v41._0)]);}
+                                      _v39.winSize,
+                                      _v39.friends,
+                                      _v41._0)
+                                      ,getBlackBackground]);}
                return _L.fromArray([]);
             }();
             var imageWin = function () {
                var _v43 = _v39.postWindow;
                switch (_v43.ctor)
-               {case "None":
-                  return _L.fromArray([]);
-                  case "Window":
+               {case "Window":
                   return _L.fromArray([A3(getPostWindow,
                                       _v39.winSize,
                                       _v43._0,
                                       _v43._1)
                                       ,getBlackBackground]);}
-               _E.Case($moduleName,
-               "between lines 40 and 43");
+               return _L.fromArray([]);
             }();
             return A2($Html.toElement,
             962,
