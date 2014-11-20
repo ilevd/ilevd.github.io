@@ -23,15 +23,12 @@ var Groups = {
     ],
 
     Brain : [
-        "v5umm",
         "vk.fact",
-        "prosvetlen",
         "sci_psy",
         "mirfactov",
         "modarts",
         "top.secrets",
         "vkwhy",
-        "poet_omar",
         "tripdiary",
         "the_intellectuals",
         "ru.esquire",
@@ -160,7 +157,7 @@ var Groups = {
         "bestgames",
         "onlaingamer",
         "club30362362",
-        "games_secrets",
+        "game_scrt",
 
         "gameri",
         "world_game",
@@ -172,6 +169,7 @@ var Groups = {
 
 
     Quotes : [
+        "v5umm",
         "poet_omar",
         "club2961933",
         "prosvetlen",
@@ -286,6 +284,28 @@ var Groups = {
         "club31753769",
     ],
 
+
+    Verse : [
+        "1poetry",  
+        "stihi_club",
+        "38087663",
+        "best_poems",
+        "42642365",
+
+        "sokroveniya",
+        "ipoetry",
+        "greatverse",
+        "my_stihiya",
+        "violations",
+
+        "memorypoets",
+        "dolinakukol",
+        "mirstihov",
+        "37442070",
+        "38853214",
+        "stihi_o_liubvi"
+    ],
+
     My : [],
 
 
@@ -304,7 +324,8 @@ var Groups = {
                 Groups.Fashion,
                 Groups.Recepts, 
                 Groups.English, 
-                Groups.Cards, 
+                Groups.Cards,
+                Groups.Verse,
                 Groups.My
         ];
     },
@@ -313,7 +334,7 @@ var Groups = {
 
     groupsNames : ["Юмор","Любовь", "Новости", "Картинки", "Умное", "Цитаты",
         "Музыка", "Игры", "Спорт", "Авто", "Бизнес", "Мода",
-        "Рецепты", "English", "Открытки", "Мои" ],
+        "Рецепты", "English", "Открытки", "Стихи", "Мои" ],
 
     getAllGroupsString : function(){
     	var arr = [];
