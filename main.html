@@ -122,7 +122,7 @@
 				var max = Math.max(p1.offsetHeight, p2.offsetHeight, p3.offsetHeight);
 				//alert(document.body.scrollTop  + " " +  min)
 				var currentTime = (new Date()).getTime();
-				if( (scrollTop + winHeight + 1500 > min) && currentTime > lastGetTime + 800  /*jsonpCount == 0*/){
+				if( (scrollTop + winHeight + 2000 > min) && currentTime > lastGetTime + 1000  /*jsonpCount == 0*/){
 					//alert("need data! " + jsonpCount  );
 					lastGetTime = currentTime;
 					wallGet(currentGroup);
@@ -162,15 +162,16 @@
 			}
 			currentGroup = owner_id;
 			jsonpCount++;
-			VK.api("wall.get", {v:5.25, count: 60, owner_id: owner_id, offset: currentGroupOffset}, onWallGet);
+			currentGroupOffset += 50;
+			VK.api("wall.get", {v:5.25, count: 50, owner_id: owner_id, offset: currentGroupOffset}, onWallGet);
 		}
 		function onWallGet(json){
 			var posts = parseJson(json);
 			var sortPosts = posts.sort( function(a,b){return b.likes-a.likes} )
-				.slice(0, 50).sort( function(a, b){ return a.date > b.date ? -1 : 1} );
+				.slice(0, 45).sort( function(a, b){ return a.date > b.date ? -1 : 1} );
 			vk.ports.getWallPosts.send([currentGroupOffset, sortPosts]); 
 			//console.log("WallGet posts.length: " + posts.length);
-			currentGroupOffset += json.response.items.length;
+			//currentGroupOffset += json.response.items.length;
 			jsonpCount--;
 		}
 
