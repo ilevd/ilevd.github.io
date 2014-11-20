@@ -53,6 +53,7 @@ body{
 .footer{
   margin-top: 5px;
   padding-top: 3px;
+  vertical-align: middle;
   /*border: 1px solid #cccccc;*/
 }
 
