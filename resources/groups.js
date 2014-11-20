@@ -229,7 +229,8 @@ var Groups = {
         "public_of_music",
         "clubmusictlt",
         "wiba_music",
-
+        "ellotv",
+        
         "onlineradio101ru",
         "msc_e",
         "plmusic",

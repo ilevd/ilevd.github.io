@@ -1891,6 +1891,7 @@ Elm.Nicepost.make = function (_elm) {
    var emptyPost = {_: {}
                    ,audios: _L.fromArray([])
                    ,date: 0
+                   ,date_str: ""
                    ,id: 0
                    ,likes: 0
                    ,photos: _L.fromArray([])
@@ -1948,28 +1949,29 @@ Elm.Nicepost.make = function (_elm) {
       return _U.isJSArray(v) ? {ctor: "_Tuple2"
                                ,_0: typeof v[0] === "number" ? v[0] : _E.raise("invalid input, expecting JSNumber but got " + v[0])
                                ,_1: _U.isJSArray(v[1]) ? _L.fromArray(v[1].map(function (v) {
-                                  return typeof v === "object" && "id" in v && "text" in v && "likes" in v && "date" in v && "photos" in v && "audios" in v ? {_: {}
-                                                                                                                                                              ,id: typeof v.id === "number" ? v.id : _E.raise("invalid input, expecting JSNumber but got " + v.id)
-                                                                                                                                                              ,text: typeof v.text === "string" || typeof v.text === "object" && v.text instanceof String ? v.text : _E.raise("invalid input, expecting JSString but got " + v.text)
-                                                                                                                                                              ,likes: typeof v.likes === "number" ? v.likes : _E.raise("invalid input, expecting JSNumber but got " + v.likes)
-                                                                                                                                                              ,date: typeof v.date === "number" ? v.date : _E.raise("invalid input, expecting JSNumber but got " + v.date)
-                                                                                                                                                              ,photos: _U.isJSArray(v.photos) ? _L.fromArray(v.photos.map(function (v) {
-                                                                                                                                                                 return typeof v === "object" && "id" in v && "owner_id" in v && "photo_75" in v && "photo_130" in v && "photo_604" in v && "width" in v && "height" in v ? {_: {}
-                                                                                                                                                                                                                                                                                                                            ,id: typeof v.id === "number" ? v.id : _E.raise("invalid input, expecting JSNumber but got " + v.id)
-                                                                                                                                                                                                                                                                                                                            ,owner_id: typeof v.owner_id === "number" ? v.owner_id : _E.raise("invalid input, expecting JSNumber but got " + v.owner_id)
-                                                                                                                                                                                                                                                                                                                            ,photo_75: typeof v.photo_75 === "string" || typeof v.photo_75 === "object" && v.photo_75 instanceof String ? v.photo_75 : _E.raise("invalid input, expecting JSString but got " + v.photo_75)
-                                                                                                                                                                                                                                                                                                                            ,photo_130: typeof v.photo_130 === "string" || typeof v.photo_130 === "object" && v.photo_130 instanceof String ? v.photo_130 : _E.raise("invalid input, expecting JSString but got " + v.photo_130)
-                                                                                                                                                                                                                                                                                                                            ,photo_604: typeof v.photo_604 === "string" || typeof v.photo_604 === "object" && v.photo_604 instanceof String ? v.photo_604 : _E.raise("invalid input, expecting JSString but got " + v.photo_604)
-                                                                                                                                                                                                                                                                                                                            ,width: typeof v.width === "number" ? v.width : _E.raise("invalid input, expecting JSNumber but got " + v.width)
-                                                                                                                                                                                                                                                                                                                            ,height: typeof v.height === "number" ? v.height : _E.raise("invalid input, expecting JSNumber but got " + v.height)} : _E.raise("invalid input, expecting JSObject [\"id\",\"owner_id\",\"photo_75\",\"photo_130\",\"photo_604\",\"width\",\"height\"] but got " + v);
-                                                                                                                                                              })) : _E.raise("invalid input, expecting JSArray but got " + v.photos)
-                                                                                                                                                              ,audios: _U.isJSArray(v.audios) ? _L.fromArray(v.audios.map(function (v) {
-                                                                                                                                                                 return typeof v === "object" && "id" in v && "owner_id" in v && "title" in v && "artist" in v ? {_: {}
-                                                                                                                                                                                                                                                                 ,id: typeof v.id === "number" ? v.id : _E.raise("invalid input, expecting JSNumber but got " + v.id)
-                                                                                                                                                                                                                                                                 ,owner_id: typeof v.owner_id === "number" ? v.owner_id : _E.raise("invalid input, expecting JSNumber but got " + v.owner_id)
-                                                                                                                                                                                                                                                                 ,title: typeof v.title === "string" || typeof v.title === "object" && v.title instanceof String ? v.title : _E.raise("invalid input, expecting JSString but got " + v.title)
-                                                                                                                                                                                                                                                                 ,artist: typeof v.artist === "string" || typeof v.artist === "object" && v.artist instanceof String ? v.artist : _E.raise("invalid input, expecting JSString but got " + v.artist)} : _E.raise("invalid input, expecting JSObject [\"id\",\"owner_id\",\"title\",\"artist\"] but got " + v);
-                                                                                                                                                              })) : _E.raise("invalid input, expecting JSArray but got " + v.audios)} : _E.raise("invalid input, expecting JSObject [\"id\",\"text\",\"likes\",\"date\",\"photos\",\"audios\"] but got " + v);
+                                  return typeof v === "object" && "id" in v && "text" in v && "likes" in v && "date" in v && "date_str" in v && "photos" in v && "audios" in v ? {_: {}
+                                                                                                                                                                                 ,id: typeof v.id === "number" ? v.id : _E.raise("invalid input, expecting JSNumber but got " + v.id)
+                                                                                                                                                                                 ,text: typeof v.text === "string" || typeof v.text === "object" && v.text instanceof String ? v.text : _E.raise("invalid input, expecting JSString but got " + v.text)
+                                                                                                                                                                                 ,likes: typeof v.likes === "number" ? v.likes : _E.raise("invalid input, expecting JSNumber but got " + v.likes)
+                                                                                                                                                                                 ,date: typeof v.date === "number" ? v.date : _E.raise("invalid input, expecting JSNumber but got " + v.date)
+                                                                                                                                                                                 ,date_str: typeof v.date_str === "string" || typeof v.date_str === "object" && v.date_str instanceof String ? v.date_str : _E.raise("invalid input, expecting JSString but got " + v.date_str)
+                                                                                                                                                                                 ,photos: _U.isJSArray(v.photos) ? _L.fromArray(v.photos.map(function (v) {
+                                                                                                                                                                                    return typeof v === "object" && "id" in v && "owner_id" in v && "photo_75" in v && "photo_130" in v && "photo_604" in v && "width" in v && "height" in v ? {_: {}
+                                                                                                                                                                                                                                                                                                                                               ,id: typeof v.id === "number" ? v.id : _E.raise("invalid input, expecting JSNumber but got " + v.id)
+                                                                                                                                                                                                                                                                                                                                               ,owner_id: typeof v.owner_id === "number" ? v.owner_id : _E.raise("invalid input, expecting JSNumber but got " + v.owner_id)
+                                                                                                                                                                                                                                                                                                                                               ,photo_75: typeof v.photo_75 === "string" || typeof v.photo_75 === "object" && v.photo_75 instanceof String ? v.photo_75 : _E.raise("invalid input, expecting JSString but got " + v.photo_75)
+                                                                                                                                                                                                                                                                                                                                               ,photo_130: typeof v.photo_130 === "string" || typeof v.photo_130 === "object" && v.photo_130 instanceof String ? v.photo_130 : _E.raise("invalid input, expecting JSString but got " + v.photo_130)
+                                                                                                                                                                                                                                                                                                                                               ,photo_604: typeof v.photo_604 === "string" || typeof v.photo_604 === "object" && v.photo_604 instanceof String ? v.photo_604 : _E.raise("invalid input, expecting JSString but got " + v.photo_604)
+                                                                                                                                                                                                                                                                                                                                               ,width: typeof v.width === "number" ? v.width : _E.raise("invalid input, expecting JSNumber but got " + v.width)
+                                                                                                                                                                                                                                                                                                                                               ,height: typeof v.height === "number" ? v.height : _E.raise("invalid input, expecting JSNumber but got " + v.height)} : _E.raise("invalid input, expecting JSObject [\"id\",\"owner_id\",\"photo_75\",\"photo_130\",\"photo_604\",\"width\",\"height\"] but got " + v);
+                                                                                                                                                                                 })) : _E.raise("invalid input, expecting JSArray but got " + v.photos)
+                                                                                                                                                                                 ,audios: _U.isJSArray(v.audios) ? _L.fromArray(v.audios.map(function (v) {
+                                                                                                                                                                                    return typeof v === "object" && "id" in v && "owner_id" in v && "title" in v && "artist" in v ? {_: {}
+                                                                                                                                                                                                                                                                                    ,id: typeof v.id === "number" ? v.id : _E.raise("invalid input, expecting JSNumber but got " + v.id)
+                                                                                                                                                                                                                                                                                    ,owner_id: typeof v.owner_id === "number" ? v.owner_id : _E.raise("invalid input, expecting JSNumber but got " + v.owner_id)
+                                                                                                                                                                                                                                                                                    ,title: typeof v.title === "string" || typeof v.title === "object" && v.title instanceof String ? v.title : _E.raise("invalid input, expecting JSString but got " + v.title)
+                                                                                                                                                                                                                                                                                    ,artist: typeof v.artist === "string" || typeof v.artist === "object" && v.artist instanceof String ? v.artist : _E.raise("invalid input, expecting JSString but got " + v.artist)} : _E.raise("invalid input, expecting JSObject [\"id\",\"owner_id\",\"title\",\"artist\"] but got " + v);
+                                                                                                                                                                                 })) : _E.raise("invalid input, expecting JSArray but got " + v.audios)} : _E.raise("invalid input, expecting JSObject [\"id\",\"text\",\"likes\",\"date\",\"date_str\",\"photos\",\"audios\"] but got " + v);
                                })) : _E.raise("invalid input, expecting JSArray but got " + v[1])} : _E.raise("invalid input, expecting JSArray but got " + v);
    }));
    var newPosts = function () {
@@ -1979,7 +1981,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "_Tuple2":
                return $Update.GetPosts(_v0._1);}
             _E.Case($moduleName,
-            "on line 376, column 35 to 49");
+            "on line 378, column 35 to 49");
          }();
       };
       return A2($Signal._op["<~"],
@@ -2014,7 +2016,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "ChangeGroup":
                return _v4._0;}
             _E.Case($moduleName,
-            "on line 403, column 40 to 47");
+            "on line 405, column 40 to 47");
          }();
       };
       var pridicate = function (act) {
@@ -2043,7 +2045,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "ChangeToggle":
                return _v9._0;}
             _E.Case($moduleName,
-            "on line 412, column 38 to 42");
+            "on line 414, column 38 to 42");
          }();
       };
       var predicate = function (act) {
@@ -2067,6 +2069,7 @@ Elm.Nicepost.make = function (_elm) {
               ,text: v._0.text
               ,likes: v._0.likes
               ,date: v._0.date
+              ,date_str: v._0.date_str
               ,photos: _L.toArray(v._0.photos).map(function (v) {
                  return {id: v.id
                         ,owner_id: v.owner_id
@@ -2093,7 +2096,7 @@ Elm.Nicepost.make = function (_elm) {
                       ,_0: _v14._0
                       ,_1: _v14._1};}
             _E.Case($moduleName,
-            "on line 421, column 42 to 56");
+            "on line 423, column 42 to 56");
          }();
       };
       var predicate = function (act) {
@@ -2234,7 +2237,10 @@ Elm.Nicepost.make = function (_elm) {
                                 ,A2($Html$Events.onclick,
                                 actions.handle,
                                 $Basics.always($Update.OpenGroupWindow($Model.GroupWindow(post))))]),
-                   _L.fromArray([$Html.text("В группу!")]))]));
+                   _L.fromArray([$Html.text("В группу!")]))
+                   ,A2($Html$Tags.span,
+                   _L.fromArray([]),
+                   _L.fromArray([$Html.text(post.date_str)]))]));
    };
    var getAudio = F2(function (post,
    audio) {
@@ -4023,18 +4029,20 @@ Elm.Model.make = function (_elm) {
              ,photo_75: c
              ,width: f};
    });
-   var Post = F6(function (a,
+   var Post = F7(function (a,
    b,
    c,
    d,
    e,
-   f) {
+   f,
+   g) {
       return {_: {}
-             ,audios: f
+             ,audios: g
              ,date: d
+             ,date_str: e
              ,id: a
              ,likes: c
-             ,photos: e
+             ,photos: f
              ,text: b};
    });
    var Group = F7(function (a,

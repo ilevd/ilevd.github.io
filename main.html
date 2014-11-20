@@ -273,8 +273,10 @@
 				rec.text = "";
 			}
 			rec.date = postObject.date;
+			rec.date_str = unixTimeToStr(rec.date);
 			rec.likes = postObject.likes.count;
 			rec.reposts = postObject.reposts.count;
+
 			if( postObject.attachments == null) {
 				postObject.attachments = [];
 			}
@@ -310,7 +312,28 @@
 			rec.audios = audios;
 		}	
 
+      	function unixTimeToStr(unixTime){
+            var date = new Date(unixTime*1000);
+            var day = date.getDate();
+            var month = date.getMonth();
+            var year = date.getFullYear();
+            var hours = date.getHours();
+            var minutes = date.getMinutes();
+            var timeStr = hours < 10 ? "0" + hours : hours.toString();
+            timeStr += ":" + (minutes < 10 ? "0" + minutes : minutes.toString());
 
+            var nowDate = new Date();
+            var dayStr = "";
+            if( nowDate.getDate() == day && nowDate.getMonth() == month && nowDate.getFullYear() == year){
+                dayStr = "сегодня в ";
+            } else
+            if( nowDate.getDate() == day+1 && nowDate.getMonth() == month && nowDate.getFullYear() == year){
+                dayStr = "вчера в ";
+            } else{
+                dayStr = day + " " +  getMonth(month) + " в ";
+            }
+            return dayStr + timeStr;
+   		}
 	
 		
 		
