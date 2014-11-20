@@ -1979,7 +1979,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "_Tuple2":
                return $Update.GetPosts(_v0._1);}
             _E.Case($moduleName,
-            "on line 340, column 35 to 49");
+            "on line 375, column 35 to 49");
          }();
       };
       return A2($Signal._op["<~"],
@@ -2014,7 +2014,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "ChangeGroup":
                return _v4._0;}
             _E.Case($moduleName,
-            "on line 367, column 40 to 47");
+            "on line 402, column 40 to 47");
          }();
       };
       var pridicate = function (act) {
@@ -2043,7 +2043,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "ChangeToggle":
                return _v9._0;}
             _E.Case($moduleName,
-            "on line 376, column 38 to 42");
+            "on line 411, column 38 to 42");
          }();
       };
       var predicate = function (act) {
@@ -2093,7 +2093,7 @@ Elm.Nicepost.make = function (_elm) {
                       ,_0: _v14._0
                       ,_1: _v14._1};}
             _E.Case($moduleName,
-            "on line 385, column 42 to 56");
+            "on line 420, column 42 to 56");
          }();
       };
       var predicate = function (act) {
@@ -2121,9 +2121,10 @@ Elm.Nicepost.make = function (_elm) {
                       ,currentToggle: "Юмор"
                       ,friendWindow: $Model.NoneFriend
                       ,friends: _L.fromArray([])
-                      ,groupWindow: $Model.NoneGroup(_L.fromArray([]))
+                      ,groupWindow: $Model.NoneGroup
                       ,groups: _L.fromArray([])
                       ,openPosts: _L.fromArray([])
+                      ,postGroups: _L.fromArray([])
                       ,postWindow: $Model.None
                       ,posts: _L.fromArray([])
                       ,winSize: {ctor: "_Tuple2"
@@ -2228,7 +2229,10 @@ Elm.Nicepost.make = function (_elm) {
                                 $Basics.always($Update.OpenFriendWindow($Model.FriendWindow(post))))]),
                    _L.fromArray([$Html.text("Другу!")]))
                    ,A2($Html$Tags.a,
-                   _L.fromArray([$Html$Attributes.$class("postbutton")]),
+                   _L.fromArray([$Html$Attributes.$class("postbutton")
+                                ,A2($Html$Events.onclick,
+                                actions.handle,
+                                $Basics.always($Update.OpenGroupWindow($Model.GroupWindow(post))))]),
                    _L.fromArray([$Html.text("В группу!")]))]));
    };
    var getAudio = F2(function (post,
@@ -2274,7 +2278,7 @@ Elm.Nicepost.make = function (_elm) {
               {case "::": return _v21._1._1;}
               break;}
          _E.Case($moduleName,
-         "on line 190, column 25 to 26");
+         "on line 223, column 25 to 26");
       }();
    };
    var getImgs = function (post) {
@@ -2395,6 +2399,54 @@ Elm.Nicepost.make = function (_elm) {
       postHtml(openPosts),
       posts));
    });
+   var getGroupLine = F2(function (post,
+   group) {
+      return A2($Html$Tags.span,
+      _L.fromArray([$Html$Attributes.$class("friend_item")
+                   ,A2($Html$Events.onclick,
+                   actions.handle,
+                   $Basics.always(A2($Update.Repost,
+                   post,
+                   0 - group.id)))]),
+      _L.fromArray([A2($Html$Tags.img,
+                   _L.fromArray([$Html$Attributes.$class("friend_img")
+                                ,$Html$Attributes.src(group.photo_50)]),
+                   _L.fromArray([]))
+                   ,A2($Html$Tags.a,
+                   _L.fromArray([$Html$Attributes.$class("friend_text")]),
+                   _L.fromArray([$Html.text(group.name)]))]));
+   });
+   var getGroupWindow = F3(function (_v32,
+   groups,
+   post) {
+      return function () {
+         switch (_v32.ctor)
+         {case "_Tuple2":
+            return A2($Html$Tags.div,
+              _L.fromArray([$Html$Attributes.$class("win_container")
+                           ,$Html.style(_L.fromArray([A2($Html.prop,
+                           "top",
+                           _L.append($String.show(_v32._1),
+                           "px"))]))]),
+              _L.fromArray([A2($Html$Tags.div,
+              _L.fromArray([$Html$Attributes.$class("window_friend")]),
+              _L.fromArray([A2($Html$Tags.p,
+                           _L.fromArray([$Html$Attributes.$class("post_window_p")]),
+                           _L.fromArray([A2($Html$Tags.a,
+                           _L.fromArray([$Html$Attributes.$class("song")
+                                        ,A2($Html$Events.onclick,
+                                        actions.handle,
+                                        $Basics.always($Update.OpenGroupWindow($Model.NoneGroup)))]),
+                           _L.fromArray([$Html.text("Закрыть")]))]))
+                           ,A2($Html$Tags.div,
+                           _L.fromArray([$Html$Attributes.$class("friend_container")]),
+                           A2($List.map,
+                           getGroupLine(post),
+                           groups))]))]));}
+         _E.Case($moduleName,
+         "between lines 120 and 135");
+      }();
+   });
    var getFriendLine = F2(function (post,
    user) {
       return A2($Html$Tags.span,
@@ -2414,17 +2466,17 @@ Elm.Nicepost.make = function (_elm) {
                    _L.append(" ",
                    user.first_name)))]))]));
    });
-   var getFriendsWindow = F3(function (_v32,
+   var getFriendsWindow = F3(function (_v36,
    friends,
    post) {
       return function () {
-         switch (_v32.ctor)
+         switch (_v36.ctor)
          {case "_Tuple2":
             return A2($Html$Tags.div,
               _L.fromArray([$Html$Attributes.$class("win_container")
                            ,$Html.style(_L.fromArray([A2($Html.prop,
                            "top",
-                           _L.append($String.show(_v32._1),
+                           _L.append($String.show(_v36._1),
                            "px"))]))]),
               _L.fromArray([A2($Html$Tags.div,
               _L.fromArray([$Html$Attributes.$class("window_friend")]),
@@ -2442,7 +2494,7 @@ Elm.Nicepost.make = function (_elm) {
                            getFriendLine(post),
                            friends))]))]));}
          _E.Case($moduleName,
-         "between lines 87 and 102");
+         "between lines 90 and 105");
       }();
    });
    var getBlackBackground = A2($Html$Tags.div,
@@ -2458,11 +2510,11 @@ Elm.Nicepost.make = function (_elm) {
       },
       imgSrc);
    });
-   var getPostWindow = F3(function (_v36,
+   var getPostWindow = F3(function (_v40,
    post,
    imgSrc) {
       return function () {
-         switch (_v36.ctor)
+         switch (_v40.ctor)
          {case "_Tuple2":
             return function () {
                  var imgStyle = _U.cmp($List.length(post.photos),
@@ -2484,7 +2536,7 @@ Elm.Nicepost.make = function (_elm) {
                  _L.fromArray([$Html$Attributes.$class("win_container")
                               ,$Html.style(_L.fromArray([A2($Html.prop,
                               "top",
-                              _L.append($String.show(_v36._1),
+                              _L.append($String.show(_v40._1),
                               "px"))]))]),
                  _L.fromArray([A2($Html$Tags.div,
                  _L.fromArray([$Html$Attributes.$class("win")]),
@@ -2502,7 +2554,7 @@ Elm.Nicepost.make = function (_elm) {
                               _L.fromArray([]))]))]));
               }();}
          _E.Case($moduleName,
-         "between lines 61 and 82");
+         "between lines 64 and 85");
       }();
    });
    var dividePosts = function (posts) {
@@ -2541,28 +2593,40 @@ Elm.Nicepost.make = function (_elm) {
          }();
       }();
    });
-   var display = function (_v41) {
+   var display = function (_v45) {
       return function () {
          return function () {
+            var groupWin = function () {
+               var _v47 = _v45.groupWindow;
+               switch (_v47.ctor)
+               {case "GroupWindow":
+                  return _L.fromArray([A3(getGroupWindow,
+                                      _v45.winSize,
+                                      _v45.groups,
+                                      _v47._0)
+                                      ,getBlackBackground]);}
+               _E.Case($moduleName,
+               "between lines 48 and 50");
+            }();
             var friendWin = function () {
-               var _v43 = _v41.friendWindow;
-               switch (_v43.ctor)
+               var _v49 = _v45.friendWindow;
+               switch (_v49.ctor)
                {case "FriendWindow":
                   return _L.fromArray([A3(getFriendsWindow,
-                                      _v41.winSize,
-                                      _v41.friends,
-                                      _v43._0)
+                                      _v45.winSize,
+                                      _v45.friends,
+                                      _v49._0)
                                       ,getBlackBackground]);}
                return _L.fromArray([]);
             }();
             var imageWin = function () {
-               var _v45 = _v41.postWindow;
-               switch (_v45.ctor)
+               var _v51 = _v45.postWindow;
+               switch (_v51.ctor)
                {case "Window":
                   return _L.fromArray([A3(getPostWindow,
-                                      _v41.winSize,
-                                      _v45._0,
-                                      _v45._1)
+                                      _v45.winSize,
+                                      _v51._0,
+                                      _v51._1)
                                       ,getBlackBackground]);}
                return _L.fromArray([]);
             }();
@@ -2575,12 +2639,12 @@ Elm.Nicepost.make = function (_elm) {
                                    toggleList)
                                    ,A3($Html$Optimize$RefEq.lazy2,
                                    groupsDiv,
-                                   _v41.groups,
-                                   _v41.currentGroup)
+                                   _v45.groups,
+                                   _v45.currentGroup)
                                    ,A3($Html$Optimize$RefEq.lazy2,
                                    postColumns,
-                                   _v41.posts,
-                                   _v41.openPosts)]),
+                                   _v45.posts,
+                                   _v45.openPosts)]),
             _L.append(imageWin,
             friendWin))));
          }();
@@ -2597,6 +2661,8 @@ Elm.Nicepost.make = function (_elm) {
                           ,getPostWindow: getPostWindow
                           ,getFriendsWindow: getFriendsWindow
                           ,getFriendLine: getFriendLine
+                          ,getGroupWindow: getGroupWindow
+                          ,getGroupLine: getGroupLine
                           ,postColumns: postColumns
                           ,postColumn: postColumn
                           ,postHtml: postHtml
@@ -3784,8 +3850,8 @@ Elm.Update.make = function (_elm) {
                                ,action._0]],
               state);
             case "SetGroups":
-            return _U.replace([["groupWindow"
-                               ,$Model.NoneGroup(action._0)]],
+            return _U.replace([["postGroups"
+                               ,action._0]],
               state);}
          _E.Case($moduleName,
          "between lines 26 and 69");
@@ -3880,17 +3946,20 @@ Elm.Model.make = function (_elm) {
                         return function (h) {
                            return function (i) {
                               return function (j) {
-                                 return {_: {}
-                                        ,currentGroup: b
-                                        ,currentToggle: a
-                                        ,friendWindow: g
-                                        ,friends: h
-                                        ,groupWindow: i
-                                        ,groups: c
-                                        ,openPosts: e
-                                        ,postWindow: f
-                                        ,posts: d
-                                        ,winSize: j};
+                                 return function (k) {
+                                    return {_: {}
+                                           ,currentGroup: b
+                                           ,currentToggle: a
+                                           ,friendWindow: g
+                                           ,friends: h
+                                           ,groupWindow: i
+                                           ,groups: c
+                                           ,openPosts: e
+                                           ,postGroups: j
+                                           ,postWindow: f
+                                           ,posts: d
+                                           ,winSize: k};
+                                 };
                               };
                            };
                         };
@@ -3906,16 +3975,11 @@ Elm.Model.make = function (_elm) {
       return {ctor: "FriendWindow"
              ,_0: a};
    };
-   var NoneGroup = function (a) {
-      return {ctor: "NoneGroup"
+   var NoneGroup = {ctor: "NoneGroup"};
+   var GroupWindow = function (a) {
+      return {ctor: "GroupWindow"
              ,_0: a};
    };
-   var GroupWindow = F2(function (a,
-   b) {
-      return {ctor: "GroupWindow"
-             ,_0: a
-             ,_1: b};
-   });
    var None = {ctor: "None"};
    var Window = F2(function (a,b) {
       return {ctor: "Window"
