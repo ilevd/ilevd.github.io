@@ -60,7 +60,7 @@ body{
 
 .likes{
   float: right;
-  line-height: 18px;
+  height: 18px;
   vertical-align: middle;
 }
 
@@ -69,8 +69,6 @@ body{
   /*margin-right: 45px;*/
   font-weight: bold;  
   color: #41658a;
-  line-height: 18px;
-  vertical-align: middle;
 }
 
 .likesimg{
