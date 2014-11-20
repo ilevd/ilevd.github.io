@@ -293,7 +293,6 @@ a.song:active{
   display: block;
   cursor: pointer;
   padding: 4px 10px;
-  width: 200;
   height: 38px;
 }
 
@@ -301,7 +300,6 @@ a.song:active{
   cursor: pointer;
   display: block;
   padding: 4px 10px;
-  width: 200;
   height: 38px;
   background: #edf1f5;
 }
@@ -314,7 +312,7 @@ a.song:active{
 
 .friend_text{
   color: #4a6283;
-  line-height: 40px;
+  line-height: 38px;
   padding-left: 10px;
   display: block;
   float: left;
