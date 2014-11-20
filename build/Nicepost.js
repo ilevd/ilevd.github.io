@@ -2407,13 +2407,13 @@ Elm.Nicepost.make = function (_elm) {
          switch (_v30.ctor)
          {case "_Tuple2":
             return A2($Html$Tags.div,
-              _L.fromArray([$Html$Attributes.$class("window_friend")
+              _L.fromArray([$Html$Attributes.$class("win_container")
                            ,$Html.style(_L.fromArray([A2($Html.prop,
                            "top",
                            _L.append($String.show(_v30._1),
                            "px"))]))]),
               _L.fromArray([A2($Html$Tags.div,
-              _L.fromArray([$Html$Attributes.$class("win")]),
+              _L.fromArray([$Html$Attributes.$class("window_friend")]),
               _L.fromArray([A2($Html$Tags.p,
                            _L.fromArray([$Html$Attributes.$class("post_window_p")]),
                            _L.fromArray([A2($Html$Tags.a,
