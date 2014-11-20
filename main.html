@@ -71,8 +71,8 @@
                 var keyValue = rawData[i].split('=');
                 data[ keyValue[0] ] = keyValue[1];
             }
-            console.log(decodeURIComponent(  data["api_result"] ));
-            console.log(data["viewer_id"])
+            //console.log(decodeURIComponent(  data["api_result"] ));
+            //console.log(data["viewer_id"])
             viewer_id = data["viewer_id"];
             var api_result = JSON.parse(decodeURIComponent(  data["api_result"] ));  
  		}
@@ -82,7 +82,7 @@
  		function getVKInfo(){
  			var code = 'return {admin_groups: API.groups.get({filter:"moder", extended:1}), groups: API.groups.get({fields:"can_post,status", extended:1}), friends:API.friends.get({  fields:"uid, first_name, last_name,city,photo_big,photo,sex,bdate,can_post"   }), appFriends:API.getAppFriends()    };';
  			VK.api("execute", {code:code, v: "5.26"}, function(response){
- 				console.log("Execute: " + JSON.stringify(response));
+ 				//console.log("Execute: " + JSON.stringify(response));
  				Groups.My = response.response.groups.items;
  				var friends = response.response.friends.items;
  				var admin_groups = response.response.admin_groups.items
@@ -112,7 +112,7 @@
 			windowHeight = winHeight;
 			vk.ports.resize.send([windowHeight, windowScrollTop]);
 
-			console.log("OnScroll: " + scrollTop + " " + winHeight);
+			//console.log("OnScroll: " + scrollTop + " " + winHeight);
 			var p1 = document.getElementById("post-column1");
 			var p2 = document.getElementById("post-column2");
 			var p3 = document.getElementById("post-column3");
@@ -127,7 +127,7 @@
 					lastGetTime = currentTime;
 					wallGet(currentGroup);
 				}
-				console.log("Body height: " + bdy.offsetHeight);
+				//console.log("Body height: " + bdy.offsetHeight);
 				if( max + 160 > appHeight){
 					VK.callMethod("resizeWindow", 962, max + 160);
 					appHeight = max + 160;
@@ -198,9 +198,10 @@
 			if( owner_id == 0 ){
 				owner_id = viewer_id;
 			}
-			console.log("RepostClick: " + post.text);
-			console.log("RepostClick: " + owner_id);
+			//console.log("RepostClick: " + post.text);
+			//console.log("RepostClick: " + owner_id);
 			//alert(JSON.stringify(post));
+
 			var message = addLinkText(post.text);
 			var getPhoto = function(photo){ 
 				return "photo" + photo.owner_id + "_" + photo.id;
@@ -208,11 +209,18 @@
 			var getAudio = function(audio){
 				return "audio" + audio.owner_id + "_" + audio.id;
 			}
+
 			var atts = post.photos.map( getPhoto ).concat( post.audios.map( getAudio));
 			var strAtts = atts.join(",");
-			VK.api("wall.post", {v: "5.26", owner_id: owner_id, message: message, attachments: strAtts}, function(response){
+			var params = {v: "5.26", owner_id: owner_id, message: message, attachments: strAtts};
+	        if( owner_id.charAt(0) == "-"){
+            	params["from_group"] = 1;
+        	}
+
+			VK.api("wall.post", params, function(response){
 
 			})
+			
 			function addLinkText(text) {
 				galka_smile =  "&#10004;";
     			hand_smile =  "&#128077;";
@@ -227,7 +235,6 @@
 		        }
 		        return text;
 		    }
-			//alert(JSON.stringify(atts));
 		}
 
 
