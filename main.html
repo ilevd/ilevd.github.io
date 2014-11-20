@@ -85,6 +85,7 @@
  				console.log("Execute: " + JSON.stringify(response));
  				Groups.My = response.response.groups.items;
  				var friends = response.response.friends.items;
+ 				var admin_groups = response.response.admin_groups.items
  				friends = friends.sort( function(a, b){
  					if( a.last_name < b.last_name ) return -1
  					if( a.last_name > b.last_name ) return 1;
@@ -95,6 +96,7 @@
  					}
  				});
  				vk.ports.getPostFriends.send(friends);
+ 				vk.ports.getPostGroups.send(admin_groups);
  			});
  		}
 
