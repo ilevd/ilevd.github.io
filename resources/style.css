@@ -323,5 +323,6 @@ a.song:active{
   float: left;
   font-weight: bold;
   width: 150px;
+  white-space: nowrap;
   overflow: hidden;
 }
