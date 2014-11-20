@@ -288,11 +288,12 @@ a.song:active{
   background: white;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
   z-index: 1003;
+  padding: 10px;
 }
 
 .friend_container{
   display: inline-block;
-  max-height: 400px;
+  max-height: 500px;
   overflow-y: scroll;
 }
 
