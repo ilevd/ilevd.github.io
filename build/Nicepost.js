@@ -1895,6 +1895,44 @@ Elm.Nicepost.make = function (_elm) {
                    ,likes: 0
                    ,photos: _L.fromArray([])
                    ,text: ""};
+   var getPostFriends = $Native$Ports.portIn("getPostFriends",
+   $Native$Ports.incomingSignal(function (v) {
+      return _U.isJSArray(v) ? _L.fromArray(v.map(function (v) {
+         return typeof v === "object" && "id" in v && "first_name" in v && "last_name" in v ? {_: {}
+                                                                                              ,id: typeof v.id === "number" ? v.id : _E.raise("invalid input, expecting JSNumber but got " + v.id)
+                                                                                              ,first_name: typeof v.first_name === "string" || typeof v.first_name === "object" && v.first_name instanceof String ? v.first_name : _E.raise("invalid input, expecting JSString but got " + v.first_name)
+                                                                                              ,last_name: typeof v.last_name === "string" || typeof v.last_name === "object" && v.last_name instanceof String ? v.last_name : _E.raise("invalid input, expecting JSString but got " + v.last_name)} : _E.raise("invalid input, expecting JSObject [\"id\",\"first_name\",\"last_name\"] but got " + v);
+      })) : _E.raise("invalid input, expecting JSArray but got " + v);
+   }));
+   var newFriends = function () {
+      var convert = function (friends) {
+         return $Update.SetFriends(friends);
+      };
+      return A2($Signal._op["<~"],
+      convert,
+      getPostFriends);
+   }();
+   var getPostGroups = $Native$Ports.portIn("getPostGroups",
+   $Native$Ports.incomingSignal(function (v) {
+      return _U.isJSArray(v) ? _L.fromArray(v.map(function (v) {
+         return typeof v === "object" && "id" in v && "name" in v && "screen_name" in v && "is_closed" in v && "photo_50" in v && "photo_100" in v && "photo_200" in v ? {_: {}
+                                                                                                                                                                         ,id: typeof v.id === "number" ? v.id : _E.raise("invalid input, expecting JSNumber but got " + v.id)
+                                                                                                                                                                         ,name: typeof v.name === "string" || typeof v.name === "object" && v.name instanceof String ? v.name : _E.raise("invalid input, expecting JSString but got " + v.name)
+                                                                                                                                                                         ,screen_name: typeof v.screen_name === "string" || typeof v.screen_name === "object" && v.screen_name instanceof String ? v.screen_name : _E.raise("invalid input, expecting JSString but got " + v.screen_name)
+                                                                                                                                                                         ,is_closed: typeof v.is_closed === "number" ? v.is_closed : _E.raise("invalid input, expecting JSNumber but got " + v.is_closed)
+                                                                                                                                                                         ,photo_50: typeof v.photo_50 === "string" || typeof v.photo_50 === "object" && v.photo_50 instanceof String ? v.photo_50 : _E.raise("invalid input, expecting JSString but got " + v.photo_50)
+                                                                                                                                                                         ,photo_100: typeof v.photo_100 === "string" || typeof v.photo_100 === "object" && v.photo_100 instanceof String ? v.photo_100 : _E.raise("invalid input, expecting JSString but got " + v.photo_100)
+                                                                                                                                                                         ,photo_200: typeof v.photo_200 === "string" || typeof v.photo_200 === "object" && v.photo_200 instanceof String ? v.photo_200 : _E.raise("invalid input, expecting JSString but got " + v.photo_200)} : _E.raise("invalid input, expecting JSObject [\"id\",\"name\",\"screen_name\",\"is_closed\",\"photo_50\",\"photo_100\",\"photo_200\"] but got " + v);
+      })) : _E.raise("invalid input, expecting JSArray but got " + v);
+   }));
+   var newPostGrpous = function () {
+      var convert = function (groups) {
+         return $Update.SetGroups(groups);
+      };
+      return A2($Signal._op["<~"],
+      convert,
+      getPostGroups);
+   }();
    var resize = $Native$Ports.portIn("resize",
    $Native$Ports.incomingSignal(function (v) {
       return _U.isJSArray(v) ? {ctor: "_Tuple2"
@@ -1940,7 +1978,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "_Tuple2":
                return $Update.GetPosts(_v0._1);}
             _E.Case($moduleName,
-            "on line 299, column 35 to 49");
+            "on line 334, column 35 to 49");
          }();
       };
       return A2($Signal._op["<~"],
@@ -1975,7 +2013,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "ChangeGroup":
                return _v4._0;}
             _E.Case($moduleName,
-            "on line 314, column 40 to 47");
+            "on line 361, column 40 to 47");
          }();
       };
       var pridicate = function (act) {
@@ -2004,7 +2042,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "ChangeToggle":
                return _v9._0;}
             _E.Case($moduleName,
-            "on line 323, column 38 to 42");
+            "on line 370, column 38 to 42");
          }();
       };
       var predicate = function (act) {
@@ -2050,7 +2088,7 @@ Elm.Nicepost.make = function (_elm) {
             switch (_v14.ctor)
             {case "Repost": return _v14._0;}
             _E.Case($moduleName,
-            "on line 332, column 32 to 36");
+            "on line 379, column 32 to 36");
          }();
       };
       var predicate = function (act) {
@@ -2070,10 +2108,14 @@ Elm.Nicepost.make = function (_elm) {
    var mainSignal = $Signal.merges(_L.fromArray([actions.signal
                                                 ,newGroups
                                                 ,newPosts
-                                                ,newResize]));
+                                                ,newResize
+                                                ,newPostGrpous
+                                                ,newFriends]));
    var defaultState = {_: {}
                       ,currentGroup: 0
                       ,currentToggle: "Юмор"
+                      ,friendWindow: $Model.NoneFriend(_L.fromArray([]))
+                      ,groupWindow: $Model.NoneGroup(_L.fromArray([]))
                       ,groups: _L.fromArray([])
                       ,openPosts: _L.fromArray([])
                       ,postWindow: $Model.None
@@ -2219,7 +2261,7 @@ Elm.Nicepost.make = function (_elm) {
               {case "::": return _v19._1._1;}
               break;}
          _E.Case($moduleName,
-         "on line 155, column 25 to 26");
+         "on line 186, column 25 to 26");
       }();
    };
    var getImgs = function (post) {
@@ -2340,6 +2382,44 @@ Elm.Nicepost.make = function (_elm) {
       postHtml(openPosts),
       posts));
    });
+   var getFriendLine = function (user) {
+      return A2($Html$Tags.a,
+      _L.fromArray([$Html$Attributes.$class("song")]),
+      _L.fromArray([$Html.text(_L.append(user.last_name,
+      _L.append(" ",
+      user.first_name)))]));
+   };
+   var getFriendsWindow = F3(function (_v30,
+   friends,
+   post) {
+      return function () {
+         switch (_v30.ctor)
+         {case "_Tuple2":
+            return A2($Html$Tags.div,
+              _L.fromArray([$Html$Attributes.$class("win_container")
+                           ,$Html.style(_L.fromArray([A2($Html.prop,
+                           "top",
+                           _L.append($String.show(_v30._1),
+                           "px"))]))]),
+              _L.fromArray([A2($Html$Tags.div,
+              _L.fromArray([$Html$Attributes.$class("win")]),
+              _L.fromArray([A2($Html$Tags.p,
+                           _L.fromArray([$Html$Attributes.$class("post_window_p")]),
+                           _L.fromArray([A2($Html$Tags.a,
+                           _L.fromArray([$Html$Attributes.$class("song")
+                                        ,A2($Html$Events.onclick,
+                                        actions.handle,
+                                        $Basics.always($Update.OpenImage($Model.None)))]),
+                           _L.fromArray([$Html.text("Закрыть")]))]))
+                           ,A2($Html$Tags.div,
+                           _L.fromArray([$Html$Attributes.$class("friend_container")]),
+                           A2($List.map,
+                           getFriendLine,
+                           friends))]))]));}
+         _E.Case($moduleName,
+         "between lines 87 and 102");
+      }();
+   });
    var getBlackBackground = A2($Html$Tags.div,
    _L.fromArray([$Html$Attributes.$class("win_black")]),
    _L.fromArray([]));
@@ -2353,11 +2433,11 @@ Elm.Nicepost.make = function (_elm) {
       },
       imgSrc);
    });
-   var getPostWindow = F3(function (_v30,
+   var getPostWindow = F3(function (_v34,
    post,
    imgSrc) {
       return function () {
-         switch (_v30.ctor)
+         switch (_v34.ctor)
          {case "_Tuple2":
             return function () {
                  var imgStyle = _U.cmp($List.length(post.photos),
@@ -2379,7 +2459,7 @@ Elm.Nicepost.make = function (_elm) {
                  _L.fromArray([$Html$Attributes.$class("win_container")
                               ,$Html.style(_L.fromArray([A2($Html.prop,
                               "top",
-                              _L.append($String.show(_v30._1),
+                              _L.append($String.show(_v34._1),
                               "px"))]))]),
                  _L.fromArray([A2($Html$Tags.div,
                  _L.fromArray([$Html$Attributes.$class("win")]),
@@ -2397,7 +2477,7 @@ Elm.Nicepost.make = function (_elm) {
                               _L.fromArray([]))]))]));
               }();}
          _E.Case($moduleName,
-         "between lines 56 and 77");
+         "between lines 61 and 82");
       }();
    });
    var dividePosts = function (posts) {
@@ -2436,22 +2516,32 @@ Elm.Nicepost.make = function (_elm) {
          }();
       }();
    });
-   var display = function (_v35) {
+   var display = function (_v39) {
       return function () {
          return function () {
-            var divWin = function () {
-               var _v37 = _v35.postWindow;
-               switch (_v37.ctor)
+            var friendWin = function () {
+               var _v41 = _v39.friendWindow;
+               switch (_v41.ctor)
+               {case "FriendWindow":
+                  return _L.fromArray([A3(getFriendsWindow,
+                    _v39.winSize,
+                    _v41._0,
+                    _v41._1)]);}
+               return _L.fromArray([]);
+            }();
+            var imageWin = function () {
+               var _v44 = _v39.postWindow;
+               switch (_v44.ctor)
                {case "None":
                   return _L.fromArray([]);
                   case "Window":
                   return _L.fromArray([A3(getPostWindow,
-                                      _v35.winSize,
-                                      _v37._0,
-                                      _v37._1)
+                                      _v39.winSize,
+                                      _v44._0,
+                                      _v44._1)
                                       ,getBlackBackground]);}
                _E.Case($moduleName,
-               "between lines 39 and 42");
+               "between lines 40 and 43");
             }();
             return A2($Html.toElement,
             962,
@@ -2462,13 +2552,14 @@ Elm.Nicepost.make = function (_elm) {
                                    toggleList)
                                    ,A3($Html$Optimize$RefEq.lazy2,
                                    groupsDiv,
-                                   _v35.groups,
-                                   _v35.currentGroup)
+                                   _v39.groups,
+                                   _v39.currentGroup)
                                    ,A3($Html$Optimize$RefEq.lazy2,
                                    postColumns,
-                                   _v35.posts,
-                                   _v35.openPosts)]),
-            divWin)));
+                                   _v39.posts,
+                                   _v39.openPosts)]),
+            _L.append(imageWin,
+            friendWin))));
          }();
       }();
    };
@@ -2481,6 +2572,8 @@ Elm.Nicepost.make = function (_elm) {
                           ,display: display
                           ,getBlackBackground: getBlackBackground
                           ,getPostWindow: getPostWindow
+                          ,getFriendsWindow: getFriendsWindow
+                          ,getFriendLine: getFriendLine
                           ,postColumns: postColumns
                           ,postColumn: postColumn
                           ,postHtml: postHtml
@@ -2505,6 +2598,8 @@ Elm.Nicepost.make = function (_elm) {
                           ,newGroups: newGroups
                           ,newPosts: newPosts
                           ,newResize: newResize
+                          ,newPostGrpous: newPostGrpous
+                          ,newFriends: newFriends
                           ,emptyPost: emptyPost};
    return _elm.Nicepost.values;
 };Elm.View = Elm.View || {};
@@ -3589,12 +3684,12 @@ Elm.Update.make = function (_elm) {
               state);
             case "ClickText":
             return function () {
-                 var _v11 = A2($List.filter,
+                 var _v15 = A2($List.filter,
                  function (id) {
                     return _U.eq(id,action._0);
                  },
                  state.openPosts);
-                 switch (_v11.ctor)
+                 switch (_v15.ctor)
                  {case "[]":
                     return _U.replace([["openPosts"
                                        ,A2($List._op["::"],
@@ -3611,14 +3706,14 @@ Elm.Update.make = function (_elm) {
               }();
             case "GetPosts":
             return function () {
-                 var _v12 = state.posts;
-                 switch (_v12.ctor)
+                 var _v16 = state.posts;
+                 switch (_v16.ctor)
                  {case "[]":
                     return _U.replace([["posts"
                                        ,action._0]],
                       state);}
                  return _U.replace([["posts"
-                                    ,_L.append(_v12,action._0)]],
+                                    ,_L.append(_v16,action._0)]],
                  state);
               }();
             case "NewGroups":
@@ -3639,6 +3734,14 @@ Elm.Update.make = function (_elm) {
                  state);
               }();
             case "Noop": return state;
+            case "OpenFriendWindow":
+            return _U.replace([["friendWindow"
+                               ,action._0]],
+              state);
+            case "OpenGroupWindow":
+            return _U.replace([["groupWindow"
+                               ,action._0]],
+              state);
             case "OpenImage":
             return _U.replace([["postWindow"
                                ,action._0]],
@@ -3652,9 +3755,17 @@ Elm.Update.make = function (_elm) {
                                      ,_0: action._0._0
                                      ,_1: action._0._1}]],
                    state);}
-              break;}
+              break;
+            case "SetFriends":
+            return _U.replace([["friendWindow"
+                               ,$Model.NoneFriend(action._0)]],
+              state);
+            case "SetGroups":
+            return _U.replace([["groupWindow"
+                               ,$Model.NoneGroup(action._0)]],
+              state);}
          _E.Case($moduleName,
-         "between lines 21 and 52");
+         "between lines 26 and 69");
       }();
    });
    var Repost = function (a) {
@@ -3667,6 +3778,22 @@ Elm.Update.make = function (_elm) {
    };
    var NewGroups = function (a) {
       return {ctor: "NewGroups"
+             ,_0: a};
+   };
+   var SetGroups = function (a) {
+      return {ctor: "SetGroups"
+             ,_0: a};
+   };
+   var SetFriends = function (a) {
+      return {ctor: "SetFriends"
+             ,_0: a};
+   };
+   var OpenGroupWindow = function (a) {
+      return {ctor: "OpenGroupWindow"
+             ,_0: a};
+   };
+   var OpenFriendWindow = function (a) {
+      return {ctor: "OpenFriendWindow"
              ,_0: a};
    };
    var OpenImage = function (a) {
@@ -3697,6 +3824,10 @@ Elm.Update.make = function (_elm) {
                         ,ChangeGroup: ChangeGroup
                         ,ClickText: ClickText
                         ,OpenImage: OpenImage
+                        ,OpenFriendWindow: OpenFriendWindow
+                        ,OpenGroupWindow: OpenGroupWindow
+                        ,SetFriends: SetFriends
+                        ,SetGroups: SetGroups
                         ,NewGroups: NewGroups
                         ,Resize: Resize
                         ,Repost: Repost
@@ -3715,27 +3846,57 @@ Elm.Model.make = function (_elm) {
    _A = _N.Array.make(_elm),
    _E = _N.Error.make(_elm),
    $moduleName = "Model";
-   var State = F7(function (a,
+   var State = F9(function (a,
    b,
    c,
    d,
    e,
    f,
-   g) {
+   g,
+   h,
+   i) {
       return {_: {}
              ,currentGroup: b
              ,currentToggle: a
+             ,friendWindow: g
+             ,groupWindow: h
              ,groups: c
              ,openPosts: e
              ,postWindow: f
              ,posts: d
-             ,winSize: g};
+             ,winSize: i};
+   });
+   var NoneFriend = function (a) {
+      return {ctor: "NoneFriend"
+             ,_0: a};
+   };
+   var FriendWindow = F2(function (a,
+   b) {
+      return {ctor: "FriendWindow"
+             ,_0: a
+             ,_1: b};
+   });
+   var NoneGroup = function (a) {
+      return {ctor: "NoneGroup"
+             ,_0: a};
+   };
+   var GroupWindow = F2(function (a,
+   b) {
+      return {ctor: "GroupWindow"
+             ,_0: a
+             ,_1: b};
    });
    var None = {ctor: "None"};
    var Window = F2(function (a,b) {
       return {ctor: "Window"
              ,_0: a
              ,_1: b};
+   });
+   var User = F3(function (a,b,c) {
+      return {_: {}
+             ,first_name: b
+             ,id: a
+             ,last_name: c};
    });
    var Audio = F4(function (a,
    b,
@@ -3798,8 +3959,13 @@ Elm.Model.make = function (_elm) {
                        ,Post: Post
                        ,Photo: Photo
                        ,Audio: Audio
+                       ,User: User
                        ,Window: Window
                        ,None: None
+                       ,GroupWindow: GroupWindow
+                       ,NoneGroup: NoneGroup
+                       ,FriendWindow: FriendWindow
+                       ,NoneFriend: NoneFriend
                        ,State: State};
    return _elm.Model.values;
 };Elm.Utils = Elm.Utils || {};

@@ -279,3 +279,12 @@ a.song:active{
 .post_window_p{
   text-align: right;
 }
+
+
+.friend_container{
+  width: 150px;
+  min-height: 150px;
+  line-height: 3em;
+  overflow: auto;
+  padding: 5px;
+}

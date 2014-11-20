@@ -46,7 +46,9 @@
 		var vk = Elm.embed(Elm.Nicepost, div, {
 			getGroups: [],
 			getWallPosts: [0, []],
-			resize: [1000, 0]
+			resize: [1000, 0],
+			getPostGroups: [],
+			getPostFriends: []
 		} );
 		
 
@@ -81,6 +83,7 @@
  			VK.api("execute", {code:code, v: "5.26"}, function(response){
  				console.log("Execute: " + JSON.stringify(response));
  				Groups.My = response.response.groups.items;
+ 				vk.ports.getPostFriends.send(response.response.friends.items);
  			});
  		}
 
@@ -197,7 +200,7 @@
 		            if (text != "") {
 		                text += "\n\n";
 		            }
-		            text += "Всё лучшее тут: vk.com/NicePost";
+		            text += "Отправлено через: vk.com/NicePost";
 		            if (text.indexOf(galka_smile) == -1 && text.indexOf(hand_smile) == -1) {
 		                text += " " + galka_smile + hand_smile;
 		            }
