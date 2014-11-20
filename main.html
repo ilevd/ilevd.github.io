@@ -330,7 +330,7 @@
             if( nowDate.getDate() == day+1 && nowDate.getMonth() == month && nowDate.getFullYear() == year){
                 dayStr = "вчера в ";
             } else{
-                dayStr = day + " " +  getMonth(month) + " в ";
+                dayStr = day + " " +  getSmallMonth(month) + " в ";
             }
             return dayStr + timeStr;
    		}
@@ -341,6 +341,11 @@
 	        return arr[m];
     	}
 		
+		function getSmallMonth(m){
+	        var arr = ["янв", "фев", "мар", "апр", "мая", "июн", "июл", "авг", "сен", "окт", "ноя", "дек" ];
+	        return arr[m];
+    	}
+
 	</script>
 	
 </html>

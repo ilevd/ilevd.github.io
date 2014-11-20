@@ -84,7 +84,9 @@ body{
   color: #999999;
   margin-right: 5px;
   font-size: 9.5px;
-  cursor: pointer;  
+  width: 85px;
+  overflow: hidden;
+  text-align: left;
 }
 
 
