@@ -1978,7 +1978,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "_Tuple2":
                return $Update.GetPosts(_v0._1);}
             _E.Case($moduleName,
-            "on line 334, column 35 to 49");
+            "on line 336, column 35 to 49");
          }();
       };
       return A2($Signal._op["<~"],
@@ -2013,7 +2013,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "ChangeGroup":
                return _v4._0;}
             _E.Case($moduleName,
-            "on line 361, column 40 to 47");
+            "on line 363, column 40 to 47");
          }();
       };
       var pridicate = function (act) {
@@ -2042,7 +2042,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "ChangeToggle":
                return _v9._0;}
             _E.Case($moduleName,
-            "on line 370, column 38 to 42");
+            "on line 372, column 38 to 42");
          }();
       };
       var predicate = function (act) {
@@ -2088,7 +2088,7 @@ Elm.Nicepost.make = function (_elm) {
             switch (_v14.ctor)
             {case "Repost": return _v14._0;}
             _E.Case($moduleName,
-            "on line 379, column 32 to 36");
+            "on line 381, column 32 to 36");
          }();
       };
       var predicate = function (act) {
@@ -2114,7 +2114,8 @@ Elm.Nicepost.make = function (_elm) {
    var defaultState = {_: {}
                       ,currentGroup: 0
                       ,currentToggle: "Юмор"
-                      ,friendWindow: $Model.NoneFriend(_L.fromArray([]))
+                      ,friendWindow: $Model.NoneFriend
+                      ,friends: _L.fromArray([])
                       ,groupWindow: $Model.NoneGroup(_L.fromArray([]))
                       ,groups: _L.fromArray([])
                       ,openPosts: _L.fromArray([])
@@ -2214,7 +2215,10 @@ Elm.Nicepost.make = function (_elm) {
                                 $Basics.always($Update.Repost(post)))]),
                    _L.fromArray([$Html.text("На стену!")]))
                    ,A2($Html$Tags.a,
-                   _L.fromArray([$Html$Attributes.$class("postbutton")]),
+                   _L.fromArray([$Html$Attributes.$class("postbutton")
+                                ,A2($Html$Events.onclick,
+                                actions.handle,
+                                $Basics.always($Update.OpenFriendWindow($Model.FriendWindow(post))))]),
                    _L.fromArray([$Html.text("Другу!")]))
                    ,A2($Html$Tags.a,
                    _L.fromArray([$Html$Attributes.$class("postbutton")]),
@@ -2409,7 +2413,7 @@ Elm.Nicepost.make = function (_elm) {
                            _L.fromArray([$Html$Attributes.$class("song")
                                         ,A2($Html$Events.onclick,
                                         actions.handle,
-                                        $Basics.always($Update.OpenImage($Model.None)))]),
+                                        $Basics.always($Update.OpenFriendWindow($Model.NoneFriend)))]),
                            _L.fromArray([$Html.text("Закрыть")]))]))
                            ,A2($Html$Tags.div,
                            _L.fromArray([$Html$Attributes.$class("friend_container")]),
@@ -2525,20 +2529,20 @@ Elm.Nicepost.make = function (_elm) {
                {case "FriendWindow":
                   return _L.fromArray([A3(getFriendsWindow,
                     _v39.winSize,
-                    _v41._0,
-                    _v41._1)]);}
+                    _v39.friends,
+                    _v41._0)]);}
                return _L.fromArray([]);
             }();
             var imageWin = function () {
-               var _v44 = _v39.postWindow;
-               switch (_v44.ctor)
+               var _v43 = _v39.postWindow;
+               switch (_v43.ctor)
                {case "None":
                   return _L.fromArray([]);
                   case "Window":
                   return _L.fromArray([A3(getPostWindow,
                                       _v39.winSize,
-                                      _v44._0,
-                                      _v44._1)
+                                      _v43._0,
+                                      _v43._1)
                                       ,getBlackBackground]);}
                _E.Case($moduleName,
                "between lines 40 and 43");
@@ -3757,8 +3761,8 @@ Elm.Update.make = function (_elm) {
                    state);}
               break;
             case "SetFriends":
-            return _U.replace([["friendWindow"
-                               ,$Model.NoneFriend(action._0)]],
+            return _U.replace([["friends"
+                               ,action._0]],
               state);
             case "SetGroups":
             return _U.replace([["groupWindow"
@@ -3846,36 +3850,42 @@ Elm.Model.make = function (_elm) {
    _A = _N.Array.make(_elm),
    _E = _N.Error.make(_elm),
    $moduleName = "Model";
-   var State = F9(function (a,
-   b,
-   c,
-   d,
-   e,
-   f,
-   g,
-   h,
-   i) {
-      return {_: {}
-             ,currentGroup: b
-             ,currentToggle: a
-             ,friendWindow: g
-             ,groupWindow: h
-             ,groups: c
-             ,openPosts: e
-             ,postWindow: f
-             ,posts: d
-             ,winSize: i};
-   });
-   var NoneFriend = function (a) {
-      return {ctor: "NoneFriend"
+   var State = function (a) {
+      return function (b) {
+         return function (c) {
+            return function (d) {
+               return function (e) {
+                  return function (f) {
+                     return function (g) {
+                        return function (h) {
+                           return function (i) {
+                              return function (j) {
+                                 return {_: {}
+                                        ,currentGroup: b
+                                        ,currentToggle: a
+                                        ,friendWindow: g
+                                        ,friends: h
+                                        ,groupWindow: i
+                                        ,groups: c
+                                        ,openPosts: e
+                                        ,postWindow: f
+                                        ,posts: d
+                                        ,winSize: j};
+                              };
+                           };
+                        };
+                     };
+                  };
+               };
+            };
+         };
+      };
+   };
+   var NoneFriend = {ctor: "NoneFriend"};
+   var FriendWindow = function (a) {
+      return {ctor: "FriendWindow"
              ,_0: a};
    };
-   var FriendWindow = F2(function (a,
-   b) {
-      return {ctor: "FriendWindow"
-             ,_0: a
-             ,_1: b};
-   });
    var NoneGroup = function (a) {
       return {ctor: "NoneGroup"
              ,_0: a};
