@@ -189,8 +189,10 @@
 			}
 		}
 
-		function onRepostClick(post, owner_id){
-			console.log("RepostClick: " + post.message + " " + post.post);
+		function onRepostClick(postData){
+			var post = postData[0];
+			var owner_id = postData[1]
+			console.log("RepostClick: " + post.text);
 			console.log("RepostClick: " + owner_id);
 			//alert(JSON.stringify(post));
 			var message = addLinkText(post.text);
