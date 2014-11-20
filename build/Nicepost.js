@@ -1981,7 +1981,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "_Tuple2":
                return $Update.GetPosts(_v0._1);}
             _E.Case($moduleName,
-            "on line 380, column 35 to 49");
+            "on line 382, column 35 to 49");
          }();
       };
       return A2($Signal._op["<~"],
@@ -2016,7 +2016,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "ChangeGroup":
                return _v4._0;}
             _E.Case($moduleName,
-            "on line 407, column 40 to 47");
+            "on line 409, column 40 to 47");
          }();
       };
       var pridicate = function (act) {
@@ -2045,7 +2045,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "ChangeToggle":
                return _v9._0;}
             _E.Case($moduleName,
-            "on line 416, column 38 to 42");
+            "on line 418, column 38 to 42");
          }();
       };
       var predicate = function (act) {
@@ -2096,7 +2096,7 @@ Elm.Nicepost.make = function (_elm) {
                       ,_0: _v14._0
                       ,_1: _v14._1};}
             _E.Case($moduleName,
-            "on line 425, column 42 to 56");
+            "on line 427, column 42 to 56");
          }();
       };
       var predicate = function (act) {
@@ -2234,13 +2234,15 @@ Elm.Nicepost.make = function (_elm) {
                                 actions.handle,
                                 $Basics.always($Update.OpenGroupWindow($Model.GroupWindow(post))))]),
                    _L.fromArray([$Html.text("В группу!")]))
-                   ,A2($Html$Tags.img,
-                   _L.fromArray([$Html$Attributes.$class("likesimg")
-                                ,$Html$Attributes.src("/resources/like_vk2.png")]),
-                   _L.fromArray([]))
                    ,A2($Html$Tags.span,
-                   _L.fromArray([$Html$Attributes.$class("likestext")]),
-                   _L.fromArray([$Html.text($String.show(post.likes))]))]));
+                   _L.fromArray([$Html$Attributes.$class("likes")]),
+                   _L.fromArray([A2($Html$Tags.img,
+                                _L.fromArray([$Html$Attributes.$class("likesimg")
+                                             ,$Html$Attributes.src("/resources/like_vk2.png")]),
+                                _L.fromArray([]))
+                                ,A2($Html$Tags.span,
+                                _L.fromArray([$Html$Attributes.$class("likestext")]),
+                                _L.fromArray([$Html.text($String.show(post.likes))]))]))]));
    };
    var getAudio = F2(function (post,
    audio) {

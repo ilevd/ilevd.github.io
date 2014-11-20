@@ -57,6 +57,10 @@ body{
   /*border: 1px solid #cccccc;*/
 }
 
+.likes{
+  float: right;
+}
+
 .likestext{
   margin-left: 5px;
   /*margin-right: 45px;*/
