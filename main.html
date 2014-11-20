@@ -28,7 +28,7 @@
 	<script type="text/javascript">
 
 
-
+		var viewer_id;
 		var jsonpCount = 0;
 
 		var currentGroup = 0;
@@ -73,9 +73,10 @@
             }
             console.log(decodeURIComponent(  data["api_result"] ));
             console.log(data["viewer_id"])
+            viewer_id = data["viewer_id"];
             var api_result = JSON.parse(decodeURIComponent(  data["api_result"] ));  
  		}
- 		//parseVkData();
+ 		parseVkData();
 
 
  		function getVKInfo(){
@@ -191,7 +192,10 @@
 
 		function onRepostClick(postData){
 			var post = postData[0];
-			var owner_id = postData[1]
+			var owner_id = postData[1];
+			if( owner_id == 0 ){
+				owner_id = viewer_id;
+			}
 			console.log("RepostClick: " + post.text);
 			console.log("RepostClick: " + owner_id);
 			//alert(JSON.stringify(post));
@@ -204,7 +208,7 @@
 			}
 			var atts = post.photos.map( getPhoto ).concat( post.audios.map( getAudio));
 			var strAtts = atts.join(",");
-			VK.api("wall.post", {v: "5.26", message: message, attachments: strAtts}, function(response){
+			VK.api("wall.post", {v: "5.26", owner_id: owner_id, message: message, attachments: strAtts}, function(response){
 
 			})
 			function addLinkText(text) {
