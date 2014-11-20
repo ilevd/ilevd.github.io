@@ -213,14 +213,15 @@
 			var atts = post.photos.map( getPhoto ).concat( post.audios.map( getAudio));
 			var strAtts = atts.join(",");
 			var params = {v: "5.26", owner_id: owner_id, message: message, attachments: strAtts};
-	        if( owner_id.charAt(0) == "-"){
+	        
+	        if( owner_id.toString().charAt(0) == "-"){
             	params["from_group"] = 1;
         	}
 
 			VK.api("wall.post", params, function(response){
 
 			})
-			
+
 			function addLinkText(text) {
 				galka_smile =  "&#10004;";
     			hand_smile =  "&#128077;";
