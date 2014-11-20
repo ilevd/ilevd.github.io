@@ -281,6 +281,15 @@ a.song:active{
 }
 
 
+.window_friend{
+  text-align: left;
+  vertical-align: middle;
+  display: inline-block;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  z-index: 1002;
+}
+
 .friend_container{
   display: inline-block;
   max-height: 400px;

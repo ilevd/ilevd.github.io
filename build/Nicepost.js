@@ -2407,7 +2407,7 @@ Elm.Nicepost.make = function (_elm) {
          switch (_v30.ctor)
          {case "_Tuple2":
             return A2($Html$Tags.div,
-              _L.fromArray([$Html$Attributes.$class("win_container")
+              _L.fromArray([$Html$Attributes.$class("window_friend")
                            ,$Html.style(_L.fromArray([A2($Html.prop,
                            "top",
                            _L.append($String.show(_v30._1),
