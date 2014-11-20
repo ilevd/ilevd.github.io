@@ -2169,6 +2169,7 @@ Elm.Nicepost.make = function (_elm) {
                                  ,"Рецепты"
                                  ,"English"
                                  ,"Открытки"
+                                 ,"Стихи"
                                  ,"Мои"]);
    var groupImg = F2(function (currentGroup,
    group) {
