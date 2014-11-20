@@ -282,8 +282,8 @@ a.song:active{
 
 
 .friend_container{
-  width: 150px;
-  min-height: 150px;
+  width: 170px;
+  max-height: 300px;
   line-height: 3em;
   overflow: auto;
   padding: 5px;
