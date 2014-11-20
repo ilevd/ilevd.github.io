@@ -284,7 +284,7 @@ a.song:active{
 .friend_container{
   display: inline-block;
   max-height: 400px;
-  overflow-y: auto;
+  overflow-y: scroll;
   padding: 5px;
 
 }
