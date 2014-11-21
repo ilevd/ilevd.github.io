@@ -2141,7 +2141,7 @@ Elm.Nicepost.make = function (_elm) {
    name) {
       return function () {
          var className = _U.eq(name,
-         theme) ? "toggle-btn toggle-btn-checked" : "toggle-btn";
+         theme) ? "toggle-btn-checked" : "toggle-btn";
          return A2($Html$Tags.div,
          _L.fromArray([$Html$Attributes.$class(className)
                       ,A2($Html$Events.onclick,

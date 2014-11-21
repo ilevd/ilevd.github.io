@@ -198,7 +198,7 @@ a.song:active{
 .toggle-btn{
     text-align:center; 
     margin: 2px 2px;
-    padding: 7px 0px; 
+    padding: 8px 0px; 
     color:#45688E; 
     font-size: 12;
     background-color:#F5F5F5; 
@@ -207,7 +207,7 @@ a.song:active{
     border:solid 1px #FFFFFF; 
     cursor:pointer;
     font-family: Tahoma; 
-    width: 100px;
+    width: 9px;
 }
 
 div.toggle-btn:hover {
@@ -215,8 +215,18 @@ div.toggle-btn:hover {
 }
 
 div.toggle-btn-checked{
+    text-align:center; 
+    margin: 2px 2px;
+    padding: 8px 0px; 
+    color:#45688E; 
+    font-size: 12;
+    border-radius: 0px; 
+    display:inline-block; 
+    border:solid 1px #FFFFFF; 
+    font-family: Tahoma; 
+    width: 99px;
     background: #45688E;
-    color: #FFFFFF; 
+    color: white; 
 }
 
 /*
