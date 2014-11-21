@@ -1981,7 +1981,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "_Tuple2":
                return $Update.GetPosts(_v0._1);}
             _E.Case($moduleName,
-            "on line 382, column 35 to 49");
+            "on line 388, column 35 to 49");
          }();
       };
       return A2($Signal._op["<~"],
@@ -2016,7 +2016,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "ChangeGroup":
                return _v4._0;}
             _E.Case($moduleName,
-            "on line 409, column 40 to 47");
+            "on line 415, column 40 to 47");
          }();
       };
       var pridicate = function (act) {
@@ -2045,7 +2045,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "ChangeToggle":
                return _v9._0;}
             _E.Case($moduleName,
-            "on line 418, column 38 to 42");
+            "on line 424, column 38 to 42");
          }();
       };
       var predicate = function (act) {
@@ -2096,7 +2096,7 @@ Elm.Nicepost.make = function (_elm) {
                       ,_0: _v14._0
                       ,_1: _v14._1};}
             _E.Case($moduleName,
-            "on line 427, column 42 to 56");
+            "on line 433, column 42 to 56");
          }();
       };
       var predicate = function (act) {
@@ -2137,26 +2137,23 @@ Elm.Nicepost.make = function (_elm) {
    $Update.update,
    defaultState,
    mainSignal);
-   var getToggle = function (name) {
+   var getToggle = F2(function (theme,
+   name) {
       return A2($Html$Tags.div,
-      _L.fromArray([A2($Html$Events.onclick,
-      actions.handle,
-      $Basics.always($Update.ChangeToggle(name)))]),
-      _L.fromArray([A2($Html$Tags.input,
-                   _L.fromArray([$Html$Attributes.type$("radio")
-                                ,$Html$Attributes.name("group1")]),
-                   _L.fromArray([]))
-                   ,A2($Html$Tags.label,
-                   _L.fromArray([$Html$Attributes.$class("toggle-btn")]),
-                   _L.fromArray([$Html.text(name)]))]));
-   };
-   var displayToggles = function (toggles) {
+      _L.fromArray([$Html$Attributes.$class("toggle-btn")
+                   ,A2($Html$Events.onclick,
+                   actions.handle,
+                   $Basics.always($Update.ChangeToggle(name)))]),
+      _L.fromArray([$Html.text(name)]));
+   });
+   var displayToggles = F2(function (toggles,
+   theme) {
       return A2($Html$Tags.div,
-      _L.fromArray([$Html$Attributes.$class("toggle-btn-grp cssonly main-toggle")]),
+      _L.fromArray([$Html$Attributes.$class("main-toggle")]),
       A2($List.map,
-      getToggle,
+      getToggle(theme),
       toggles));
-   };
+   });
    var toggleList = _L.fromArray(["Юмор"
                                  ,"Любовь"
                                  ,"Новости"
@@ -2642,9 +2639,10 @@ Elm.Nicepost.make = function (_elm) {
             962,
             700)(A2($Html$Tags.div,
             _L.fromArray([]),
-            _L.append(_L.fromArray([A2($Html$Optimize$RefEq.lazy,
+            _L.append(_L.fromArray([A3($Html$Optimize$RefEq.lazy2,
                                    displayToggles,
-                                   toggleList)
+                                   toggleList,
+                                   _v45.currentToggle)
                                    ,A3($Html$Optimize$RefEq.lazy2,
                                    groupsDiv,
                                    _v45.groups,
