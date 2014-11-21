@@ -198,7 +198,7 @@ a.song:active{
 .toggle-btn{
     text-align:center; 
     margin: 2px 2px;
-    padding:0.4em 3em; 
+    padding: 0.4em 10px; 
     color:#45688E; 
     font-size: 12;
     background-color:#F5F5F5; 
@@ -207,6 +207,7 @@ a.song:active{
     border:solid 1px #FFFFFF; 
     cursor:pointer;
     font-family: Tahoma; 
+    width: 100px;
 }
 
 div.toggle-btn:hover {
