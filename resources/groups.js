@@ -327,8 +327,8 @@ var Groups = {
         "53079952",
 
         "biser_juliakorn",
-        "ideirukodelie",
-        "61945080"
+        "ideirukodelie"
+        //,"61945080"
     ],
 
 

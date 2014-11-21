@@ -160,15 +160,15 @@
 			if( currentGroupOffset == 0 ){
 				vk.ports.getWallPosts.send([0, []]); 	
 			}
-			VK.api("wall.get", {v:5.25, count: 50, owner_id: owner_id, offset: currentGroupOffset}, onWallGet);
-			currentGroupOffset += 50;
+			VK.api("wall.get", {v:5.25, count: 55, owner_id: owner_id, offset: currentGroupOffset}, onWallGet);
+			currentGroupOffset += 55;
 			jsonpCount++;
 			currentGroup = owner_id;
 		}
 		function onWallGet(json){
 			var posts = parseJson(json);
 			var sortPosts = posts.sort( function(a,b){ return b.likes-a.likes } )
-				.slice(0, 47).sort( function(a, b){ return a.date > b.date ? -1 : 1} );
+				.slice(0, 45).sort( function(a, b){ return a.date > b.date ? -1 : 1} );
 			vk.ports.getWallPosts.send([currentGroupOffset, sortPosts]); 
 			//console.log("WallGet posts.length: " + posts.length);
 			//currentGroupOffset += json.response.items.length;
