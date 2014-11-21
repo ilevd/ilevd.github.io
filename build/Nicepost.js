@@ -2643,8 +2643,7 @@ Elm.Nicepost.make = function (_elm) {
             962,
             700)(A2($Html$Tags.div,
             _L.fromArray([]),
-            _L.append(_L.fromArray([A3($Html$Optimize$RefEq.lazy2,
-                                   displayToggles,
+            _L.append(_L.fromArray([A2(displayToggles,
                                    toggleList,
                                    _v45.currentToggle)
                                    ,A3($Html$Optimize$RefEq.lazy2,
@@ -3780,7 +3779,8 @@ Elm.Update.make = function (_elm) {
             case "ChangeToggle":
             return _U.replace([["openPosts"
                                ,_L.fromArray([])]
-                              ,["posts",_L.fromArray([])]],
+                              ,["posts",_L.fromArray([])]
+                              ,["currentToggle",action._0]],
               state);
             case "ClickText":
             return function () {
