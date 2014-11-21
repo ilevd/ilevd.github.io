@@ -155,7 +155,7 @@ var Groups = {
 
         "playtoplay",
         "bestgames",
-        "onlaingamer",
+        "games",
         "club30362362",
         "game_scrt",
 
@@ -307,6 +307,31 @@ var Groups = {
         "stihi_o_liubvi"
     ],
 
+    Handiwork : [
+        "h.made",
+        "31805219",
+        "be.kreativ",
+        "knitting",
+        "soverwenstvo.decora",
+        
+        "world_hm",
+        "best.knitting",
+        "shenows",
+        "girljj",
+        "funny.home",
+
+        "magiarukodelia",
+        "hands.make",
+        "rddis",
+        "39153494",
+        "53079952",
+
+        "biser_juliakorn",
+        "ideirukodelie",
+        "61945080"
+    ],
+
+
     My : [],
 
 
@@ -327,6 +352,7 @@ var Groups = {
                 Groups.English, 
                 Groups.Cards,
                 Groups.Verse,
+                Groups.Handiwork,
                 Groups.My
         ];
     },
@@ -335,7 +361,7 @@ var Groups = {
 
     groupsNames : ["Юмор","Любовь", "Новости", "Картинки", "Умное", "Цитаты",
         "Музыка", "Игры", "Спорт", "Авто", "Бизнес", "Мода",
-        "Рецепты", "English", "Открытки", "Стихи", "Мои" ],
+        "Рецепты", "English", "Открытки", "Стихи", "Рукоделие", "Мои" ],
 
     getAllGroupsString : function(){
     	var arr = [];

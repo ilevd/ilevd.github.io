@@ -2174,6 +2174,7 @@ Elm.Nicepost.make = function (_elm) {
                                  ,"English"
                                  ,"Открытки"
                                  ,"Стихи"
+                                 ,"Рукоделие"
                                  ,"Мои"]);
    var groupImg = F2(function (currentGroup,
    group) {
@@ -2643,7 +2644,8 @@ Elm.Nicepost.make = function (_elm) {
             962,
             700)(A2($Html$Tags.div,
             _L.fromArray([]),
-            _L.append(_L.fromArray([A2(displayToggles,
+            _L.append(_L.fromArray([A3($Html$Optimize$RefEq.lazy2,
+                                   displayToggles,
                                    toggleList,
                                    _v45.currentToggle)
                                    ,A3($Html$Optimize$RefEq.lazy2,
