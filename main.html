@@ -160,10 +160,10 @@
 			if( currentGroupOffset == 0 ){
 				vk.ports.getWallPosts.send([0, []]); 	
 			}
-			currentGroup = owner_id;
-			jsonpCount++;
-			currentGroupOffset += 50;
 			VK.api("wall.get", {v:5.25, count: 50, owner_id: owner_id, offset: currentGroupOffset}, onWallGet);
+			currentGroupOffset += 50;
+			jsonpCount++;
+			currentGroup = owner_id;
 		}
 		function onWallGet(json){
 			var posts = parseJson(json);
