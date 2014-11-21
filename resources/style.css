@@ -208,7 +208,6 @@ a.song:active{
     cursor:pointer;
     font-family: Tahoma; 
     width: 99px;
-    user-select: none;
 }
 
 div.toggle-btn:hover {
@@ -228,7 +227,7 @@ div.toggle-btn-checked{
     width: 99px;
     background: #45688E;
     color: white; 
-    user-select: none;
+    cursor:pointer;
 }
 
 /*
