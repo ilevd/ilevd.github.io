@@ -228,6 +228,7 @@ div.toggle-btn-checked{
     background: #45688E;
     color: white; 
     cursor:pointer;
+    font-weight: bold;
 }
 
 /*
