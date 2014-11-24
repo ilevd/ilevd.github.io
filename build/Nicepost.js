@@ -2307,7 +2307,7 @@ Elm.Nicepost.make = function (_elm) {
          },
          post);
          var getImg_290 = A3(getImg,
-         280,
+         270,
          function (_) {
             return _.photo_604;
          },
