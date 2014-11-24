@@ -51,45 +51,13 @@ body{
   cursor: pointer;
 }
 
+
+
+/** ---------- Footer----------------------- **/
+
 .footer{
   margin-top: 5px;
   padding-top: 3px;
-  vertical-align: middle;
-  height: 18px;
-  /*border: 1px solid #cccccc;*/
-}
-
-.likes{
-  float: right;
-  height: 18px;
-  vertical-align: middle;
-}
-
-.likestext{
-  margin-left: 5px;
-  /*margin-right: 45px;*/
-  font-weight: normal;  
-  color: #41658a;
-}
-
-.likesimg{
-  height: 9px;
-}
-
-.postbutton{
-  color: #2B587A;
-  margin-right: 5px;
-  font-size: 9.5px;
-  cursor: pointer;
-  height: 18px;
-  vertical-align: middle;
-  font-weight: bold;
-}
-.postbutton:hover{
-  text-decoration: underline;
-}
-.postbutton:active{
-  text-decoration: none;
 }
 
 .date{
@@ -102,6 +70,39 @@ body{
   overflow: hidden;
   text-align: left;
 }
+
+.likes{
+  float: right;
+  position: relative;
+}
+
+.likestext{
+  margin-left: 5px;
+  padding-left: 15px;
+  font-weight: normal;  
+  color: #999999;
+}
+
+.likesimg{
+  height: 9px;
+  position: absolute;
+}
+
+.postbutton{
+  color: #2B587A;
+  margin-right: 5px;
+  font-size: 9.5px;
+  cursor: pointer;
+  vertical-align: middle;
+  font-weight: bold;
+}
+.postbutton:hover{
+  text-decoration: underline;
+}
+.postbutton:active{
+  text-decoration: none;
+}
+
 
 
 
