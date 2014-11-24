@@ -7,7 +7,7 @@ body{
 }
 
 .columnpost{
-  margin-right: 5px;
+  margin-right: 10px;
   float: left;
   /*border-right: 1px solid #cccccc;*/
 }
@@ -22,12 +22,11 @@ body{
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 9px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   font-size: 11px;
   font-family: tahoma;
   text-align: left;
-  /*link: #573463;*/
-  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  box-shadow: 0 0 2px rgba(0,0,0,0.2);
 }
 
 .mainimg{
@@ -203,7 +202,6 @@ a.song:active{
     color:#45688E; 
     font-size: 12;
     background-color:#F5F5F5; 
-    border-radius: 0px; 
     display:inline-block; 
     border:solid 1px #FFFFFF; 
     cursor:pointer;
@@ -217,11 +215,10 @@ div.toggle-btn:hover {
 
 div.toggle-btn-checked{
     text-align:center; 
-    margin: 1;
+    margin: 1px;
     padding: 8px 0px; 
     color:#45688E; 
     font-size: 12;
-    border-radius: 0px; 
     display:inline-block; 
     border:solid 1px #FFFFFF; 
     font-family: Tahoma; 
