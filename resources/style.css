@@ -1,9 +1,13 @@
 body{
   font-size: 11px;
   font-family: tahoma; 
-  background: #f2f0f1;
+  background: white;
  
 
+}
+
+.columns{
+    background: #f2f0f1;
 }
 
 .columnpost{
@@ -14,7 +18,7 @@ body{
 
 .main{
   background-color: #FEFEFE;
-  border: 1px solid #cccccc;
+  /*border: 1px solid #cccccc;*/
   /*border-right: 1px solid #cccccc;
   /*border-radius: 5px;*/
   width: 280px;
@@ -26,7 +30,7 @@ body{
   font-size: 11px;
   font-family: tahoma;
   text-align: left;
-  box-shadow: 0 0 2px rgba(0,0,0,0.2);
+  /*box-shadow: 0 0 2px rgba(0,0,0,0.2);*/
 }
 
 .mainimg{

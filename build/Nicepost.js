@@ -2588,7 +2588,7 @@ Elm.Nicepost.make = function (_elm) {
             posts2 = $._1,
             posts3 = $._2;
             return A2($Html$Tags.div,
-            _L.fromArray([]),
+            _L.fromArray([$Html$Attributes.$class("columns")]),
             _L.fromArray([A3(postColumn,
                          "post-column1",
                          posts1,
