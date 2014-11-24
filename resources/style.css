@@ -17,7 +17,7 @@ body{
   border: 1px solid #cccccc;
   /*border-right: 1px solid #cccccc;
   /*border-radius: 5px;*/
-  width: 290px;
+  width: 280px;
   padding-top: 10px;
   padding-left: 10px;
   padding-right: 10px;
@@ -27,6 +27,7 @@ body{
   font-family: tahoma;
   text-align: left;
   /*link: #573463;*/
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
 
 .mainimg{
@@ -197,7 +198,7 @@ a.song:active{
 
 .toggle-btn{
     text-align:center; 
-    margin: 2px 2px;
+    margin: 1px;
     padding: 8px 0px; 
     color:#45688E; 
     font-size: 12;
@@ -216,7 +217,7 @@ div.toggle-btn:hover {
 
 div.toggle-btn-checked{
     text-align:center; 
-    margin: 2px 2px;
+    margin: 1;
     padding: 8px 0px; 
     color:#45688E; 
     font-size: 12;
