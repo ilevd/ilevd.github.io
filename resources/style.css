@@ -73,10 +73,12 @@ body{
 
 .likes{
   float: right;
-  position: relative;
+  padding-left: 15px;
+  background: url("/resources/like_vk2.png") 0px 50% no-repeat;
+  vertical-align: middle;
 }
 
-.likestext{
+/*.likestext{
   margin-left: 5px;
   padding-left: 15px;
   font-weight: normal;  
@@ -86,7 +88,7 @@ body{
 .likesimg{
   height: 9px;
   position: absolute;
-}
+}*/
 
 .postbutton{
   color: #2B587A;
