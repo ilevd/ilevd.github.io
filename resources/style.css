@@ -2,6 +2,7 @@ body{
   font-size: 11px;
   font-family: tahoma; 
   background: #e9eae6;
+  margin: 0px;
  }
 
 .columns{
@@ -9,8 +10,8 @@ body{
 }
 
 .columnpost{
-  margin-right: 20px;
   float: left;
+  padding: 20px;
   /*border-right: 1px solid #cccccc;*/
 }
 
@@ -24,7 +25,6 @@ body{
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 9px;
-  margin-bottom: 20px;
   font-size: 11px;
   font-family: tahoma;
   text-align: left;
