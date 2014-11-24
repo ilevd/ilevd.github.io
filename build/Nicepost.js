@@ -2295,13 +2295,13 @@ Elm.Nicepost.make = function (_elm) {
    var getImgs = function (post) {
       return function () {
          var getImg_95 = A3(getImg,
-         95,
+         89,
          function (_) {
             return _.photo_130;
          },
          post);
          var getImg_144 = A3(getImg,
-         144,
+         134,
          function (_) {
             return _.photo_604;
          },
