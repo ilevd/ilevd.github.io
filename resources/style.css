@@ -1,7 +1,7 @@
 body{
   font-size: 11px;
   font-family: tahoma; 
-  background: white;
+  background: #F7F7F7;
   margin: 0px;
  }
 
@@ -20,16 +20,13 @@ body{
   /*border: 1px solid #cccccc;*/
   /*border-right: 1px solid #cccccc;
   /*border-radius: 5px;*/
-  width: 280px;
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 9px;
+  width: 270px;
+  padding: 15px;
   margin-bottom: 20px;
   font-size: 11px;
   font-family: tahoma;
   text-align: left;
-  box-shadow: 0 0 2px rgba(0,0,0,0.2);
+  box-shadow: 0 0 0 rgba(0,0,0,0.2);
 }
 
 .mainimg{
@@ -85,6 +82,7 @@ body{
   cursor: pointer;
   height: 18px;
   vertical-align: middle;
+  font-variant: bold;
 }
 .postbutton:hover{
   text-decoration: underline;
@@ -99,7 +97,7 @@ body{
   line-height: 18px;
   vertical-align: middle;
   font-size: 9.5px;
-  width: 85px;
+  width: 80px;
   overflow: hidden;
   text-align: left;
 }
@@ -120,6 +118,7 @@ body{
 div.groups{
   margin-bottom: 10px;
   background: white;
+  border-bottom: 2px solid #D9E0E7;
 }
 
 
