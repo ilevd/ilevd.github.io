@@ -1,13 +1,13 @@
 body{
   font-size: 11px;
   font-family: tahoma; 
-  background: white;
+  background: #f2f0f1;
  
 
 }
 
 .columnpost{
-  margin-right: 10px;
+  margin-right: 20px;
   float: left;
   /*border-right: 1px solid #cccccc;*/
 }
@@ -22,7 +22,7 @@ body{
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 9px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-size: 11px;
   font-family: tahoma;
   text-align: left;
