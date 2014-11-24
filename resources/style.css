@@ -1,10 +1,8 @@
 body{
   font-size: 11px;
   font-family: tahoma; 
-  background: white;
- 
-
-}
+  background: #e9eae6;
+ }
 
 .columns{
     background: #f2f0f1;
@@ -120,6 +118,7 @@ body{
 
 div.groups{
   margin-bottom: 10px;
+  background: white;
 }
 
 
@@ -197,6 +196,7 @@ a.song:active{
 /* CSS toggle only version */
 .main-toggle{
   padding-bottom: 10px;
+  background: white;
 }
 
 .toggle-btn{
