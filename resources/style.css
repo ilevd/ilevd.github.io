@@ -73,7 +73,7 @@ body{
 
 .likes{
   float: right;
-  padding-left: 15px;
+  padding-left: 12px;
   background: url("/resources/black2.jpg") 0px 50% no-repeat;
   line-height: 18px;
   vertical-align: middle;
