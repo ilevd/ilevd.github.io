@@ -26,7 +26,7 @@ body{
   font-size: 11px;
   font-family: tahoma;
   text-align: left;
-  box-shadow: 0 0 0 rgba(0,0,0,0.2);
+  box-shadow: 0 0 10 rgba(0,0,0,0.1);
 }
 
 .mainimg{
@@ -82,7 +82,7 @@ body{
   cursor: pointer;
   height: 18px;
   vertical-align: middle;
-  font-variant: bold;
+  font-weight: bold;
 }
 .postbutton:hover{
   text-decoration: underline;
@@ -119,6 +119,7 @@ div.groups{
   margin-bottom: 10px;
   background: white;
   border-bottom: 2px solid #D9E0E7;
+  padding: 5px;
 }
 
 
@@ -195,6 +196,7 @@ a.song:active{
 
 /* CSS toggle only version */
 .main-toggle{
+  padding: 5px;
   padding-bottom: 10px;
   background: white;
 }
