@@ -73,7 +73,7 @@ body{
 
 .likes{
   float: right;
-  padding-left: 12px;
+  padding-left: 13px;
   background: url("/resources/black2.jpg") 0px 50% no-repeat;
   line-height: 18px;
   vertical-align: middle;
@@ -219,6 +219,7 @@ a.song:active{
     cursor:pointer;
     font-family: Tahoma; 
     width: 99px;
+    font-weight: bold;
 }
 
 div.toggle-btn:hover {
