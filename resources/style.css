@@ -12,7 +12,6 @@ body{
 .columnpost{
   float: left;
   padding: 10px;
-  /*border-right: 1px solid #cccccc;*/
 }
 
 .main{
@@ -219,7 +218,7 @@ a.song:active{
     cursor:pointer;
     font-family: Tahoma; 
     width: 99px;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 div.toggle-btn:hover {
