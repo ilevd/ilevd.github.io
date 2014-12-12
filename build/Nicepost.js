@@ -1981,7 +1981,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "_Tuple2":
                return $Update.GetPosts(_v0._1);}
             _E.Case($moduleName,
-            "on line 393, column 35 to 49");
+            "on line 394, column 35 to 49");
          }();
       };
       return A2($Signal._op["<~"],
@@ -2016,7 +2016,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "ChangeGroup":
                return _v4._0;}
             _E.Case($moduleName,
-            "on line 420, column 40 to 47");
+            "on line 421, column 40 to 47");
          }();
       };
       var pridicate = function (act) {
@@ -2045,7 +2045,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "ChangeToggle":
                return _v9._0;}
             _E.Case($moduleName,
-            "on line 429, column 38 to 42");
+            "on line 430, column 38 to 42");
          }();
       };
       var predicate = function (act) {
@@ -2096,7 +2096,7 @@ Elm.Nicepost.make = function (_elm) {
                       ,_0: _v14._0
                       ,_1: _v14._1};}
             _E.Case($moduleName,
-            "on line 438, column 42 to 56");
+            "on line 439, column 42 to 56");
          }();
       };
       var predicate = function (act) {
@@ -2249,11 +2249,9 @@ Elm.Nicepost.make = function (_elm) {
                    $Basics.always(A2($Update.Repost,
                    post,
                    0)))]),
-      _L.fromArray([$Html.text(A2($String.left,
-      40,
-      _L.append(audio.artist,
+      _L.fromArray([$Html.text(_L.append(audio.artist,
       _L.append(" - ",
-      audio.title))))]));
+      audio.title)))]));
    });
    var getAudios = function (post) {
       return A2($List.map,
