@@ -353,6 +353,13 @@ a.close{
   color: #4a6283;
   display: block;
 }
+a.close:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+a.close:active{
+  color: #999999;
+}
 
 
 
