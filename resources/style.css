@@ -182,7 +182,8 @@ img.groupimg:hover{
 a.song {
   /*font-weight: bold;*/
   /*font-size: 11;*/
-  width: 240px;
+  width: 250px;
+  white-space: nowrap;
   color: #4a6283;
   display: block;
   overflow: hidden;
