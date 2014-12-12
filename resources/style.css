@@ -177,7 +177,6 @@ img.groupimg:hover{
 
 
 
-
 /* Audio style */
 a.song {
   /*font-weight: bold;*/
@@ -349,6 +348,12 @@ div.toggle-btn-checked{
 .post_window_p{
   text-align: right;
 }
+a.close{
+  display: block;
+  color: #4a6283;
+  display: block;
+}
+
 
 
 .window_friend{

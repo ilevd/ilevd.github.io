@@ -2436,7 +2436,7 @@ Elm.Nicepost.make = function (_elm) {
               _L.fromArray([A2($Html$Tags.p,
                            _L.fromArray([$Html$Attributes.$class("post_window_p")]),
                            _L.fromArray([A2($Html$Tags.a,
-                           _L.fromArray([$Html$Attributes.$class("song")
+                           _L.fromArray([$Html$Attributes.$class("close")
                                         ,A2($Html$Events.onclick,
                                         actions.handle,
                                         $Basics.always($Update.OpenGroupWindow($Model.NoneGroup)))]),
@@ -2486,7 +2486,7 @@ Elm.Nicepost.make = function (_elm) {
               _L.fromArray([A2($Html$Tags.p,
                            _L.fromArray([$Html$Attributes.$class("post_window_p")]),
                            _L.fromArray([A2($Html$Tags.a,
-                           _L.fromArray([$Html$Attributes.$class("song")
+                           _L.fromArray([$Html$Attributes.$class("close")
                                         ,A2($Html$Events.onclick,
                                         actions.handle,
                                         $Basics.always($Update.OpenFriendWindow($Model.NoneFriend)))]),
@@ -2546,7 +2546,7 @@ Elm.Nicepost.make = function (_elm) {
                  _L.fromArray([A2($Html$Tags.p,
                               _L.fromArray([$Html$Attributes.$class("post_window_p")]),
                               _L.fromArray([A2($Html$Tags.a,
-                              _L.fromArray([$Html$Attributes.$class("song")
+                              _L.fromArray([$Html$Attributes.$class("close")
                                            ,A2($Html$Events.onclick,
                                            actions.handle,
                                            $Basics.always($Update.OpenImage($Model.None)))]),
