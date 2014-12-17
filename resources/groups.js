@@ -147,7 +147,7 @@ var Groups = {
     ],
 
     Games : [
-        "vk_gameplay",
+        /*"vk_gameplay",*/
         "igromania_official",
         "worldgames",
         "onlinegamer",

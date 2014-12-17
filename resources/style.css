@@ -111,6 +111,7 @@ div.groups{
   background: white;
   border-bottom: 2px solid #D9E0E7;
   padding: 5px;
+  padding-bottom: 10px;
   text-align: center;
 }
 
@@ -191,7 +192,9 @@ a.song:active{
 /* CSS toggle only version */
 .main-toggle{
   padding: 5px;
+  padding-top: 10px;
   background: white;
+  text-align: center;
 }
 
 .toggle-btn{
