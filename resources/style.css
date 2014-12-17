@@ -111,6 +111,7 @@ div.groups{
   background: white;
   border-bottom: 2px solid #D9E0E7;
   padding: 5px;
+  text-align: center;
 }
 
 
@@ -202,8 +203,8 @@ a.song:active{
     padding: 8px 0px; 
     width: 99px;
 
-    /*border-radius: 7px;*/
-    border:solid 1px #FFFFFF; 
+    border-radius: 5px;
+    /*border:solid 1px #FFFFFF;*/
 
     font-size: 12;
     font-family: Tahoma; 
@@ -214,7 +215,7 @@ a.song:active{
 
 div.toggle-btn-normal{
   color:#45688E; 
-  background-color:#F5F5F5; 
+  /*background-color:#F5F5F5; */
   /*background-image: linear-gradient(#5ba1f7, #1277f3);*/
 }
 
@@ -225,8 +226,9 @@ div.toggle-btn-normal:hover {
 
 div.toggle-btn-checked{
     /*background-image: linear-gradient(#f7635b, #f31e12);*/
+    background-image: linear-gradient(#DB6963, #C4352D)
     color: white; 
-    background: #45688E;
+    /*background: #45688E;*/
 }
 
 
