@@ -39,12 +39,8 @@ body{
   overflow: hidden;
   word-wrap: break-word;
   white-space: pre-wrap;
-  margin-bottom: 5px;
   font-size: 12px;
-  padding-left: 10px;
-  padding-top: 7px;
-  padding-right: 10px;
-  /*border: 1px solid #cccccc;*/
+  padding: 7px 10px 5px 10px;
 }
 
 .textBlockClicked:hover{
@@ -57,7 +53,7 @@ body{
 /** ---------- Footer----------------------- **/
 
 .footer{
-  padding: 10px;
+  padding: 5px 8px 7px 8px;
 }
 
 .date{
@@ -66,7 +62,7 @@ body{
   line-height: 18px;
   vertical-align: middle;
   font-size: 9.5px;
-  width: 80px;
+  width: 70px;
   overflow: hidden;
   text-align: left;
 }
