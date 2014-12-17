@@ -175,6 +175,7 @@ a.song {
   overflow: hidden;
   text-overflow: ellipsis;
   padding-left: 25px;
+  position: relative;
 }
 a.song:before{
   border-style: solid;
