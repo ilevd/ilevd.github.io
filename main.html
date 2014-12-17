@@ -36,6 +36,7 @@
 		var currentGroupMax = 0;
 
 		var appHeight = 1000;
+		var appWidth = 930;
 
 		var windowHeight = 1000;
 		var windowScrollTop = 0;
@@ -129,7 +130,7 @@
 				}
 				//console.log("Body height: " + bdy.offsetHeight);
 				if( max + 160 > appHeight){
-					VK.callMethod("resizeWindow", 962, max + 160);
+					VK.callMethod("resizeWindow", appWidth, max + 160);
 					appHeight = max + 160;
 				}
 			}
@@ -182,7 +183,7 @@
 			currentGroup = "-" + id.toString()
 			currentGroupOffset = 0;
 			wallGet(currentGroup);
-			VK.callMethod("resizeWindow", 962, 2000);
+			VK.callMethod("resizeWindow", appWidth, 2000);
 			appHeight = 2000;
 		}
 
