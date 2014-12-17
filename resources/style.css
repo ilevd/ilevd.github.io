@@ -41,9 +41,9 @@ body{
   white-space: pre-wrap;
   margin-bottom: 5px;
   font-size: 12px;
-  padding-left: 7px;
+  padding-left: 10px;
   padding-top: 7px;
-  padding-right: 7px;
+  padding-right: 10px;
   /*border: 1px solid #cccccc;*/
 }
 
@@ -57,7 +57,7 @@ body{
 /** ---------- Footer----------------------- **/
 
 .footer{
-  padding: 7px;
+  padding: 10px;
 }
 
 .date{
@@ -175,7 +175,7 @@ a.song {
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding-left: 7px;
+  padding-left: 10px;
 }
 
 a.song:hover{
