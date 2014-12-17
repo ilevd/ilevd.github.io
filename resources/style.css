@@ -56,8 +56,8 @@ body{
 
 .footer{
   margin-top: 5px;
-  padding-top: 3px;
-  padding-left: 7px;
+  /*padding-top: 3px;*/
+  padding: 7px;
 }
 
 .date{
