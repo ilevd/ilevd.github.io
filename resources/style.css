@@ -170,7 +170,7 @@ a.song {
   width: 230px;
   white-space: nowrap;
   /*color: #4a6283;*/
-  color: #777777;
+  color: #555;
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -192,7 +192,7 @@ a.song:hover{
 }
 
 a.song:active{
-  color: #999999;
+  color: #555555;
 }
 
 
