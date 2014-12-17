@@ -16,8 +16,6 @@ body{
 
 .main{
   background-color: #FEFEFE;
-  /*border: 1px solid #cccccc;*/
-  /*border-right: 1px solid #cccccc;*/
   border-radius: 5px;
   width: 270px;
   padding: 15px;
@@ -79,17 +77,6 @@ body{
   color: #999999;
 }
 
-/*.likestext{
-  margin-left: 5px;
-  padding-left: 15px;
-  font-weight: normal;  
-  color: #999999;
-}
-
-.likesimg{
-  height: 9px;
-  position: absolute;
-}*/
 
 .postbutton{
   color: #2B587A;
@@ -179,8 +166,6 @@ img.groupimg:hover{
 
 /* Audio style */
 a.song {
-  /*font-weight: bold;*/
-  /*font-size: 11;*/
   width: 250px;
   white-space: nowrap;
   color: #4a6283;
@@ -210,91 +195,40 @@ a.song:active{
 }
 
 .toggle-btn{
-    text-align:center; 
-    margin: 1px;
-    padding: 8px 0px; 
-    color:#45688E; 
-    font-size: 12;
-    background-color:#F5F5F5; 
     display:inline-block; 
-    border:solid 1px #FFFFFF; 
     cursor:pointer;
+
+    margin-bottom: 1px;
+    margin-right: 1px;
+    padding: 8px 0px; 
+    width: 102px;
+
+    /*border-radius: 7px;*/
+    border:solid 1px #FFFFFF; 
+
+    font-size: 12;
     font-family: Tahoma; 
-    width: 99px;
+    text-transform: uppercase;
+    text-align: center; 
     font-weight: normal;
 }
 
-div.toggle-btn:hover {
-    background: #e1e7ed
+div.toggle-btn-normal{
+  color:#45688E; 
+  background-color:#F5F5F5; 
+  /*background-image: linear-gradient(#5ba1f7, #1277f3);*/
+}
+
+div.toggle-btn-normal:hover {
+   /* background-image: linear-gradient(#f7635b, #f31e12);*/
+    background: #e1e7ed;
 }
 
 div.toggle-btn-checked{
-    text-align:center; 
-    margin: 1px;
-    padding: 8px 0px; 
-    color:#45688E; 
-    font-size: 12;
-    display:inline-block; 
-    border:solid 1px #FFFFFF; 
-    font-family: Tahoma; 
-    width: 99px;
-    background: #45688E;
+    /*background-image: linear-gradient(#f7635b, #f31e12);*/
     color: white; 
-    cursor:pointer;
-    font-weight: bold;
-}
-
-/*
-.toggle-btn { 
-    text-align:center; 
-    margin: 2px 2px;
-    padding:0.4em 3em; 
-    color:#45688E; 
-    font-size: 12;
-    background-color:#F5F5F5; 
-    border-radius: 0px; 
-    display:inline-block; 
-    border:solid 1px #FFFFFF; 
-    cursor:pointer;
-    font-family: Tahoma;
-}
-
-.toggle-btn-grp.cssonly * {
-    width: 100px;
-    height: 30px;
-    line-height: 30px;
-}
-.toggle-btn-grp.cssonly div {
-    display:inline-block;
-    position:relative;
-    margin:2px 2px;
-}
-
-.toggle-btn-grp.cssonly div label {
-    position:absolute;
-    z-index:0;
-    padding:0;
-    text-align:center;
-}
-
-.toggle-btn-grp.cssonly div input {
-    position:absolute;
-    z-index:1;
-    cursor:pointer;
-    height: 30px;
-    opacity:0;
-}
-
-.toggle-btn-grp.cssonly div:hover label {
-    background: #e1e7ed
-}
-
-.toggle-btn-grp.cssonly div input:checked + label {
     background: #45688E;
-    color: #FFFFFF;
-    border:solid 1px black !important; 
-}*/
-
+}
 
 
 
@@ -310,23 +244,7 @@ div.toggle-btn-checked{
   opacity: 0.5;
 }
 
-/*
-.win_container{
-    position: fixed;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    z-index: 1001;
-}
-.win_container:before{
-  content: '';
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-  margin-right: -0.25em;
-}
-*/
+
 
 .win_container{
     position: fixed;
