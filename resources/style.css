@@ -178,12 +178,13 @@ a.song {
   position: relative;
 }
 a.song:before{
+  content: '';
   border-style: solid;
   border-width: 5px 0 5px 10px;
   border-color: transparent transparent transparent #777777;
   position: absolute;
-  left: -20px;
-  top: 0;
+  left: 0px;
+  top: 0px;
 }
 a.song:hover{
   text-decoration: underline;
