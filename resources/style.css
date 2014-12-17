@@ -226,7 +226,7 @@ div.toggle-btn-normal:hover {
 
 div.toggle-btn-checked{
     /*background-image: linear-gradient(#f7635b, #f31e12);*/
-    background-image: linear-gradient(#DB6963, #C4352D)
+    background-image: linear-gradient(#DB6963, #C4352D);
     color: white; 
     /*background: #45688E;*/
 }

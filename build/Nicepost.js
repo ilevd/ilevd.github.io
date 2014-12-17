@@ -2633,7 +2633,7 @@ Elm.Nicepost.make = function (_elm) {
                return _L.fromArray([]);
             }();
             return A2($Html.toElement,
-            962,
+            930,
             700)(A2($Html$Tags.div,
             _L.fromArray([]),
             _L.append(_L.fromArray([A3($Html$Optimize$RefEq.lazy2,
