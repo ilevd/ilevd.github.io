@@ -11,25 +11,26 @@ body{
 
 .columnpost{
   float: left;
-  padding: 10px;
+  padding: 20px;
 }
 
 .main{
   background-color: #FEFEFE;
-  border-radius: 5px;
+  border-radius: 7px;
   width: 270px;
-  padding: 15px;
-  margin-bottom: 20px;
+  /*padding: 15px;*/
+  margin-bottom: 40px;
   font-size: 11px;
   font-family: tahoma;
   text-align: left;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
 .mainimg{
-  /*width: 290px;*/
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
   max-height: 350px;
-  margin-bottom: 5px;
+  margin-bottom: 1px;
   margin-right: 1px;
   cursor: pointer;
 }
@@ -84,7 +85,7 @@ body{
   font-size: 9.5px;
   cursor: pointer;
   vertical-align: middle;
-  font-weight: bold;
+  /*font-weight: bold;*/
 }
 .postbutton:hover{
   text-decoration: underline;
