@@ -174,17 +174,17 @@ a.song {
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding-left: 25px;
+  padding-left: 20px;
   position: relative;
 }
 a.song:before{
   content: '';
   border-style: solid;
   border-width: 5px 0 5px 10px;
-  border-color: transparent transparent transparent #777777;
+  border-color: transparent transparent transparent #555;
   position: absolute;
-  left: 0px;
-  top: 0px;
+  left: 10px;
+  top: 5px;
 }
 a.song:hover{
   text-decoration: underline;
