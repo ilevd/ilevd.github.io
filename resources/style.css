@@ -41,6 +41,7 @@ body{
   white-space: pre-wrap;
   margin-bottom: 5px;
   font-size: 12px;
+  padding-left: 7px;
   /*border: 1px solid #cccccc;*/
 }
 
@@ -56,6 +57,7 @@ body{
 .footer{
   margin-top: 5px;
   padding-top: 3px;
+  padding-left: 7px;
 }
 
 .date{
@@ -80,7 +82,7 @@ body{
 
 
 .postbutton{
-  color: #2B587A;
+  color: #888888;
   margin-right: 5px;
   font-size: 9.5px;
   cursor: pointer;
@@ -173,6 +175,7 @@ a.song {
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
+  padding-left: 7px;
 }
 
 a.song:hover{
