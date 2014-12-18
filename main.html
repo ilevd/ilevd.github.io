@@ -214,6 +214,7 @@
 			}
 
 			var atts = post.photos.map( getPhoto ).concat( post.audios.map( getAudio));
+			atts.push("http://vk.com/nicepost");
 			var strAtts = atts.join(",");
 			var params = {v: "5.26", owner_id: owner_id, message: message, attachments: strAtts};
 	        
