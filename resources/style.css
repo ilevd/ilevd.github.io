@@ -294,6 +294,7 @@ div.toggle-btn-checked{
 }
 .post_window_p{
   text-align: right;
+  margin: 3px 0px 10px;
 }
 a.close{
   display: block;
