@@ -214,7 +214,6 @@
 			}
 
 			var atts = post.photos.map( getPhoto ).concat( post.audios.map( getAudio));
-			console.log("atts: " + atts.length +  " " + (atts.length > 0));
 			var message = (atts.length > 0) ? addLinkText(post.text) : post.text;
 			atts.push("http://vk.com/nicepost");
 			var strAtts = atts.join(",");
