@@ -2522,11 +2522,8 @@ Elm.Nicepost.make = function (_elm) {
             return function () {
                  var imgStyle = _U.cmp($List.length(post.photos),
                  1) > 0 ? _L.fromArray([$Html.style(_L.fromArray([A2($Html.prop,
-                                                                 "cursor",
-                                                                 "pointer")
-                                                                 ,A2($Html.prop,
-                                                                 "min-width",
-                                                                 "200px")]))
+                                       "cursor",
+                                       "pointer")]))
                                        ,$Html$Attributes.alt("Loading")
                                        ,A2($Html$Events.onclick,
                                        actions.handle,
@@ -2552,7 +2549,8 @@ Elm.Nicepost.make = function (_elm) {
                                            $Basics.always($Update.OpenImage($Model.None)))]),
                               _L.fromArray([$Html.text("Закрыть")]))]))
                               ,A2($Html$Tags.img,
-                              _L.append(_L.fromArray([$Html$Attributes.src(imgSrc)]),
+                              _L.append(_L.fromArray([$Html$Attributes.$class("win_img")
+                                                     ,$Html$Attributes.src(imgSrc)]),
                               imgStyle),
                               _L.fromArray([]))]))]));
               }();}

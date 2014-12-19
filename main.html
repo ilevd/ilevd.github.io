@@ -316,7 +316,7 @@
 			rec.audios = audios;
 		}	
 
-      	function unixTimeToStr(unixTime){
+		function unixTimeToStr(unixTime){
             var date = new Date(unixTime*1000);
             var day = date.getDate();
             var month = date.getMonth();
@@ -337,18 +337,18 @@
                 dayStr = day + " " +  getSmallMonth(month) + " в ";
             }
             return dayStr + timeStr;
-   		}
+		}
 	
 		function getMonth(m){
 	        var arr = ["января", "февраля", "марта", "апреля", "мая", "июня",
 	            "июля","августа",  "сентября", "октября", "ноября", "декабря" ];
 	        return arr[m];
-    	}
+		}
 		
 		function getSmallMonth(m){
 	        var arr = ["янв", "фев", "мар", "апр", "мая", "июн", "июл", "авг", "сен", "окт", "ноя", "дек" ];
 	        return arr[m];
-    	}
+	    }
 
 	</script>
 	
