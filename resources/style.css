@@ -333,7 +333,7 @@ a.close:active{
 .friend_item{
   display: block;
   cursor: pointer;
-  padding: 4px 10px;
+  padding: 4px 5px;
   height: 38px;
   width: 220px;
 }
