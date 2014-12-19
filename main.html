@@ -205,7 +205,7 @@
 			//console.log("RepostClick: " + owner_id);
 			//alert(JSON.stringify(post));
 
-			var message = addLinkText(post.text);
+			
 			var getPhoto = function(photo){ 
 				return "photo" + photo.owner_id + "_" + photo.id;
 			}
@@ -214,6 +214,7 @@
 			}
 
 			var atts = post.photos.map( getPhoto ).concat( post.audios.map( getAudio));
+			var message = atts.length > 0 ? addLinkText(post.text) : post.text;
 			atts.push("http://vk.com/nicepost");
 			var strAtts = atts.join(",");
 			var params = {v: "5.26", owner_id: owner_id, message: message, attachments: strAtts};
