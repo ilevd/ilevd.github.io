@@ -23,6 +23,7 @@ var Groups = {
     ],
 
     Brain : [
+        "nakedsci",
         "vk.fact",
         "sci_psy",
         "mirfactov",
@@ -33,8 +34,7 @@ var Groups = {
         "the_intellectuals",
         "ru.esquire",
         "refact",
-        "globusfact",
-        "nakedsci"
+        "globusfact"
     ],
 
     Business : [
@@ -88,7 +88,6 @@ var Groups = {
     ],
 
     Fashion : [
-        "like_bp",
         "moda_pomode",
         "fshn_blg",
         "fashioneira",
@@ -169,11 +168,11 @@ var Groups = {
 
 
     Quotes : [
+        "wisewordss",
         "v5umm",
         "poet_omar",
         "club2961933",
         "prosvetlen",
-        "wisewordss",
         "mudrostyle",
         "the.business",
         "positiv_sun",
