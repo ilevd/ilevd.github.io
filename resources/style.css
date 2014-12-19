@@ -346,6 +346,7 @@ a.close:active{
   float: left;
   width: 38px;
   height: 38px;
+  border-radius: 7px;
 }
 
 .friend_text{
