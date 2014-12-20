@@ -54,6 +54,8 @@ body{
 
 .footer{
   padding: 5px 8px 7px 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .date{
@@ -74,6 +76,7 @@ body{
   line-height: 18px;
   vertical-align: middle;
   color: #999999;
+  white-space: nowrap;
 }
 
 
