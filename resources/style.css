@@ -77,6 +77,9 @@ body{
   vertical-align: middle;
   color: #999999;
   white-space: nowrap;
+  max-width: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 
