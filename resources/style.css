@@ -101,10 +101,10 @@ body{
 
   display:inline-block; 
   cursor:pointer;
-  margin-bottom: 1px;
+  margin-bottom: 3px;
   margin-right: 1px;
-  padding: 8px 0px; 
-  width: 99px;
+  /*padding: 8px 0px; */
+  /*width: 99px;*/
   border-radius: 5px;
 
   width: 65px;
@@ -117,15 +117,20 @@ body{
   text-transform: uppercase;
   text-align: center; 
   font-weight: normal;
-  background-image: linear-gradient(#99db63, #71c42d);
+  background-image: linear-gradient(#63d5db, #2dbdc4);
+  opacity: 0;
+  transition: opacity 0.3s linear;
 }
 .postbutton:hover{
   /*text-decoration: underline;*/
+    background-image: linear-gradient(#99db63, #71c42d);
 }
 .postbutton:active{
   /*text-decoration: none;*/
 }
-
+.main:hover .postbutton{
+  opacity: 1;
+}
 
 
 

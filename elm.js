@@ -10700,13 +10700,13 @@ Elm.Nicepost.make = function (_elm) {
                                 ,$Html$Events.onClick(A2($Signal.send,
                                 actions,
                                 A2($Update.Repost,post,0)))]),
-                   _L.fromArray([$Html.text("На стену!")]))
+                   _L.fromArray([$Html.text("На стену")]))
                    ,A2($Html.div,
                    _L.fromArray([$Html$Attributes.$class("postbutton")
                                 ,$Html$Events.onClick(A2($Signal.send,
                                 actions,
                                 $Update.OpenFriendWindow($Model.FriendWindow(post))))]),
-                   _L.fromArray([$Html.text("Другу!")]))
+                   _L.fromArray([$Html.text("Другу")]))
                    ,A2($Html.span,
                    _L.fromArray([$Html$Attributes.$class("likes")]),
                    _L.fromArray([$Html.text($Basics.toString(post.likes))]))]));
