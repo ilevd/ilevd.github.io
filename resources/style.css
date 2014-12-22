@@ -94,15 +94,14 @@ body{
 
 .postbutton{
   /*color: #888888;*/
-  margin-right: 5px;
+  /*margin-right: 5px;*/
   /*font-size: 9.5px;*/
   /*cursor: pointer;*/
   vertical-align: middle;
 
   display:inline-block; 
   cursor:pointer;
-  margin-bottom: 3px;
-  margin-right: 1px;
+  margin-right: 3px;
   /*padding: 8px 0px; */
   /*width: 99px;*/
   border-radius: 5px;
@@ -120,6 +119,9 @@ body{
   background-image: linear-gradient(#63d5db, #2dbdc4);
   opacity: 0;
   transition: opacity 0.3s linear;
+}
+.postbutton:last-child{
+  margin-right: 0px;
 }
 .postbutton:hover{
   /*text-decoration: underline;*/
