@@ -10450,7 +10450,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "_Tuple2":
                return $Update.GetPosts(_v0._1);}
             _U.badCase($moduleName,
-            "on line 397, column 35 to 49");
+            "on line 378, column 35 to 49");
          }();
       };
       return A2($Signal.map,
@@ -10493,7 +10493,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "ChangeGroup":
                return _v4._0;}
             _U.badCase($moduleName,
-            "on line 424, column 40 to 47");
+            "on line 405, column 40 to 47");
          }();
       };
       var pridicate = function (act) {
@@ -10522,7 +10522,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "ChangeToggle":
                return _v9._0;}
             _U.badCase($moduleName,
-            "on line 433, column 38 to 42");
+            "on line 414, column 38 to 42");
          }();
       };
       var predicate = function (act) {
@@ -10573,7 +10573,7 @@ Elm.Nicepost.make = function (_elm) {
                       ,_0: _v14._0
                       ,_1: _v14._1};}
             _U.badCase($moduleName,
-            "on line 442, column 42 to 56");
+            "on line 423, column 42 to 56");
          }();
       };
       var predicate = function (act) {
@@ -10695,24 +10695,18 @@ Elm.Nicepost.make = function (_elm) {
       _L.fromArray([A2($Html.span,
                    _L.fromArray([$Html$Attributes.$class("date")]),
                    _L.fromArray([$Html.text(post.date_str)]))
-                   ,A2($Html.a,
+                   ,A2($Html.div,
                    _L.fromArray([$Html$Attributes.$class("postbutton")
                                 ,$Html$Events.onClick(A2($Signal.send,
                                 actions,
                                 A2($Update.Repost,post,0)))]),
                    _L.fromArray([$Html.text("На стену!")]))
-                   ,A2($Html.a,
+                   ,A2($Html.div,
                    _L.fromArray([$Html$Attributes.$class("postbutton")
                                 ,$Html$Events.onClick(A2($Signal.send,
                                 actions,
                                 $Update.OpenFriendWindow($Model.FriendWindow(post))))]),
                    _L.fromArray([$Html.text("Другу!")]))
-                   ,A2($Html.a,
-                   _L.fromArray([$Html$Attributes.$class("postbutton")
-                                ,$Html$Events.onClick(A2($Signal.send,
-                                actions,
-                                $Update.OpenGroupWindow($Model.GroupWindow(post))))]),
-                   _L.fromArray([$Html.text("В группу!")]))
                    ,A2($Html.span,
                    _L.fromArray([$Html$Attributes.$class("likes")]),
                    _L.fromArray([$Html.text($Basics.toString(post.likes))]))]));
@@ -10758,7 +10752,7 @@ Elm.Nicepost.make = function (_elm) {
               {case "::": return _v21._1._1;}
               break;}
          _U.badCase($moduleName,
-         "on line 227, column 25 to 26");
+         "on line 221, column 25 to 26");
       }();
    };
    var getImgs = function (post) {
@@ -10927,7 +10921,7 @@ Elm.Nicepost.make = function (_elm) {
                            getGroupLine(post),
                            groups))]))]));}
          _U.badCase($moduleName,
-         "between lines 124 and 139");
+         "between lines 118 and 133");
       }();
    });
    var getFriendLine = F2(function (post,
@@ -10980,7 +10974,7 @@ Elm.Nicepost.make = function (_elm) {
                            getFriendLine(post),
                            friends))]))]));}
          _U.badCase($moduleName,
-         "between lines 94 and 109");
+         "between lines 88 and 103");
       }();
    });
    var getBlackBackground = A2($Html.div,
@@ -11040,7 +11034,7 @@ Elm.Nicepost.make = function (_elm) {
                               _L.fromArray([]))]))]));
               }();}
          _U.badCase($moduleName,
-         "between lines 68 and 89");
+         "between lines 62 and 83");
       }();
    });
    var dividePosts = function (posts) {
