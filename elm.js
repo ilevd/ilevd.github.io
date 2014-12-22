@@ -10450,7 +10450,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "_Tuple2":
                return $Update.GetPosts(_v0._1);}
             _U.badCase($moduleName,
-            "on line 378, column 35 to 49");
+            "on line 379, column 35 to 49");
          }();
       };
       return A2($Signal.map,
@@ -10493,7 +10493,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "ChangeGroup":
                return _v4._0;}
             _U.badCase($moduleName,
-            "on line 405, column 40 to 47");
+            "on line 406, column 40 to 47");
          }();
       };
       var pridicate = function (act) {
@@ -10522,7 +10522,7 @@ Elm.Nicepost.make = function (_elm) {
             {case "ChangeToggle":
                return _v9._0;}
             _U.badCase($moduleName,
-            "on line 414, column 38 to 42");
+            "on line 415, column 38 to 42");
          }();
       };
       var predicate = function (act) {
@@ -10573,7 +10573,7 @@ Elm.Nicepost.make = function (_elm) {
                       ,_0: _v14._0
                       ,_1: _v14._1};}
             _U.badCase($moduleName,
-            "on line 423, column 42 to 56");
+            "on line 424, column 42 to 56");
          }();
       };
       var predicate = function (act) {
@@ -10706,7 +10706,7 @@ Elm.Nicepost.make = function (_elm) {
                                 ,$Html$Events.onClick(A2($Signal.send,
                                 actions,
                                 $Update.OpenFriendWindow($Model.FriendWindow(post))))]),
-                   _L.fromArray([$Html.text("Другу")]))
+                   _L.fromArray([$Html.text("Друзьям")]))
                    ,A2($Html.span,
                    _L.fromArray([$Html$Attributes.$class("likes")]),
                    _L.fromArray([$Html.text($Basics.toString(post.likes))]))]));
@@ -10752,7 +10752,7 @@ Elm.Nicepost.make = function (_elm) {
               {case "::": return _v21._1._1;}
               break;}
          _U.badCase($moduleName,
-         "on line 221, column 25 to 26");
+         "on line 222, column 25 to 26");
       }();
    };
    var getImgs = function (post) {
@@ -10921,7 +10921,7 @@ Elm.Nicepost.make = function (_elm) {
                            getGroupLine(post),
                            groups))]))]));}
          _U.badCase($moduleName,
-         "between lines 118 and 133");
+         "between lines 119 and 134");
       }();
    });
    var getFriendLine = F2(function (post,
@@ -10945,8 +10945,9 @@ Elm.Nicepost.make = function (_elm) {
                    " ",
                    user.first_name)))]))]));
    });
-   var getFriendsWindow = F3(function (_v36,
+   var getFriendsWindow = F4(function (_v36,
    friends,
+   groups,
    post) {
       return function () {
          switch (_v36.ctor)
@@ -10970,11 +10971,15 @@ Elm.Nicepost.make = function (_elm) {
                            _L.fromArray([$Html.text("Закрыть")]))]))
                            ,A2($Html.div,
                            _L.fromArray([$Html$Attributes.$class("friend_container")]),
+                           A2($Basics._op["++"],
+                           A2($List.map,
+                           getGroupLine(post),
+                           groups),
                            A2($List.map,
                            getFriendLine(post),
-                           friends))]))]));}
+                           friends)))]))]));}
          _U.badCase($moduleName,
-         "between lines 88 and 103");
+         "between lines 88 and 104");
       }();
    });
    var getBlackBackground = A2($Html.div,
@@ -11091,9 +11096,10 @@ Elm.Nicepost.make = function (_elm) {
                var _v49 = _v45.friendWindow;
                switch (_v49.ctor)
                {case "FriendWindow":
-                  return _L.fromArray([A3(getFriendsWindow,
+                  return _L.fromArray([A4(getFriendsWindow,
                                       _v45.winSize,
                                       _v45.friends,
+                                      _v45.postGroups,
                                       _v49._0)
                                       ,getBlackBackground]);}
                return _L.fromArray([]);
