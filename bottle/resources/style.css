@@ -1,0 +1,90 @@
+body{
+  font-size: 11px;
+  font-family: tahoma; 
+  /*margin: 0px;*/
+
+     -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background: url("background.jpg") no-repeat 0 0;
+    background-size: 780px 580px;
+
+}
+
+.table{
+  border: 1px solid #eeeeee;
+
+  width: 760px;
+  height: 470px;
+  background: url("table.png") no-repeat 0 0;
+}
+
+.user_div{
+  position: absolute;
+}
+
+.user_name{
+  font-size: 12px;
+  color: #FFFFFF;
+  font-weight: bold;
+  text-align: center;
+  width: 80px;
+  text-shadow: 0px 0px 5px rgba(0,0,0,0.8);
+}
+
+.user_img_div{
+  width: 80px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 5px;
+  background: #000000;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+.user_img {
+  width: 80px;
+  position: relative;
+}
+
+.user_phrase{
+  display: inline-block;
+  max-width: 95px;
+  line-height: 1.2;
+  padding: 2px 4px 3px 4px;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  border: 1px solid #cccccc;
+  position: relative;
+  top: -5px;
+  left: 15px;
+  /*z-index: -100;
+  */
+}
+
+.user_gift{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: -20px;
+  top: 90px;
+}
+
+.text_input{
+  width: 500px;
+  height: 30px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 2px solid #DDDDDD;
+  padding-left: 5px;
+  position: relative;
+  left: 120px;
+  /*box-shadow: 0 0 5px rgba(0,0,0,0.5);*/
+  placeholder: "hoho";
+}
+
+.menu{
+  height: 40px;
+}
