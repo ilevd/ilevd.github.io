@@ -1,1 +1,0 @@
-elm-make --only-js Nicepost.elm
