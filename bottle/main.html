@@ -23,7 +23,9 @@
             var api_result = JSON.parse(decodeURIComponent(  data["api_result"] ));  
             //;user["id"] = user["external_id"] = data["viewer_id"];
             //;user[]
-            console.log(data);
+            user = api_result.response.userInfo;
+            console.log("PARSING!");
+            console.log(user);
  		}
  		parseVkData();
 
