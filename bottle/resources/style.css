@@ -32,13 +32,17 @@ body{
 }
 
 
-@keyframes bottle-rotate-frames{
-  100% {
-    transform: rotate(10000deg);
-  }
-}
+@-moz-keyframes bottle-rotate-frames{ 100% {transform: rotate(10000deg);}}
+@-webkit-keyframes bottle-rotate-frames{ 100% {transform: rotate(10000deg);}}
+@-o-keyframes bottle-rotate-frames{ 100% {transform: rotate(10000deg);}}
+@-ms-keyframes bottle-rotate-frames{ 100% {transform: rotate(10000deg);}}
+@keyframes bottle-rotate-frames{ 100% {transform: rotate(10000deg);}}
 
 .bottle_rotate{
+  -moz-animation: bottle-rotate-frames 6s ease-in;
+  -webkit-animation: bottle-rotate-frames 6s ease-in;
+  -o-animation: bottle-rotate-frames 6s ease-in;
+  -ms-animation: bottle-rotate-frames 6s ease-in;
   animation: bottle-rotate-frames 6s ease-in;
 }
 
