@@ -118,8 +118,8 @@ body{
 .user_name{
   font-size: 12px;
   padding-bottom: 3px;
+  font-weight: bold;
   color: #FFFFFF;
-  font-weight: normal;
   text-align: center;
   width: 80px;
   text-shadow: 0px 0px 5px rgba(0,0,0,0.8);
@@ -131,15 +131,15 @@ body{
   overflow: hidden;
   border-radius: 5px;
   background: #000000;
-  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
 }
 
 .user_select{
   /*border: 3px solid #CCAA00;*/
- box-shadow: 2px 2px 10px #fce9c4,
-             -2px 2px 10px #fce9c4,
-             1px 1px 10px white,
-             -1px 1px 10px white;
+ box-shadow: 3px 3px 0px white,/*#fce9c4,*/
+             -3px 3px 0px white,
+             3px -3px 0px white,
+             -3px -3px 0px white;
 }
 
 
@@ -168,7 +168,7 @@ body{
   /*min-width: 40px;*/
   max-width: 105px;
   line-height: 1.2;
-  font-size: 14px;
+  font-size: 13px;
   padding: 2px 4px 3px 4px;
   border-radius: 5px;
   background-color: #f5f5f5;
