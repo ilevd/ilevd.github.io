@@ -174,7 +174,7 @@ body{
   left: 15px;
   overflow: hidden;
   /*opacity: 0;*/
-  animation: anim-message 10s linear 0s  normal forwards;
+  /*animation: anim-message 10s linear 0s  normal forwards;*/
 }
 
 

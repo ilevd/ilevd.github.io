@@ -1,0 +1,6 @@
+method=execute&code=return {   userInfo:API.getProfiles(   {uids:{viewer_id}, fields:"city,photo_big,photo,sex,bdate" }   ),   friends:API.friends.get({    fields:"uid, first_name, last_name,city,photo_big,photo,sex,bdate"   }), appFriends:API.getAppFriends(),  cityName:API.getCities({     cids:API.getProfiles(   {uids:{viewer_id}, fields:"city" }     )@.city      } )@.name  };&v=2.0&format=json
+
+method=execute&code=return {cityName:API.getCities({cids:API.getProfiles(   {uids:{viewer_id}, fields:"city" }     )@.city      } )@.name, settings:API.getUserSettings(), userInfo:API.getProfiles(   {uids:{viewer_id}, fields:"city,photo_big,photo,sex,bdate" }   )};&v=5.26&format=json
+
+Без использования контейнера
+Виндов - перекырвает уведомления
