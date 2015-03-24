@@ -1,22 +1,106 @@
 body{
   font-size: 11px;
-  font-family: tahoma; 
-  /*margin: 0px;*/
-
-     -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background: url("background.jpg") no-repeat 0 0;
-    background-size: 780px 580px;
-
+  font-family: tahoma;
+  margin: 0px;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: url("background.jpg") no-repeat 0 0;
+  background-size: 760px 580px;
+  width: 760px;
+}
+.error{
+  position: absolute;
+  z-index: 100;
+  width: 256px;
+  left: 230;
+  top: 220;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 16px;
+  z-index: 100;
+  padding: 20px;
+  background: white;
+  border: 2px solid #fce9c4;
+  border-radius: 10px;
 }
 
-.table{
-  border: 1px solid #eeeeee;
+.bottle{
+  position: absolute;
+}
 
+
+@keyframes bottle-rotate-frames{
+  100% {
+    transform: rotate(10000deg);
+  }
+}
+
+.bottle_rotate{
+  animation: bottle-rotate-frames 6s ease-in;
+}
+
+.game_info{
+  position: absolute;
+  width: 760px;
+  text-align: center;
+  top: 310px;
+  color: #fce9c4;
+  font-size: 12px;
+}
+.game_result{
+  position: absolute;
+  width: 760px;
+  text-align: center;
+  top: 250px;
+  color: white; /*#FF5555;*/
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 0px 0px 5px rgba(0,0,0,0.8);
+}
+
+.kiss_buttons{
+  position: absolute;
+  text-align: center;
+  width: 760px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  top: 200px;
+  text-shadow: 0px 0px 5px rgba(0,0,0,0.8);
+}
+.kiss_button{
+  text-shadow: none;
+  color: white;
+  display: inline-block;
+  text-align: center;
+  width: 80px;
+  height: 26px;
+  line-height: 25px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 5px;  
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+.yes_kiss_button{
+  background-image: linear-gradient(#00DD00, #00BB00);
+  margin-right: 5px;
+}
+.yes_kiss_button:hover{
+  background-image: linear-gradient(#00EE00, #00CC00);
+  margin-right: 5px;
+}
+.no_kiss_button{
+  background-image: linear-gradient(#DD0000, #BB0000);
+}
+.no_kiss_button:hover{
+  background-image: linear-gradient(#EE0000, #CC0000);
+}
+.table{
   width: 760px;
   height: 470px;
   background: url("table.png") no-repeat 0 0;
@@ -26,10 +110,12 @@ body{
   position: absolute;
 }
 
+
 .user_name{
   font-size: 12px;
+  padding-bottom: 3px;
   color: #FFFFFF;
-  font-weight: bold;
+  font-weight: normal;
   text-align: center;
   width: 80px;
   text-shadow: 0px 0px 5px rgba(0,0,0,0.8);
@@ -44,15 +130,41 @@ body{
   box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
 
+.user_select{
+  /*border: 3px solid #CCAA00;*/
+ box-shadow: 2px 2px 10px #fce9c4,
+             -2px 2px 10px #fce9c4,
+             1px 1px 10px white,
+             -1px 1px 10px white;
+}
+
+
 .user_img {
   width: 80px;
   position: relative;
 }
 
+
+@keyframes anim-message {
+  5% {
+    background-color: white;
+    opacity: 1;
+  }
+  95%{
+    background-color:white;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .user_phrase{
   display: inline-block;
+  /*min-width: 40px;*/
   max-width: 95px;
   line-height: 1.2;
+  font-size: 13px;
   padding: 2px 4px 3px 4px;
   border-radius: 5px;
   background-color: #f5f5f5;
@@ -60,9 +172,13 @@ body{
   position: relative;
   top: -5px;
   left: 15px;
-  /*z-index: -100;
-  */
+  overflow: hidden;
+  /*opacity: 0;*/
+  animation: anim-message 10s linear 0s  normal forwards;
 }
+
+
+
 
 .user_gift{
   width: 40px;
@@ -82,9 +198,26 @@ body{
   position: relative;
   left: 120px;
   /*box-shadow: 0 0 5px rgba(0,0,0,0.5);*/
-  placeholder: "hoho";
 }
 
 .menu{
-  height: 40px;
+  height: 50px;
+}
+
+a{
+	/*border-radius: 7px;
+	background-color: #dddddd;*/
+	padding: 10px;
+	color: black;
+	font-size: 14px;
+	font-family: Comic Sans MS;
+	font-weight: normal;
+	/*text-shadow: 0px 0px 5px rgba(0,0,0,1);*/
+
+	/*-webkit-text-stroke: 1px rgba(0,0,0,0.5);
+    -webkit-text-fill-color: rgba(0,0,0,0.1);*/
+}
+
+a:first-child{
+	padding-left: 30px;
 }

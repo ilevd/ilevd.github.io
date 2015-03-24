@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<title>Bottle</title>
+		<meta http-equiv="Content-Language" Content="ru"/>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="elm.js"></script>
+		<link rel="stylesheet" type="text/css" href="resources/style.css">
+	</head>
+
+	<body>
+		<div id="elm-vk" style="margin-left: auto; margin-right: auto; left: 0px; right:0px;"></div>
+	</body>
+
+	<script type="text/javascript">
+
+
+		var viewer_id;
+
+
+		var div = document.getElementById('elm-vk');
+		var vk = Elm.embed(Elm.Main, div, {} );
+		
+/*
+
+		VK.init(function() {
+				console.log("VK init success");
+				VK.addCallback("onScroll", onVkScroll);
+				VK.addCallback("onWindowResized", onVkWindowResized);
+				VK.callMethod("scrollSubscribe", true)
+			}, function() {
+				console.log("VK init fail");
+		}, '5.26');
+
+
+
+		function parseVkData(){
+ 			var rawData = document.location.search.substr(1).split("&");
+            var data = {};
+            for (i = 0; i < rawData.length; i++) {
+                var keyValue = rawData[i].split('=');
+                data[ keyValue[0] ] = keyValue[1];
+            }
+            viewer_id = data["viewer_id"];
+            var api_result = JSON.parse(decodeURIComponent(  data["api_result"] ));  
+ 		}
+ 		parseVkData();
+
+
+ 		function getVKInfo(){
+ 			var code = 'return {admin_groups: API.groups.get({filter:"moder", extended:1}), groups: API.groups.get({fields:"can_post,status", extended:1}), friends:API.friends.get({  fields:"uid, first_name, last_name,city,photo_big,photo,sex,bdate,can_post"   }), appFriends:API.getAppFriends()    };';
+ 			VK.api("execute", {code:code, v: "5.26"}, function(response){
+
+ 				Groups.My = response.response.groups.items;
+ 				var friends = response.response.friends.items;
+ 				var admin_groups = response.response.admin_groups.items
+ 				friends = friends.sort( function(a, b){
+ 					if( a.last_name < b.last_name ) return -1
+ 					if( a.last_name > b.last_name ) return 1;
+ 					if( a.last_name == b.last_name ){
+ 						if ( a.first_name < b.first_name ) return -1;
+ 						if ( a.first_name > b.first_name ) return 1;
+ 						return 0;
+ 					}
+ 				});
+ 				vk.ports.getPostFriends.send(friends);
+ 				vk.ports.getPostGroups.send(admin_groups);
+ 			});
+ 		}
+
+*/
+
+
+
+	</script>
+	
+</html>
