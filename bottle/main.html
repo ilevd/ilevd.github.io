@@ -17,17 +17,17 @@
                 var keyValue = rawData[i].split('=');
                 data[ keyValue[0] ] = keyValue[1];
             }
-            //console.log(decodeURIComponent(  data["api_result"] ));
-            //console.log(data["viewer_id"])
-            //viewer_id = data["viewer_id"];
             var api_result = JSON.parse(decodeURIComponent(  data["api_result"] ));  
-            //;user["id"] = user["external_id"] = data["viewer_id"];
-            //;user[]
             user = api_result.response.userInfo[0];
+            user.city_name = api_result.response.cityName[0];
+            user.id = user.external_id = user.uid;
+            user.photo = user.photo_big;
+            user.auth_key = data.auth_key;
             console.log("PARSING!");
+            console.log(data);
             console.log(api_result);
-            console.log(api_result.cityName);
             console.log(user);
+            main.run(user);
  		}
  		parseVkData();
 
