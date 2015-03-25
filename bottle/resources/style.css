@@ -119,6 +119,7 @@ body{
 
 .user_name{
   font-size: 12px;
+  white-space: nowrap;
   padding-bottom: 3px;
   font-weight: bold;
   color: #FFFFFF;
