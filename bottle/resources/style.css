@@ -8,7 +8,7 @@ body{
   -ms-user-select: none;
   user-select: none;
   background: url("background.jpg") no-repeat 0 0;
-  background-size: 760px 580px;
+  background-size: 760px 680px;
   width: 760px;
 }
 .error{
@@ -94,11 +94,11 @@ body{
 }
 .yes_kiss_button{
   background-image: linear-gradient(#00DD00, #00BB00);
-  margin-right: 5px;
+  margin-right: 10px;
 }
 .yes_kiss_button:hover{
   background-image: linear-gradient(#00EE00, #00CC00);
-  margin-right: 5px;
+  margin-right: 10px;
 }
 .no_kiss_button{
   background-image: linear-gradient(#DD0000, #BB0000);
@@ -108,7 +108,7 @@ body{
 }
 .table{
   width: 760px;
-  height: 470px;
+  height: 420px;
   background: url("table.png") no-repeat 0 0;
 }
 
@@ -170,8 +170,9 @@ body{
   display: inline-block;
   /*min-width: 40px;*/
   max-width: 105px;
+  /*max-height: 50px;*/
   line-height: 1.2;
-  font-size: 13px;
+  font-size: 11px;
   padding: 2px 4px 3px 4px;
   border-radius: 5px;
   background-color: #f5f5f5;
@@ -179,7 +180,9 @@ body{
   position: relative;
   top: -7px;
   left: 15px;
+  white-space: pre-line;
   overflow: hidden;
+  text-overflow: ellipsis;
   /*opacity: 0;*/
   /*animation: anim-message 10s linear 0s  normal forwards;*/
 }
@@ -195,17 +198,7 @@ body{
   top: 90px;
 }
 
-.text_input{
-  width: 500px;
-  height: 30px;
-  font-size: 14px;
-  border-radius: 5px;
-  border: 2px solid #cccccc;
-  padding-left: 5px;
-  position: relative;
-  left: 120px;
-  /*box-shadow: 0 0 5px rgba(0,0,0,0.5);*/
-}
+
 
 .menu{
   height: 50px;
