@@ -36,7 +36,7 @@
             user.id = user.external_id = user.uid;
             user.photo = user.photo_big;
             user.auth_key = data.auth_key;
-            user.age = getAge(data.bdate);
+            user.age = getAge(user.bdate);
             console.log("PARSING!");
             console.log(data);
             console.log(api_result);
