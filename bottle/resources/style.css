@@ -1,6 +1,7 @@
 body{
   font-size: 11px;
-  font-family: tahoma;
+  font-family: arial;
+  /*font-family: sans-serif;*/
   margin: 0px;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -30,7 +31,8 @@ body{
 .bottle{
   position: absolute;
   left: 373px;
-  top: 200px;
+  top: 200px;  
+  /*box-shadow: 0px 0px 5px rgba(0,0,0,0.8);*/
 }
 
 
@@ -114,6 +116,7 @@ body{
 
 .user_div{
   position: absolute;
+  cursor: pointer;
 }
 
 
