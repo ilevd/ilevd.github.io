@@ -7,7 +7,6 @@
 	cursor: pointer;
 	position: relative;
 	display: inline-block;
-	/*width: 80px;*/
 	height: 24px;
 	line-height: 25px;
 	text-align: center;
@@ -24,7 +23,6 @@
 	padding-left: 16px;
 }
 .tab-normal{
-	/*background: rgba(234, 215, 177, 0.5);*/
 	background: #ead7b1;
 }
 .tab-normal:hover{
@@ -39,14 +37,11 @@
 
 .chat{
 	padding: 10px;
-	/*background: #fef4e1;*/
 }
 .chat_content{
 	width: 725px;
 	height: 132px;
 	border: 2px solid #ecdbb9;
-	/*border-bottom-left-radius: 10px;
-	border-bottom-right-radius: 10px;*/
 	background: white;
 	padding: 0px 5px;
 	overflow-y: scroll;
@@ -57,17 +52,12 @@
 	line-height: 22px;
 	height: 22px;
 	vertical-align: middle;
-	/*padding: 2px 0 2px;
-	/*font-family: Comic Sans MS;*/
 }
 
 .chat_user_name{
 	cursor: pointer;
 	font-size: 12px;
 	font-weight: bold;
-	/*font-family: Comic Sans MS;*/
-
-	/*text-decoration: underline;*/
 }
 
 textarea:focus, input:focus{
@@ -123,23 +113,26 @@ textarea:focus, input:focus{
 .button{
 	height: 30px;
 	line-height: 30px;
-	background: #ead7b1;
 	border-radius: 5px;
 	/*border: 2px solid #d6c4a1;*/
-	text-align: center;
+	/*text-align: center;*/
+	padding-left: 50px;
 	font-weight: bold;
 	font-size: 12px;
 	cursor: pointer;
-	margin-top: 20px; 
 	color: #6b6352;
 }
 .button:hover{
-	background-color: #e5d1b0;
+	background-color: #bceab1; /*#e5d1b0;*/
 }
 .button_chat{
-	background: #ead7b1 url("icons/chat.png") 30px center no-repeat;
+	margin-top: 20px; 
+	background: #ead7b1 url("icons/chat.png") 25px center no-repeat;
 }
-
+.button_gift{
+	margin-top: 5px; 
+	background: #ead7b1 url("icons/gift.png") 25px center no-repeat;
+}
 .close_icon{
 	position: absolute;
 	right: 10px;
@@ -173,19 +166,24 @@ textarea:focus, input:focus{
 }
 
 /*------- user shower ---------*/
-.user_window{
+.window {
 	position: absolute;
-	display: inline-block;
-	left: 160px;
-	top: 130px;
-	width: 400px;
-	/*height: 300px;*/
+	display: inline-block;	
 	border-radius: 10px;
 	border: 5px solid #dacca7;
 	background: #fdf8e5;
 	padding: 10px;
 	box-shadow: 0 0 10px rgba(0,0,0,0.8);;
 }
+
+.user_window{
+	left: 160px;
+	top: 130px;
+	width: 400px;
+	/*height: 300px;*/
+	border-radius: 10px;
+}
+
 .user_crop{
 	border-radius: 10px;
 	width: 200px;
@@ -196,4 +194,52 @@ textarea:focus, input:focus{
 
 .user_info{
 	margin-left: 210px;
+}
+
+/*------- gift window --------*/
+.gifts_window{
+	left: 150px;
+	top: 50px;	
+	padding: 10px;
+
+}
+.gifts_title{
+	font-size: 16px;
+	font-weight: bold;
+	padding: 0px 0 10px;
+	color: #cdbd9e;
+}
+.gifts_container{
+	width: 450px;
+	height: 430px;
+	overflow-y: scroll;	
+}
+.gifts_tab{
+	text-align: center;
+	width: 100%;
+	padding: 10px;
+}
+.gift_img{
+	width: 100px;
+	height: 100px;
+	background: #eee9d8;
+	padding: 2px;
+	margin: 2px;
+	cursor: pointer;
+}
+.gift_img:hover{
+	background: #dcd7c6;
+
+}
+
+
+.gift_hide{
+	animation: gift_hide 1s 2s normal ease-in forwards;
+}
+
+
+@keyframes gift_hide{
+  to{
+    opacity: 0;
+  }
 }
