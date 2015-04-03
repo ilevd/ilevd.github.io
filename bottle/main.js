@@ -36598,15 +36598,19 @@ views.gifts_game_view.random = function random() {
   return Math.floor(Math.random() * 100);
 };
 views.gifts_game_view.show_gift = function show_gift(recv_x, recv_y, gift) {
-  return cljs.core.with_meta(new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1057191632), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "style", "style", -496642736), cljs.core.not.call(null, (new cljs.core.Keyword(null, "new", "new", -2085437848)).cljs$core$IFn$_invoke$arity$1(gift)) ? new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "animation", "animation", -1248293244), 
-  [cljs.core.str("gift_hide 1s 3s normal ease-in forwards")].join("")], null) : cljs.core.PersistentArrayMap.EMPTY], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "img", "img", 1442687358), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "src", "src", -1651076051), views.gifts_game_view.get_path.call(null, gift), new cljs.core.Keyword(null, "style", "style", -496642736), new cljs.core.PersistentArrayMap(null, 
-  6, [new cljs.core.Keyword(null, "position", "position", -2011731912), "absolute", new cljs.core.Keyword(null, "width", "width", -384071477), "50px", new cljs.core.Keyword(null, "height", "height", 1025178622), "50px", new cljs.core.Keyword(null, "animation", "animation", -1248293244), [cljs.core.str("gift-send"), cljs.core.str((new cljs.core.Keyword(null, "sender-index", "sender-index", -1305090771)).cljs$core$IFn$_invoke$arity$1(gift)), cljs.core.str(" 4s reverse ease-in forwards")].join(""), 
-  new cljs.core.Keyword(null, "left", "left", -399115937), [cljs.core.str(370 + recv_x - 55), cljs.core.str("px")].join(""), new cljs.core.Keyword(null, "top", "top", -1856271961), [cljs.core.str(230 + recv_y + 50), cljs.core.str("px")].join("")], null)], null)], null)], null), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "key", "key", -1516042587), (new cljs.core.Keyword(null, "key", "key", -1516042587)).cljs$core$IFn$_invoke$arity$1(gift)], null));
+  return cljs.core.with_meta(new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1057191632), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "style", "style", -496642736), cljs.core.not.call(null, (new cljs.core.Keyword(null, "new", "new", -2085437848)).cljs$core$IFn$_invoke$arity$1(gift)) ? function() {
+    var animation = [cljs.core.str("gift_hide 1s 3s normal ease-in forwards")].join("");
+    return new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null, "animation", "animation", -1248293244), animation, new cljs.core.Keyword(null, "-moz-animation", "-moz-animation", 922344036), animation, new cljs.core.Keyword(null, "-o-animation", "-o-animation", 194639525), animation, new cljs.core.Keyword(null, "-webkit-animation", "-webkit-animation", 561031553), animation], null);
+  }() : cljs.core.PersistentArrayMap.EMPTY], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "img", "img", 1442687358), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "src", "src", -1651076051), views.gifts_game_view.get_path.call(null, gift), new cljs.core.Keyword(null, "style", "style", -496642736), function() {
+    var animation = [cljs.core.str("gift-send"), cljs.core.str((new cljs.core.Keyword(null, "sender-index", "sender-index", -1305090771)).cljs$core$IFn$_invoke$arity$1(gift)), cljs.core.str(" 4s reverse ease-in forwards")].join("");
+    return cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null, "-webkit-animation", "-webkit-animation", 561031553), new cljs.core.Keyword(null, "-moz-animation", "-moz-animation", 922344036), new cljs.core.Keyword(null, "animation", "animation", -1248293244), new cljs.core.Keyword(null, "-o-animation", "-o-animation", 194639525), new cljs.core.Keyword(null, "top", "top", -1856271961), new cljs.core.Keyword(null, "width", "width", -384071477), new cljs.core.Keyword(null, "position", 
+    "position", -2011731912), new cljs.core.Keyword(null, "height", "height", 1025178622), new cljs.core.Keyword(null, "left", "left", -399115937)], [animation, animation, animation, animation, [cljs.core.str(230 + recv_y + 50), cljs.core.str("px")].join(""), "50px", "absolute", "50px", [cljs.core.str(370 + recv_x - 55), cljs.core.str("px")].join("")]);
+  }()], null)], null)], null), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "key", "key", -1516042587), (new cljs.core.Keyword(null, "key", "key", -1516042587)).cljs$core$IFn$_invoke$arity$1(gift)], null));
 };
 views.gifts_game_view.show_gift_meta = cljs.core.with_meta.call(null, views.gifts_game_view.show_gift, new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "component-will-mount", "component-will-mount", 209708855), function() {
   return utils.log.call(null, "gift will mount!");
-}, new cljs.core.Keyword(null, "component-did-update", "component-did-update", -1468549173), function(p1__6455_SHARP_) {
-  var elem = reagent.core.dom_node.call(null, p1__6455_SHARP_);
+}, new cljs.core.Keyword(null, "component-did-update", "component-did-update", -1468549173), function(p1__6571_SHARP_) {
+  var elem = reagent.core.dom_node.call(null, p1__6571_SHARP_);
   utils.log.call(null, "gift did update");
   elem.style.animationPlayState = "paused";
   elem.style.webkitAnimationPlayState = "paused";
@@ -36619,17 +36623,17 @@ views.gifts_game_view.show_gift_meta = cljs.core.with_meta.call(null, views.gift
 }], null));
 views.gifts_game_view.show_gifts = function show_gifts(user) {
   var recv_index = info.get_index_by_id.call(null, (new cljs.core.Keyword(null, "id", "id", -1388402092)).cljs$core$IFn$_invoke$arity$1(user));
-  var vec__6458 = cljs.core.get.call(null, views.gifts_game_view.user_positions, recv_index);
-  var recv_x = cljs.core.nth.call(null, vec__6458, 0, null);
-  var recv_y = cljs.core.nth.call(null, vec__6458, 1, null);
+  var vec__6574 = cljs.core.get.call(null, views.gifts_game_view.user_positions, recv_index);
+  var recv_x = cljs.core.nth.call(null, vec__6574, 0, null);
+  var recv_y = cljs.core.nth.call(null, vec__6574, 1, null);
   var gifts = (new cljs.core.Keyword(null, "gifts", "gifts", 288839187)).cljs$core$IFn$_invoke$arity$1(user);
   if (cljs.core.count.call(null, gifts) > 0) {
     var new_gifts = cljs.core.assoc_in.call(null, gifts, new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.count.call(null, gifts) - 1, new cljs.core.Keyword(null, "new", "new", -2085437848)], null), true);
-    return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1057191632), cljs.core.doall.call(null, cljs.core.map.call(null, function(new_gifts, recv_index, vec__6458, recv_x, recv_y, gifts) {
-      return function(p1__6456_SHARP_) {
-        return views.gifts_game_view.show_gift.call(null, recv_x, recv_y, p1__6456_SHARP_);
+    return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1057191632), cljs.core.doall.call(null, cljs.core.map.call(null, function(new_gifts, recv_index, vec__6574, recv_x, recv_y, gifts) {
+      return function(p1__6572_SHARP_) {
+        return views.gifts_game_view.show_gift.call(null, recv_x, recv_y, p1__6572_SHARP_);
       };
-    }(new_gifts, recv_index, vec__6458, recv_x, recv_y, gifts), new_gifts))], null);
+    }(new_gifts, recv_index, vec__6574, recv_x, recv_y, gifts), new_gifts))], null);
   } else {
     return null;
   }

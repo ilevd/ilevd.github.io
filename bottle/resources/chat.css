@@ -235,11 +235,13 @@ textarea:focus, input:focus{
 
 .gift_hide{
 	animation: gift_hide 1s 2s normal ease-in forwards;
+	-moz-animation: gift_hide 1s 2s normal ease-in forwards;
+	-o-animation: gift_hide 1s 2s normal ease-in forwards;
+	-webkit-animation: gift_hide 1s 2s normal ease-in forwards;
 }
 
-
-@keyframes gift_hide{
-  to{
-    opacity: 0;
-  }
-}
+@-moz-keyframes  gift_hide{ to{ opacity: 0;}}
+@-webkit-keyframes gift_hide{ to{ opacity: 0;}}
+@-o-keyframes  gift_hide{ to{ opacity: 0;}}
+@-ms-keyframes gift_hide{ to{ opacity: 0;}}
+@keyframes gift_hide{ to{ opacity: 0;}}
