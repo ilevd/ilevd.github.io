@@ -230,3 +230,155 @@ a:first-child{
 }
 
 
+
+
+
+
+
+@-moz-keyframes r0{100% {transform: rotate(1334deg);}}
+@-webkit-keyframes r0{100% {transform: rotate(1334deg);}}
+@-o-keyframes r0{100% {transform: rotate(1334deg);}}
+@-ms-keyframes r0{100% {transform: rotate(-105.94539590092285deg);}}
+@keyframes r0{100% {transform: rotate(1334deg);}}
+ 
+@-moz-keyframes r1{100% {transform: rotate(1307deg);}}
+@-webkit-keyframes r1{100% {transform: rotate(1307deg);}}
+@-o-keyframes r1{100% {transform: rotate(1307deg);}}
+@-ms-keyframes r1{100% {transform: rotate(-132.87890360333853deg);}}
+@keyframes r1{100% {transform: rotate(1307deg);}}
+ 
+@-moz-keyframes r2{100% {transform: rotate(1620deg);}}
+@-webkit-keyframes r2{100% {transform: rotate(1620deg);}}
+@-o-keyframes r2{100% {transform: rotate(1620deg);}}
+@-ms-keyframes r2{100% {transform: rotate(180deg);}}
+@keyframes r2{100% {transform: rotate(1620deg);}}
+ 
+@-moz-keyframes r3{100% {transform: rotate(1573deg);}}
+@-webkit-keyframes r3{100% {transform: rotate(1573deg);}}
+@-o-keyframes r3{100% {transform: rotate(1573deg);}}
+@-ms-keyframes r3{100% {transform: rotate(132.87890360333853deg);}}
+@keyframes r3{100% {transform: rotate(1573deg);}}
+ 
+@-moz-keyframes r4{100% {transform: rotate(1546deg);}}
+@-webkit-keyframes r4{100% {transform: rotate(1546deg);}}
+@-o-keyframes r4{100% {transform: rotate(1546deg);}}
+@-ms-keyframes r4{100% {transform: rotate(105.94539590092285deg);}}
+@keyframes r4{100% {transform: rotate(1546deg);}}
+ 
+@-moz-keyframes r5{100% {transform: rotate(1366deg);}}
+@-webkit-keyframes r5{100% {transform: rotate(1366deg);}}
+@-o-keyframes r5{100% {transform: rotate(1366deg);}}
+@-ms-keyframes r5{100% {transform: rotate(-74.05460409907715deg);}}
+@keyframes r5{100% {transform: rotate(1366deg);}}
+ 
+@-moz-keyframes r6{100% {transform: rotate(1393deg);}}
+@-webkit-keyframes r6{100% {transform: rotate(1393deg);}}
+@-o-keyframes r6{100% {transform: rotate(1393deg);}}
+@-ms-keyframes r6{100% {transform: rotate(-47.12109639666145deg);}}
+@keyframes r6{100% {transform: rotate(1393deg);}}
+ 
+@-moz-keyframes r7{100% {transform: rotate(1440deg);}}
+@-webkit-keyframes r7{100% {transform: rotate(1440deg);}}
+@-o-keyframes r7{100% {transform: rotate(1440deg);}}
+@-ms-keyframes r7{100% {transform: rotate(0deg);}}
+@keyframes r7{100% {transform: rotate(1440deg);}}
+ 
+@-moz-keyframes r8{100% {transform: rotate(1487deg);}}
+@-webkit-keyframes r8{100% {transform: rotate(1487deg);}}
+@-o-keyframes r8{100% {transform: rotate(1487deg);}}
+@-ms-keyframes r8{100% {transform: rotate(47.12109639666145deg);}}
+@keyframes r8{100% {transform: rotate(1487deg);}}
+ 
+@-moz-keyframes r9{100% {transform: rotate(1514deg);}}
+@-webkit-keyframes r9{100% {transform: rotate(1514deg);}}
+@-o-keyframes r9{100% {transform: rotate(1514deg);}}
+@-ms-keyframes r9{100% {transform: rotate(74.05460409907715deg);}}
+@keyframes r9{100% {transform: rotate(1514deg);}}
+ 
+@-moz-keyframes r10{100% {transform: rotate(1620deg);}}
+@-webkit-keyframes r10{100% {transform: rotate(1620deg);}}
+@-o-keyframes r10{100% {transform: rotate(1620deg);}}
+@-ms-keyframes r10{100% {transform: rotate(180deg);}}
+@keyframes r10{100% {transform: rotate(1620deg);}}
+ 
+@-moz-keyframes r11{100% {transform: rotate(1620deg);}}
+@-webkit-keyframes r11{100% {transform: rotate(1620deg);}}
+@-o-keyframes r11{100% {transform: rotate(1620deg);}}
+@-ms-keyframes r11{100% {transform: rotate(180deg);}}
+@keyframes r11{100% {transform: rotate(1620deg);}}
+
+
+
+
+
+@-moz-keyframes gift-send0{100% {top: 307.5; left:80;}}
+@-webkit-keyframes gift-send0{100% {top: 307.5; left:80;}}
+@-o-keyframes gift-send0{100% {top: 307.5; left:80;}}
+@-ms-keyframes gift-send0{100% {top: 307.5; left:80;}}
+@keyframes gift-send0{100% {top: 307.5; left:80;}}
+ 
+@-moz-keyframes gift-send1{100% {top: 357.5; left:220;}}
+@-webkit-keyframes gift-send1{100% {top: 357.5; left:220;}}
+@-o-keyframes gift-send1{100% {top: 357.5; left:220;}}
+@-ms-keyframes gift-send1{100% {top: 357.5; left:220;}}
+@keyframes gift-send1{100% {top: 357.5; left:220;}}
+ 
+@-moz-keyframes gift-send2{100% {top: 372.5; left:360;}}
+@-webkit-keyframes gift-send2{100% {top: 372.5; left:360;}}
+@-o-keyframes gift-send2{100% {top: 372.5; left:360;}}
+@-ms-keyframes gift-send2{100% {top: 372.5; left:360;}}
+@keyframes gift-send2{100% {top: 372.5; left:360;}}
+ 
+@-moz-keyframes gift-send3{100% {top: 357.5; left:500;}}
+@-webkit-keyframes gift-send3{100% {top: 357.5; left:500;}}
+@-o-keyframes gift-send3{100% {top: 357.5; left:500;}}
+@-ms-keyframes gift-send3{100% {top: 357.5; left:500;}}
+@keyframes gift-send3{100% {top: 357.5; left:500;}}
+ 
+@-moz-keyframes gift-send4{100% {top: 307.5; left:640;}}
+@-webkit-keyframes gift-send4{100% {top: 307.5; left:640;}}
+@-o-keyframes gift-send4{100% {top: 307.5; left:640;}}
+@-ms-keyframes gift-send4{100% {top: 307.5; left:640;}}
+@keyframes gift-send4{100% {top: 307.5; left:640;}}
+ 
+@-moz-keyframes gift-send5{100% {top: 147.5; left:80;}}
+@-webkit-keyframes gift-send5{100% {top: 147.5; left:80;}}
+@-o-keyframes gift-send5{100% {top: 147.5; left:80;}}
+@-ms-keyframes gift-send5{100% {top: 147.5; left:80;}}
+@keyframes gift-send5{100% {top: 147.5; left:80;}}
+ 
+@-moz-keyframes gift-send6{100% {top: 97.5; left:220;}}
+@-webkit-keyframes gift-send6{100% {top: 97.5; left:220;}}
+@-o-keyframes gift-send6{100% {top: 97.5; left:220;}}
+@-ms-keyframes gift-send6{100% {top: 97.5; left:220;}}
+@keyframes gift-send6{100% {top: 97.5; left:220;}}
+ 
+@-moz-keyframes gift-send7{100% {top: 82.5; left:360;}}
+@-webkit-keyframes gift-send7{100% {top: 82.5; left:360;}}
+@-o-keyframes gift-send7{100% {top: 82.5; left:360;}}
+@-ms-keyframes gift-send7{100% {top: 82.5; left:360;}}
+@keyframes gift-send7{100% {top: 82.5; left:360;}}
+ 
+@-moz-keyframes gift-send8{100% {top: 97.5; left:500;}}
+@-webkit-keyframes gift-send8{100% {top: 97.5; left:500;}}
+@-o-keyframes gift-send8{100% {top: 97.5; left:500;}}
+@-ms-keyframes gift-send8{100% {top: 97.5; left:500;}}
+@keyframes gift-send8{100% {top: 97.5; left:500;}}
+ 
+@-moz-keyframes gift-send9{100% {top: 147.5; left:640;}}
+@-webkit-keyframes gift-send9{100% {top: 147.5; left:640;}}
+@-o-keyframes gift-send9{100% {top: 147.5; left:640;}}
+@-ms-keyframes gift-send9{100% {top: 147.5; left:640;}}
+@keyframes gift-send9{100% {top: 147.5; left:640;}}
+ 
+@-moz-keyframes gift-send10{100% {top: 237.5; left:360;}}
+@-webkit-keyframes gift-send10{100% {top: 237.5; left:360;}}
+@-o-keyframes gift-send10{100% {top: 237.5; left:360;}}
+@-ms-keyframes gift-send10{100% {top: 237.5; left:360;}}
+@keyframes gift-send10{100% {top: 237.5; left:360;}}
+ 
+@-moz-keyframes gift-send11{100% {top: 287.5; left:360;}}
+@-webkit-keyframes gift-send11{100% {top: 287.5; left:360;}}
+@-o-keyframes gift-send11{100% {top: 287.5; left:360;}}
+@-ms-keyframes gift-send11{100% {top: 287.5; left:360;}}
+@keyframes gift-send11{100% {top: 287.5; left:360;}}

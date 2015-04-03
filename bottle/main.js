@@ -36642,10 +36642,10 @@ goog.require("cljs.core");
 animation_styles.user_positions = new cljs.core.PersistentVector(null, 12, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [-280, 80], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [-140, 130], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [0, 145], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, 
 [140, 130], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [280, 80], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [-280, -80], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [-140, -130], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [0, -145], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, 
 [140, -130], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [280, -80], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [0, 10], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [0, 60], null)], null);
-animation_styles.bottle_rot_keyframe = function bottle_rot_keyframe(index, p__14035) {
-  var vec__14037 = p__14035;
-  var x = cljs.core.nth.call(null, vec__14037, 0, null);
-  var y = cljs.core.nth.call(null, vec__14037, 1, null);
+animation_styles.bottle_rot_keyframe = function bottle_rot_keyframe(index, p__6477) {
+  var vec__6479 = p__6477;
+  var x = cljs.core.nth.call(null, vec__6479, 0, null);
+  var y = cljs.core.nth.call(null, vec__6479, 1, null);
   var rad = 180 * Math.atan2(x, -y) / Math.PI;
   var r = Math.round(360 * 4 + rad);
   var unit = "deg";
@@ -36655,10 +36655,10 @@ animation_styles.bottle_rot_keyframe = function bottle_rot_keyframe(index, p__14
 animation_styles.bottle_rot_keyframes = function bottle_rot_keyframes() {
   return cljs.core.apply.call(null, cljs.core.str, cljs.core.keep_indexed.call(null, animation_styles.bottle_rot_keyframe, animation_styles.user_positions));
 };
-animation_styles.gift_send_keyframe = function gift_send_keyframe(index, p__14038) {
-  var vec__14040 = p__14038;
-  var x = cljs.core.nth.call(null, vec__14040, 0, null);
-  var y = cljs.core.nth.call(null, vec__14040, 1, null);
+animation_styles.gift_send_keyframe = function gift_send_keyframe(index, p__6480) {
+  var vec__6482 = p__6480;
+  var x = cljs.core.nth.call(null, vec__6482, 0, null);
+  var y = cljs.core.nth.call(null, vec__6482, 1, null);
   var w = 760 / 2 - 80 / 2;
   var h = 435 / 2 - 120 / 2 - -40;
   var top = h + y + 30;
