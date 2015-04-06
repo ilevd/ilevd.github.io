@@ -36788,6 +36788,5 @@ main.run_local = function run_local() {
   info.start_timer.call(null);
   return connection.init_websocket.call(null);
 };
-main.run_local.call(null);
 goog.provide("view");
 goog.require("cljs.core");
