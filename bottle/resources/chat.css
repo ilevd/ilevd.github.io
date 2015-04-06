@@ -125,14 +125,19 @@ textarea:focus, input:focus{
 .button:hover{
 	background-color: #bceab1; /*#e5d1b0;*/
 }
+.button_page{
+	margin-top: 5px; 
+	background: #ead7b1 url("icons/user.png") 25px center no-repeat;
+}
 .button_chat{
-	margin-top: 20px; 
+	margin-top: 5px; 
 	background: #ead7b1 url("icons/chat.png") 25px center no-repeat;
 }
 .button_gift{
 	margin-top: 5px; 
 	background: #ead7b1 url("icons/gift.png") 25px center no-repeat;
 }
+
 .close_icon{
 	position: absolute;
 	right: 10px;
@@ -194,6 +199,11 @@ textarea:focus, input:focus{
 
 .user_info{
 	margin-left: 210px;
+}
+.city_name{
+	padding-top: 5px;
+	font-size: 12px;
+	color: #706755;
 }
 
 /*------- gift window --------*/
