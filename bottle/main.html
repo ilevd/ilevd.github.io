@@ -12,7 +12,7 @@
 
 
         function getAge(bdate) {
-            if (bdate == null || bdate == undefined) return 0;
+            if (bdate == null || bdate == undefined) return null;
             var bdateArr = bdate.split(".");
             for (var i = 0; i < bdateArr.length; i++) {
                 if (bdateArr[i].length == 4) {
