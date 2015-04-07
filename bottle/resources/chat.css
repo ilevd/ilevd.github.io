@@ -52,6 +52,7 @@
 	line-height: 22px;
 	height: 22px;
 	vertical-align: middle;
+	overflow: hidden;
 }
 
 .chat_user_name{
@@ -120,7 +121,7 @@ textarea:focus, input:focus{
 	font-weight: bold;
 	font-size: 12px;
 	cursor: pointer;
-	color: #6b6352;
+	color: #534C3F;
 }
 .button:hover{
 	background-color: #bceab1; /*#e5d1b0;*/
@@ -204,6 +205,9 @@ textarea:focus, input:focus{
 	padding-top: 5px;
 	font-size: 12px;
 	color: #706755;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /*------- gift window --------*/
