@@ -36259,7 +36259,7 @@ goog.require("state");
 goog.require("connection");
 goog.require("reagent.core");
 views.gifts_view.current_tab = reagent.core.atom.call(null, "eat");
-views.gifts_view.gifts = new cljs.core.PersistentArrayMap(null, 3, ["eat", 32, "love", 38, "interes", 24], null);
+views.gifts_view.gifts = new cljs.core.PersistentArrayMap(null, 4, ["eat", 32, "heart", 28, "love", 28, "interes", 28], null);
 views.gifts_view.close_window = function close_window() {
   return cljs.core.swap_BANG_.call(null, state.app, cljs.core.assoc_in, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "is-gifts-show", "is-gifts-show", 1623076372)], null), null);
 };
@@ -36275,11 +36275,14 @@ views.gifts_view.display_gift = function display_gift(index) {
 };
 views.gifts_view.display_gifts = function display_gifts() {
   return new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1057191632), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), "window gifts_window"], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "img", "img", 1442687358), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "class", "class", 
-  -2030961996), "close_icon", new cljs.core.Keyword(null, "src", "src", -1651076051), "resources/icons/close.png", new cljs.core.Keyword(null, "on-click", "on-click", 1632826543), views.gifts_view.close_window], null)], null), new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1057191632), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), "gifts_tab"], null), new cljs.core.PersistentVector(null, 
+  -2030961996), "close_icon", new cljs.core.Keyword(null, "src", "src", -1651076051), "resources/icons/close.png", new cljs.core.Keyword(null, "on-click", "on-click", 1632826543), views.gifts_view.close_window], null)], null), new cljs.core.PersistentVector(null, 7, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1057191632), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), "gifts_tab"], null), new cljs.core.PersistentVector(null, 
   3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1057191632), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), "gifts_title"], null), "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u043f\u043e\u0434\u0430\u0440\u043e\u043a"], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1057191632), new cljs.core.PersistentArrayMap(null, 
   2, [new cljs.core.Keyword(null, "class", "class", -2030961996), cljs.core._EQ_.call(null, "eat", cljs.core.deref.call(null, views.gifts_view.current_tab)) ? "tab tab-select" : "tab tab-normal", new cljs.core.Keyword(null, "on-click", "on-click", 1632826543), function() {
     return cljs.core.reset_BANG_.call(null, views.gifts_view.current_tab, "eat");
-  }], null), "\u041d\u0430\u043f\u0438\u0442\u043a\u0438"], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1057191632), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "class", "class", -2030961996), cljs.core._EQ_.call(null, "love", cljs.core.deref.call(null, views.gifts_view.current_tab)) ? "tab tab-select" : "tab tab-normal", new cljs.core.Keyword(null, "on-click", "on-click", 1632826543), 
+  }], null), "\u041d\u0430\u043f\u0438\u0442\u043a\u0438"], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1057191632), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "class", "class", -2030961996), cljs.core._EQ_.call(null, "heart", cljs.core.deref.call(null, views.gifts_view.current_tab)) ? "tab tab-select" : "tab tab-normal", new cljs.core.Keyword(null, "on-click", "on-click", 1632826543), 
+  function() {
+    return cljs.core.reset_BANG_.call(null, views.gifts_view.current_tab, "heart");
+  }], null), "\u0421\u0435\u0440\u0434\u0435\u0447\u043a\u0438"], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1057191632), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "class", "class", -2030961996), cljs.core._EQ_.call(null, "love", cljs.core.deref.call(null, views.gifts_view.current_tab)) ? "tab tab-select" : "tab tab-normal", new cljs.core.Keyword(null, "on-click", "on-click", 1632826543), 
   function() {
     return cljs.core.reset_BANG_.call(null, views.gifts_view.current_tab, "love");
   }], null), "\u041b\u044e\u0431\u043e\u0432\u044c"], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1057191632), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "class", "class", -2030961996), cljs.core._EQ_.call(null, "interes", cljs.core.deref.call(null, views.gifts_view.current_tab)) ? "tab tab-select" : "tab tab-normal", new cljs.core.Keyword(null, "on-click", "on-click", 1632826543), 
@@ -36555,37 +36558,39 @@ views.chat_view.display_tab = function display_tab(tab, current_tab) {
     };
   }(cls)], null), cljs.core.truth_((new cljs.core.Keyword(null, "can-close", "can-close", -499094293)).cljs$core$IFn$_invoke$arity$1(tab)) ? new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "img", "img", 1442687358), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "class", "class", -2030961996), "close-mini-icon", new cljs.core.Keyword(null, "src", "src", -1651076051), "resources/icons/close.png", new cljs.core.Keyword(null, 
   "on-click", "on-click", 1632826543), function(cls) {
-    return function(p1__12709_SHARP_) {
-      p1__12709_SHARP_.stopPropagation();
+    return function(p1__12805_SHARP_) {
+      p1__12805_SHARP_.stopPropagation();
       return state.close_tab.call(null, tab);
     };
   }(cls)], null)], null) : null, (new cljs.core.Keyword(null, "name", "name", 1843675177)).cljs$core$IFn$_invoke$arity$1(tab)], null);
 };
 views.chat_view.display_tabs = function display_tabs(tabs, current_tab) {
-  return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1057191632), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), "tabs"], null), cljs.core.map.call(null, function(p1__12710_SHARP_) {
-    return views.chat_view.display_tab.call(null, p1__12710_SHARP_, current_tab);
+  return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1057191632), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), "tabs"], null), cljs.core.map.call(null, function(p1__12806_SHARP_) {
+    return views.chat_view.display_tab.call(null, p1__12806_SHARP_, current_tab);
   }, tabs)], null);
 };
 views.chat_view.display_message = function display_message(message) {
   var user = (new cljs.core.Keyword(null, "user", "user", 1532431356)).cljs$core$IFn$_invoke$arity$1(message);
   var data = (new cljs.core.Keyword(null, "message", "message", -406056002)).cljs$core$IFn$_invoke$arity$1(message);
-  return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "p", "p", 151049309), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), "chat_message"], null), new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "span", "span", 1394872991), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "class", "class", -2030961996), 
-  "chat_user_name", new cljs.core.Keyword(null, "style", "style", -496642736), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "color", "color", 1011675173), cljs.core._EQ_.call(null, 2, (new cljs.core.Keyword(null, "sex", "sex", -2056008571)).cljs$core$IFn$_invoke$arity$1(user)) ? "#066ecf" : "#c60098"], null), new cljs.core.Keyword(null, "on-click", "on-click", 1632826543), function(user, data) {
+  var color = cljs.core._EQ_.call(null, 2, (new cljs.core.Keyword(null, "sex", "sex", -2056008571)).cljs$core$IFn$_invoke$arity$1(user)) ? "#066ecf" : "#c60098";
+  return new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "p", "p", 151049309), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), "chat_message"], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "span", "span", 1394872991), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "class", "class", -2030961996), 
+  "chat_user_name", new cljs.core.Keyword(null, "style", "style", -496642736), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "color", "color", 1011675173), color], null), new cljs.core.Keyword(null, "on-click", "on-click", 1632826543), function(user, data, color) {
     return function() {
       return views.chat_view.open_user_window.call(null, user);
     };
-  }(user, data)], null), (new cljs.core.Keyword(null, "first_name", "first_name", -1744629757)).cljs$core$IFn$_invoke$arity$1(user), ": "], null), smiles.get_message.call(null, data)], null);
+  }(user, data, color)], null), (new cljs.core.Keyword(null, "first_name", "first_name", -1744629757)).cljs$core$IFn$_invoke$arity$1(user)], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "span", "span", 1394872991), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "style", "style", -496642736), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "color", "color", 1011675173), color, new cljs.core.Keyword(null, 
+  "font-weight", "font-weight", 2085804583), "bold"], null)], null), ": "], null), smiles.get_message.call(null, data)], null);
 };
 views.chat_view.display_chat = function display_chat(tab) {
-  return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1057191632), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "class", "class", -2030961996), "chat_content", new cljs.core.Keyword(null, "on-change", "on-change", -732046149), function(p1__12711_SHARP_) {
+  return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1057191632), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "class", "class", -2030961996), "chat_content", new cljs.core.Keyword(null, "on-change", "on-change", -732046149), function(p1__12807_SHARP_) {
     utils.log.call(null, "chat change");
-    return p1__12711_SHARP_.target.scrollTop = p1__12711_SHARP_.target.scrollHeight;
+    return p1__12807_SHARP_.target.scrollTop = p1__12807_SHARP_.target.scrollHeight;
   }], null), cljs.core.map.call(null, views.chat_view.display_message, (new cljs.core.Keyword(null, "messages", "messages", 345434482)).cljs$core$IFn$_invoke$arity$1(tab))], null);
 };
 views.chat_view.display_chat_meta = cljs.core.with_meta.call(null, views.chat_view.display_chat, new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "component-will-mount", "component-will-mount", 209708855), function() {
   return utils.log.call(null, "Will mount!");
-}, new cljs.core.Keyword(null, "component-did-update", "component-did-update", -1468549173), function(p1__12712_SHARP_) {
-  var elem = reagent.core.dom_node.call(null, p1__12712_SHARP_);
+}, new cljs.core.Keyword(null, "component-did-update", "component-did-update", -1468549173), function(p1__12808_SHARP_) {
+  var elem = reagent.core.dom_node.call(null, p1__12808_SHARP_);
   return elem.scrollTop = elem.scrollHeight;
 }, new cljs.core.Keyword(null, "component-did-mount", "component-did-mount", -1126910518), function() {
   return utils.log.call(null, "Did mount!");
@@ -36593,8 +36598,8 @@ views.chat_view.display_chat_meta = cljs.core.with_meta.call(null, views.chat_vi
 views.chat_view.send_message = function send_message(msg) {
   var trim_msg = clojure.string.trim.call(null, msg);
   if (cljs.core.truth_(cljs.core.not_empty.call(null, trim_msg))) {
-    var G__12714 = (new cljs.core.Keyword(null, "type", "type", 1174270348)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state.current_tab)) instanceof cljs.core.Keyword ? (new cljs.core.Keyword(null, "type", "type", 1174270348)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state.current_tab)).fqn : null;
-    switch(G__12714) {
+    var G__12810 = (new cljs.core.Keyword(null, "type", "type", 1174270348)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state.current_tab)) instanceof cljs.core.Keyword ? (new cljs.core.Keyword(null, "type", "type", 1174270348)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state.current_tab)).fqn : null;
+    switch(G__12810) {
       case "private":
         connection.send_private_message.call(null, (new cljs.core.Keyword(null, "id", "id", -1388402092)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state.current_tab)), trim_msg);
         return state.add_private_message.call(null, (new cljs.core.Keyword(null, "id", "id", -1388402092)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state.current_tab)), cljs.core.deref.call(null, state.user), trim_msg);
@@ -36619,10 +36624,10 @@ views.chat_view.input_text = function input_text() {
         return elem.focus();
       };
     }(elem), 10);
-  }, new cljs.core.Keyword(null, "on-key-down", "on-key-down", -1374733765), function(p1__12716_SHARP_) {
-    if (cljs.core._EQ_.call(null, p1__12716_SHARP_.which, 13)) {
-      views.chat_view.send_message.call(null, p1__12716_SHARP_.target.value);
-      return p1__12716_SHARP_.target.value = "";
+  }, new cljs.core.Keyword(null, "on-key-down", "on-key-down", -1374733765), function(p1__12812_SHARP_) {
+    if (cljs.core._EQ_.call(null, p1__12812_SHARP_.which, 13)) {
+      views.chat_view.send_message.call(null, p1__12812_SHARP_.target.value);
+      return p1__12812_SHARP_.target.value = "";
     } else {
       return null;
     }

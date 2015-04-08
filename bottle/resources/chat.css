@@ -59,6 +59,10 @@
 	cursor: pointer;
 	font-size: 12px;
 	font-weight: bold;
+	text-decoration: underline;
+}
+.chat_user_name:hover{
+	text-decoration: none;
 }
 
 textarea:focus, input:focus{
