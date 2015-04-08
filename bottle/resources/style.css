@@ -43,12 +43,66 @@ body{
 @keyframes bottle-rotate-frames{ 100% {transform: rotate(10000deg);}}
 
 .bottle_rotate{
-  -moz-animation: bottle-rotate-frames 6s ease-in;
-  -webkit-animation: bottle-rotate-frames 6s ease-in;
-  -o-animation: bottle-rotate-frames 6s ease-in;
-  -ms-animation: bottle-rotate-frames 6s ease-in;
-  animation: bottle-rotate-frames 6s ease-in;
+  -moz-animation: bottle-rotate-frames 1s linear forwards;
+  -webkit-animation: bottle-rotate-frames 1s linear forwards;
+  -o-animation: bottle-rotate-frames 1s linear forwards;
+  -ms-animation: bottle-rotate-frames 1s linear forwards;
+  animation: bottle-rotate-frames 1s linear forwards;
 }
+
+.sender_animation{
+  -moz-animation: sender-frames 1s linear forwards;
+  -webkit-animation: sender-frames 1s linear forwards;
+  -o-animation: sender-frames 1s linear forwards;
+  -ms-animation: sender-frames 1s linear forwards;
+  animation: sender-frames 1s linear forwards;
+}
+.sender_back_animation{
+  -moz-animation: sender-frames2 1s 3s linear reverse backwards;
+  -webkit-animation: sender-frames2 1s 3s linear reverse backwards;
+  -o-animation: sender-frames2 1s 3s linear reverse backwards;
+  -ms-animation: sender-frames2 1s 3s linear reverse backwards;
+  animation: sender-frames2 1s 3s linear reverse backwards;
+}
+@-moz-keyframes sender-frames{100% {top:195px;left: 230px;}}
+@-webkit-keyframes sender-frames{100% {top:195px;left: 230px;}}
+@-o-keyframes sender-frames{100% {top:195px;left: 230px;}}
+@-ms-keyframes sender-frames{100% {top:195px;left: 230px;}}
+@keyframes sender-frames{100% {top:195px;left: 230px;}}
+
+@-moz-keyframes sender-frames2{100% {top:195px;left: 230px;}}
+@-webkit-keyframes sender-frames2{100% {top:195px;left: 230px;}}
+@-o-keyframes sender-frames2{100% {top:195px;left: 230px;}}
+@-ms-keyframes sender-frames2{100% {top:195px;left: 230px;}}
+@keyframes sender-frames2{100% {top:195px;left: 230px;}}
+
+.recv_animation{
+  -moz-animation: recv-frames 1s linear forwards;
+  -webkit-animation: recv-frames 1s linear forwards;
+  -o-animation: recv-frames 1s linear forwards;
+  -ms-animation: recv-frames 1s linear forwards;
+  animation: recv-frames 1s linear forwards;
+}
+.recv_back_animation{
+  -moz-animation: recv-frames2 1s 3s linear reverse backwards; 
+  -webkit-animation: recv-frames2 1s 3s linear reverse backwards; 
+  -o-animation: recv-frames2 1s 3s linear reverse backwards; 
+  -ms-animation: recv-frames2 1s 3s linear reverse backwards; 
+  animation: recv-frames2 1s 3s linear reverse backwards; 
+}
+@-moz-keyframes recv-frames{100% {top:195px;left: 450px;}}
+@-webkit-keyframes recv-frames{100% {top:195px;left: 450px;}}
+@-o-keyframes recv-frames{100% {top:195px;left: 450px;}}
+@-ms-keyframes recv-frames{100% {top:195px;left: 450px;}}
+@keyframes recv-frames{100% {top:195px;left: 450px;}}
+
+@-moz-keyframes recv-frames2{100% {top:195px;left: 450px;}}
+@-webkit-keyframes recv-frames2{100% {top:195px;left: 450px;}}
+@-o-keyframes recv-frames2{100% {top:195px;left: 450px;}}
+@-ms-keyframes recv-frames2{100% {top:195px;left: 450px;}}
+@keyframes recv-frames2{100% {top:195px;left: 450px;}}
+
+
 
 .game_info{
   position: absolute;
@@ -64,27 +118,29 @@ body{
   text-align: center;
   top: 250px;
   color: white; /*#FF5555;*/
-  font-size: 18px;
+  font-size: 15px;
   font-weight: bold;
   text-shadow: 0px 0px 5px rgba(0,0,0,0.8);
 }
 
 .kiss_buttons{
   position: absolute;
+  left: 328px;
   text-align: center;
-  width: 760px;
+  /*width: 760px;*/
   font-size: 16px;
   font-weight: bold;
   color: white;
-  top: 210px;
+  top: 195px;
   text-shadow: 0px 0px 5px rgba(0,0,0,0.8);
 }
 .kiss_button{
+  margin: 0 auto;
   text-shadow: none;
   color: white;
-  display: inline-block;
+  /*display: inline-block;*/
   text-align: center;
-  width: 80px;
+  width: 100px;
   height: 26px;
   line-height: 25px;
   font-size: 12px;
@@ -96,11 +152,10 @@ body{
 }
 .yes_kiss_button{
   background-image: linear-gradient(#00DD00, #00BB00);
-  margin-right: 10px;
+  margin-bottom: 5px;
 }
 .yes_kiss_button:hover{
   background-image: linear-gradient(#00EE00, #00CC00);
-  margin-right: 10px;
 }
 .no_kiss_button{
   background-image: linear-gradient(#DD0000, #BB0000);
