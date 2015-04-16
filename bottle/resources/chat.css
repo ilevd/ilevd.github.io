@@ -38,6 +38,31 @@
 .chat{
 	padding: 10px;
 }
+.chat_user_list{
+	border: 2px solid #ecdbb9;
+	border-left: none;
+	background: white;
+	margin-left: 590px;
+	/*padding: 5px;*/
+	height: 132px;
+	overflow-y: scroll;
+}
+.chat_user_item{
+	border-bottom: 1px solid #ecdbb9;
+	padding: 5px;
+	padding-left: 10px;
+	font-weight: bold;
+	cursor: pointer;
+	font-size: 12px;
+}
+.chat_user_item:hover{
+	background-color: #FFF4DE;
+}
+.chat_user_item:last_child{
+	border-bottom: none;
+}
+
+
 .chat_content{
 	width: 725px;
 	height: 132px;
@@ -45,6 +70,7 @@
 	background: white;
 	padding: 0px 5px;
 	overflow-y: scroll;
+	float:left;
 }
 .chat_message{
 	margin: 0px;
