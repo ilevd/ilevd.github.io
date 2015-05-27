@@ -91,6 +91,28 @@ var Utf8 = {
         }
         return bb;
     } 
+	 function utf8_encode (aa) {
+        var bb = '', c = 0;
+        for (var i = 0; i < aa.length; i++) {
+            c = aa.charCodeAt(i);
+            if (c > 127) {
+                if (c == 168) {
+                    c = 1025 - 848;
+                } else if (c == 184) {
+                    c = 1105 - 848;
+                }
+                bb += String.fromCharCode(c + 848);
+
+            } else {
+                bb += aa.charAt(i);
+            }
+        }
+        return bb;
+    } 
+	
+	
+	
+	
 	
         function getAge(bdate) {
             if (bdate == null || bdate == undefined) return null;
@@ -113,7 +135,7 @@ var Utf8 = {
             }
             var api_result = JSON.parse(decodeURIComponent(  data["api_result"] ));
             user = api_result.response.userInfo[0];
-            user.city_name = utf8_decode(api_result.response.cityName[0]);
+            user.city_name = utf8_encode(api_result.response.cityName[0]);
             user.id = user.external_id = user.uid;
             user.photo = user.photo_big;
             user.auth_key = data.auth_key;
