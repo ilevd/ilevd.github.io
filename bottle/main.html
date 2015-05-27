@@ -113,7 +113,6 @@ var Utf8 = {
 	
 	
 	
-	
         function getAge(bdate) {
             if (bdate == null || bdate == undefined) return null;
             var bdateArr = bdate.split(".");
@@ -135,7 +134,7 @@ var Utf8 = {
             }
             var api_result = JSON.parse(decodeURIComponent(  data["api_result"] ));
             user = api_result.response.userInfo[0];
-            user.city_name = utf8_encode(api_result.response.cityName[0]);
+            user.city_name = api_result.response.cityName[0];
             user.id = user.external_id = user.uid;
             user.photo = user.photo_big;
             user.auth_key = data.auth_key;
