@@ -91,11 +91,10 @@ var Utf8 = {
                 var keyValue = rawData[i].split('=');
                 data[ keyValue[0] ] = keyValue[1];
             }
-            //var api_result = JSON.parse(decodeURIComponent(  data["api_result"] ));  \
-			var api_result = JSON.parse(  data["api_result"] );  
+            var api_result = JSON.parse(decodeURIComponent(  data["api_result"] ));
             user = api_result.response.userInfo[0];
             user.city_name = api_result.response.cityName[0];
-			//user.city_name = utf8_encode(user.city_name) + " " 
+			user.city_name = utf8_encode(user.city_name);
 			//				utf8_decode(user.city_name) + " " + decodeURIComponent(escape(user.city_name));
             user.id = user.external_id = user.uid;
             user.photo = user.photo_big;
