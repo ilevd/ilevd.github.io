@@ -139,7 +139,7 @@ var Utf8 = {
 			user.last_name = JSON.parse('"' +user.last_name + '"');
 			
             user.city_name = api_result.response.cityName[0];
-			console.log("CityName-Length: " + user.city_name.length);
+			//console.log("CityName-Length: " + user.city_name.length);
             user.id = user.external_id = user.uid;
             user.photo = user.photo_big;
             user.auth_key = data.auth_key;
