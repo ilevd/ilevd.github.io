@@ -135,6 +135,7 @@ var Utf8 = {
             var api_result = JSON.parse(decodeURIComponent(  data["api_result"] ));
             user = api_result.response.userInfo[0];
             user.city_name = api_result.response.cityName[0];
+			console.log("CityName-Length: " + user.city_name.length;
             user.id = user.external_id = user.uid;
             user.photo = user.photo_big;
             user.auth_key = data.auth_key;
