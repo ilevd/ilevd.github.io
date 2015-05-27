@@ -135,8 +135,8 @@ var Utf8 = {
             var api_result = JSON.parse(decodeURIComponent(  data["api_result"] ));
             user = api_result.response.userInfo[0];
 			
-			user.first_name = JSON.parse(user.first_name);
-			user.last_name = JSON.parse(user.last_name);
+			user.first_name = JSON.parse('"' + user.first_name + '"');
+			user.last_name = JSON.parse('"' +user.last_name + '"');
 			
             user.city_name = api_result.response.cityName[0];
 			console.log("CityName-Length: " + user.city_name.length);
