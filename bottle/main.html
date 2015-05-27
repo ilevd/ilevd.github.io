@@ -2,12 +2,12 @@
 <head>
 	<title>Bottle</title>
     <meta http-equiv="Content-Language" Content="en"/>
-	<meta charset="windows-1251">
+	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="resources/style.css">
 	<link rel="stylesheet" type="text/css" href="resources/chat.css">
 </head>
 <body>
-	<script type="text/javascript" charset="Windows-1251" src="main.js"></script>
+	<script type="text/javascript" src="main.js"></script>
 	<script type="text/javascript">
 
 var Utf8 = {
@@ -93,7 +93,7 @@ var Utf8 = {
             }
             var api_result = JSON.parse(decodeURIComponent(  data["api_result"] ));  
             user = api_result.response.userInfo[0];
-            user.city_name = Utf8.decode(api_result.response.cityName[0]);
+            user.city_name = Utf8.encode(api_result.response.cityName[0]);
 			//user.city_name = utf8_encode(user.city_name) + " " 
 			//				utf8_decode(user.city_name) + " " + decodeURIComponent(escape(user.city_name));
             user.id = user.external_id = user.uid;
