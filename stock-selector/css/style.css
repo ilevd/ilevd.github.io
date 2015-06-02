@@ -1,0 +1,115 @@
+body{
+  /*font-size: 11px;*/
+  font-family: tahoma;/*
+  margin: 0px;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: url("background.jpg") no-repeat 0 0;
+  background-size: 760px 680px;
+  width: 760px;*/
+}
+
+.main-stock-selector{
+  width: 400px;
+  /*height: 400px;*/
+  border: 1px solid #bbbbbb;
+  text-align: center;
+
+}
+
+.choose-device-label{
+  margin: 0px;
+  padding: 10px;
+  height: 20px;
+}
+
+.path{
+  height: 40px;
+  line-height: 40px;
+}
+
+.items-box{
+  /*padding: 5px;*/
+  text-align: left;
+  height: 328px;
+  overflow-y: scroll;
+}
+
+.stock-item{
+  width: 175px;
+  height: 70px;
+  line-height: 70px;
+  margin: 0px 0px 10px 10px;
+  display: inline-block;
+  border: 1px solid #bbbbbb;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.filter-input{
+  width: 300px;
+  border-radius: 10px;
+  height: 25px;
+  border: 1px solid #bbbbbb;
+  padding-left: 5px;
+  margin-bottom: 10px;
+}
+
+.active-path-item{
+  text-decoration: underline;
+  color: blue;
+  cursor: pointer;
+}
+.passive-path-item{
+
+}
+
+.path{
+  text-align: left;
+  font-size: 14px;
+}
+.path span{
+  margin: 5px;
+}
+
+
+
+.good{
+  border-bottom: 1px solid #bbbbbb;
+  padding: 10px;
+}
+
+.good .info{
+  margin-left: 90px;
+}
+
+.icon{
+  max-width: 80px;
+  max-height: 80px;
+  float: left;
+}
+div.good-name{
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+div.good-text{
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.good-company{
+  border: 1px solid #bbbbbb;
+  border-radius: 10px;
+  font-size: 12px;
+  padding: 2px 10px;
+}
+/*a{
+	padding: 10px;
+	color: black;
+	font-size: 14px;
+	font-family: Comic Sans MS;
+	font-weight: normal;
+
+}*/
