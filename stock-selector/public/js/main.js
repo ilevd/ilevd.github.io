@@ -48904,15 +48904,15 @@ cljs.core.test = function cljs$core$test(v) {
 };
 goog.provide("stock_selector.mock");
 goog.require("cljs.core");
-stock_selector.mock.data = new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "devices", "devices", 1929380599), new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, ["iPhone", "iPad", "iPod", "Samsung"], null), new cljs.core.Keyword(null, "models", "models", -1985455662), new cljs.core.PersistentArrayMap(null, 4, ["iPhone", new cljs.core.PersistentVector(null, 9, 5, cljs.core.PersistentVector.EMPTY_NODE, ["6 Plus", "6", "5s", "5c", "5", "4S", "4", 
-"3GS", "3G"], null), "iPad", new cljs.core.PersistentVector(null, 7, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Mini 2", "Mini", "Air", "4", "3", "2", "1"], null), "iPod", new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, ["5th Generation", "4th Generation", "3rd Generation", "2nd Generation"], null), "Samsung", new cljs.core.PersistentVector(null, 8, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Galaxy S6", "Galaxy S5", "Galaxy S4", "Galaxy S3", "Galaxy Note 4", "Galaxy Note 3", 
-"Galaxy Note 2", "Galaxy Note"], null)], null), new cljs.core.Keyword(null, "goods", "goods", 702040840), new cljs.core.PersistentVector(null, 8, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null, "description", "description", -1428560544), new cljs.core.Keyword(null, "item", "item", 249373802), new cljs.core.Keyword(null, "sku", "sku", -1508141232), new cljs.core.Keyword(null, "code", "code", 1586293142), new cljs.core.Keyword(null, "device", 
-"device", 1817743352), new cljs.core.Keyword(null, "price", "price", 22129180), new cljs.core.Keyword(null, "company", "company", -340475075), new cljs.core.Keyword(null, "img", "img", 1442687358), new cljs.core.Keyword(null, "stock", "stock", -877288674), new cljs.core.Keyword(null, "model", "model", 331153215)], ["iPhone 6/6 Plus Backcov", "iPhone 6/6 Plus Backcov", 1, "02144422345", "iPhone", "1567.89", "apple", "http://sinomobi.ru/packages/img/thumbnails/1432803481-iphone5_ios7.jpg", 10, "6"]), 
-cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null, "description", "description", -1428560544), new cljs.core.Keyword(null, "item", "item", 249373802), new cljs.core.Keyword(null, "sku", "sku", -1508141232), new cljs.core.Keyword(null, "code", "code", 1586293142), new cljs.core.Keyword(null, "device", "device", 1817743352), new cljs.core.Keyword(null, "price", "price", 22129180), new cljs.core.Keyword(null, "company", "company", -340475075), new cljs.core.Keyword(null, "img", "img", 
-1442687358), new cljs.core.Keyword(null, "stock", "stock", -877288674), new cljs.core.Keyword(null, "model", "model", 331153215)], ["iPhone 6 Microphone", "iPhone 6 Microphone", 2, "02344422473", "iPhone", "400.00", "apple", "http://sinomobi.ru/packages/img/thumbnails/1432803481-iphone5_ios7.jpg", 10, "6"]), cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null, "description", "description", -1428560544), new cljs.core.Keyword(null, "item", "item", 249373802), new cljs.core.Keyword(null, 
+stock_selector.mock.data = new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "devices", "devices", 1929380599), new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, ["iPhone", "iPad", "iPod", "Samsung", "Asus"], null), new cljs.core.Keyword(null, "models", "models", -1985455662), new cljs.core.PersistentArrayMap(null, 5, ["iPhone", new cljs.core.PersistentVector(null, 9, 5, cljs.core.PersistentVector.EMPTY_NODE, ["6 Plus", "6", "5s", "5c", "5", "4S", 
+"4", "3GS", "3G"], null), "iPad", new cljs.core.PersistentVector(null, 7, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Mini 2", "Mini", "Air", "4", "3", "2", "1"], null), "iPod", new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, ["5th Generation", "4th Generation", "3rd Generation", "2nd Generation"], null), "Samsung", new cljs.core.PersistentVector(null, 8, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Galaxy S6", "Galaxy S5", "Galaxy S4", "Galaxy S3", "Galaxy Note 4", 
+"Galaxy Note 3", "Galaxy Note 2", "Galaxy Note"], null), "Asus", cljs.core.PersistentVector.EMPTY], null), new cljs.core.Keyword(null, "goods", "goods", 702040840), new cljs.core.PersistentVector(null, 8, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null, "description", "description", -1428560544), new cljs.core.Keyword(null, "item", "item", 249373802), new cljs.core.Keyword(null, "sku", "sku", -1508141232), new cljs.core.Keyword(null, "code", 
+"code", 1586293142), new cljs.core.Keyword(null, "device", "device", 1817743352), new cljs.core.Keyword(null, "price", "price", 22129180), new cljs.core.Keyword(null, "company", "company", -340475075), new cljs.core.Keyword(null, "img", "img", 1442687358), new cljs.core.Keyword(null, "stock", "stock", -877288674), new cljs.core.Keyword(null, "model", "model", 331153215)], ["iPhone 6/6 Plus Backcov", "iPhone 6/6 Plus Backcov", 1, "02144422345", "iPhone", "1567.89", "apple", "http://sinomobi.ru/packages/img/thumbnails/1432803481-iphone5_ios7.jpg", 
+10, "6"]), cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null, "description", "description", -1428560544), new cljs.core.Keyword(null, "item", "item", 249373802), new cljs.core.Keyword(null, "sku", "sku", -1508141232), new cljs.core.Keyword(null, "code", "code", 1586293142), new cljs.core.Keyword(null, "device", "device", 1817743352), new cljs.core.Keyword(null, "price", "price", 22129180), new cljs.core.Keyword(null, "company", "company", -340475075), new cljs.core.Keyword(null, 
+"img", "img", 1442687358), new cljs.core.Keyword(null, "stock", "stock", -877288674), new cljs.core.Keyword(null, "model", "model", 331153215)], ["iPhone 6 Microphone", "iPhone 6 Microphone", 2, "02344422473", "iPhone", "400.00", "apple", "http://sinomobi.ru/packages/img/thumbnails/1432803481-iphone5_ios7.jpg", 10, "6"]), cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null, "description", "description", -1428560544), new cljs.core.Keyword(null, "item", "item", 249373802), new cljs.core.Keyword(null, 
 "sku", "sku", -1508141232), new cljs.core.Keyword(null, "code", "code", 1586293142), new cljs.core.Keyword(null, "device", "device", 1817743352), new cljs.core.Keyword(null, "price", "price", 22129180), new cljs.core.Keyword(null, "company", "company", -340475075), new cljs.core.Keyword(null, "img", "img", 1442687358), new cljs.core.Keyword(null, "stock", "stock", -877288674), new cljs.core.Keyword(null, "model", "model", 331153215)], ["iPhone 6 Backcover", "iPhone 6 Backcover", 3, "02744422473", 
 "iPhone", "567.89", "apple", "http://sinomobi.ru/packages/img/thumbnails/1432803481-iphone5_ios7.jpg", 10, "6"]), cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null, "description", "description", -1428560544), new cljs.core.Keyword(null, "item", "item", 249373802), new cljs.core.Keyword(null, "sku", "sku", -1508141232), new cljs.core.Keyword(null, "code", "code", 1586293142), new cljs.core.Keyword(null, "device", "device", 1817743352), new cljs.core.Keyword(null, "price", "price", 
-22129180), new cljs.core.Keyword(null, "company", "company", -340475075), new cljs.core.Keyword(null, "img", "img", 1442687358), new cljs.core.Keyword(null, "stock", "stock", -877288674), new cljs.core.Keyword(null, "model", "model", 331153215)], ["iPhone 6 Ribbon", "iPhone 6 Ribbon", 4, "02325222473", "iPhone", "267.89", "apple", "http://sinomobi.ru/packages/img/thumbnails/1432803481-iphone5_ios7.jpg", 10, "6"]), cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null, "description", 
+22129180), new cljs.core.Keyword(null, "company", "company", -340475075), new cljs.core.Keyword(null, "img", "img", 1442687358), new cljs.core.Keyword(null, "stock", "stock", -877288674), new cljs.core.Keyword(null, "model", "model", 331153215)], ["iPhone 6 Ribbon", "iPhone 6 Ribbon", 4, "02325222471", "iPhone", "267.89", "apple", "http://sinomobi.ru/packages/img/thumbnails/1432803481-iphone5_ios7.jpg", 10, "6"]), cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null, "description", 
 "description", -1428560544), new cljs.core.Keyword(null, "item", "item", 249373802), new cljs.core.Keyword(null, "sku", "sku", -1508141232), new cljs.core.Keyword(null, "code", "code", 1586293142), new cljs.core.Keyword(null, "device", "device", 1817743352), new cljs.core.Keyword(null, "price", "price", 22129180), new cljs.core.Keyword(null, "company", "company", -340475075), new cljs.core.Keyword(null, "img", "img", 1442687358), new cljs.core.Keyword(null, "stock", "stock", -877288674), new cljs.core.Keyword(null, 
 "model", "model", 331153215)], ["iPhone 6 Plus Speaker", "iPhone 6 Plus Speaker", 5, "02325222473", "iPhone", "520.00", "apple", "http://sinomobi.ru/packages/img/thumbnails/1432803481-iphone5_ios7.jpg", 10, "6"]), cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null, "description", "description", -1428560544), new cljs.core.Keyword(null, "item", "item", 249373802), new cljs.core.Keyword(null, "sku", "sku", -1508141232), new cljs.core.Keyword(null, "code", "code", 1586293142), new cljs.core.Keyword(null, 
 "device", "device", 1817743352), new cljs.core.Keyword(null, "price", "price", 22129180), new cljs.core.Keyword(null, "company", "company", -340475075), new cljs.core.Keyword(null, "img", "img", 1442687358), new cljs.core.Keyword(null, "stock", "stock", -877288674), new cljs.core.Keyword(null, "model", "model", 331153215)], ["iPhone 5 Backcover", "iPhone 5 Backcover", 6, "023454543", "iPhone", "420.00", "apple", "http://ishop.s8.com.br/produtos/01/00/item/116237/3/116237392_5GG.jpg", 10, "5"]), cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null, 
@@ -51949,58 +51949,110 @@ stock_selector.components.stock_selector.display_path = function stock_selector$
   "span", "span", 1394872991), "\x3e"], null) : null, cljs.core._EQ_.call(null, (new cljs.core.Keyword(null, "current-page", "current-page", -101294180)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state)), new cljs.core.Keyword(null, "results", "results", -1134170113)) ? new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "span", "span", 1394872991), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", 
   "class", -2030961996), "passive-path-item"], null), (new cljs.core.Keyword(null, "current-model", "current-model", -1288511749)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state))], null) : null], null);
 };
-stock_selector.components.stock_selector.display_goods_item = function stock_selector$components$stock_selector$display_goods_item(state, data, index, is_highlight) {
-  return cljs.core.with_meta(new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1057191632), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "class", "class", -2030961996), cljs.core.truth_(is_highlight) ? "good highlight" : "good", new cljs.core.Keyword(null, "on-mouse-over", "on-mouse-over", -858472552), function() {
+stock_selector.components.stock_selector.select_item = function stock_selector$components$stock_selector$select_item(state, data) {
+  cljs.core.swap_BANG_.call(null, state, function(state__$1) {
+    return cljs.core.assoc.call(null, state__$1, new cljs.core.Keyword(null, "selected-results", "selected-results", 1133098956), cljs.core.conj.call(null, (new cljs.core.Keyword(null, "selected-results", "selected-results", 1133098956)).cljs$core$IFn$_invoke$arity$1(state__$1), data), new cljs.core.Keyword(null, "results", "results", -1134170113), cljs.core.remove.call(null, function(p1__12123_SHARP_) {
+      return cljs.core._EQ_.call(null, (new cljs.core.Keyword(null, "sku", "sku", -1508141232)).cljs$core$IFn$_invoke$arity$1(data), (new cljs.core.Keyword(null, "sku", "sku", -1508141232)).cljs$core$IFn$_invoke$arity$1(p1__12123_SHARP_));
+    }, (new cljs.core.Keyword(null, "results", "results", -1134170113)).cljs$core$IFn$_invoke$arity$1(state__$1)));
+  });
+  return(new cljs.core.Keyword(null, "on-select-item-fn", "on-select-item-fn", 764866031)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state)).call(null, data);
+};
+stock_selector.components.stock_selector.display_goods_item = function stock_selector$components$stock_selector$display_goods_item(state, data, index) {
+  return cljs.core.with_meta(new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1057191632), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "class", "class", -2030961996), cljs.core._EQ_.call(null, index, (new cljs.core.Keyword(null, "higlighted-index", "higlighted-index", 261808712)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state))) ? "good highlight" : "good", new cljs.core.Keyword(null, 
+  "on-mouse-over", "on-mouse-over", -858472552), function() {
     return cljs.core.swap_BANG_.call(null, state, cljs.core.assoc, new cljs.core.Keyword(null, "higlighted-index", "higlighted-index", 261808712), index);
   }, new cljs.core.Keyword(null, "on-click", "on-click", 1632826543), function() {
-    cljs.core.swap_BANG_.call(null, state, cljs.core.update_in, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "selected-results", "selected-results", 1133098956)], null), cljs.core.conj, data);
-    return(new cljs.core.Keyword(null, "on-select-item-fn", "on-select-item-fn", 764866031)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state)).call(null, data);
-  }], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "img", "img", 1442687358), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "src", "src", -1651076051), (new cljs.core.Keyword(null, "img", "img", 1442687358)).cljs$core$IFn$_invoke$arity$1(data), new cljs.core.Keyword(null, "class", "class", -2030961996), "icon"], null)], null), new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, 
+    return stock_selector.components.stock_selector.select_item.call(null, state, data);
+  }], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "img", "img", 1442687358), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "src", "src", -1651076051), (new cljs.core.Keyword(null, "img", "img", 1442687358)).cljs$core$IFn$_invoke$arity$1(data), new cljs.core.Keyword(null, "class", "class", -2030961996), "icon"], null)], null), new cljs.core.PersistentVector(null, 7, 5, cljs.core.PersistentVector.EMPTY_NODE, 
   [new cljs.core.Keyword(null, "div", "div", 1057191632), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), "info"], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1057191632), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), "good-name"], null), (new cljs.core.Keyword(null, "item", "item", 249373802)).cljs$core$IFn$_invoke$arity$1(data)], 
   null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1057191632), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), "good-text"], null), (new cljs.core.Keyword(null, "code", "code", 1586293142)).cljs$core$IFn$_invoke$arity$1(data)], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1057191632), 
   new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "span", "span", 1394872991), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), "good-company"], null), (new cljs.core.Keyword(null, "company", "company", -340475075)).cljs$core$IFn$_invoke$arity$1(data)], null)], null), cljs.core.truth_((new cljs.core.Keyword(null, "show-prices?", "show-prices?", 1738541380)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, 
-  state))) ? new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "span", "span", 1394872991), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), "good-price"], null), [cljs.core.str("R"), cljs.core.str((new cljs.core.Keyword(null, "price", "price", 22129180)).cljs$core$IFn$_invoke$arity$1(data))].join("")], null) : null], null)], null), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, 
-  "key", "key", -1516042587), [cljs.core.str((new cljs.core.Keyword(null, "device", "device", 1817743352)).cljs$core$IFn$_invoke$arity$1(data)), cljs.core.str((new cljs.core.Keyword(null, "model", "model", 331153215)).cljs$core$IFn$_invoke$arity$1(data)), cljs.core.str((new cljs.core.Keyword(null, "item", "item", 249373802)).cljs$core$IFn$_invoke$arity$1(data))].join("")], null));
+  state))) ? new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "span", "span", 1394872991), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), "good-price"], null), [cljs.core.str("R"), cljs.core.str((new cljs.core.Keyword(null, "price", "price", 22129180)).cljs$core$IFn$_invoke$arity$1(data))].join("")], null) : null, cljs.core.truth_((new cljs.core.Keyword(null, "show-stock-count?", 
+  "show-stock-count?", -1043270389)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state))) ? new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "span.good-stock-count", "span.good-stock-count", -261822212), (new cljs.core.Keyword(null, "stock", "stock", -877288674)).cljs$core$IFn$_invoke$arity$1(data)], null) : null], null)], null), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "key", "key", -1516042587), 
+  (new cljs.core.Keyword(null, "code", "code", 1586293142)).cljs$core$IFn$_invoke$arity$1(data)], null));
 };
 stock_selector.components.stock_selector.display_input = function stock_selector$components$stock_selector$display_input(state) {
-  var on_change = function(p1__12146_SHARP_) {
-    return stock_selector.components.stock_selector.input_change.call(null, state, p1__12146_SHARP_.target.value);
+  var on_change = function(p1__12124_SHARP_) {
+    return stock_selector.components.stock_selector.input_change.call(null, state, p1__12124_SHARP_.target.value);
   };
   var placeholder = [cljs.core.str("Filter "), cljs.core.str(cljs.core._EQ_.call(null, (new cljs.core.Keyword(null, "current-page", "current-page", -101294180)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state)), new cljs.core.Keyword(null, "models", "models", -1985455662)) || cljs.core._EQ_.call(null, (new cljs.core.Keyword(null, "current-page", "current-page", -101294180)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state)), new cljs.core.Keyword(null, "results", "results", 
   -1134170113)) ? [cljs.core.str((new cljs.core.Keyword(null, "current-device", "current-device", -109766560)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state))), cljs.core.str(" ")].join("") : null), cljs.core.str(cljs.core._EQ_.call(null, (new cljs.core.Keyword(null, "current-page", "current-page", -101294180)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state)), new cljs.core.Keyword(null, "results", "results", -1134170113)) ? [cljs.core.str((new cljs.core.Keyword(null, 
   "current-model", "current-model", -1288511749)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state))), cljs.core.str(" ")].join("") : null), cljs.core.str("Stock")].join("");
   return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "input", "input", 556931961), new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null, "class", "class", -2030961996), "filter-input", new cljs.core.Keyword(null, "placeholder", "placeholder", -104873083), placeholder, new cljs.core.Keyword(null, "value", "value", 305978217), (new cljs.core.Keyword(null, "input-value", "input-value", -1719954369)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, 
   state)), new cljs.core.Keyword(null, "on-change", "on-change", -732046149), function(on_change, placeholder) {
-    return function(p1__12147_SHARP_) {
-      return stock_selector.components.stock_selector.input_change.call(null, state, p1__12147_SHARP_.target.value);
+    return function(p1__12125_SHARP_) {
+      return stock_selector.components.stock_selector.input_change.call(null, state, p1__12125_SHARP_.target.value);
     };
   }(on_change, placeholder)], null)], null);
 };
 stock_selector.components.stock_selector.display_results_count = function stock_selector$components$stock_selector$display_results_count(state, results_count) {
-  return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "span", "span", 1394872991), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), "results-count"], null), [cljs.core.str(results_count), cljs.core.str(cljs.core._EQ_.call(null, results_count, 1) ? " result" : " results")].join("")], null);
+  return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "span", "span", 1394872991), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), "results-count"], null), cljs.core.truth_(function() {
+    var or__4215__auto__ = cljs.core._EQ_.call(null, (new cljs.core.Keyword(null, "current-page", "current-page", -101294180)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state)), new cljs.core.Keyword(null, "results", "results", -1134170113));
+    if (or__4215__auto__) {
+      return or__4215__auto__;
+    } else {
+      return cljs.core.not_empty.call(null, (new cljs.core.Keyword(null, "filter-text", "filter-text", -381699202)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state)));
+    }
+  }()) ? cljs.core._EQ_.call(null, results_count, 0) ? "No results" : cljs.core._EQ_.call(null, results_count, 1) ? "1 result" : [cljs.core.str(results_count), cljs.core.str(" results")].join("") : cljs.core._EQ_.call(null, (new cljs.core.Keyword(null, "current-page", "current-page", -101294180)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state)), new cljs.core.Keyword(null, "models", "models", -1985455662)) ? function() {
+    var models_count = cljs.core.count.call(null, cljs.core.get.call(null, (new cljs.core.Keyword(null, "models", "models", -1985455662)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state)), (new cljs.core.Keyword(null, "current-device", "current-device", -109766560)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state))));
+    if (cljs.core._EQ_.call(null, models_count, 0)) {
+      return "No models";
+    } else {
+      if (cljs.core._EQ_.call(null, models_count, 1)) {
+        return "1 model";
+      } else {
+        return[cljs.core.str(models_count), cljs.core.str(" models")].join("");
+      }
+    }
+  }() : function() {
+    var devices_count = cljs.core.count.call(null, (new cljs.core.Keyword(null, "devices", "devices", 1929380599)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state)));
+    if (cljs.core._EQ_.call(null, devices_count, 0)) {
+      return "No devices";
+    } else {
+      if (cljs.core._EQ_.call(null, devices_count, 1)) {
+        return "1 device";
+      } else {
+        return[cljs.core.str(devices_count), cljs.core.str(" devices")].join("");
+      }
+    }
+  }()], null);
 };
-stock_selector.components.stock_selector.display_no_result_message = function stock_selector$components$stock_selector$display_no_result_message() {
-  return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1057191632), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), "stock-not-found"], null), "Nothing found"], null);
+stock_selector.components.stock_selector.display_no_models_message = function stock_selector$components$stock_selector$display_no_models_message(state) {
+  return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div.stock-not-found", "div.stock-not-found", 902817927), "No models found", new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1057191632), "Broaden search to ", new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "span.active-path-item", "span.active-path-item", 
+  -1599151042), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "on-click", "on-click", 1632826543), function() {
+    return stock_selector.components.stock_selector.devices_click.call(null, state);
+  }], null), "All devices"], null)], null)], null);
+};
+stock_selector.components.stock_selector.display_no_result_message = function stock_selector$components$stock_selector$display_no_result_message(state) {
+  var message = [cljs.core.str("Sorry, no "), cljs.core.str(cljs.core.truth_((new cljs.core.Keyword(null, "current-device", "current-device", -109766560)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state))) ? [cljs.core.str((new cljs.core.Keyword(null, "current-device", "current-device", -109766560)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state))), cljs.core.str(" ")].join("") : null), cljs.core.str(cljs.core.truth_((new cljs.core.Keyword(null, "current-model", "current-model", 
+  -1288511749)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state))) ? [cljs.core.str((new cljs.core.Keyword(null, "current-model", "current-model", -1288511749)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state))), cljs.core.str(" ")].join("") : null), cljs.core.str("stock "), cljs.core.str(cljs.core.truth_(cljs.core.not_empty.call(null, (new cljs.core.Keyword(null, "filter-text", "filter-text", -381699202)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state)))) ? 
+  [cljs.core.str('matches "'), cljs.core.str((new cljs.core.Keyword(null, "filter-text", "filter-text", -381699202)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state))), cljs.core.str('"')].join("") : "found")].join("");
+  return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1057191632), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), "stock-not-found"], null), message, cljs.core.truth_((new cljs.core.Keyword(null, "current-device", "current-device", -109766560)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state))) ? new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, 
+  [new cljs.core.Keyword(null, "div", "div", 1057191632), "Broaden search to ", cljs.core.truth_((new cljs.core.Keyword(null, "current-model", "current-model", -1288511749)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state))) ? new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "span", "span", 1394872991), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "class", "class", -2030961996), "active-path-item", 
+  new cljs.core.Keyword(null, "on-click", "on-click", 1632826543), function(message) {
+    return function() {
+      return stock_selector.components.stock_selector.models_click.call(null, state);
+    };
+  }(message)], null), (new cljs.core.Keyword(null, "current-device", "current-device", -109766560)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state))], null) : null, cljs.core.truth_((new cljs.core.Keyword(null, "current-model", "current-model", -1288511749)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state))) ? " or " : null, new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "span", "span", 1394872991), new cljs.core.PersistentArrayMap(null, 
+  2, [new cljs.core.Keyword(null, "class", "class", -2030961996), "active-path-item", new cljs.core.Keyword(null, "on-click", "on-click", 1632826543), function(message) {
+    return function() {
+      return stock_selector.components.stock_selector.devices_click.call(null, state);
+    };
+  }(message)], null), "All devices"], null)], null) : null], null);
 };
 stock_selector.components.stock_selector.display_loading_message = function stock_selector$components$stock_selector$display_loading_message() {
   return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1057191632), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), "stock-not-found"], null), "Loading..."], null);
 };
-stock_selector.components.stock_selector.get_results_compute_here = function stock_selector$components$stock_selector$get_results_compute_here(state) {
-  console.log("Get reaults!");
-  var filter_by_device = !cljs.core._EQ_.call(null, (new cljs.core.Keyword(null, "current-page", "current-page", -101294180)).cljs$core$IFn$_invoke$arity$1(state), new cljs.core.Keyword(null, "devices", "devices", 1929380599)) ? cljs.core.filter.call(null, function(p1__12148_SHARP_) {
-    return cljs.core._EQ_.call(null, (new cljs.core.Keyword(null, "current-device", "current-device", -109766560)).cljs$core$IFn$_invoke$arity$1(state), (new cljs.core.Keyword(null, "device", "device", 1817743352)).cljs$core$IFn$_invoke$arity$1(p1__12148_SHARP_));
-  }, (new cljs.core.Keyword(null, "goods", "goods", 702040840)).cljs$core$IFn$_invoke$arity$1(state)) : (new cljs.core.Keyword(null, "goods", "goods", 702040840)).cljs$core$IFn$_invoke$arity$1(state);
-  var filter_by_model = cljs.core._EQ_.call(null, (new cljs.core.Keyword(null, "current-page", "current-page", -101294180)).cljs$core$IFn$_invoke$arity$1(state), new cljs.core.Keyword(null, "results", "results", -1134170113)) ? cljs.core.filter.call(null, function(filter_by_device) {
-    return function(p1__12149_SHARP_) {
-      return cljs.core._EQ_.call(null, (new cljs.core.Keyword(null, "current-model", "current-model", -1288511749)).cljs$core$IFn$_invoke$arity$1(state), (new cljs.core.Keyword(null, "model", "model", 331153215)).cljs$core$IFn$_invoke$arity$1(p1__12149_SHARP_));
-    };
-  }(filter_by_device), filter_by_device) : filter_by_device;
-  var filter_by_text = !cljs.core.empty_QMARK_.call(null, (new cljs.core.Keyword(null, "filter-text", "filter-text", -381699202)).cljs$core$IFn$_invoke$arity$1(state)) ? cljs.core.filter.call(null, function(filter_by_device, filter_by_model) {
-    return function(p1__12150_SHARP_) {
-      return cljs.core.not_EQ_.call(null, -1, (new cljs.core.Keyword(null, "code", "code", 1586293142)).cljs$core$IFn$_invoke$arity$1(p1__12150_SHARP_).indexOf((new cljs.core.Keyword(null, "filter-text", "filter-text", -381699202)).cljs$core$IFn$_invoke$arity$1(state)));
-    };
-  }(filter_by_device, filter_by_model), filter_by_model) : filter_by_model;
-  return filter_by_text;
+stock_selector.components.stock_selector.remove_selected_results = function stock_selector$components$stock_selector$remove_selected_results(selected_results, results) {
+  if (results == null) {
+    return null;
+  } else {
+    return cljs.core.filter.call(null, function(item) {
+      return cljs.core.not_any_QMARK_.call(null, function(p1__12126_SHARP_) {
+        return cljs.core._EQ_.call(null, (new cljs.core.Keyword(null, "sku", "sku", -1508141232)).cljs$core$IFn$_invoke$arity$1(item), (new cljs.core.Keyword(null, "sku", "sku", -1508141232)).cljs$core$IFn$_invoke$arity$1(p1__12126_SHARP_));
+      }, selected_results);
+    }, results);
+  }
 };
 stock_selector.components.stock_selector.get_results = function stock_selector$components$stock_selector$get_results(state) {
   console.log([cljs.core.str("Invoke get-results: "), cljs.core.str((new cljs.core.Keyword(null, "current-device", "current-device", -109766560)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state))), cljs.core.str(" -\x3e"), cljs.core.str((new cljs.core.Keyword(null, "current-model", "current-model", -1288511749)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state))), cljs.core.str(" -\x3e"), cljs.core.str((new cljs.core.Keyword(null, "filter-text", "filter-text", -381699202)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, 
@@ -52008,31 +52060,58 @@ stock_selector.components.stock_selector.get_results = function stock_selector$c
   cljs.core.swap_BANG_.call(null, state, cljs.core.assoc, new cljs.core.Keyword(null, "results", "results", -1134170113), null);
   return(new cljs.core.Keyword(null, "get-results-fn", "get-results-fn", 37342243)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state)).call(null, new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "device", "device", 1817743352), (new cljs.core.Keyword(null, "current-device", "current-device", -109766560)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state)), new cljs.core.Keyword(null, "model", "model", 331153215), (new cljs.core.Keyword(null, "current-model", 
   "current-model", -1288511749)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state)), new cljs.core.Keyword(null, "text", "text", -1790561697), (new cljs.core.Keyword(null, "filter-text", "filter-text", -381699202)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state))], null), function(results) {
-    return cljs.core.swap_BANG_.call(null, state, cljs.core.assoc, new cljs.core.Keyword(null, "results", "results", -1134170113), results, new cljs.core.Keyword(null, "higlighted-index", "higlighted-index", 261808712), 0);
+    return cljs.core.swap_BANG_.call(null, state, cljs.core.assoc, new cljs.core.Keyword(null, "results", "results", -1134170113), stock_selector.components.stock_selector.remove_selected_results.call(null, (new cljs.core.Keyword(null, "selected-results", "selected-results", 1133098956)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state)), results), new cljs.core.Keyword(null, "higlighted-index", "higlighted-index", 261808712), 0);
   });
 };
 stock_selector.components.stock_selector.on_key_down = function stock_selector$components$stock_selector$on_key_down(state, event) {
   console.log([cljs.core.str("Key down "), cljs.core.str(event.keyCode)].join(""));
-  var G__12154 = event.keyCode;
-  switch(G__12154) {
+  var G__12130 = event.keyCode;
+  switch(G__12130) {
     case 38:
       if (cljs.core.count.call(null, (new cljs.core.Keyword(null, "results", "results", -1134170113)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state))) > 0) {
-        return cljs.core.swap_BANG_.call(null, state, function(G__12154) {
-          return function(p1__12151_SHARP_) {
-            return cljs.core.assoc.call(null, p1__12151_SHARP_, new cljs.core.Keyword(null, "higlighted-index", "higlighted-index", 261808712), cljs.core.mod.call(null, (new cljs.core.Keyword(null, "higlighted-index", "higlighted-index", 261808712)).cljs$core$IFn$_invoke$arity$1(p1__12151_SHARP_) - 1, cljs.core.count.call(null, (new cljs.core.Keyword(null, "results", "results", -1134170113)).cljs$core$IFn$_invoke$arity$1(p1__12151_SHARP_))));
+        return cljs.core.swap_BANG_.call(null, state, function(G__12130) {
+          return function(p1__12127_SHARP_) {
+            return cljs.core.assoc.call(null, p1__12127_SHARP_, new cljs.core.Keyword(null, "higlighted-index", "higlighted-index", 261808712), cljs.core.mod.call(null, (new cljs.core.Keyword(null, "higlighted-index", "higlighted-index", 261808712)).cljs$core$IFn$_invoke$arity$1(p1__12127_SHARP_) - 1, cljs.core.count.call(null, (new cljs.core.Keyword(null, "results", "results", -1134170113)).cljs$core$IFn$_invoke$arity$1(p1__12127_SHARP_))));
           };
-        }(G__12154));
+        }(G__12130));
       } else {
         return null;
       }
       break;
     case 40:
       if (cljs.core.count.call(null, (new cljs.core.Keyword(null, "results", "results", -1134170113)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state))) > 0) {
-        return cljs.core.swap_BANG_.call(null, state, function(G__12154) {
-          return function(p1__12152_SHARP_) {
-            return cljs.core.assoc.call(null, p1__12152_SHARP_, new cljs.core.Keyword(null, "higlighted-index", "higlighted-index", 261808712), cljs.core.mod.call(null, (new cljs.core.Keyword(null, "higlighted-index", "higlighted-index", 261808712)).cljs$core$IFn$_invoke$arity$1(p1__12152_SHARP_) + 1, cljs.core.count.call(null, (new cljs.core.Keyword(null, "results", "results", -1134170113)).cljs$core$IFn$_invoke$arity$1(p1__12152_SHARP_))));
+        return cljs.core.swap_BANG_.call(null, state, function(G__12130) {
+          return function(p1__12128_SHARP_) {
+            return cljs.core.assoc.call(null, p1__12128_SHARP_, new cljs.core.Keyword(null, "higlighted-index", "higlighted-index", 261808712), cljs.core.mod.call(null, (new cljs.core.Keyword(null, "higlighted-index", "higlighted-index", 261808712)).cljs$core$IFn$_invoke$arity$1(p1__12128_SHARP_) + 1, cljs.core.count.call(null, (new cljs.core.Keyword(null, "results", "results", -1134170113)).cljs$core$IFn$_invoke$arity$1(p1__12128_SHARP_))));
           };
-        }(G__12154));
+        }(G__12130));
+      } else {
+        return null;
+      }
+      break;
+    case 8:
+      if (cljs.core._EQ_.call(null, cljs.core.count.call(null, (new cljs.core.Keyword(null, "filter-text", "filter-text", -381699202)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state))), 0)) {
+        if (cljs.core.truth_((new cljs.core.Keyword(null, "current-model", "current-model", -1288511749)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state)))) {
+          return stock_selector.components.stock_selector.models_click.call(null, state);
+        } else {
+          if (cljs.core.truth_((new cljs.core.Keyword(null, "current-device", "current-device", -109766560)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state)))) {
+            return stock_selector.components.stock_selector.devices_click.call(null, state);
+          } else {
+            return null;
+          }
+        }
+      } else {
+        return null;
+      }
+      break;
+    case 13:
+      if (cljs.core.count.call(null, (new cljs.core.Keyword(null, "results", "results", -1134170113)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state))) > 0) {
+        stock_selector.components.stock_selector.select_item.call(null, state, cljs.core.nth.call(null, (new cljs.core.Keyword(null, "results", "results", -1134170113)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state)), (new cljs.core.Keyword(null, "higlighted-index", "higlighted-index", 261808712)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state))));
+        if ((new cljs.core.Keyword(null, "higlighted-index", "higlighted-index", 261808712)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state)) >= cljs.core.count.call(null, (new cljs.core.Keyword(null, "results", "results", -1134170113)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state)))) {
+          return cljs.core.swap_BANG_.call(null, state, cljs.core.update_in, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "higlighted-index", "higlighted-index", 261808712)], null), cljs.core.dec);
+        } else {
+          return null;
+        }
       } else {
         return null;
       }
@@ -52041,49 +52120,40 @@ stock_selector.components.stock_selector.on_key_down = function stock_selector$c
       return new cljs.core.Keyword(null, "else", "else", -1508377146);
   }
 };
-stock_selector.components.stock_selector.remove_selected_results = function stock_selector$components$stock_selector$remove_selected_results(state, results) {
-  if (results == null) {
-    return null;
-  } else {
-    return cljs.core.filter.call(null, function(item) {
-      return cljs.core.not_any_QMARK_.call(null, function(p1__12156_SHARP_) {
-        return cljs.core._EQ_.call(null, (new cljs.core.Keyword(null, "sku", "sku", -1508141232)).cljs$core$IFn$_invoke$arity$1(item), (new cljs.core.Keyword(null, "sku", "sku", -1508141232)).cljs$core$IFn$_invoke$arity$1(p1__12156_SHARP_));
-      }, (new cljs.core.Keyword(null, "selected-results", "selected-results", 1133098956)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state)));
-    }, results);
-  }
-};
 stock_selector.components.stock_selector.display_selector = function stock_selector$components$stock_selector$display_selector(props) {
   var state = reagent.core.atom.call(null, cljs.core.merge.call(null, stock_selector.components.stock_selector.init_state, props));
   (new cljs.core.Keyword(null, "get-devices-fn", "get-devices-fn", -1092795780)).cljs$core$IFn$_invoke$arity$1(props).call(null, function(state) {
-    return function(p1__12157_SHARP_) {
-      return cljs.core.swap_BANG_.call(null, state, cljs.core.assoc, new cljs.core.Keyword(null, "devices", "devices", 1929380599), p1__12157_SHARP_);
+    return function(p1__12132_SHARP_) {
+      return cljs.core.swap_BANG_.call(null, state, cljs.core.assoc, new cljs.core.Keyword(null, "devices", "devices", 1929380599), p1__12132_SHARP_);
     };
   }(state));
   (new cljs.core.Keyword(null, "get-models-fn", "get-models-fn", 879511516)).cljs$core$IFn$_invoke$arity$1(props).call(null, function(state) {
-    return function(p1__12158_SHARP_) {
-      return cljs.core.swap_BANG_.call(null, state, cljs.core.assoc, new cljs.core.Keyword(null, "models", "models", -1985455662), p1__12158_SHARP_);
+    return function(p1__12133_SHARP_) {
+      return cljs.core.swap_BANG_.call(null, state, cljs.core.assoc, new cljs.core.Keyword(null, "models", "models", -1985455662), p1__12133_SHARP_);
     };
   }(state));
   return function(state) {
     return function() {
-      var results = stock_selector.components.stock_selector.remove_selected_results.call(null, state, (new cljs.core.Keyword(null, "results", "results", -1134170113)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state)));
-      return new cljs.core.PersistentVector(null, 8, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1057191632), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "class", "class", -2030961996), "main-stock-selector", new cljs.core.Keyword(null, "on-key-down", "on-key-down", -1374733765), function(results, state) {
-        return function(p1__12159_SHARP_) {
-          return stock_selector.components.stock_selector.on_key_down.call(null, state, p1__12159_SHARP_);
+      var results = (new cljs.core.Keyword(null, "results", "results", -1134170113)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state));
+      return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div.block-container", "div.block-container", 1334645108), new cljs.core.PersistentVector(null, 8, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1057191632), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "class", "class", -2030961996), "main-stock-selector", new cljs.core.Keyword(null, "on-key-down", "on-key-down", 
+      -1374733765), function(results, state) {
+        return function(p1__12134_SHARP_) {
+          return stock_selector.components.stock_selector.on_key_down.call(null, state, p1__12134_SHARP_);
         };
       }(results, state)], null), cljs.core._EQ_.call(null, (new cljs.core.Keyword(null, "current-page", "current-page", -101294180)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state)), new cljs.core.Keyword(null, "devices", "devices", 1929380599)) && cljs.core.empty_QMARK_.call(null, (new cljs.core.Keyword(null, "filter-text", "filter-text", -381699202)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state))) ? new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, 
       [new cljs.core.Keyword(null, "p", "p", 151049309), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), "choose-device-label"], null), "Choose Device"], null) : new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [stock_selector.components.stock_selector.display_path, state], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [stock_selector.components.stock_selector.display_results_count, 
       state, cljs.core.count.call(null, results)], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [stock_selector.components.stock_selector.display_input, state], null), cljs.core._EQ_.call(null, (new cljs.core.Keyword(null, "current-page", "current-page", -101294180)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state)), new cljs.core.Keyword(null, "devices", "devices", 1929380599)) && cljs.core.empty_QMARK_.call(null, (new cljs.core.Keyword(null, 
       "filter-text", "filter-text", -381699202)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state))) ? new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1057191632), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), "items-box"], null), (new cljs.core.Keyword(null, "devices", "devices", 1929380599)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state)) == 
       null ? new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [stock_selector.components.stock_selector.display_loading_message], null) : cljs.core.doall.call(null, cljs.core.map.call(null, function(results, state) {
-        return function(p1__12160_SHARP_) {
-          return stock_selector.components.stock_selector.display_item.call(null, state, p1__12160_SHARP_);
+        return function(p1__12135_SHARP_) {
+          return stock_selector.components.stock_selector.display_item.call(null, state, p1__12135_SHARP_);
         };
       }(results, state), (new cljs.core.Keyword(null, "devices", "devices", 1929380599)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state))))], null) : null, cljs.core._EQ_.call(null, (new cljs.core.Keyword(null, "current-page", "current-page", -101294180)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state)), new cljs.core.Keyword(null, "models", "models", -1985455662)) && cljs.core.empty_QMARK_.call(null, (new cljs.core.Keyword(null, "filter-text", "filter-text", -381699202)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, 
       state))) ? new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1057191632), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), "items-box"], null), (new cljs.core.Keyword(null, "models", "models", -1985455662)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state)) == null ? new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [stock_selector.components.stock_selector.display_loading_message], 
-      null) : cljs.core.doall.call(null, cljs.core.map.call(null, function(results, state) {
-        return function(p1__12161_SHARP_) {
-          return stock_selector.components.stock_selector.display_item.call(null, state, p1__12161_SHARP_);
+      null) : cljs.core._EQ_.call(null, cljs.core.count.call(null, cljs.core.get.call(null, (new cljs.core.Keyword(null, "models", "models", -1985455662)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state)), (new cljs.core.Keyword(null, "current-device", "current-device", -109766560)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state)))), 0) ? new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [stock_selector.components.stock_selector.display_no_models_message, 
+      state], null) : cljs.core.doall.call(null, cljs.core.map.call(null, function(results, state) {
+        return function(p1__12136_SHARP_) {
+          return stock_selector.components.stock_selector.display_item.call(null, state, p1__12136_SHARP_);
         };
       }(results, state), cljs.core.get.call(null, (new cljs.core.Keyword(null, "models", "models", -1985455662)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state)), (new cljs.core.Keyword(null, "current-device", "current-device", -109766560)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state)))))], null) : null, cljs.core.truth_(function() {
         var or__4215__auto__ = cljs.core._EQ_.call(null, (new cljs.core.Keyword(null, "current-page", "current-page", -101294180)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state)), new cljs.core.Keyword(null, "results", "results", -1134170113));
@@ -52093,13 +52163,13 @@ stock_selector.components.stock_selector.display_selector = function stock_selec
           return cljs.core.not_empty.call(null, (new cljs.core.Keyword(null, "filter-text", "filter-text", -381699202)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state)));
         }
       }()) ? cljs.core.count.call(null, results) > 0 ? new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1057191632), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "id", "id", -1388402092), "items-box", new cljs.core.Keyword(null, "class", "class", -2030961996), "items-box", new cljs.core.Keyword(null, "on-click", "on-click", 1632826543), function(results, state) {
-        return function(p1__12162_SHARP_) {
-          console.log([cljs.core.str("scroll "), cljs.core.str(p1__12162_SHARP_.currentTarget.id), cljs.core.str(" : "), cljs.core.str(p1__12162_SHARP_.currentTarget.srollTop)].join(""));
-          return p1__12162_SHARP_.currentTarget.srollTop = 10;
+        return function(p1__12137_SHARP_) {
+          console.log([cljs.core.str("scroll "), cljs.core.str(p1__12137_SHARP_.currentTarget.id), cljs.core.str(" : "), cljs.core.str(p1__12137_SHARP_.currentTarget.srollTop)].join(""));
+          return p1__12137_SHARP_.currentTarget.srollTop = 10;
         };
       }(results, state)], null), cljs.core.doall.call(null, cljs.core.map.call(null, function(results, state) {
-        return function(p1__12163_SHARP_, p2__12164_SHARP_) {
-          return stock_selector.components.stock_selector.display_goods_item.call(null, state, p1__12163_SHARP_, p2__12164_SHARP_, cljs.core._EQ_.call(null, p2__12164_SHARP_, (new cljs.core.Keyword(null, "higlighted-index", "higlighted-index", 261808712)).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null, state))));
+        return function(p1__12138_SHARP_, p2__12139_SHARP_) {
+          return stock_selector.components.stock_selector.display_goods_item.call(null, state, p1__12138_SHARP_, p2__12139_SHARP_);
         };
       }(results, state), results, cljs.core.range.call(null)))], null) : results == null ? new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1057191632), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), "items-box"], null), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [stock_selector.components.stock_selector.display_loading_message], 
       null)], null) : cljs.core.truth_(function() {
@@ -52109,7 +52179,7 @@ stock_selector.components.stock_selector.display_selector = function stock_selec
         } else {
           return and__4203__auto__;
         }
-      }()) ? new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1057191632), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), "items-box"], null), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [stock_selector.components.stock_selector.display_no_result_message], null)], null) : null : null], null);
+      }()) ? new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1057191632), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "class", "class", -2030961996), "items-box"], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [stock_selector.components.stock_selector.display_no_result_message, state], null)], null) : null : null], null)], null);
     };
   }(state);
 };
@@ -61245,319 +61315,319 @@ goog.require("cljs.core");
 goog.require("cljs.core.async");
 goog.require("stock_selector.mock");
 stock_selector.storage_emulator.get_devices = function stock_selector$storage_emulator$get_devices(on_get_devices) {
-  var c__7749__auto__ = cljs.core.async.chan.call(null, 1);
-  cljs.core.async.impl.dispatch.run.call(null, function(c__7749__auto__) {
+  var c__7524__auto__ = cljs.core.async.chan.call(null, 1);
+  cljs.core.async.impl.dispatch.run.call(null, function(c__7524__auto__) {
     return function() {
-      var f__7750__auto__ = function() {
-        var switch__7687__auto__ = function(c__7749__auto__) {
-          return function(state_12531) {
-            var state_val_12532 = state_12531[1];
-            if (state_val_12532 === 1) {
-              var inst_12525 = cljs.core.async.timeout.call(null, 2250);
-              var state_12531__$1 = state_12531;
-              return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_12531__$1, 2, inst_12525);
+      var f__7525__auto__ = function() {
+        var switch__7462__auto__ = function(c__7524__auto__) {
+          return function(state_11568) {
+            var state_val_11569 = state_11568[1];
+            if (state_val_11569 === 1) {
+              var inst_11562 = cljs.core.async.timeout.call(null, 1250);
+              var state_11568__$1 = state_11568;
+              return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_11568__$1, 2, inst_11562);
             } else {
-              if (state_val_12532 === 2) {
-                var inst_12527 = state_12531[2];
-                var inst_12528 = (new cljs.core.Keyword(null, "devices", "devices", 1929380599)).cljs$core$IFn$_invoke$arity$1(stock_selector.mock.data);
-                var inst_12529 = on_get_devices.call(null, inst_12528);
-                var state_12531__$1 = function() {
-                  var statearr_12533 = state_12531;
-                  statearr_12533[7] = inst_12527;
-                  return statearr_12533;
+              if (state_val_11569 === 2) {
+                var inst_11564 = state_11568[2];
+                var inst_11565 = (new cljs.core.Keyword(null, "devices", "devices", 1929380599)).cljs$core$IFn$_invoke$arity$1(stock_selector.mock.data);
+                var inst_11566 = on_get_devices.call(null, inst_11565);
+                var state_11568__$1 = function() {
+                  var statearr_11570 = state_11568;
+                  statearr_11570[7] = inst_11564;
+                  return statearr_11570;
                 }();
-                return cljs.core.async.impl.ioc_helpers.return_chan.call(null, state_12531__$1, inst_12529);
+                return cljs.core.async.impl.ioc_helpers.return_chan.call(null, state_11568__$1, inst_11566);
               } else {
                 return null;
               }
             }
           };
-        }(c__7749__auto__);
-        return function(switch__7687__auto__, c__7749__auto__) {
+        }(c__7524__auto__);
+        return function(switch__7462__auto__, c__7524__auto__) {
           return function() {
-            var stock_selector$storage_emulator$get_devices_$_state_machine__7688__auto__ = null;
-            var stock_selector$storage_emulator$get_devices_$_state_machine__7688__auto____0 = function() {
-              var statearr_12537 = [null, null, null, null, null, null, null, null];
-              statearr_12537[0] = stock_selector$storage_emulator$get_devices_$_state_machine__7688__auto__;
-              statearr_12537[1] = 1;
-              return statearr_12537;
+            var stock_selector$storage_emulator$get_devices_$_state_machine__7463__auto__ = null;
+            var stock_selector$storage_emulator$get_devices_$_state_machine__7463__auto____0 = function() {
+              var statearr_11574 = [null, null, null, null, null, null, null, null];
+              statearr_11574[0] = stock_selector$storage_emulator$get_devices_$_state_machine__7463__auto__;
+              statearr_11574[1] = 1;
+              return statearr_11574;
             };
-            var stock_selector$storage_emulator$get_devices_$_state_machine__7688__auto____1 = function(state_12531) {
+            var stock_selector$storage_emulator$get_devices_$_state_machine__7463__auto____1 = function(state_11568) {
               while (true) {
-                var ret_value__7689__auto__ = function() {
+                var ret_value__7464__auto__ = function() {
                   try {
                     while (true) {
-                      var result__7690__auto__ = switch__7687__auto__.call(null, state_12531);
-                      if (cljs.core.keyword_identical_QMARK_.call(null, result__7690__auto__, new cljs.core.Keyword(null, "recur", "recur", -437573268))) {
+                      var result__7465__auto__ = switch__7462__auto__.call(null, state_11568);
+                      if (cljs.core.keyword_identical_QMARK_.call(null, result__7465__auto__, new cljs.core.Keyword(null, "recur", "recur", -437573268))) {
                         continue;
                       } else {
-                        return result__7690__auto__;
+                        return result__7465__auto__;
                       }
                       break;
                     }
-                  } catch (e12538) {
-                    if (e12538 instanceof Object) {
-                      var ex__7691__auto__ = e12538;
-                      var statearr_12539_12541 = state_12531;
-                      statearr_12539_12541[5] = ex__7691__auto__;
-                      cljs.core.async.impl.ioc_helpers.process_exception.call(null, state_12531);
+                  } catch (e11575) {
+                    if (e11575 instanceof Object) {
+                      var ex__7466__auto__ = e11575;
+                      var statearr_11576_11578 = state_11568;
+                      statearr_11576_11578[5] = ex__7466__auto__;
+                      cljs.core.async.impl.ioc_helpers.process_exception.call(null, state_11568);
                       return new cljs.core.Keyword(null, "recur", "recur", -437573268);
                     } else {
-                      throw e12538;
+                      throw e11575;
                     }
                   }
                 }();
-                if (cljs.core.keyword_identical_QMARK_.call(null, ret_value__7689__auto__, new cljs.core.Keyword(null, "recur", "recur", -437573268))) {
-                  var G__12542 = state_12531;
-                  state_12531 = G__12542;
+                if (cljs.core.keyword_identical_QMARK_.call(null, ret_value__7464__auto__, new cljs.core.Keyword(null, "recur", "recur", -437573268))) {
+                  var G__11579 = state_11568;
+                  state_11568 = G__11579;
                   continue;
                 } else {
-                  return ret_value__7689__auto__;
+                  return ret_value__7464__auto__;
                 }
                 break;
               }
             };
-            stock_selector$storage_emulator$get_devices_$_state_machine__7688__auto__ = function(state_12531) {
+            stock_selector$storage_emulator$get_devices_$_state_machine__7463__auto__ = function(state_11568) {
               switch(arguments.length) {
                 case 0:
-                  return stock_selector$storage_emulator$get_devices_$_state_machine__7688__auto____0.call(this);
+                  return stock_selector$storage_emulator$get_devices_$_state_machine__7463__auto____0.call(this);
                 case 1:
-                  return stock_selector$storage_emulator$get_devices_$_state_machine__7688__auto____1.call(this, state_12531);
+                  return stock_selector$storage_emulator$get_devices_$_state_machine__7463__auto____1.call(this, state_11568);
               }
               throw new Error("Invalid arity: " + arguments.length);
             };
-            stock_selector$storage_emulator$get_devices_$_state_machine__7688__auto__.cljs$core$IFn$_invoke$arity$0 = stock_selector$storage_emulator$get_devices_$_state_machine__7688__auto____0;
-            stock_selector$storage_emulator$get_devices_$_state_machine__7688__auto__.cljs$core$IFn$_invoke$arity$1 = stock_selector$storage_emulator$get_devices_$_state_machine__7688__auto____1;
-            return stock_selector$storage_emulator$get_devices_$_state_machine__7688__auto__;
+            stock_selector$storage_emulator$get_devices_$_state_machine__7463__auto__.cljs$core$IFn$_invoke$arity$0 = stock_selector$storage_emulator$get_devices_$_state_machine__7463__auto____0;
+            stock_selector$storage_emulator$get_devices_$_state_machine__7463__auto__.cljs$core$IFn$_invoke$arity$1 = stock_selector$storage_emulator$get_devices_$_state_machine__7463__auto____1;
+            return stock_selector$storage_emulator$get_devices_$_state_machine__7463__auto__;
           }();
-        }(switch__7687__auto__, c__7749__auto__);
+        }(switch__7462__auto__, c__7524__auto__);
       }();
-      var state__7751__auto__ = function() {
-        var statearr_12540 = f__7750__auto__.call(null);
-        statearr_12540[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__7749__auto__;
-        return statearr_12540;
+      var state__7526__auto__ = function() {
+        var statearr_11577 = f__7525__auto__.call(null);
+        statearr_11577[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__7524__auto__;
+        return statearr_11577;
       }();
-      return cljs.core.async.impl.ioc_helpers.run_state_machine_wrapped.call(null, state__7751__auto__);
+      return cljs.core.async.impl.ioc_helpers.run_state_machine_wrapped.call(null, state__7526__auto__);
     };
-  }(c__7749__auto__));
-  return c__7749__auto__;
+  }(c__7524__auto__));
+  return c__7524__auto__;
 };
 stock_selector.storage_emulator.get_models = function stock_selector$storage_emulator$get_models(on_get_models) {
-  var c__7749__auto__ = cljs.core.async.chan.call(null, 1);
-  cljs.core.async.impl.dispatch.run.call(null, function(c__7749__auto__) {
+  var c__7524__auto__ = cljs.core.async.chan.call(null, 1);
+  cljs.core.async.impl.dispatch.run.call(null, function(c__7524__auto__) {
     return function() {
-      var f__7750__auto__ = function() {
-        var switch__7687__auto__ = function(c__7749__auto__) {
-          return function(state_12565) {
-            var state_val_12566 = state_12565[1];
-            if (state_val_12566 === 1) {
-              var inst_12559 = cljs.core.async.timeout.call(null, 6250);
-              var state_12565__$1 = state_12565;
-              return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_12565__$1, 2, inst_12559);
+      var f__7525__auto__ = function() {
+        var switch__7462__auto__ = function(c__7524__auto__) {
+          return function(state_11602) {
+            var state_val_11603 = state_11602[1];
+            if (state_val_11603 === 1) {
+              var inst_11596 = cljs.core.async.timeout.call(null, 2250);
+              var state_11602__$1 = state_11602;
+              return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_11602__$1, 2, inst_11596);
             } else {
-              if (state_val_12566 === 2) {
-                var inst_12561 = state_12565[2];
-                var inst_12562 = (new cljs.core.Keyword(null, "models", "models", -1985455662)).cljs$core$IFn$_invoke$arity$1(stock_selector.mock.data);
-                var inst_12563 = on_get_models.call(null, inst_12562);
-                var state_12565__$1 = function() {
-                  var statearr_12567 = state_12565;
-                  statearr_12567[7] = inst_12561;
-                  return statearr_12567;
+              if (state_val_11603 === 2) {
+                var inst_11598 = state_11602[2];
+                var inst_11599 = (new cljs.core.Keyword(null, "models", "models", -1985455662)).cljs$core$IFn$_invoke$arity$1(stock_selector.mock.data);
+                var inst_11600 = on_get_models.call(null, inst_11599);
+                var state_11602__$1 = function() {
+                  var statearr_11604 = state_11602;
+                  statearr_11604[7] = inst_11598;
+                  return statearr_11604;
                 }();
-                return cljs.core.async.impl.ioc_helpers.return_chan.call(null, state_12565__$1, inst_12563);
+                return cljs.core.async.impl.ioc_helpers.return_chan.call(null, state_11602__$1, inst_11600);
               } else {
                 return null;
               }
             }
           };
-        }(c__7749__auto__);
-        return function(switch__7687__auto__, c__7749__auto__) {
+        }(c__7524__auto__);
+        return function(switch__7462__auto__, c__7524__auto__) {
           return function() {
-            var stock_selector$storage_emulator$get_models_$_state_machine__7688__auto__ = null;
-            var stock_selector$storage_emulator$get_models_$_state_machine__7688__auto____0 = function() {
-              var statearr_12571 = [null, null, null, null, null, null, null, null];
-              statearr_12571[0] = stock_selector$storage_emulator$get_models_$_state_machine__7688__auto__;
-              statearr_12571[1] = 1;
-              return statearr_12571;
+            var stock_selector$storage_emulator$get_models_$_state_machine__7463__auto__ = null;
+            var stock_selector$storage_emulator$get_models_$_state_machine__7463__auto____0 = function() {
+              var statearr_11608 = [null, null, null, null, null, null, null, null];
+              statearr_11608[0] = stock_selector$storage_emulator$get_models_$_state_machine__7463__auto__;
+              statearr_11608[1] = 1;
+              return statearr_11608;
             };
-            var stock_selector$storage_emulator$get_models_$_state_machine__7688__auto____1 = function(state_12565) {
+            var stock_selector$storage_emulator$get_models_$_state_machine__7463__auto____1 = function(state_11602) {
               while (true) {
-                var ret_value__7689__auto__ = function() {
+                var ret_value__7464__auto__ = function() {
                   try {
                     while (true) {
-                      var result__7690__auto__ = switch__7687__auto__.call(null, state_12565);
-                      if (cljs.core.keyword_identical_QMARK_.call(null, result__7690__auto__, new cljs.core.Keyword(null, "recur", "recur", -437573268))) {
+                      var result__7465__auto__ = switch__7462__auto__.call(null, state_11602);
+                      if (cljs.core.keyword_identical_QMARK_.call(null, result__7465__auto__, new cljs.core.Keyword(null, "recur", "recur", -437573268))) {
                         continue;
                       } else {
-                        return result__7690__auto__;
+                        return result__7465__auto__;
                       }
                       break;
                     }
-                  } catch (e12572) {
-                    if (e12572 instanceof Object) {
-                      var ex__7691__auto__ = e12572;
-                      var statearr_12573_12575 = state_12565;
-                      statearr_12573_12575[5] = ex__7691__auto__;
-                      cljs.core.async.impl.ioc_helpers.process_exception.call(null, state_12565);
+                  } catch (e11609) {
+                    if (e11609 instanceof Object) {
+                      var ex__7466__auto__ = e11609;
+                      var statearr_11610_11612 = state_11602;
+                      statearr_11610_11612[5] = ex__7466__auto__;
+                      cljs.core.async.impl.ioc_helpers.process_exception.call(null, state_11602);
                       return new cljs.core.Keyword(null, "recur", "recur", -437573268);
                     } else {
-                      throw e12572;
+                      throw e11609;
                     }
                   }
                 }();
-                if (cljs.core.keyword_identical_QMARK_.call(null, ret_value__7689__auto__, new cljs.core.Keyword(null, "recur", "recur", -437573268))) {
-                  var G__12576 = state_12565;
-                  state_12565 = G__12576;
+                if (cljs.core.keyword_identical_QMARK_.call(null, ret_value__7464__auto__, new cljs.core.Keyword(null, "recur", "recur", -437573268))) {
+                  var G__11613 = state_11602;
+                  state_11602 = G__11613;
                   continue;
                 } else {
-                  return ret_value__7689__auto__;
+                  return ret_value__7464__auto__;
                 }
                 break;
               }
             };
-            stock_selector$storage_emulator$get_models_$_state_machine__7688__auto__ = function(state_12565) {
+            stock_selector$storage_emulator$get_models_$_state_machine__7463__auto__ = function(state_11602) {
               switch(arguments.length) {
                 case 0:
-                  return stock_selector$storage_emulator$get_models_$_state_machine__7688__auto____0.call(this);
+                  return stock_selector$storage_emulator$get_models_$_state_machine__7463__auto____0.call(this);
                 case 1:
-                  return stock_selector$storage_emulator$get_models_$_state_machine__7688__auto____1.call(this, state_12565);
+                  return stock_selector$storage_emulator$get_models_$_state_machine__7463__auto____1.call(this, state_11602);
               }
               throw new Error("Invalid arity: " + arguments.length);
             };
-            stock_selector$storage_emulator$get_models_$_state_machine__7688__auto__.cljs$core$IFn$_invoke$arity$0 = stock_selector$storage_emulator$get_models_$_state_machine__7688__auto____0;
-            stock_selector$storage_emulator$get_models_$_state_machine__7688__auto__.cljs$core$IFn$_invoke$arity$1 = stock_selector$storage_emulator$get_models_$_state_machine__7688__auto____1;
-            return stock_selector$storage_emulator$get_models_$_state_machine__7688__auto__;
+            stock_selector$storage_emulator$get_models_$_state_machine__7463__auto__.cljs$core$IFn$_invoke$arity$0 = stock_selector$storage_emulator$get_models_$_state_machine__7463__auto____0;
+            stock_selector$storage_emulator$get_models_$_state_machine__7463__auto__.cljs$core$IFn$_invoke$arity$1 = stock_selector$storage_emulator$get_models_$_state_machine__7463__auto____1;
+            return stock_selector$storage_emulator$get_models_$_state_machine__7463__auto__;
           }();
-        }(switch__7687__auto__, c__7749__auto__);
+        }(switch__7462__auto__, c__7524__auto__);
       }();
-      var state__7751__auto__ = function() {
-        var statearr_12574 = f__7750__auto__.call(null);
-        statearr_12574[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__7749__auto__;
-        return statearr_12574;
+      var state__7526__auto__ = function() {
+        var statearr_11611 = f__7525__auto__.call(null);
+        statearr_11611[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__7524__auto__;
+        return statearr_11611;
       }();
-      return cljs.core.async.impl.ioc_helpers.run_state_machine_wrapped.call(null, state__7751__auto__);
+      return cljs.core.async.impl.ioc_helpers.run_state_machine_wrapped.call(null, state__7526__auto__);
     };
-  }(c__7749__auto__));
-  return c__7749__auto__;
+  }(c__7524__auto__));
+  return c__7524__auto__;
 };
 stock_selector.storage_emulator.find_results = function stock_selector$storage_emulator$find_results(device, model, text) {
-  var filter_by_device = cljs.core.truth_(device) ? cljs.core.filter.call(null, function(p1__12577_SHARP_) {
-    return cljs.core._EQ_.call(null, device, (new cljs.core.Keyword(null, "device", "device", 1817743352)).cljs$core$IFn$_invoke$arity$1(p1__12577_SHARP_));
+  var filter_by_device = cljs.core.truth_(device) ? cljs.core.filter.call(null, function(p1__11614_SHARP_) {
+    return cljs.core._EQ_.call(null, device, (new cljs.core.Keyword(null, "device", "device", 1817743352)).cljs$core$IFn$_invoke$arity$1(p1__11614_SHARP_));
   }, (new cljs.core.Keyword(null, "goods", "goods", 702040840)).cljs$core$IFn$_invoke$arity$1(stock_selector.mock.data)) : (new cljs.core.Keyword(null, "goods", "goods", 702040840)).cljs$core$IFn$_invoke$arity$1(stock_selector.mock.data);
   var filter_by_model = cljs.core.truth_(model) ? cljs.core.filter.call(null, function(filter_by_device) {
-    return function(p1__12578_SHARP_) {
-      return cljs.core._EQ_.call(null, model, (new cljs.core.Keyword(null, "model", "model", 331153215)).cljs$core$IFn$_invoke$arity$1(p1__12578_SHARP_));
+    return function(p1__11615_SHARP_) {
+      return cljs.core._EQ_.call(null, model, (new cljs.core.Keyword(null, "model", "model", 331153215)).cljs$core$IFn$_invoke$arity$1(p1__11615_SHARP_));
     };
   }(filter_by_device), filter_by_device) : filter_by_device;
   var filter_by_text = !cljs.core.empty_QMARK_.call(null, text) ? cljs.core.filter.call(null, function(filter_by_device, filter_by_model) {
-    return function(p1__12579_SHARP_) {
-      return cljs.core.not_EQ_.call(null, -1, (new cljs.core.Keyword(null, "code", "code", 1586293142)).cljs$core$IFn$_invoke$arity$1(p1__12579_SHARP_).indexOf(text));
+    return function(p1__11616_SHARP_) {
+      return cljs.core.not_EQ_.call(null, -1, (new cljs.core.Keyword(null, "code", "code", 1586293142)).cljs$core$IFn$_invoke$arity$1(p1__11616_SHARP_).indexOf(text));
     };
   }(filter_by_device, filter_by_model), filter_by_model) : filter_by_model;
   return filter_by_text;
 };
-stock_selector.storage_emulator.get_results = function stock_selector$storage_emulator$get_results(p__12580, on_get_results) {
-  var map__12598 = p__12580;
-  var map__12598__$1 = cljs.core.seq_QMARK_.call(null, map__12598) ? cljs.core.apply.call(null, cljs.core.hash_map, map__12598) : map__12598;
-  var device = cljs.core.get.call(null, map__12598__$1, new cljs.core.Keyword(null, "device", "device", 1817743352));
-  var model = cljs.core.get.call(null, map__12598__$1, new cljs.core.Keyword(null, "model", "model", 331153215));
-  var text = cljs.core.get.call(null, map__12598__$1, new cljs.core.Keyword(null, "text", "text", -1790561697));
-  var c__7749__auto__ = cljs.core.async.chan.call(null, 1);
-  cljs.core.async.impl.dispatch.run.call(null, function(c__7749__auto__, map__12598, map__12598__$1, device, model, text) {
+stock_selector.storage_emulator.get_results = function stock_selector$storage_emulator$get_results(p__11617, on_get_results) {
+  var map__11635 = p__11617;
+  var map__11635__$1 = cljs.core.seq_QMARK_.call(null, map__11635) ? cljs.core.apply.call(null, cljs.core.hash_map, map__11635) : map__11635;
+  var device = cljs.core.get.call(null, map__11635__$1, new cljs.core.Keyword(null, "device", "device", 1817743352));
+  var model = cljs.core.get.call(null, map__11635__$1, new cljs.core.Keyword(null, "model", "model", 331153215));
+  var text = cljs.core.get.call(null, map__11635__$1, new cljs.core.Keyword(null, "text", "text", -1790561697));
+  var c__7524__auto__ = cljs.core.async.chan.call(null, 1);
+  cljs.core.async.impl.dispatch.run.call(null, function(c__7524__auto__, map__11635, map__11635__$1, device, model, text) {
     return function() {
-      var f__7750__auto__ = function() {
-        var switch__7687__auto__ = function(c__7749__auto__, map__12598, map__12598__$1, device, model, text) {
-          return function(state_12605) {
-            var state_val_12606 = state_12605[1];
-            if (state_val_12606 === 1) {
-              var inst_12599 = cljs.core.async.timeout.call(null, 250);
-              var state_12605__$1 = state_12605;
-              return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_12605__$1, 2, inst_12599);
+      var f__7525__auto__ = function() {
+        var switch__7462__auto__ = function(c__7524__auto__, map__11635, map__11635__$1, device, model, text) {
+          return function(state_11642) {
+            var state_val_11643 = state_11642[1];
+            if (state_val_11643 === 1) {
+              var inst_11636 = cljs.core.async.timeout.call(null, 250);
+              var state_11642__$1 = state_11642;
+              return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null, state_11642__$1, 2, inst_11636);
             } else {
-              if (state_val_12606 === 2) {
-                var inst_12601 = state_12605[2];
-                var inst_12602 = stock_selector.storage_emulator.find_results.call(null, device, model, text);
-                var inst_12603 = on_get_results.call(null, inst_12602);
-                var state_12605__$1 = function() {
-                  var statearr_12607 = state_12605;
-                  statearr_12607[7] = inst_12601;
-                  return statearr_12607;
+              if (state_val_11643 === 2) {
+                var inst_11638 = state_11642[2];
+                var inst_11639 = stock_selector.storage_emulator.find_results.call(null, device, model, text);
+                var inst_11640 = on_get_results.call(null, inst_11639);
+                var state_11642__$1 = function() {
+                  var statearr_11644 = state_11642;
+                  statearr_11644[7] = inst_11638;
+                  return statearr_11644;
                 }();
-                return cljs.core.async.impl.ioc_helpers.return_chan.call(null, state_12605__$1, inst_12603);
+                return cljs.core.async.impl.ioc_helpers.return_chan.call(null, state_11642__$1, inst_11640);
               } else {
                 return null;
               }
             }
           };
-        }(c__7749__auto__, map__12598, map__12598__$1, device, model, text);
-        return function(switch__7687__auto__, c__7749__auto__, map__12598, map__12598__$1, device, model, text) {
+        }(c__7524__auto__, map__11635, map__11635__$1, device, model, text);
+        return function(switch__7462__auto__, c__7524__auto__, map__11635, map__11635__$1, device, model, text) {
           return function() {
-            var stock_selector$storage_emulator$get_results_$_state_machine__7688__auto__ = null;
-            var stock_selector$storage_emulator$get_results_$_state_machine__7688__auto____0 = function() {
-              var statearr_12611 = [null, null, null, null, null, null, null, null];
-              statearr_12611[0] = stock_selector$storage_emulator$get_results_$_state_machine__7688__auto__;
-              statearr_12611[1] = 1;
-              return statearr_12611;
+            var stock_selector$storage_emulator$get_results_$_state_machine__7463__auto__ = null;
+            var stock_selector$storage_emulator$get_results_$_state_machine__7463__auto____0 = function() {
+              var statearr_11648 = [null, null, null, null, null, null, null, null];
+              statearr_11648[0] = stock_selector$storage_emulator$get_results_$_state_machine__7463__auto__;
+              statearr_11648[1] = 1;
+              return statearr_11648;
             };
-            var stock_selector$storage_emulator$get_results_$_state_machine__7688__auto____1 = function(state_12605) {
+            var stock_selector$storage_emulator$get_results_$_state_machine__7463__auto____1 = function(state_11642) {
               while (true) {
-                var ret_value__7689__auto__ = function() {
+                var ret_value__7464__auto__ = function() {
                   try {
                     while (true) {
-                      var result__7690__auto__ = switch__7687__auto__.call(null, state_12605);
-                      if (cljs.core.keyword_identical_QMARK_.call(null, result__7690__auto__, new cljs.core.Keyword(null, "recur", "recur", -437573268))) {
+                      var result__7465__auto__ = switch__7462__auto__.call(null, state_11642);
+                      if (cljs.core.keyword_identical_QMARK_.call(null, result__7465__auto__, new cljs.core.Keyword(null, "recur", "recur", -437573268))) {
                         continue;
                       } else {
-                        return result__7690__auto__;
+                        return result__7465__auto__;
                       }
                       break;
                     }
-                  } catch (e12612) {
-                    if (e12612 instanceof Object) {
-                      var ex__7691__auto__ = e12612;
-                      var statearr_12613_12615 = state_12605;
-                      statearr_12613_12615[5] = ex__7691__auto__;
-                      cljs.core.async.impl.ioc_helpers.process_exception.call(null, state_12605);
+                  } catch (e11649) {
+                    if (e11649 instanceof Object) {
+                      var ex__7466__auto__ = e11649;
+                      var statearr_11650_11652 = state_11642;
+                      statearr_11650_11652[5] = ex__7466__auto__;
+                      cljs.core.async.impl.ioc_helpers.process_exception.call(null, state_11642);
                       return new cljs.core.Keyword(null, "recur", "recur", -437573268);
                     } else {
-                      throw e12612;
+                      throw e11649;
                     }
                   }
                 }();
-                if (cljs.core.keyword_identical_QMARK_.call(null, ret_value__7689__auto__, new cljs.core.Keyword(null, "recur", "recur", -437573268))) {
-                  var G__12616 = state_12605;
-                  state_12605 = G__12616;
+                if (cljs.core.keyword_identical_QMARK_.call(null, ret_value__7464__auto__, new cljs.core.Keyword(null, "recur", "recur", -437573268))) {
+                  var G__11653 = state_11642;
+                  state_11642 = G__11653;
                   continue;
                 } else {
-                  return ret_value__7689__auto__;
+                  return ret_value__7464__auto__;
                 }
                 break;
               }
             };
-            stock_selector$storage_emulator$get_results_$_state_machine__7688__auto__ = function(state_12605) {
+            stock_selector$storage_emulator$get_results_$_state_machine__7463__auto__ = function(state_11642) {
               switch(arguments.length) {
                 case 0:
-                  return stock_selector$storage_emulator$get_results_$_state_machine__7688__auto____0.call(this);
+                  return stock_selector$storage_emulator$get_results_$_state_machine__7463__auto____0.call(this);
                 case 1:
-                  return stock_selector$storage_emulator$get_results_$_state_machine__7688__auto____1.call(this, state_12605);
+                  return stock_selector$storage_emulator$get_results_$_state_machine__7463__auto____1.call(this, state_11642);
               }
               throw new Error("Invalid arity: " + arguments.length);
             };
-            stock_selector$storage_emulator$get_results_$_state_machine__7688__auto__.cljs$core$IFn$_invoke$arity$0 = stock_selector$storage_emulator$get_results_$_state_machine__7688__auto____0;
-            stock_selector$storage_emulator$get_results_$_state_machine__7688__auto__.cljs$core$IFn$_invoke$arity$1 = stock_selector$storage_emulator$get_results_$_state_machine__7688__auto____1;
-            return stock_selector$storage_emulator$get_results_$_state_machine__7688__auto__;
+            stock_selector$storage_emulator$get_results_$_state_machine__7463__auto__.cljs$core$IFn$_invoke$arity$0 = stock_selector$storage_emulator$get_results_$_state_machine__7463__auto____0;
+            stock_selector$storage_emulator$get_results_$_state_machine__7463__auto__.cljs$core$IFn$_invoke$arity$1 = stock_selector$storage_emulator$get_results_$_state_machine__7463__auto____1;
+            return stock_selector$storage_emulator$get_results_$_state_machine__7463__auto__;
           }();
-        }(switch__7687__auto__, c__7749__auto__, map__12598, map__12598__$1, device, model, text);
+        }(switch__7462__auto__, c__7524__auto__, map__11635, map__11635__$1, device, model, text);
       }();
-      var state__7751__auto__ = function() {
-        var statearr_12614 = f__7750__auto__.call(null);
-        statearr_12614[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__7749__auto__;
-        return statearr_12614;
+      var state__7526__auto__ = function() {
+        var statearr_11651 = f__7525__auto__.call(null);
+        statearr_11651[cljs.core.async.impl.ioc_helpers.USER_START_IDX] = c__7524__auto__;
+        return statearr_11651;
       }();
-      return cljs.core.async.impl.ioc_helpers.run_state_machine_wrapped.call(null, state__7751__auto__);
+      return cljs.core.async.impl.ioc_helpers.run_state_machine_wrapped.call(null, state__7526__auto__);
     };
-  }(c__7749__auto__, map__12598, map__12598__$1, device, model, text));
-  return c__7749__auto__;
+  }(c__7524__auto__, map__11635, map__11635__$1, device, model, text));
+  return c__7524__auto__;
 };
 goog.provide("stock_selector.components.line_editor");
 goog.require("cljs.core");
@@ -61621,10 +61691,11 @@ stock_selector.core.foo = function stock_selector$core$foo() {
 };
 stock_selector.core.app = function stock_selector$core$app() {
   return new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1057191632), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1057191632), "Lide editor"], null), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [stock_selector.components.line_editor.display_line_editor], null), new cljs.core.PersistentVector(null, 2, 5, 
-  cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1057191632), "Stock selector"], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [stock_selector.components.stock_selector.display_selector, new cljs.core.PersistentArrayMap(null, 7, [new cljs.core.Keyword(null, "show-prices?", "show-prices?", 1738541380), true, new cljs.core.Keyword(null, "show-costs?", "show-costs?", -1330862398), false, new cljs.core.Keyword(null, "show-stock-count?", 
-  "show-stock-count?", -1043270389), false, new cljs.core.Keyword(null, "get-devices-fn", "get-devices-fn", -1092795780), stock_selector.storage_emulator.get_devices, new cljs.core.Keyword(null, "get-models-fn", "get-models-fn", 879511516), stock_selector.storage_emulator.get_models, new cljs.core.Keyword(null, "get-results-fn", "get-results-fn", 37342243), stock_selector.storage_emulator.get_results, new cljs.core.Keyword(null, "on-select-item-fn", "on-select-item-fn", 764866031), function(p1__12619_SHARP_) {
-    return console.log([cljs.core.str("Item selected in stock-selector: "), cljs.core.str((new cljs.core.Keyword(null, "item", "item", 249373802)).cljs$core$IFn$_invoke$arity$1(p1__12619_SHARP_))].join(""));
-  }], null)], null)], null);
+  cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div", "div", 1057191632), "Stock selector"], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div.stock-selector-container", "div.stock-selector-container", 1130604223), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "style", "style", -496642736), new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "width", "width", 
+  -384071477), "1000px", new cljs.core.Keyword(null, "height", "height", 1025178622), "600px"], null)], null), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [stock_selector.components.stock_selector.display_selector, new cljs.core.PersistentArrayMap(null, 7, [new cljs.core.Keyword(null, "show-prices?", "show-prices?", 1738541380), true, new cljs.core.Keyword(null, "show-costs?", "show-costs?", -1330862398), false, new cljs.core.Keyword(null, "show-stock-count?", 
+  "show-stock-count?", -1043270389), false, new cljs.core.Keyword(null, "get-devices-fn", "get-devices-fn", -1092795780), stock_selector.storage_emulator.get_devices, new cljs.core.Keyword(null, "get-models-fn", "get-models-fn", 879511516), stock_selector.storage_emulator.get_models, new cljs.core.Keyword(null, "get-results-fn", "get-results-fn", 37342243), stock_selector.storage_emulator.get_results, new cljs.core.Keyword(null, "on-select-item-fn", "on-select-item-fn", 764866031), function(p1__12142_SHARP_) {
+    return console.log([cljs.core.str("Item selected in stock-selector: "), cljs.core.str((new cljs.core.Keyword(null, "item", "item", 249373802)).cljs$core$IFn$_invoke$arity$1(p1__12142_SHARP_))].join(""));
+  }], null)], null)], null)], null);
 };
 stock_selector.core.mount_html = function stock_selector$core$mount_html() {
   return reagent.core.render_component.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [stock_selector.core.app], null), document.body);

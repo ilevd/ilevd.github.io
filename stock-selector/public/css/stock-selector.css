@@ -1,9 +1,27 @@
+.stock-selector-container{
+  display: table;
+}
+
+.block-container{
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  /*position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%) translateX(50%);
+  -ms-transform: translateY(-50%) translateX(50%);
+  transform: translateY(-50%) translateX(50%);  */
+}
+
 .main-stock-selector{
+  display: inline-block;
   font-family: Tahoma;
+  /*font-size: 14px;*/
   width: 400px;
   border: 1px solid #bbbbbb;
   text-align: center;
   position: relative;
+
 }
 
 .choose-device-label{
@@ -17,6 +35,7 @@
   text-align: left;
   height: 328px;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .stock-item{
@@ -103,6 +122,13 @@ div.good-text{
   font-weight: bold;
   font-size: 14px;
 }
+.good-stock-count{
+  position: absolute;
+  top: 25px;
+  right: 0px;
+  font-weight: normal;
+  font-size: 12px;  
+}
 .good-company{
   border: 1px solid #bbbbbb;
   border-radius: 10px;
@@ -112,7 +138,7 @@ div.good-text{
 
 .stock-not-found{
   text-align: center;
-  padding-top: 140px;
+  padding-top: 20px;
 }
 
 
