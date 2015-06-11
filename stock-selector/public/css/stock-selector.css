@@ -12,10 +12,23 @@
   -ms-transform: translateY(-50%) translateX(50%);
   transform: translateY(-50%) translateX(50%);  */
 }
+.block-container2{
+  z-index: 200;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.b{
+  border: 1px solid black;
+}
+
 
 .main-stock-selector{
   display: inline-block;
   font-family: Tahoma;
+  background-color: white;
   /*font-size: 14px;*/
   width: 400px;
   border: 1px solid #bbbbbb;
@@ -26,8 +39,9 @@
 
 .choose-device-label{
   margin: 0px;
-  padding: 10px;
-  height: 20px;
+  padding: 0px 10px;
+  height: 40px;
+  line-height: 40px;
 }
 
 
@@ -95,6 +109,13 @@
 .highlight{
   background: rgba(0, 120, 255, 0.27);
 }
+.good-select-highlight{
+  background: #85D785;
+}
+.good-select{
+  background: #A8ECA8;
+}
+
 
 .good .info{
   margin-left: 90px;

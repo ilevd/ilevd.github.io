@@ -1,0 +1,25 @@
+ .daterangepicker .ranges {
+  width: 165px;
+}
+
+.daterangepicker .ranges .input-mini {
+  width: 77px;
+}
+
+.daterangepicker-container .control-label{
+  display: block;
+}
+
+.daterangepicker-container .widget-container {
+  border:  1px solid #CCC;
+  padding: 5px;
+}
+
+.daterangepicker-container > .widget-container .widget {
+  cursor:  pointer;
+  padding: 5px 10px;
+}
+
+.daterangepicker-container > .widget-container .text {
+  padding-left: 5px;
+}
