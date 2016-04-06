@@ -297,6 +297,25 @@ var Groups = {
         //,"61945080"
     ],
 
+    Erotic : [
+        "vog18",
+        "majes",
+        "fupoff",
+        "cekc_sex",
+        "sexis18",
+        "tf.erotica",
+        "nu_art_photo",
+        "beautigirls",
+        "ledesirerotique",
+        "beausex",
+        "roasty",
+        "sexdom18",
+		"sex.room",
+		"fupex",
+		"zapret.official",
+		"yabvdul",
+		"ero_0"
+    ],
 
     My : [],
 
@@ -319,7 +338,8 @@ var Groups = {
                 Groups.Cards,
                 Groups.Verse,
                 Groups.Handiwork,
-                Groups.My
+                Groups.Erotic
+                //,Groups.My
         ];
     },
 
@@ -327,7 +347,7 @@ var Groups = {
 
     groupsNames : ["Юмор","Любовь", "Новости", "Картинки", "Умное", "Цитаты",
         "Музыка", "Игры", "Спорт", "Авто", "Бизнес", "Мода",
-        "Рецепты", "English", "Открытки", "Стихи", "Рукоделие", "Мои" ],
+        "Рецепты", "English", "Открытки", "Стихи", "Рукоделие", "Эротика"/*, "Мои"*/ ],
 
     getAllGroupsString : function(){
     	var arr = [];
