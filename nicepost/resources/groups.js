@@ -167,7 +167,6 @@ var Groups = {
     ],
 
     Images : [
-        "wiba_image",
         "club_tenderness_by",
         "awesome__world",
         "travelis",
