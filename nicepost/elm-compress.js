@@ -11068,42 +11068,42 @@ Elm.View.ImgsView.make = function (_elm) {
                       ,$Html$Attributes.width(90)
                       ,$Html$Attributes.height(120)
                       ,$Html$Attributes.src(p1.photo_130)
-                      ,A2($Html$Events.onClick,address,$Update.OpenImage(A2($Model.Window,post,p1.photo_130)))]),
+                      ,A2($Html$Events.onClick,address,$Update.OpenImage(A2($Model.Window,post,p1.photo_604)))]),
               _U.list([]))
               ,A2($Html.img,
               _U.list([$Html$Attributes.$class("mainimg border-bottom border-right")
                       ,$Html$Attributes.width(90)
                       ,$Html$Attributes.height(120)
                       ,$Html$Attributes.src(p2.photo_130)
-                      ,A2($Html$Events.onClick,address,$Update.OpenImage(A2($Model.Window,post,p2.photo_130)))]),
+                      ,A2($Html$Events.onClick,address,$Update.OpenImage(A2($Model.Window,post,p2.photo_604)))]),
               _U.list([]))
               ,A2($Html.img,
               _U.list([$Html$Attributes.$class("mainimg border-top-right-radius border-bottom")
                       ,$Html$Attributes.width(90)
                       ,$Html$Attributes.height(120)
                       ,$Html$Attributes.src(p3.photo_130)
-                      ,A2($Html$Events.onClick,address,$Update.OpenImage(A2($Model.Window,post,p3.photo_130)))]),
+                      ,A2($Html$Events.onClick,address,$Update.OpenImage(A2($Model.Window,post,p3.photo_604)))]),
               _U.list([]))
               ,A2($Html.img,
               _U.list([$Html$Attributes.$class("mainimg border-right")
                       ,$Html$Attributes.width(90)
                       ,$Html$Attributes.height(120)
                       ,$Html$Attributes.src(p4.photo_130)
-                      ,A2($Html$Events.onClick,address,$Update.OpenImage(A2($Model.Window,post,p4.photo_130)))]),
+                      ,A2($Html$Events.onClick,address,$Update.OpenImage(A2($Model.Window,post,p4.photo_604)))]),
               _U.list([]))
               ,A2($Html.img,
               _U.list([$Html$Attributes.$class("mainimg border-right")
                       ,$Html$Attributes.width(90)
                       ,$Html$Attributes.height(120)
                       ,$Html$Attributes.src(p5.photo_130)
-                      ,A2($Html$Events.onClick,address,$Update.OpenImage(A2($Model.Window,post,p5.photo_130)))]),
+                      ,A2($Html$Events.onClick,address,$Update.OpenImage(A2($Model.Window,post,p5.photo_604)))]),
               _U.list([]))
               ,A2($Html.img,
               _U.list([$Html$Attributes.$class("mainimg")
                       ,$Html$Attributes.width(90)
                       ,$Html$Attributes.height(120)
                       ,$Html$Attributes.src(p6.photo_130)
-                      ,A2($Html$Events.onClick,address,$Update.OpenImage(A2($Model.Window,post,p6.photo_130)))]),
+                      ,A2($Html$Events.onClick,address,$Update.OpenImage(A2($Model.Window,post,p6.photo_604)))]),
               _U.list([]))]));
    });
    var display_photo_5 = F7(function (address,post,p1,p2,p3,p4,p5) {
@@ -11128,21 +11128,21 @@ Elm.View.ImgsView.make = function (_elm) {
                       ,$Html$Attributes.width(90)
                       ,$Html$Attributes.height(120)
                       ,$Html$Attributes.src(p3.photo_130)
-                      ,A2($Html$Events.onClick,address,$Update.OpenImage(A2($Model.Window,post,p3.photo_130)))]),
+                      ,A2($Html$Events.onClick,address,$Update.OpenImage(A2($Model.Window,post,p3.photo_604)))]),
               _U.list([]))
               ,A2($Html.img,
               _U.list([$Html$Attributes.$class("mainimg border-right")
                       ,$Html$Attributes.width(90)
                       ,$Html$Attributes.height(120)
                       ,$Html$Attributes.src(p4.photo_130)
-                      ,A2($Html$Events.onClick,address,$Update.OpenImage(A2($Model.Window,post,p4.photo_130)))]),
+                      ,A2($Html$Events.onClick,address,$Update.OpenImage(A2($Model.Window,post,p4.photo_604)))]),
               _U.list([]))
               ,A2($Html.img,
               _U.list([$Html$Attributes.$class("mainimg")
                       ,$Html$Attributes.width(90)
                       ,$Html$Attributes.height(120)
                       ,$Html$Attributes.src(p5.photo_130)
-                      ,A2($Html$Events.onClick,address,$Update.OpenImage(A2($Model.Window,post,p5.photo_130)))]),
+                      ,A2($Html$Events.onClick,address,$Update.OpenImage(A2($Model.Window,post,p5.photo_604)))]),
               _U.list([]))]));
    });
    var display_photo_4 = F6(function (address,post,p1,p2,p3,p4) {
