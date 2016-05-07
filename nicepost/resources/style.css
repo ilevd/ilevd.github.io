@@ -123,23 +123,13 @@ a:hover{
 
 
 
-
-
-
-
-
 .postbutton{
-  /*color: #888888;*/
-  /*margin-right: 5px;*/
-  /*font-size: 9.5px;*/
-  /*cursor: pointer;*/
   vertical-align: middle;
 
   display:inline-block;
   cursor:pointer;
   margin-right: 5px;
-  /*padding: 8px 0px; */
-  /*width: 99px;*/
+
   border-radius: 5px;
 
   width: 65px;
@@ -148,7 +138,7 @@ a:hover{
 
   color: white;
   font-size: 12px;
-  font-family: Tahoma;
+
   text-transform: uppercase;
   text-align: center;
   font-weight: normal;
@@ -288,45 +278,29 @@ a.song:active{
 .toggle-btn{
     display:inline-block;
     cursor:pointer;
-
     margin-bottom: 1px;
     margin-right: 1px;
     padding: 8px 0px;
     width: 99px;
-
     border-radius: 5px;
-    /*border:solid 1px #FFFFFF;*/
-
     font-size: 12px;
-    font-family: Tahoma;
     text-transform: uppercase;
     text-align: center;
     font-weight: normal;
-
 }
 
 div.toggle-btn-normal{
-  /*color:#45688E; */
   color: #333333;
-  /*background-color:#F5F5F5; */
-  /*background-image: linear-gradient(#5ba1f7, #1277f3);*/
 }
 
 div.toggle-btn-normal:hover {
-   /* background-image: linear-gradient(#f7635b, #f31e12);*/
-   /*background-image: linear-gradient(#63d5db, #2dbdc4);*/
-   /*color: white;*/
-   /*font-weight: bold;*/
-   /* background: #e1e7ed;*/
    background: #f5f5f5;
 }
 
 div.toggle-btn-checked{
-    /*background-image: linear-gradient(#f7635b, #f31e12);*/
     background-image: linear-gradient(#DB6963, #C4352D);
     color: white;
     font-weight: bold;
-    /*background: #45688E;*/
 }
 
 
@@ -360,8 +334,6 @@ div.toggle-btn-checked{
   box-shadow: 0 0 7px rgba(0,0,0,0.5);
   z-index: 1002;
   padding: 10px;
-  /*min-width: 200px;
-  max-height: 400px;*/
   border-radius: 7px;
   /*position: relative;*/
 }
