@@ -149,7 +149,7 @@ a:hover{
   line-height: 23px;
 
   color: white;
-  font-size: 12;
+  font-size: 12px;
   font-family: Tahoma;
   text-transform: uppercase;
   text-align: center;
@@ -299,7 +299,7 @@ a.song:active{
     border-radius: 5px;
     /*border:solid 1px #FFFFFF;*/
 
-    font-size: 12;
+    font-size: 12px;
     font-family: Tahoma;
     text-transform: uppercase;
     text-align: center;
