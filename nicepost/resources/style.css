@@ -1,6 +1,6 @@
 body{
   font-size: 11px;
-  font-family: tahoma;
+  font-family:  Open Sans,Helvetica Neue,sans-serif;
   background: #F7F7F7;
   margin: 0px;
  }
@@ -18,10 +18,8 @@ body{
   background-color: #FEFEFE;
   border-radius: 7px;
   width: 270px;
-  /*padding: 15px;*/
   margin-bottom: 40px;
   font-size: 11px;
-  font-family: tahoma;
   text-align: left;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
