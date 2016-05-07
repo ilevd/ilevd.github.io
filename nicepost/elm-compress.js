@@ -11225,8 +11225,7 @@ Elm.View.ImgsView.make = function (_elm) {
       _U.list([]),
       _U.list([A2($Html.img,
       _U.list([$Html$Attributes.$class("mainimg border-top-left-radius border-top-right-radius")
-              ,$Html$Attributes.width(135)
-              ,$Html$Attributes.height(150)
+              ,$Html$Attributes.width(270)
               ,$Html$Attributes.src(p1.photo_604)
               ,A2($Html$Events.onClick,address,$Update.OpenImage(A2($Model.Window,post,p1.photo_604)))]),
       _U.list([]))]));
