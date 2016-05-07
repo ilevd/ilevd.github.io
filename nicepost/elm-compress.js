@@ -11062,7 +11062,7 @@ Elm.View.ImgsView.make = function (_elm) {
    var _op = {};
    var display_photo_6 = F8(function (address,post,p1,p2,p3,p4,p5,p6) {
       return A2($Html.div,
-      _U.list([]),
+      _U.list([$Html$Attributes.$class("divimg")]),
       _U.list([A2($Html.img,
               _U.list([$Html$Attributes.$class("mainimg border-top-left-radius border-bottom border-right")
                       ,$Html$Attributes.width(90)
@@ -11108,7 +11108,7 @@ Elm.View.ImgsView.make = function (_elm) {
    });
    var display_photo_5 = F7(function (address,post,p1,p2,p3,p4,p5) {
       return A2($Html.div,
-      _U.list([]),
+      _U.list([$Html$Attributes.$class("divimg")]),
       _U.list([A2($Html.img,
               _U.list([$Html$Attributes.$class("ainimg border-top-left-radius border-bottom border-right")
                       ,$Html$Attributes.width(135)
@@ -11147,7 +11147,7 @@ Elm.View.ImgsView.make = function (_elm) {
    });
    var display_photo_4 = F6(function (address,post,p1,p2,p3,p4) {
       return A2($Html.div,
-      _U.list([]),
+      _U.list([$Html$Attributes.$class("divimg")]),
       _U.list([A2($Html.img,
               _U.list([$Html$Attributes.$class("mainimg border-top-left-radius border-bottom border-right")
                       ,$Html$Attributes.width(135)
@@ -11179,7 +11179,7 @@ Elm.View.ImgsView.make = function (_elm) {
    });
    var display_photo_3 = F5(function (address,post,p1,p2,p3) {
       return A2($Html.div,
-      _U.list([]),
+      _U.list([$Html$Attributes.$class("divimg")]),
       _U.list([A2($Html.img,
               _U.list([$Html$Attributes.$class("mainimg border-top-left-radius border-top-right-radius border-bottom")
                       ,$Html$Attributes.width(270)
@@ -11204,7 +11204,7 @@ Elm.View.ImgsView.make = function (_elm) {
    });
    var display_photo_2 = F4(function (address,post,p1,p2) {
       return A2($Html.div,
-      _U.list([]),
+      _U.list([$Html$Attributes.$class("divimg")]),
       _U.list([A2($Html.img,
               _U.list([$Html$Attributes.$class("mainimg border-top-left-radius border-right")
                       ,$Html$Attributes.width(135)
@@ -11222,7 +11222,7 @@ Elm.View.ImgsView.make = function (_elm) {
    });
    var display_photo_1 = F3(function (address,post,p1) {
       return A2($Html.div,
-      _U.list([]),
+      _U.list([$Html$Attributes.$class("divimg")]),
       _U.list([A2($Html.img,
       _U.list([$Html$Attributes.$class("mainimg border-top-left-radius border-top-right-radius")
               ,$Html$Attributes.width(270)

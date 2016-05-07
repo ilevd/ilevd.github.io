@@ -27,6 +27,9 @@ body{
 }
 
 /* -----------------  images -------------- */
+.divimg{
+  font-size: 0px;
+}
 .border-top-left-radius{
   border-top-left-radius: 7px;
 }
