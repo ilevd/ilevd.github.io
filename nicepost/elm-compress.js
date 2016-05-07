@@ -11040,6 +11040,292 @@ Elm.View.make = function (_elm) {
    var hello = "Hello";
    return _elm.View.values = {_op: _op,hello: hello};
 };
+Elm.View = Elm.View || {};
+Elm.View.ImgsView = Elm.View.ImgsView || {};
+Elm.View.ImgsView.make = function (_elm) {
+   "use strict";
+   _elm.View = _elm.View || {};
+   _elm.View.ImgsView = _elm.View.ImgsView || {};
+   if (_elm.View.ImgsView.values) return _elm.View.ImgsView.values;
+   var _U = Elm.Native.Utils.make(_elm),
+   $Basics = Elm.Basics.make(_elm),
+   $Debug = Elm.Debug.make(_elm),
+   $Html = Elm.Html.make(_elm),
+   $Html$Attributes = Elm.Html.Attributes.make(_elm),
+   $Html$Events = Elm.Html.Events.make(_elm),
+   $List = Elm.List.make(_elm),
+   $Maybe = Elm.Maybe.make(_elm),
+   $Model = Elm.Model.make(_elm),
+   $Result = Elm.Result.make(_elm),
+   $Signal = Elm.Signal.make(_elm),
+   $Update = Elm.Update.make(_elm);
+   var _op = {};
+   var display_photo_6 = F8(function (address,post,p1,p2,p3,p4,p5,p6) {
+      return A2($Html.div,
+      _U.list([]),
+      _U.list([A2($Html.img,
+              _U.list([$Html$Attributes.$class("mainimg border-top-left-radius border-bottom border-right")
+                      ,$Html$Attributes.width(90)
+                      ,$Html$Attributes.height(120)
+                      ,$Html$Attributes.src(p1.photo_130)
+                      ,A2($Html$Events.onClick,address,$Update.OpenImage(A2($Model.Window,post,p1.photo_130)))]),
+              _U.list([]))
+              ,A2($Html.img,
+              _U.list([$Html$Attributes.$class("mainimg border-bottom border-right")
+                      ,$Html$Attributes.width(90)
+                      ,$Html$Attributes.height(120)
+                      ,$Html$Attributes.src(p2.photo_130)
+                      ,A2($Html$Events.onClick,address,$Update.OpenImage(A2($Model.Window,post,p2.photo_130)))]),
+              _U.list([]))
+              ,A2($Html.img,
+              _U.list([$Html$Attributes.$class("mainimg border-top-right-radius border-bottom")
+                      ,$Html$Attributes.width(90)
+                      ,$Html$Attributes.height(120)
+                      ,$Html$Attributes.src(p3.photo_130)
+                      ,A2($Html$Events.onClick,address,$Update.OpenImage(A2($Model.Window,post,p3.photo_130)))]),
+              _U.list([]))
+              ,A2($Html.img,
+              _U.list([$Html$Attributes.$class("mainimg border-right")
+                      ,$Html$Attributes.width(90)
+                      ,$Html$Attributes.height(120)
+                      ,$Html$Attributes.src(p4.photo_130)
+                      ,A2($Html$Events.onClick,address,$Update.OpenImage(A2($Model.Window,post,p4.photo_130)))]),
+              _U.list([]))
+              ,A2($Html.img,
+              _U.list([$Html$Attributes.$class("mainimg border-right")
+                      ,$Html$Attributes.width(90)
+                      ,$Html$Attributes.height(120)
+                      ,$Html$Attributes.src(p5.photo_130)
+                      ,A2($Html$Events.onClick,address,$Update.OpenImage(A2($Model.Window,post,p5.photo_130)))]),
+              _U.list([]))
+              ,A2($Html.img,
+              _U.list([$Html$Attributes.$class("mainimg")
+                      ,$Html$Attributes.width(90)
+                      ,$Html$Attributes.height(120)
+                      ,$Html$Attributes.src(p6.photo_130)
+                      ,A2($Html$Events.onClick,address,$Update.OpenImage(A2($Model.Window,post,p6.photo_130)))]),
+              _U.list([]))]));
+   });
+   var display_photo_5 = F7(function (address,post,p1,p2,p3,p4,p5) {
+      return A2($Html.div,
+      _U.list([]),
+      _U.list([A2($Html.img,
+              _U.list([$Html$Attributes.$class("ainimg border-top-left-radius border-bottom border-right")
+                      ,$Html$Attributes.width(135)
+                      ,$Html$Attributes.height(150)
+                      ,$Html$Attributes.src(p1.photo_604)
+                      ,A2($Html$Events.onClick,address,$Update.OpenImage(A2($Model.Window,post,p1.photo_604)))]),
+              _U.list([]))
+              ,A2($Html.img,
+              _U.list([$Html$Attributes.$class("mainimg border-top-right-radius border-bottom")
+                      ,$Html$Attributes.width(135)
+                      ,$Html$Attributes.height(150)
+                      ,$Html$Attributes.src(p2.photo_604)
+                      ,A2($Html$Events.onClick,address,$Update.OpenImage(A2($Model.Window,post,p2.photo_604)))]),
+              _U.list([]))
+              ,A2($Html.img,
+              _U.list([$Html$Attributes.$class("mainimg border-right")
+                      ,$Html$Attributes.width(90)
+                      ,$Html$Attributes.height(120)
+                      ,$Html$Attributes.src(p3.photo_130)
+                      ,A2($Html$Events.onClick,address,$Update.OpenImage(A2($Model.Window,post,p3.photo_130)))]),
+              _U.list([]))
+              ,A2($Html.img,
+              _U.list([$Html$Attributes.$class("mainimg border-right")
+                      ,$Html$Attributes.width(90)
+                      ,$Html$Attributes.height(120)
+                      ,$Html$Attributes.src(p4.photo_130)
+                      ,A2($Html$Events.onClick,address,$Update.OpenImage(A2($Model.Window,post,p4.photo_130)))]),
+              _U.list([]))
+              ,A2($Html.img,
+              _U.list([$Html$Attributes.$class("mainimg")
+                      ,$Html$Attributes.width(90)
+                      ,$Html$Attributes.height(120)
+                      ,$Html$Attributes.src(p5.photo_130)
+                      ,A2($Html$Events.onClick,address,$Update.OpenImage(A2($Model.Window,post,p5.photo_130)))]),
+              _U.list([]))]));
+   });
+   var display_photo_4 = F6(function (address,post,p1,p2,p3,p4) {
+      return A2($Html.div,
+      _U.list([]),
+      _U.list([A2($Html.img,
+              _U.list([$Html$Attributes.$class("mainimg border-top-left-radius border-bottom border-right")
+                      ,$Html$Attributes.width(135)
+                      ,$Html$Attributes.height(150)
+                      ,$Html$Attributes.src(p1.photo_604)
+                      ,A2($Html$Events.onClick,address,$Update.OpenImage(A2($Model.Window,post,p1.photo_604)))]),
+              _U.list([]))
+              ,A2($Html.img,
+              _U.list([$Html$Attributes.$class("mainimg border-top-right-radius border-bottom")
+                      ,$Html$Attributes.width(135)
+                      ,$Html$Attributes.height(150)
+                      ,$Html$Attributes.src(p2.photo_604)
+                      ,A2($Html$Events.onClick,address,$Update.OpenImage(A2($Model.Window,post,p2.photo_604)))]),
+              _U.list([]))
+              ,A2($Html.img,
+              _U.list([$Html$Attributes.$class("mainimg border-right")
+                      ,$Html$Attributes.width(135)
+                      ,$Html$Attributes.height(150)
+                      ,$Html$Attributes.src(p3.photo_604)
+                      ,A2($Html$Events.onClick,address,$Update.OpenImage(A2($Model.Window,post,p3.photo_604)))]),
+              _U.list([]))
+              ,A2($Html.img,
+              _U.list([$Html$Attributes.$class("mainimg")
+                      ,$Html$Attributes.width(135)
+                      ,$Html$Attributes.height(150)
+                      ,$Html$Attributes.src(p4.photo_604)
+                      ,A2($Html$Events.onClick,address,$Update.OpenImage(A2($Model.Window,post,p4.photo_604)))]),
+              _U.list([]))]));
+   });
+   var display_photo_3 = F5(function (address,post,p1,p2,p3) {
+      return A2($Html.div,
+      _U.list([]),
+      _U.list([A2($Html.img,
+              _U.list([$Html$Attributes.$class("mainimg border-top-left-radius border-top-right-radius border-bottom")
+                      ,$Html$Attributes.width(270)
+                      ,$Html$Attributes.style(_U.list([{ctor: "_Tuple2",_0: "maxHeight",_1: "200px"}]))
+                      ,$Html$Attributes.src(p1.photo_604)
+                      ,A2($Html$Events.onClick,address,$Update.OpenImage(A2($Model.Window,post,p1.photo_604)))]),
+              _U.list([]))
+              ,A2($Html.img,
+              _U.list([$Html$Attributes.$class("mainimg border-right")
+                      ,$Html$Attributes.width(135)
+                      ,$Html$Attributes.height(150)
+                      ,$Html$Attributes.src(p2.photo_604)
+                      ,A2($Html$Events.onClick,address,$Update.OpenImage(A2($Model.Window,post,p2.photo_604)))]),
+              _U.list([]))
+              ,A2($Html.img,
+              _U.list([$Html$Attributes.$class("mainimg")
+                      ,$Html$Attributes.width(135)
+                      ,$Html$Attributes.height(150)
+                      ,$Html$Attributes.src(p3.photo_604)
+                      ,A2($Html$Events.onClick,address,$Update.OpenImage(A2($Model.Window,post,p3.photo_604)))]),
+              _U.list([]))]));
+   });
+   var display_photo_2 = F4(function (address,post,p1,p2) {
+      return A2($Html.div,
+      _U.list([]),
+      _U.list([A2($Html.img,
+              _U.list([$Html$Attributes.$class("mainimg border-top-left-radius border-right")
+                      ,$Html$Attributes.width(135)
+                      ,$Html$Attributes.height(150)
+                      ,$Html$Attributes.src(p1.photo_604)
+                      ,A2($Html$Events.onClick,address,$Update.OpenImage(A2($Model.Window,post,p1.photo_604)))]),
+              _U.list([]))
+              ,A2($Html.img,
+              _U.list([$Html$Attributes.$class("mainimg border-top-right-radius")
+                      ,$Html$Attributes.width(135)
+                      ,$Html$Attributes.height(150)
+                      ,$Html$Attributes.src(p2.photo_604)
+                      ,A2($Html$Events.onClick,address,$Update.OpenImage(A2($Model.Window,post,p2.photo_604)))]),
+              _U.list([]))]));
+   });
+   var display_photo_1 = F3(function (address,post,p1) {
+      return A2($Html.div,
+      _U.list([]),
+      _U.list([A2($Html.img,
+      _U.list([$Html$Attributes.$class("mainimg border-top-left-radius border-top-right-radius")
+              ,$Html$Attributes.width(135)
+              ,$Html$Attributes.height(150)
+              ,$Html$Attributes.src(p1.photo_604)
+              ,A2($Html$Events.onClick,address,$Update.OpenImage(A2($Model.Window,post,p1.photo_604)))]),
+      _U.list([]))]));
+   });
+   var getImgs2 = F3(function (address,post,photos) {
+      getImgs2: while (true) {
+         var _p0 = photos;
+         _v0_6: do {
+            if (_p0.ctor === "::") {
+                  if (_p0._1.ctor === "[]") {
+                        return A3(display_photo_1,address,post,_p0._0);
+                     } else {
+                        if (_p0._1._1.ctor === "[]") {
+                              return A4(display_photo_2,address,post,_p0._0,_p0._1._0);
+                           } else {
+                              if (_p0._1._1._1.ctor === "[]") {
+                                    return A5(display_photo_3,address,post,_p0._0,_p0._1._0,_p0._1._1._0);
+                                 } else {
+                                    if (_p0._1._1._1._1.ctor === "[]") {
+                                          return A6(display_photo_4,address,post,_p0._0,_p0._1._0,_p0._1._1._0,_p0._1._1._1._0);
+                                       } else {
+                                          if (_p0._1._1._1._1._1.ctor === "[]") {
+                                                return A7(display_photo_5,address,post,_p0._0,_p0._1._0,_p0._1._1._0,_p0._1._1._1._0,_p0._1._1._1._1._0);
+                                             } else {
+                                                if (_p0._1._1._1._1._1._1.ctor === "[]") {
+                                                      return A8(display_photo_6,
+                                                      address,
+                                                      post,
+                                                      _p0._0,
+                                                      _p0._1._0,
+                                                      _p0._1._1._0,
+                                                      _p0._1._1._1._0,
+                                                      _p0._1._1._1._1._0,
+                                                      _p0._1._1._1._1._1._0);
+                                                   } else {
+                                                      break _v0_6;
+                                                   }
+                                             }
+                                       }
+                                 }
+                           }
+                     }
+               } else {
+                  break _v0_6;
+               }
+         } while (false);
+         var _v1 = address,_v2 = post,_v3 = A2($List.take,6,photos);
+         address = _v1;
+         post = _v2;
+         photos = _v3;
+         continue getImgs2;
+      }
+   });
+   var getImg = F5(function (address,w,getSrc,post,photo) {
+      return A2($Html.img,
+      _U.list([$Html$Attributes.$class("mainimg")
+              ,$Html$Attributes.src(getSrc(photo))
+              ,$Html$Attributes.width(w)
+              ,A2($Html$Events.onClick,address,$Update.OpenImage(A2($Model.Window,post,photo.photo_604)))]),
+      _U.list([]));
+   });
+   var last2_3 = function (l) {
+      var _p1 = l;
+      if (_p1.ctor === "[]") {
+            return _U.list([]);
+         } else {
+            if (_p1._1.ctor === "[]") {
+                  return _U.list([]);
+               } else {
+                  return _p1._1._1;
+               }
+         }
+   };
+   var getImgs = F2(function (address,post) {
+      var getImg_95 = A4(getImg,address,89,function (_) {    return _.photo_130;},post);
+      var getImg_144 = A4(getImg,address,134,function (_) {    return _.photo_604;},post);
+      var getImg_290 = A4(getImg,address,270,function (_) {    return _.photo_604;},post);
+      var photos = post.photos;
+      var _p2 = $List.length(photos);
+      switch (_p2)
+      {case 1: return A2($List.map,getImg_290,photos);
+         case 2: return A2($List.map,getImg_144,photos);
+         case 3: return A2($List.map,getImg_95,A2($List.take,3,photos));
+         case 4: return A2($Basics._op["++"],A2($List.map,getImg_144,A2($List.take,2,photos)),A2($List.map,getImg_144,last2_3(photos)));
+         case 5: return A2($Basics._op["++"],A2($List.map,getImg_144,A2($List.take,2,photos)),A2($List.map,getImg_95,last2_3(photos)));
+         default: return A2($List.map,getImg_95,A2($List.take,6,photos));}
+   });
+   return _elm.View.ImgsView.values = {_op: _op
+                                      ,last2_3: last2_3
+                                      ,getImg: getImg
+                                      ,getImgs: getImgs
+                                      ,display_photo_1: display_photo_1
+                                      ,display_photo_2: display_photo_2
+                                      ,display_photo_3: display_photo_3
+                                      ,display_photo_4: display_photo_4
+                                      ,display_photo_5: display_photo_5
+                                      ,display_photo_6: display_photo_6
+                                      ,getImgs2: getImgs2};
+};
 Elm.Nicepost = Elm.Nicepost || {};
 Elm.Nicepost.make = function (_elm) {
    "use strict";
@@ -11060,7 +11346,8 @@ Elm.Nicepost.make = function (_elm) {
    $Signal = Elm.Signal.make(_elm),
    $String = Elm.String.make(_elm),
    $Update = Elm.Update.make(_elm),
-   $Utils = Elm.Utils.make(_elm);
+   $Utils = Elm.Utils.make(_elm),
+   $View$ImgsView = Elm.View.ImgsView.make(_elm);
    var _op = {};
    var emptyPost = {id: 0,text: "",likes: 0,date: 0,date_str: "",photos: _U.list([]),audios: _U.list([])};
    var getPostFriends = Elm.Native.Port.make(_elm).inboundSignal("getPostFriends",
@@ -11210,7 +11497,7 @@ Elm.Nicepost.make = function (_elm) {
          if (_p2.ctor === "ChangeGroup") {
                return _p2._0;
             } else {
-               return _U.crashCase("Nicepost",{start: {line: 418,column: 9},end: {line: 420,column: 36}},_p2)("Todo");
+               return _U.crashCase("Nicepost",{start: {line: 384,column: 9},end: {line: 386,column: 36}},_p2)("Todo");
             }
       };
       var pridicate = function (act) {    var _p4 = act;if (_p4.ctor === "ChangeGroup") {    return true;} else {    return false;}};
@@ -11226,7 +11513,7 @@ Elm.Nicepost.make = function (_elm) {
          if (_p5.ctor === "ChangeToggle") {
                return _p5._0;
             } else {
-               return _U.crashCase("Nicepost",{start: {line: 430,column: 9},end: {line: 432,column: 36}},_p5)("Todo");
+               return _U.crashCase("Nicepost",{start: {line: 396,column: 9},end: {line: 398,column: 36}},_p5)("Todo");
             }
       };
       var predicate = function (act) {    var _p7 = act;if (_p7.ctor === "ChangeToggle") {    return true;} else {    return false;}};
@@ -11253,7 +11540,7 @@ Elm.Nicepost.make = function (_elm) {
          if (_p8.ctor === "Repost") {
                return {ctor: "_Tuple2",_0: _p8._0,_1: _p8._1};
             } else {
-               return _U.crashCase("Nicepost",{start: {line: 442,column: 11},end: {line: 444,column: 38}},_p8)("Todo");
+               return _U.crashCase("Nicepost",{start: {line: 408,column: 11},end: {line: 410,column: 38}},_p8)("Todo");
             }
       };
       var predicate = function (act) {    var _p10 = act;if (_p10.ctor === "Repost") {    return true;} else {    return false;}};
@@ -11333,61 +11620,34 @@ Elm.Nicepost.make = function (_elm) {
       _U.list([$Html.text(A2($Basics._op["++"],audio.artist,A2($Basics._op["++"]," - ",audio.title)))]));
    });
    var getAudios = function (post) {    return A2($List.map,getAudio(post),post.audios);};
-   var getImg = F4(function (w,getSrc,post,photo) {
-      return A2($Html.img,
-      _U.list([$Html$Attributes.$class("mainimg")
-              ,$Html$Attributes.src(getSrc(photo))
-              ,$Html$Attributes.width(w)
-              ,A2($Html$Events.onClick,actions.address,$Update.OpenImage(A2($Model.Window,post,photo.photo_604)))]),
-      _U.list([]));
-   });
-   var last2_3 = function (l) {
-      var _p11 = l;
-      if (_p11.ctor === "[]") {
-            return _U.list([]);
-         } else {
-            if (_p11._1.ctor === "[]") {
-                  return _U.list([]);
-               } else {
-                  return _p11._1._1;
-               }
-         }
-   };
-   var getImgs = function (post) {
-      var getImg_95 = A3(getImg,89,function (_) {    return _.photo_130;},post);
-      var getImg_144 = A3(getImg,134,function (_) {    return _.photo_604;},post);
-      var getImg_290 = A3(getImg,270,function (_) {    return _.photo_604;},post);
-      var photos = post.photos;
-      var _p12 = $List.length(photos);
-      switch (_p12)
-      {case 1: return A2($List.map,getImg_290,photos);
-         case 2: return A2($List.map,getImg_144,photos);
-         case 3: return A2($List.map,getImg_95,A2($List.take,3,photos));
-         case 4: return A2($Basics._op["++"],A2($List.map,getImg_144,A2($List.take,2,photos)),A2($List.map,getImg_144,last2_3(photos)));
-         case 5: return A2($Basics._op["++"],A2($List.map,getImg_144,A2($List.take,2,photos)),A2($List.map,getImg_95,last2_3(photos)));
-         default: return A2($List.map,getImg_95,A2($List.take,6,photos));}
-   };
    var getTextBlock = F2(function (post,openPosts) {
       if (_U.eq($String.length(post.text),0)) return _U.list([]); else {
-            var _p13 = function () {
+            var _p11 = function () {
                if (_U.cmp($String.length(post.text),240) > 0) {
-                     var _p14 = A2($List.filter,function (id) {    return _U.eq(id,post.id);},openPosts);
-                     if (_p14.ctor === "[]") {
+                     var _p12 = A2($List.filter,function (id) {    return _U.eq(id,post.id);},openPosts);
+                     if (_p12.ctor === "[]") {
                            return {ctor: "_Tuple2",_0: A2($Basics._op["++"],A2($String.left,140,post.text),"... (развернуть)"),_1: "textBlockClicked"};
                         } else {
                            return {ctor: "_Tuple2",_0: post.text,_1: "textBlockClicked"};
                         }
                   } else return {ctor: "_Tuple2",_0: post.text,_1: "textBlock"};
             }();
-            var txt = _p13._0;
-            var className = _p13._1;
+            var txt = _p11._0;
+            var className = _p11._1;
             return _U.list([A2($Html.div,
             _U.list([$Html$Attributes.$class(className),A2($Html$Events.onClick,actions.address,$Update.ClickText(post.id))]),
             _U.list([$Html.text(txt)]))]);
          }
    });
    var postHtml = F2(function (openPosts,post) {
-      var imgs = function () {    var _p15 = post.photos;if (_p15.ctor === "::") {    return getImgs(post);} else {    return _U.list([]);}}();
+      var imgs = function () {
+         var _p13 = post.photos;
+         if (_p13.ctor === "::") {
+               return _U.list([A3($View$ImgsView.getImgs2,actions.address,post,post.photos)]);
+            } else {
+               return _U.list([]);
+            }
+      }();
       return A2($Html.div,
       _U.list([$Html$Attributes.$class("main")]),
       A2($Basics._op["++"],imgs,A2($Basics._op["++"],A2(getTextBlock,post,openPosts),A2($Basics._op["++"],getAudios(post),_U.list([postFooter(post)])))));
@@ -11401,11 +11661,11 @@ Elm.Nicepost.make = function (_elm) {
       _U.list([A2($Html.img,_U.list([$Html$Attributes.$class("friend_img"),$Html$Attributes.src(group.photo_50)]),_U.list([]))
               ,A2($Html.a,_U.list([$Html$Attributes.$class("friend_text")]),_U.list([$Html.text(group.name)]))]));
    });
-   var getGroupWindow = F3(function (_p16,groups,post) {
-      var _p17 = _p16;
+   var getGroupWindow = F3(function (_p14,groups,post) {
+      var _p15 = _p14;
       return A2($Html.div,
       _U.list([$Html$Attributes.$class("win_container")
-              ,$Html$Attributes.style(_U.list([{ctor: "_Tuple2",_0: "top",_1: A2($Basics._op["++"],$Basics.toString(_p17._1),"px")}]))]),
+              ,$Html$Attributes.style(_U.list([{ctor: "_Tuple2",_0: "top",_1: A2($Basics._op["++"],$Basics.toString(_p15._1),"px")}]))]),
       _U.list([A2($Html.div,
       _U.list([$Html$Attributes.$class("window_friend")]),
       _U.list([A2($Html.p,
@@ -11423,11 +11683,11 @@ Elm.Nicepost.make = function (_elm) {
               _U.list([$Html$Attributes.$class("friend_text")]),
               _U.list([$Html.text(A2($Basics._op["++"],user.last_name,A2($Basics._op["++"]," ",user.first_name)))]))]));
    });
-   var getFriendsWindow = F4(function (_p18,friends,groups,post) {
-      var _p19 = _p18;
+   var getFriendsWindow = F4(function (_p16,friends,groups,post) {
+      var _p17 = _p16;
       return A2($Html.div,
       _U.list([$Html$Attributes.$class("win_container")
-              ,$Html$Attributes.style(_U.list([{ctor: "_Tuple2",_0: "top",_1: A2($Basics._op["++"],$Basics.toString(_p19._1),"px")}]))]),
+              ,$Html$Attributes.style(_U.list([{ctor: "_Tuple2",_0: "top",_1: A2($Basics._op["++"],$Basics.toString(_p17._1),"px")}]))]),
       _U.list([A2($Html.div,
       _U.list([$Html$Attributes.$class("window_friend")]),
       _U.list([A2($Html.p,
@@ -11441,8 +11701,8 @@ Elm.Nicepost.make = function (_elm) {
    });
    var getBlackBackground = A2($Html.div,_U.list([$Html$Attributes.$class("win_black")]),_U.list([]));
    var getNextImg = F2(function (post,imgSrc) {    return A4($Utils.getNext2,post.photos,post.photos,function (_) {    return _.photo_604;},imgSrc);});
-   var getPostWindow = F3(function (_p20,post,imgSrc) {
-      var _p21 = _p20;
+   var getPostWindow = F3(function (_p18,post,imgSrc) {
+      var _p19 = _p18;
       var imgStyle = _U.cmp($List.length(post.photos),1) > 0 ? _U.list([$Html$Attributes.style(_U.list([{ctor: "_Tuple2",_0: "cursor",_1: "pointer"}]))
                                                                        ,$Html$Attributes.alt("Loading")
                                                                        ,A2($Html$Events.onClick,
@@ -11450,7 +11710,7 @@ Elm.Nicepost.make = function (_elm) {
                                                                        $Update.OpenImage(A2($Model.Window,post,A2(getNextImg,post,imgSrc))))]) : _U.list([]);
       return A2($Html.div,
       _U.list([$Html$Attributes.$class("win_container")
-              ,$Html$Attributes.style(_U.list([{ctor: "_Tuple2",_0: "top",_1: A2($Basics._op["++"],$Basics.toString(_p21._1),"px")}]))]),
+              ,$Html$Attributes.style(_U.list([{ctor: "_Tuple2",_0: "top",_1: A2($Basics._op["++"],$Basics.toString(_p19._1),"px")}]))]),
       _U.list([A2($Html.div,
       _U.list([$Html$Attributes.$class("win")]),
       _U.list([A2($Html.p,
@@ -11462,14 +11722,14 @@ Elm.Nicepost.make = function (_elm) {
    });
    var dividePosts = function (posts) {    return A5($Utils.divideList,_U.list([]),_U.list([]),_U.list([]),posts,0);};
    var postColumns = F2(function (posts,openPosts) {
-      var _p22 = posts;
-      if (_p22.ctor === "[]") {
+      var _p20 = posts;
+      if (_p20.ctor === "[]") {
             return displayLoader;
          } else {
-            var _p23 = dividePosts(posts);
-            var posts1 = _p23._0;
-            var posts2 = _p23._1;
-            var posts3 = _p23._2;
+            var _p21 = dividePosts(posts);
+            var posts1 = _p21._0;
+            var posts2 = _p21._1;
+            var posts3 = _p21._2;
             return A2($Html.div,
             _U.list([$Html$Attributes.$class("columns")]),
             _U.list([A3(postColumn,"post-column1",posts1,openPosts)
@@ -11477,30 +11737,30 @@ Elm.Nicepost.make = function (_elm) {
                     ,A3(postColumn,"post-column3",posts3,openPosts)]));
          }
    });
-   var display = function (_p24) {
-      var _p25 = _p24;
-      var _p30 = _p25.winSize;
-      var _p29 = _p25.postGroups;
+   var display = function (_p22) {
+      var _p23 = _p22;
+      var _p28 = _p23.winSize;
+      var _p27 = _p23.postGroups;
       var groupWin = function () {
-         var _p26 = _p25.groupWindow;
-         if (_p26.ctor === "GroupWindow") {
-               return _U.list([A3(getGroupWindow,_p30,_p29,_p26._0),getBlackBackground]);
+         var _p24 = _p23.groupWindow;
+         if (_p24.ctor === "GroupWindow") {
+               return _U.list([A3(getGroupWindow,_p28,_p27,_p24._0),getBlackBackground]);
             } else {
                return _U.list([]);
             }
       }();
       var friendWin = function () {
-         var _p27 = _p25.friendWindow;
-         if (_p27.ctor === "FriendWindow") {
-               return _U.list([A4(getFriendsWindow,_p30,_p25.friends,_p29,_p27._0),getBlackBackground]);
+         var _p25 = _p23.friendWindow;
+         if (_p25.ctor === "FriendWindow") {
+               return _U.list([A4(getFriendsWindow,_p28,_p23.friends,_p27,_p25._0),getBlackBackground]);
             } else {
                return _U.list([]);
             }
       }();
       var imageWin = function () {
-         var _p28 = _p25.postWindow;
-         if (_p28.ctor === "Window") {
-               return _U.list([A3(getPostWindow,_p30,_p28._0,_p28._1),getBlackBackground]);
+         var _p26 = _p23.postWindow;
+         if (_p26.ctor === "Window") {
+               return _U.list([A3(getPostWindow,_p28,_p26._0,_p26._1),getBlackBackground]);
             } else {
                return _U.list([]);
             }
@@ -11511,9 +11771,9 @@ Elm.Nicepost.make = function (_elm) {
       A2($Html.div,
       _U.list([]),
       A2($Basics._op["++"],
-      _U.list([A3($Html$Lazy.lazy2,displayToggles,toggleList,_p25.currentToggle)
-              ,A3($Html$Lazy.lazy2,groupsDiv,_p25.groups,_p25.currentGroup)
-              ,A3($Html$Lazy.lazy2,postColumns,_p25.posts,_p25.openPosts)]),
+      _U.list([A3($Html$Lazy.lazy2,displayToggles,toggleList,_p23.currentToggle)
+              ,A3($Html$Lazy.lazy2,groupsDiv,_p23.groups,_p23.currentGroup)
+              ,A3($Html$Lazy.lazy2,postColumns,_p23.posts,_p23.openPosts)]),
       A2($Basics._op["++"],imageWin,A2($Basics._op["++"],friendWin,groupWin)))));
    };
    var main = A2($Signal.map,display,currentState);
@@ -11531,9 +11791,6 @@ Elm.Nicepost.make = function (_elm) {
                                  ,postColumn: postColumn
                                  ,postHtml: postHtml
                                  ,getTextBlock: getTextBlock
-                                 ,getImgs: getImgs
-                                 ,last2_3: last2_3
-                                 ,getImg: getImg
                                  ,getAudios: getAudios
                                  ,getAudio: getAudio
                                  ,postFooter: postFooter

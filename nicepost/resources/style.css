@@ -1,6 +1,6 @@
 body{
   font-size: 11px;
-  font-family: tahoma; 
+  font-family: tahoma;
   background: #F7F7F7;
   margin: 0px;
  }
@@ -26,13 +26,53 @@ body{
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
-.mainimg{
+/* -----------------  images -------------- */
+.border-top-left-radius{
   border-top-left-radius: 7px;
+}
+.border-top-right-radius{
   border-top-right-radius: 7px;
-  max-height: 350px;
+}
+
+.border-bottom{
+   border-bottom: 2px solid white;
+    box-sizing: border-box;
+}
+.border-right{
+    border-right: 2px solid white;
+    box-sizing: border-box;
+}
+
+
+.mainimg{
+  /*border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  /*max-height: 350px;
   margin-bottom: 1px;
-  margin-right: 1px;
+  margin-right: 1px;*/
+  object-fit: cover;
   cursor: pointer;
+}
+
+/* -----------------  end images -------------- */
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+.link-block{
+    margin-top: 5px;
+}
+.link{
+    color: rgb(1, 61, 107);
+}
+.link-img{
+    float: left;
+    background: url(/imgs/iconset.png) no-repeat left -236px;
+    width: 15px;
+    height: 11px;
+    margin-top: 3px;
 }
 
 .textBlock, .textBlockClicked{
@@ -84,10 +124,10 @@ body{
 
 
 
-    
-  
 
- 
+
+
+
 
 
 
@@ -99,7 +139,7 @@ body{
   /*cursor: pointer;*/
   vertical-align: middle;
 
-  display:inline-block; 
+  display:inline-block;
   cursor:pointer;
   margin-right: 5px;
   /*padding: 8px 0px; */
@@ -112,9 +152,9 @@ body{
 
   color: white;
   font-size: 12;
-  font-family: Tahoma; 
+  font-family: Tahoma;
   text-transform: uppercase;
-  text-align: center; 
+  text-align: center;
   font-weight: normal;
   background-image: linear-gradient(#63d5db, #2dbdc4);
   opacity: 1;
@@ -182,7 +222,7 @@ img.groupimg{
   margin: 1px;
   width: 40px;
   height: 40px;
-  background-color: #FEFEFE; 
+  background-color: #FEFEFE;
   cursor: pointer;
    display: inline-block;
    vertical-align: middle;
@@ -250,21 +290,21 @@ a.song:active{
 }
 
 .toggle-btn{
-    display:inline-block; 
+    display:inline-block;
     cursor:pointer;
 
     margin-bottom: 1px;
     margin-right: 1px;
-    padding: 8px 0px; 
+    padding: 8px 0px;
     width: 99px;
 
     border-radius: 5px;
     /*border:solid 1px #FFFFFF;*/
 
     font-size: 12;
-    font-family: Tahoma; 
+    font-family: Tahoma;
     text-transform: uppercase;
-    text-align: center; 
+    text-align: center;
     font-weight: normal;
 
 }
@@ -288,7 +328,7 @@ div.toggle-btn-normal:hover {
 div.toggle-btn-checked{
     /*background-image: linear-gradient(#f7635b, #f31e12);*/
     background-image: linear-gradient(#DB6963, #C4352D);
-    color: white; 
+    color: white;
     font-weight: bold;
     /*background: #45688E;*/
 }
