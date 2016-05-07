@@ -1,0 +1,151 @@
+/* line editor */
+.line-editor .unit-price-row{
+  width: 180px;
+  position: relative; 
+}
+.line-editor .line-total-row{
+  width: 200px;
+}
+.line-editor .discount-adder-panel{
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  z-index: 100;
+  width: 200px;
+}
+
+/* stock-selector */
+.main-stock-selector{
+  z-index: 200;
+  display: inline-block;
+  font-family: Tahoma;
+  background-color: white;
+  width: 400px;
+  border: 1px solid #bbbbbb;
+  text-align: center;
+  position: relative;
+
+}
+
+.choose-device-label{
+  margin: 0px;
+  padding: 0px 10px;
+  height: 40px;
+  line-height: 40px;
+}
+
+
+.items-box{
+  text-align: left;
+  height: 328px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.stock-item{
+  width: 175px;
+  height: 70px;
+  line-height: 70px;
+  margin: 0px 0px 10px 10px;
+  display: inline-block;
+  border: 1px solid #bbbbbb;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+}
+
+.filter-input{
+  width: 95%;
+  border-radius: 10px;
+  height: 25px;
+  border: 1px solid #bbbbbb;
+  padding-left: 5px;
+  margin-bottom: 10px;
+}
+
+.active-path-item{
+  text-decoration: underline;
+  color: blue;
+  cursor: pointer;
+}
+
+.path{
+  height: 40px;
+  line-height: 40px;
+  text-align: left;
+  padding-left: 5px;
+  font-size: 14px;
+}
+.path span{
+  margin: 5px;
+}
+.results-count{
+  text-align: right;
+  position: absolute;
+  right: 10px;
+  top: 11px;
+  font-size: 14px;
+}
+
+
+.good{
+  border-bottom: 1px solid #bbbbbb;
+  padding: 10px;
+  cursor: pointer;
+}
+.highlight{
+  background: rgba(0, 120, 255, 0.27);
+}
+.good-select-highlight{
+  background: #85D785;
+}
+.good-select{
+  background: #A8ECA8;
+}
+
+
+.good .info{
+  margin-left: 90px;
+  position: relative;
+  min-height: 70px;
+}
+
+.icon{
+  max-width: 80px;
+  max-height: 70px;
+  float: left;
+}
+div.good-name{
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+div.good-text{
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+.good-price{
+  position: absolute;
+  top: 3px;
+  right: 0px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.good-stock-count{
+  position: absolute;
+  top: 25px;
+  right: 0px;
+  font-weight: normal;
+  font-size: 12px;  
+}
+.good-company{
+  border: 1px solid #bbbbbb;
+  border-radius: 10px;
+  font-size: 12px;
+  padding: 2px 10px;
+}
+.stock-not-found{
+  text-align: center;
+  padding-top: 20px;
+}
+
+

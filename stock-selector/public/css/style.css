@@ -1,0 +1,188 @@
+table th {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.glyphicon {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.right {
+    float:right;
+}
+
+.tab-pane{
+  padding-top: 20px;
+}
+
+.unselectable {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+button:focus, button:active {
+    outline: 0 !important;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.unsortable {
+    color: grey;
+}
+
+.claim-repair { margin-top: 2px; background-color: #50eea1}
+
+.id-search-box {
+  margin-right: 5px;
+}
+
+.open-repair { margin-top: 2px; }
+
+.bg-col1 {
+ background-color: #50de91;
+}
+
+.bg-col2 {
+  background-color: #4FB286;
+}
+
+.bg-col3 {
+  background-color: #3C896D;
+}
+
+.bg-col4 {
+  background-color: #546D64;
+}
+
+.bg-col5 {
+  background-color: #4D685A;
+}
+
+.bg-col7 {
+  background-color: #A4C687;
+}
+
+.bg-col6 {
+  background-color: #9DD592;
+}
+
+.compact-hr{
+  margin: 5px;
+}
+
+#g-signin {
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased;
+    display: block;
+    color: white;
+    white-space: nowrap;
+    width: 135px;
+    margin: 0 auto;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #bb3f30;
+    border-color: rgba(155, 155, 155, 0.3);
+    border-radius: 3px;
+    background: #dd4b39;
+}
+#g-signin:hover {
+    background: #e74b37;
+    cursor: pointer;
+    border-style: inset;
+}
+#g-signin span.icon {
+    background: no-repeat url(//ssl.gstatic.com/s2/oz/images/sprites/signinbutton_hdpi-b3cd3326a6bcbdce25855b809ac8f28d.png) -44px 0;
+    background-size: 84px 88px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 45px;
+    height: 30px;
+    border-right: #a55 1px solid;
+}
+#g-signin span.buttonText {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 15px;
+    padding-right: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: 'Roboto', arial,sans-serif;
+}
+
+/* Main Layout */
+
+.section-heading{
+  margin: 5px;
+}
+
+/* Filter component styles */
+
+.filter-container {
+  padding: 5px;
+}
+
+.filter-panel{
+  padding: 5px;
+  background-color: #fafafd;
+}
+
+/* Payments section */
+
+.chart-interval-dropdown {
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+
+
+.td-container {
+    position: relative;
+}
+.td-content {
+    position: absolute;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.td-spacer {
+    height: 0;
+    overflow: hidden;
+}
+
+
+/* Data grid */
+
+.grid-controls{
+  padding: 5px;
+  display: inline-block;
+}
+
+
+/* Boostrap overloads */
+.panel-heading{
+  padding: 4px;
+}
+
+
+/* Repair section */
+
+.diagnosis-extra-description{
+  border: none;
+}
+
+.quote-item-line-total{
+  font-size: 18px;
+}
+=======
+.data-loading {
+  opacity: 0.5;
+}
