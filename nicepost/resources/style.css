@@ -45,11 +45,6 @@ body{
 
 
 .mainimg{
-  /*border-top-left-radius: 7px;
-  border-top-right-radius: 7px;
-  /*max-height: 350px;
-  margin-bottom: 1px;
-  margin-right: 1px;*/
   object-fit: cover;
   cursor: pointer;
 }
