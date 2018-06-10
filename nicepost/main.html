@@ -36,6 +36,7 @@
     var windowScrollTop = 0;
 
     var lastGetTime = (new Date()).getTime();
+    var access_token = null;
 
     var div = document.getElementById('elm-vk');
     var vk = Elm.embed(Elm.Nicepost, div, {
@@ -71,6 +72,7 @@
         //var access_token = JSON.parse(decodeURIComponent(data["access_token"]));
         console.log("Viewer id: " + data["viewer_id"]);
         console.log("Access token: " + data["access_token"]);
+        access_token = data["access_token"];
         //console.log("Access token: " + access_token);
     }
 
@@ -146,7 +148,8 @@
 
     /**------- requests -------**/
     function groupsGet(groups) {
-        JSONP("https://api.vk.com/method/groups.getById?v=5.25&group_ids=" + groups, onGroupsGet);
+        JSONP("https://api.vk.com/method/groups.getById?v=5.25&group_ids=" + groups +
+            "&access_token=" + access_token, onGroupsGet);
     }
 
     function onGroupsGet(json) {
