@@ -81,7 +81,7 @@
 
     function getVKInfo() {
         var code = 'return {admin_groups: API.groups.get({filter:"moder", extended:1}), groups: API.groups.get({fields:"can_post,status", extended:1}), friends:API.friends.get({  fields:"uid, first_name, last_name,city,photo_big,photo,sex,bdate,can_post"   }), appFriends:API.getAppFriends()    };';
-        VK.api("execute", {code: code, v: "5.26"}, function(response) {
+        VK.api("execute", {code: code, v: "5.154"}, function(response) {
             //console.log("Execute: " + JSON.stringify(response));
             Groups.My = response.response.groups.items;
             var friends = response.response.friends.items;
