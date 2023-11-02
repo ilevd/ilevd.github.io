@@ -153,7 +153,7 @@
     }
 
     function onGroupsGet(json) {
-        Groups.groupsData = json.response;
+        Groups.groupsData = json.response.groups;
         vk.ports.getGroups.send(Groups.getGroupsByName("Юмор"));
     }
 
