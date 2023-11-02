@@ -148,7 +148,7 @@
 
     /**------- requests -------**/
     function groupsGet(groups) {
-        JSONP("https://api.vk.com/method/groups.getById?v=5.25&group_ids=" + groups +
+        JSONP("https://api.vk.com/method/groups.getById?v=5.154&group_ids=" + groups +
             "&access_token=" + access_token, onGroupsGet);
     }
 
@@ -161,7 +161,7 @@
         if (currentGroupOffset == 0) {
             vk.ports.getWallPosts.send([0, []]);
         }
-        VK.api("wall.get", {v: 5.25, count: 60, owner_id: owner_id, offset: currentGroupOffset}, onWallGet);
+        VK.api("wall.get", {v: 5.154, count: 60, owner_id: owner_id, offset: currentGroupOffset}, onWallGet);
         currentGroupOffset += 60;
         jsonpCount++;
         currentGroup = owner_id;
