@@ -327,6 +327,44 @@ var Groups = {
         "ero_0"
     ],
 
+    IT: ["tproger",
+        "proglib",
+        "habr",
+        "exploitex",
+        "mobidevices",
+        "digitalrazor",
+        "datalesson",
+        "itcookies",
+        "thecode.media",
+        "darkwebex",
+        "stupidmadworld",
+        "codeblog",
+        "techprosv",
+        "nostalgiepk",
+        "hyperpc",
+        "bookflow",
+        "i_devops",
+        "itmozg",
+        "prog_life",
+        "database_info",
+        "xakkep_1",
+        "digitalworldit",
+        "vkteam",
+        "python_django_programirovanie",
+        "pylounge",
+        "javascript_forum",
+        "we_use_js",
+        "php2all",
+        "ang_cpp",
+        "club26",
+        "gogolang",
+        "htmlacademy",
+        "nisnom",
+        "verstka_html",
+        "html.css.frontend.javascript"
+
+    ].sort(() => Math.random() - 0.5).slice(0, 16),
+
     My: [],
 
 
@@ -334,6 +372,7 @@ var Groups = {
         return [Groups.Humor,
         Groups.Love,
         Groups.News,
+        Groups.IT,
         Groups.Images,
         Groups.Brain,
         Groups.Quotes,
@@ -345,7 +384,7 @@ var Groups = {
         Groups.Fashion,
         Groups.Recepts,
         Groups.English,
-        Groups.Cards,
+        // Groups.Cards,
         Groups.Verse,
         Groups.Handiwork,
         //Groups.Erotic
@@ -355,7 +394,7 @@ var Groups = {
 
     groupsData: [],
 
-    groupsNames: ["Юмор", "Любовь", "Новости", "Картинки", "Умное", "Цитаты",
+    groupsNames: ["Юмор", "Любовь", "Новости", "ИТ", "Картинки", "Умное", "Цитаты",
         "Музыка", "Игры", "Спорт", "Авто", "Бизнес", "Мода",
         //"Рецепты", "English", "Открытки", "Стихи", "Рукоделие", "Эротика"/*, "Мои"*/ ],
         "Рецепты", "English", "Открытки", "Стихи", "Рукоделие", "Мои"],
