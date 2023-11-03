@@ -153,7 +153,15 @@ var Groups = {
 
 
     Quotes: [
-        "wisewordss",
+        //"wisewordss",
+        "wisdom_vk",
+        "remarkablequotes",
+        "krasiviecitatiaforismi",
+        "aphorismsgreat",
+        "topcitation",
+        "powerofaword",
+        "la_sagesse",
+        "public56268383",
         "v5umm",
         "poet_omar",
         "club2961933",
@@ -162,7 +170,7 @@ var Groups = {
         "the.business",
         "positiv_sun",
         "public23974705",
-        "bestwordsofpeace",
+        // "bestwordsofpeace",
         // "maxatma_gandi",
         //"zitati_velikih_ludej"
     ],
