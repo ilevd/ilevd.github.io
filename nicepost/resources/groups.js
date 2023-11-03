@@ -384,7 +384,7 @@ var Groups = {
         Groups.Fashion,
         Groups.Recepts,
         Groups.English,
-        // Groups.Cards,
+        Groups.Cards,
         Groups.Verse,
         Groups.Handiwork,
         //Groups.Erotic
@@ -397,7 +397,7 @@ var Groups = {
     groupsNames: ["Юмор", "Любовь", "Новости", "ИТ", "Картинки", "Умное", "Цитаты",
         "Музыка", "Игры", "Спорт", "Авто", "Бизнес", "Мода",
         //"Рецепты", "English", "Открытки", "Стихи", "Рукоделие", "Эротика"/*, "Мои"*/ ],
-        "Рецепты", "English", /*"Открытки",*/ "Стихи", "Рукоделие", "Мои"],
+        "Рецепты", "English", "Открытки", "Стихи", "Рукоделие", "Мои"],
 
     getAllGroupsString: function () {
         var arr = [];
