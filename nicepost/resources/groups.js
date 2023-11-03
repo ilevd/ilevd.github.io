@@ -4,7 +4,7 @@
 
 var Groups = {
 
-    Auto : [
+    Auto: [
         "vk.supercar",
         "world_best_cars",
         "autocentre_ua",
@@ -20,7 +20,7 @@ var Groups = {
         "taz_and_the_bass"
     ],
 
-    Brain : [
+    Brain: [
         "nakedsci",
         "vk.fact",
         "sci_psy",
@@ -34,7 +34,7 @@ var Groups = {
         "refact"
     ],
 
-    Business : [
+    Business: [
         "bu_life",
         "business",
         "ideibiza",
@@ -51,13 +51,13 @@ var Groups = {
         "rus_business",
     ],
 
-    Cards : [
+    Cards: [
         "we_love_cards",
         "fotomagic_su",
         "congratulation_vk"
     ],
 
-    English : [
+    English: [
         "just_eng",
         "english_is_fun",
         "10words_every_day",
@@ -79,7 +79,7 @@ var Groups = {
 
     ],
 
-    Fashion : [
+    Fashion: [
         "moda_pomode",
         "fshn_blg",
         "fashioneira",
@@ -94,7 +94,7 @@ var Groups = {
         "heelsandties"
     ],
 
-    News : [
+    News: [
         "ria",
         "tsnua",
         "rbc",
@@ -112,18 +112,20 @@ var Groups = {
         "pitertv"
     ],
 
-    Humor : [
+    Humor: [
         "bez_kota",
         "public29246653",
         "ne.poverish",
         "blablacomics",
         "thestrangeplanet",
+        "roflsmesharikk",
         "pozitiv",
         "trahninormalnost1",
         "i.like.this",
-        "overhear",
-        "onlyorly" ,
-        "dob.rota",
+        "oroom",
+        // "overhear",
+        "onlyorly",
+        //  "dob.rota",
         "w.like",
         "roz_moz",
         "prikol_xa",
@@ -131,7 +133,7 @@ var Groups = {
         "in.humour"
     ],
 
-    Games : [
+    Games: [
         /*"vk_gameplay",*/
         "igromania_official",
         "worldgames",
@@ -152,7 +154,7 @@ var Groups = {
     ],
 
 
-    Quotes : [
+    Quotes: [
         "wisewordss",
         "v5umm",
         "poet_omar",
@@ -167,7 +169,7 @@ var Groups = {
         "zitati_velikih_ludej"
     ],
 
-    Images : [
+    Images: [
         "club_tenderness_by",
         "awesome__world",
         "travelis",
@@ -178,7 +180,7 @@ var Groups = {
         "club39914469"
     ],
 
-    Love : [
+    Love: [
         "lubov_club",
         "cc_chertu_gordost",
         "loverayon",
@@ -197,7 +199,7 @@ var Groups = {
         "club17578631"
     ],
 
-    Music : [
+    Music: [
         "public_of_music",
         "clubmusictlt",
         "ellotv",
@@ -215,7 +217,7 @@ var Groups = {
         "artmelody"
     ],
 
-    Recepts : [
+    Recepts: [
         "my_recept",
         "vk.cooking",
         "cookinder",
@@ -232,10 +234,10 @@ var Groups = {
         "culinar.page"
     ],
 
-    Sport : [
+    Sport: [
         "eurofootball",
-        "zenit" ,
-        "olympicsrus" ,
+        "zenit",
+        "olympicsrus",
         "sportexpress",
         "lentasport",
 
@@ -253,8 +255,8 @@ var Groups = {
     ],
 
 
-    Verse : [
-        "1poetry",  
+    Verse: [
+        "1poetry",
         "stihi_club",
         "38087663",
         "best_poems",
@@ -274,13 +276,13 @@ var Groups = {
         "stihi_o_liubvi"
     ],
 
-    Handiwork : [
+    Handiwork: [
         "h.made",
         "31805219",
         "be.kreativ",
         "knitting",
         "soverwenstvo.decora",
-        
+
         "world_hm",
         "best.knitting",
         "shenows",
@@ -298,7 +300,7 @@ var Groups = {
         //,"61945080"
     ],
 
-    Erotic : [
+    Erotic: [
         "vog18",
         "majes",
         "fupoff",
@@ -311,69 +313,69 @@ var Groups = {
         "beausex",
         "roasty",
         "sexdom18",
-		"sex.room",
-		"fupex",
-		"zapret.official",
-		"yabvdul",
-		"ero_0"
+        "sex.room",
+        "fupex",
+        "zapret.official",
+        "yabvdul",
+        "ero_0"
     ],
 
-    My : [],
+    My: [],
 
 
-    getAllGroups : function(){
+    getAllGroups: function () {
         return [Groups.Humor,
-                Groups.Love, 
-                Groups.News, 
-                Groups.Images, 
-                Groups.Brain, 
-                Groups.Quotes, 
-                Groups.Music, 
-                Groups.Games, 
-                Groups.Sport, 
-                Groups.Auto, 
-                Groups.Business, 
-                Groups.Fashion,
-                Groups.Recepts, 
-                Groups.English, 
-                Groups.Cards,
-                Groups.Verse,
-                Groups.Handiwork,
-                //Groups.Erotic
-                Groups.My
+        Groups.Love,
+        Groups.News,
+        Groups.Images,
+        Groups.Brain,
+        Groups.Quotes,
+        Groups.Music,
+        Groups.Games,
+        Groups.Sport,
+        Groups.Auto,
+        Groups.Business,
+        Groups.Fashion,
+        Groups.Recepts,
+        Groups.English,
+        Groups.Cards,
+        Groups.Verse,
+        Groups.Handiwork,
+        //Groups.Erotic
+        Groups.My
         ];
     },
 
-    groupsData : [],
+    groupsData: [],
 
-    groupsNames : ["Юмор","Любовь", "Новости", "Картинки", "Умное", "Цитаты",
+    groupsNames: ["Юмор", "Любовь", "Новости", "Картинки", "Умное", "Цитаты",
         "Музыка", "Игры", "Спорт", "Авто", "Бизнес", "Мода",
         //"Рецепты", "English", "Открытки", "Стихи", "Рукоделие", "Эротика"/*, "Мои"*/ ],
-        "Рецепты", "English", "Открытки", "Стихи", "Рукоделие", "Мои" ],
+        "Рецепты", "English", "Открытки", "Стихи", "Рукоделие", "Мои"],
 
-    getAllGroupsString : function(){
-    	var arr = [];
-    	//arr = arr.concat(Auto, Brain, Business, Cards, English, Fashion, News, Humor, Quotes, Games, Images, Love, Music, Recepts, Sport );
+    getAllGroupsString: function () {
+        var arr = [];
+        //arr = arr.concat(Auto, Brain, Business, Cards, English, Fashion, News, Humor, Quotes, Games, Images, Love, Music, Recepts, Sport );
         var groups = Groups.getAllGroups();
-        for( var i = 0; i < groups.length; i++){
+        for (var i = 0; i < groups.length; i++) {
             arr = arr.concat(groups[i]);
         }
-    	return arr.join(",");
+        return arr.join(",");
     },
 
-    getGroupsByName: function (name){
-        if( name == "Мои") {
+    getGroupsByName: function (name) {
+        if (name == "Мои") {
             return Groups.My;
         }
         var index = Groups.groupsNames.indexOf(name, 0);
-        return Groups.getGroups( Groups.getAllGroups()[index], Groups.groupsData );
+        return Groups.getGroups(Groups.getAllGroups()[index], Groups.groupsData);
     },
 
-    getGroups: function (arr, groupsData){
+    getGroups: function (arr, groupsData) {
         var groups = [];
         for (var i = 0, len1 = groupsData.length; i < len1; i++) {
             for (var j = 0, len2 = arr.length; j < len2; j++) {
-                if (groupsData[i].screen_name == arr[j] 
+                if (groupsData[i].screen_name == arr[j]
                     || groupsData[i].id == arr[j]) {
                     groups.push(groupsData[i]);
                 }
