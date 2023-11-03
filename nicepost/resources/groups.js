@@ -114,9 +114,10 @@ var Groups = {
 
     Humor : [
         "bez_kota",
-        "evil_incorparate",
-        "ti_nepoverish",
-        "mdk",
+        "public29246653",
+        "ne.poverish",
+        "blablacomics",
+        "thestrangeplanet",
         "pozitiv",
         "trahninormalnost1",
         "i.like.this",
