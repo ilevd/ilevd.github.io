@@ -3,7 +3,7 @@
 
 <head>
     <title>NicePost</title>
-    <meta http-equiv="Content-Language" Content="ru"/>
+    <meta http-equiv="Content-Language" Content="ru" />
     <meta charset="UTF-8">
     <!--script type="text/javascript" src="resources/elm-runtime-compressed.js"></script>
     <script type="text/javascript" src="build/Nicepost.js"></script-->
@@ -16,7 +16,7 @@
 </head>
 
 <body>
-<div id="elm-vk" style="margin-left: auto; margin-right: auto; left: 0px; right:0px;"></div>
+    <div id="elm-vk" style="margin-left: auto; margin-right: auto; left: 0px; right:0px;"></div>
 </body>
 
 <script type="text/javascript">
@@ -48,12 +48,12 @@
     });
 
 
-    VK.init(function() {
+    VK.init(function () {
         console.log("VK init success");
         VK.addCallback("onScroll", onVkScroll);
         VK.addCallback("onWindowResized", onVkWindowResized);
         VK.callMethod("scrollSubscribe", true)
-    }, function() {
+    }, function () {
         console.log("VK init fail");
     }, '5.26');
 
@@ -81,12 +81,12 @@
 
     function getVKInfo() {
         var code = 'return {admin_groups: API.groups.get({filter:"moder", extended:1}), groups: API.groups.get({fields:"can_post,status", extended:1}), friends:API.friends.get({  fields:"uid, first_name, last_name,city,photo_big,photo,sex,bdate,can_post"   }), appFriends:API.getAppFriends()    };';
-        VK.api("execute", {code: code, v: "5.154"}, function(response) {
+        VK.api("execute", { code: code, v: "5.154" }, function (response) {
             //console.log("Execute: " + JSON.stringify(response));
             Groups.My = response.response.groups.items;
             var friends = response.response.friends.items;
             var admin_groups = response.response.admin_groups.items
-            friends = friends.sort(function(a, b) {
+            friends = friends.sort(function (a, b) {
                 if (a.last_name < b.last_name) return -1
                 if (a.last_name > b.last_name) return 1;
                 if (a.last_name == b.last_name) {
@@ -161,7 +161,7 @@
         if (currentGroupOffset == 0) {
             vk.ports.getWallPosts.send([0, []]);
         }
-        VK.api("wall.get", {v: 5.154, count: 60, owner_id: owner_id, offset: currentGroupOffset}, onWallGet);
+        VK.api("wall.get", { v: 5.154, count: 60, owner_id: owner_id, offset: currentGroupOffset }, onWallGet);
         currentGroupOffset += 60;
         jsonpCount++;
         currentGroup = owner_id;
@@ -169,10 +169,10 @@
 
     function onWallGet(json) {
         var posts = parseJson(json);
-        var sortPosts = posts.sort(function(a, b) {
-            return b.likes - a.likes
-        })
-            .slice(0, 40).sort(function(a, b) {
+        var sortPosts = posts.sort(function (a, b) { return b.likes - a.likes })
+            .filter((post) => post.attachments.length > 0 && post.attachments[0].type == 'photo')
+            .slice(0, 40)
+            .sort(function (a, b) {
                 return a.date > b.date ? -1 : 1
             });
         vk.ports.getWallPosts.send([currentGroupOffset, sortPosts]);
@@ -211,10 +211,10 @@
         //alert(JSON.stringify(post));
 
 
-        var getPhoto = function(photo) {
+        var getPhoto = function (photo) {
             return "photo" + photo.owner_id + "_" + photo.id;
         }
-        var getAudio = function(audio) {
+        var getAudio = function (audio) {
             return "audio" + audio.owner_id + "_" + audio.id;
         }
 
@@ -222,13 +222,13 @@
         var message = (atts.length > 0) ? addLinkText(post.text) : post.text;
         atts.push("http://vk.com/nicepost");
         var strAtts = atts.join(",");
-        var params = {v: "5.26", owner_id: owner_id, message: message, attachments: strAtts};
+        var params = { v: "5.26", owner_id: owner_id, message: message, attachments: strAtts };
 
         if (owner_id.toString().charAt(0) == "-") {
             params["from_group"] = 1;
         }
 
-        VK.api("wall.post", params, function(response) {
+        VK.api("wall.post", params, function (response) {
 
         })
 
