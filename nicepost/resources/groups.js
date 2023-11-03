@@ -6,7 +6,6 @@ var Groups = {
 
     Auto: [
         "vk.supercar",
-        "world_best_cars",
         "autocentre_ua",
         "mobi_net",
         "bpanpub",
@@ -43,7 +42,6 @@ var Groups = {
         "fazarosta",
         "biztimes",
         "business.partner",
-        "liderstvoiuspeh",
         "ot_0_do_1000000",
         "spekylyant",
         "towin",
@@ -136,7 +134,7 @@ var Groups = {
 
     Games: [
         /*"vk_gameplay",*/
-        "igromania_official",
+        "igromania",
         "worldgames",
         "onlinegamer",
         "on_line_gamers",
@@ -145,7 +143,6 @@ var Groups = {
         "bestgames",
         "games",
         "club30362362",
-        "game_scrt",
 
         "gameri",
         "world_game",
@@ -166,8 +163,8 @@ var Groups = {
         "positiv_sun",
         "public23974705",
         "bestwordsofpeace",
-        "maxatma_gandi",
-        "zitati_velikih_ludej"
+        // "maxatma_gandi",
+        //"zitati_velikih_ludej"
     ],
 
     Images: [
@@ -241,13 +238,10 @@ var Groups = {
         "olympicsrus",
         "sportexpress",
         "lentasport",
-
         "rsportru",
         "sovsport",
         "zdorovoe_telo",
         "sports_is_life",
-        "seskosqort",
-
         "lsport",
         "doself",
         "mh",
@@ -257,7 +251,6 @@ var Groups = {
 
 
     Verse: [
-        "1poetry",
         "stihi_club",
         "38087663",
         "best_poems",
@@ -283,22 +276,16 @@ var Groups = {
         "be.kreativ",
         "knitting",
         "soverwenstvo.decora",
-
         "world_hm",
         "best.knitting",
         "shenows",
         "girljj",
-        "funny.home",
-
         "magiarukodelia",
         "hands.make",
         "rddis",
         "39153494",
-        "53079952",
-
         "biser_juliakorn",
         "ideirukodelie"
-        //,"61945080"
     ],
 
     Erotic: [
