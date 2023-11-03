@@ -114,7 +114,7 @@ var Groups = {
     Humor: [
         "bez_kota",
         "dobriememes",
-        "public29246653",
+        "evilo",
         "ne.poverish",
         "blablacomics",
         "thestrangeplanet",
