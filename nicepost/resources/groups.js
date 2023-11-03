@@ -113,6 +113,7 @@ var Groups = {
 
     Humor: [
         "bez_kota",
+        "dobriememes",
         "public29246653",
         "ne.poverish",
         "blablacomics",
@@ -122,15 +123,25 @@ var Groups = {
         "trahninormalnost1",
         "i.like.this",
         "oroom",
-        // "overhear",
         "onlyorly",
-        //  "dob.rota",
         "w.like",
         "roz_moz",
         "prikol_xa",
         "mem1001",
-        "in.humour"
-    ],
+        "in.humour",
+        "public45045130",
+        "memesforadults",
+        "amfet1",
+        "pozvk",
+        "prukl",
+        "memec",
+        "public57494037",
+        "intellectualmems",
+        "barti_memes",
+        "q_qvazar",
+        // "overhear",
+        //  "dob.rota",
+    ].slice(0, 16),  //.sort(() => Math.random() - 0.5).slice(0, 16)
 
     Games: [
         /*"vk_gameplay",*/
