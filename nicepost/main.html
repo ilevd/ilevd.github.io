@@ -176,7 +176,8 @@
                 return a.date > b.date ? -1 : 1
             });
         vk.ports.getWallPosts.send([currentGroupOffset, sortPosts]);
-        //console.log("WallGet posts.length: " + posts.length);
+        console.log("WallGet posts.length: " + posts.length);
+        console.log("WallGet posts: " + posts.silce(0,5));
         //currentGroupOffset += json.response.items.length;
         jsonpCount--;
     }
