@@ -170,14 +170,14 @@
     function onWallGet(json) {
         var posts = parseJson(json);
         var sortPosts = posts.sort(function (a, b) { return b.likes - a.likes })
-            .filter((post) => post.attachments != undefined && post.attachments.length > 0 && post.attachments[0].type == 'photo')
+            // .filter((post) => post.attachments != undefined && post.attachments.length > 0 && post.attachments[0].type == 'photo')
             .slice(0, 40)
             .sort(function (a, b) {
                 return a.date > b.date ? -1 : 1
             });
         vk.ports.getWallPosts.send([currentGroupOffset, sortPosts]);
         console.log("WallGet posts.length: " + posts.length);
-        console.log("WallGet posts: " + posts.silce(0,5));
+        console.log("WallGet posts: " + posts.slice(0,5));
         //currentGroupOffset += json.response.items.length;
         jsonpCount--;
     }
