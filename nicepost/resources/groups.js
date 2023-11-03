@@ -96,7 +96,6 @@ var Groups = {
 
     News: [
         "ria",
-        "tsnua",
         "rbc",
         "kpru",
         "1tvnews",
@@ -104,12 +103,14 @@ var Groups = {
         "fontanka",
         "gazeta",
         "news.page",
-        "narod_protiv",
         "thevenusproject",
         "newmn",
-        "regnumru",
         "nsn",
-        "pitertv"
+        "pitertv",
+        "public188318774",
+        "nrnews24",
+        "toporcc",
+        "news_first"
     ],
 
     Humor: [
